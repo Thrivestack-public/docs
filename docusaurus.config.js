@@ -6,7 +6,7 @@ const config = {
   favicon: 'img/favicon.ico',
 
   url: 'https://docs.thrivestack.ai',
-  baseUrl: '/',
+  baseUrl: '/docs/',
 
   organizationName: 'Thrivestack-ai',
   projectName: 'docs',
