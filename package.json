@@ -2,7 +2,7 @@
   "name": "docs",
   "version": "0.0.0",
   "private": true,
-  "homepage": "https://Thrivestack-ai.github.io/docs",
+  "homepage": "https://thrivestack-ai.github.io/docs",
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
