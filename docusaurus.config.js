@@ -91,15 +91,15 @@ const config = {
               },
               {
                 label: 'For Developers',
-                to: '/devs/intro',
+                to: '/category/for-developers',
               },
               {
                 label: 'For Product Managers',
-                to: '/pms/intro',
+                to: '/category/for-product-managers',
               },
               {
                 label: 'For GTM Leaders',
-                to: '/gtm-leaders/intro',
+                to: '/category/for-growth-leaders',
               },
             ],
           },
