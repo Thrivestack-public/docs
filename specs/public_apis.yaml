@@ -1,0 +1,224 @@
+openapi: 3.0.3
+info:
+  title: ThriveStack - OpenAPI 3.0
+  description: |-
+    This is a sample Pet Store Server based on the OpenAPI 3.0 specification.  You can find out more about
+    
+    Some useful links:
+    - [The Pet Store repository](https://github.com/swagger-api/swagger-petstore)
+    - [The source API definition for the Pet Store](https://github.com/swagger-api/swagger-petstore/blob/master/src/main/resources/openapi.yaml)
+  version: 1.0.0
+externalDocs:
+  description: Find out more about Thrivestack
+  url: http://thrivestack.ai
+servers:
+  - url: https://dev.thrivestack.ai/api/v1
+paths:
+  /token:
+    post:
+      tags:
+        - instrumentation
+      summary: TODO token summary
+      description: TODO token description
+      operationId: token
+      requestBody:
+        description: TODO token requestion description
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateTokenRequest'
+        required: true
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CreateTokenResponse'
+        '405':
+          description: Invalid input
+  /track:
+    post:
+      tags:
+        - instrumentation
+      summary: TODO track summary
+      description: TODO track description
+      operationId: track
+      requestBody:
+        description: TODO track requestion description
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TrackRequest'
+        required: true
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response'
+        '405':
+          description: Invalid input
+  /identify:
+    post:
+      tags:
+        - instrumentation
+      summary: TODO token summary
+      description: TODO token description
+      operationId: identify
+      requestBody:
+        description: TODO token requestion description
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/IdentifyRequest'
+        required: true
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response'
+        '405':
+          description: Invalid input
+  /group:
+    post:
+      tags:
+        - instrumentation
+      summary: TODO token summary
+      description: TODO token description
+      operationId: group
+      requestBody:
+        description: TODO token requestion description
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GroupRequest'
+        required: true
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response'
+        '405':
+          description: Invalid input
+components:
+  schemas:
+    CreateTokenRequest:
+      type: object
+      properties:
+        key_id:
+          type: string
+          example: todo_key_id
+          description: todo key_id description
+        private_key:
+          type: string
+          example: todo_private_key
+          description: todo private_key description
+        scopes:
+          type: array
+          items:
+            type: string
+            description: todo scopes description
+        expiry:
+          type: integer
+          format: int
+          example: 10
+          description: todo expiry description
+    CreateTokenResponse:
+      type: object
+      properties:
+        token:
+          type: string
+          example: todo_private_key
+          description: todo private_key description
+        response_id:
+          type: string
+          example: todo_private_key
+          description: todo private_key description
+        message:
+          type: string
+          example: todo_private_key
+          description: todo private_key description
+    TrackRequest:
+      type: object
+      properties:
+        event_name:
+          type: string
+          example: todo_event_name
+          description: todo event name description
+        user_id:
+          type: string
+          example: todo_event_name
+          description: todo event name description
+        properties:
+          type: string
+          example: todo_event_name
+          description: todo event name description
+        context:
+          type: object
+          additionalProperties: true
+          example: todo_context
+          description: todo context description
+        timestamp:
+          type: string
+          format: date
+          example: todo_timestamp
+          description: todo event name description
+    IdentifyRequest:
+      type: object
+      properties:
+        user_id:
+          type: string
+          example: todo_user_id
+          description: todo user_id description
+        traits:
+          type: object
+          additionalProperties: true
+          example: todo_traits
+          description: todo traits description
+        timestamp:
+          type: string
+          format: date
+          example: todo_timestamp
+          description: todo event name description
+    GroupRequest:
+      type: object
+      properties:
+        group_id:
+          type: string
+          example: todo_group_id
+          description: todo group_id description
+        user_id:
+          type: string
+          example: todo_user_id
+          description: todo user_id description
+        traits:
+          type: object
+          additionalProperties: true
+          example: todo_traits
+          description: todo traits description
+        timestamp:
+          type: string
+          format: date
+          example: todo_timestamp
+          description: todo event name description  
+    Response:
+      type: object
+      properties:
+        success:
+          type: boolean
+          example: true
+          description: todo success description
+        response_id:
+          type: string
+          example: todo_response_id
+          description: todo response_id description
+        message:
+          type: string
+          example: todo_message
+          description: todo message description

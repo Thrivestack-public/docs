@@ -2,9 +2,7 @@ name: Node.js CI
 
 on:
   pull_request:
-    types:
-      - closed
-    branches: [ "main" ]
+    branches: [ "develop" ]
 
 jobs:
   build:
@@ -24,10 +22,13 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - run: npm run build --if-present
+    - run: npm test
 
-    - name: Deploy with gh-pages
+    - name: Configure AWS credentials from Test account
+      uses: aws-actions/configure-aws-credentials@v4
+      with:
+        role-to-assume: arn:aws:iam::${{ secrets.AWS_ACCOUNT_ID }}:role/${{ secrets.AWS_ROLE_NAME }}
+        aws-region: us-east-1
+    - name: Copy files to staging S3 bucket
       run: |
-        git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
-        npm run deploy -- -u "github-actions-bot <support+actions@github.com>"
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        aws s3 sync ./build/ s3://${{ secrets.AWS_S3_BUCKET_NAME }}

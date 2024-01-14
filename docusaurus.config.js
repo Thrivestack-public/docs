@@ -1,54 +1,57 @@
-import {themes as prismThemes} from 'prism-react-renderer';
+// @ts-check
+// Note: type annotations allow type checking and IDEs autocompletion
 
+const lightCodeTheme = require("prism-react-renderer/themes/github");
+const darkCodeTheme = require("prism-react-renderer/themes/dracula");
+
+/** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Thrive Documentation',
-  tagline: 'Explore our guides and examples to swiftly build scalable infrastructure and turbocharge your product launch—all on one dynamic platform.',
-  favicon: 'img/favicon.ico',
+  title: "Thrive Documenation",
+  tagline: "Explore our guides and examples to swiftly build scalable infrastructure and turbocharge your product launch—all on one dynamic platform.",
+  url: "https://docs.thrivestack.ai",
+  //baseUrl: "/docs/",
+  baseUrl: "/yarn-action-test",
+  onBrokenLinks: "throw",
+  onBrokenMarkdownLinks: "warn",
+  favicon: "img/favicon.ico",
 
-  url: 'https://docs.thrivestack.ai',
-  baseUrl: '/docs/',
-
-  organizationName: 'Thrivestack-ai',
-  projectName: 'docs',
-
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
-
-  i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
-  },
-
-  themes: [["@easyops-cn/docusaurus-search-local", ({
-      hashed: true,
-      docsRouteBasePath: "/",
-      indexBlog: false,
-    })
-  ]],
+  // GitHub pages deployment config.
+  // If you aren't using GitHub pages, you don't need these.
+  organizationName: "Thrivestack-ai", // Usually your GitHub org/user name.
+  projectName: "docs", // Usually your repo name.
 
   presets: [
     [
-      'classic',
+      "classic",
+      /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: './sidebars.js',
+          sidebarPath: require.resolve("./sidebars.js"),
           routeBasePath: '/',
           editUrl:
             'https://github.com/Thrivestack-ai/docs/tree/main/',
+          docLayoutComponent: "@theme/DocPage",
+          docItemComponent: "@theme/ApiItem", // Derived from docusaurus-theme-openapi
         },
         blog: false,
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: require.resolve("./src/css/custom.css"),
         },
       }),
     ],
   ],
 
   themeConfig:
+    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      docs: {
+        sidebar: {
+          hideable: true,
+        },
+      },
       navbar: {
         logo: {
-          alt: 'ThriveStack Logo',
+          alt: "ThriveStack Logo",
           src: 'img/logo-purple.png',
           srcDark: 'img/logo-white.png'
         },
@@ -77,10 +80,16 @@ const config = {
             position: 'left',
             label: 'For GTM Leaders',
           },
+          {
+            type: 'docSidebar',
+            sidebarId: 'openApiSidebar',
+            position: 'left',
+            label: 'APIs',
+          },
         ],
       },
       footer: {
-        style: 'dark',
+        style: "dark",
         links: [
           {
             title: 'Docs',
@@ -125,10 +134,42 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()}`,
       },
       prism: {
-        theme: prismThemes.github,
-        darkTheme: prismThemes.dracula,
+        theme: lightCodeTheme,
+        darkTheme: darkCodeTheme,
+        additionalLanguages: ["ruby", "csharp", "php"],
       },
     }),
+
+  plugins: [
+    [
+      "docusaurus-plugin-openapi-docs",
+      {
+        id: "openapi",
+        docsPluginId: "classic",
+        config: {
+          public_apis: {
+            specPath: "specs/public_apis.yaml",
+            outputDir: "docs/public_apis",
+            downloadUrl:
+              "https://raw.githubusercontent.com/PaloAltoNetworks/docusaurus-template-openapi-docs/main/examples/petstore.yaml",
+            sidebarOptions: {
+              groupPathsBy: "tag",
+              categoryLinkSource: "tag",
+            },
+          },
+        },
+      },
+    ],
+    [
+      require.resolve("@cmfcmf/docusaurus-search-local"),
+      {
+        indexDocs: true,
+        indexBlog: false,
+      },
+    ],
+  ],
+
+  themes: ["docusaurus-theme-openapi-docs"],
 };
 
-export default config;
+module.exports = config;
