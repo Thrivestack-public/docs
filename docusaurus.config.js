@@ -83,7 +83,7 @@ const config = {
           {
             type: 'docSidebar',
             sidebarId: 'openApiSidebar',
-            position: 'left',
+            position: 'right',
             label: 'APIs',
           },
         ],
