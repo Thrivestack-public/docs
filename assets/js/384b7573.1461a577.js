@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[6933],{40682:e=>{e.exports=JSON.parse('{"title":"Configure","description":"Documentation for Developers - Configure","slug":"/category/configure-3","permalink":"/docs/category/configure-3","navigation":{"next":{"title":"Introduction","permalink":"/docs/devs/configure/intro"}}}')}}]);
