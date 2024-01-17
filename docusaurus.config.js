@@ -10,7 +10,7 @@ const config = {
   tagline: "Explore our guides and examples to swiftly build scalable infrastructure and turbocharge your product launch—all on one dynamic platform.",
   url: "https://docs.thrivestack.ai",
   //baseUrl: "/docs/",
-  baseUrl: "/docs",
+  baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
@@ -83,7 +83,7 @@ const config = {
           {
             type: 'docSidebar',
             sidebarId: 'openApiSidebar',
-            position: 'left',
+            position: 'right',
             label: 'APIs',
           },
         ],
