@@ -5,6 +5,9 @@
 # Docusaurus Build Directory
 /build/
 
+# Open API Generated Files
+/docs/public_apis/
+
 ### Docusaurus.Node Stack ###
 # Logs
 logs
