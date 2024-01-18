@@ -148,10 +148,10 @@ const config = {
         docsPluginId: "classic",
         config: {
           public_apis: {
-            specPath: "https://www.dropbox.com/scl/fi/pml9nselajw3qge0wor0x/public_apis.yaml?rlkey=pm75rj65izlogtwmcfl143g8p&dl=1",
+            specPath: "https://testgithubpk001.s3.ap-south-1.amazonaws.com/public_apis.yaml",
             outputDir: "docs/public_apis",
             downloadUrl:
-              "https://www.dropbox.com/scl/fi/pml9nselajw3qge0wor0x/public_apis.yaml?rlkey=pm75rj65izlogtwmcfl143g8p&dl=1",
+              "https://testgithubpk001.s3.ap-south-1.amazonaws.com/public_apis.yaml",
             sidebarOptions: {
               groupPathsBy: "tag",
               categoryLinkSource: "tag",
