@@ -1,4 +1,4 @@
-name: Yarn CI
+name: Main CI
 
 on:
   pull_request:
@@ -6,10 +6,17 @@ on:
       - closed
     branches: [ "main" ]
 
+permissions:
+      id-token: write
+      contents: read
+
 jobs:
   build:
 
     runs-on: ubuntu-latest
+
+    env:
+     APP_ENV: production
 
     strategy:
       matrix:
@@ -37,9 +44,21 @@ jobs:
       if: always()
       run: npm uninstall -g yarn
 
-    - name: Deploy with gh-pages
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-region: us-east-1
+        role-to-assume: ${{ secrets.PROD_AWS_IAM_ROLE_ARN }}
+        role-session-name: OIDCSession
+
+    - name: Copy files to staging S3 bucket
       run: |
-        git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
-        npm run deploy -- -u "github-actions-bot <support+actions@github.com>"
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        aws s3 sync ./build/ s3://${{ secrets.PROD_AWS_S3_BUCKET_NAME }}
+
+    - name: Invalidate CloudFront Stale Distribution
+      run: |
+        distribution_id=$(aws cloudfront list-distributions --query "DistributionList.Items[?Origins.Items[?DomainName=='${{ secrets.PROD_AWS_S3_BUCKET_NAME }}.s3.us-east-1.amazonaws.com']].Id" --output text)
+         
+        echo "CloudFront Distribution ID: $distribution_id"
+        aws cloudfront create-invalidation --distribution-id $distribution_id --paths "/*"
+        echo "Invalidation Started For CloudFront Distribution ID: $distribution_id"
