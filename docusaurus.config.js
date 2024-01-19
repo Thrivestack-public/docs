@@ -148,10 +148,9 @@ const config = {
         docsPluginId: "classic",
         config: {
           public_apis: {
-            specPath: "https://testgithubpk001.s3.ap-south-1.amazonaws.com/public_apis.yaml",
+            specPath: process.env.APP_ENV === 'production' ? 'https://saas-dev-docs-apis-bucket-wqcjov1l3x7su8tl.s3.ap-south-1.amazonaws.com/public_apis.yaml' : 'https://saas-dev-docs-apis-bucket-wqcjov1l3x7su8tl.s3.ap-south-1.amazonaws.com/public_apis.yaml',
             outputDir: "docs/public_apis",
-            downloadUrl:
-              "https://testgithubpk001.s3.ap-south-1.amazonaws.com/public_apis.yaml",
+            downloadUrl: process.env.APP_ENV === 'production' ? 'https://saas-dev-docs-apis-bucket-wqcjov1l3x7su8tl.s3.ap-south-1.amazonaws.com/public_apis.yaml' : 'https://saas-dev-docs-apis-bucket-wqcjov1l3x7su8tl.s3.ap-south-1.amazonaws.com/public_apis.yaml',
             sidebarOptions: {
               groupPathsBy: "tag",
               categoryLinkSource: "tag",

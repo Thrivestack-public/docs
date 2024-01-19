@@ -15,6 +15,9 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    env:
+     APP_ENV: staging
+
     strategy:
       matrix:
         node-version: [21.x]
