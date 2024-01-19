@@ -1,7 +1,9 @@
-name: Node.js CI
+name: Staging
 
 on:
   pull_request:
+    types:
+      - closed
     branches: [ "develop" ]
 
 permissions:
@@ -39,20 +41,20 @@ jobs:
       if: always()
       run: npm uninstall -g yarn
 
-    - name: Configure AWS credentials from Test account
+    - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v1
       with:
         aws-region: us-east-1
-        role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
+        role-to-assume: ${{ secrets.INT_AWS_IAM_ROLE_ARN }}
         role-session-name: OIDCSession
 
     - name: Copy files to staging S3 bucket
       run: |
-        aws s3 sync ./build/ s3://${{ secrets.AWS_S3_BUCKET_NAME }}
+        aws s3 sync ./build/ s3://${{ secrets.INT_AWS_S3_BUCKET_NAME }}
 
     - name: Invalidate CloudFront Stale Distribution
       run: |
-        distribution_id=$(aws cloudfront list-distributions --query "DistributionList.Items[?Origins.Items[?DomainName=='${{ secrets.AWS_S3_BUCKET_NAME }}.s3.us-east-1.amazonaws.com']].Id" --output text)
+        distribution_id=$(aws cloudfront list-distributions --query "DistributionList.Items[?Origins.Items[?DomainName=='${{ secrets.INT_AWS_S3_BUCKET_NAME }}.s3.us-east-1.amazonaws.com']].Id" --output text)
          
         echo "CloudFront Distribution ID: $distribution_id"
         aws cloudfront create-invalidation --distribution-id $distribution_id --paths "/*"
