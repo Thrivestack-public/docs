@@ -96,7 +96,7 @@ const config = {
             items: [
               {
                 label: 'Getting Started',
-                to: '/intro',
+                to: '/getting-started/intro',
               },
               {
                 label: 'For Developers',
@@ -108,7 +108,7 @@ const config = {
               },
               {
                 label: 'For GTM Leaders',
-                to: '/category/for-growth-leaders',
+                to: '/category/for-gtm-leaders',
               },
             ],
           },
