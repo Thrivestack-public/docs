@@ -1,0 +1,52 @@
+---
+id: group
+title: "API to track groups"
+description: "This action is employed for tracking group identification"
+sidebar_label: "API to track groups"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVsmO2zgQ/RVCF18sb+32dssEwcDIIY20c8jEjQFFliymJVJDUk4bgv89VZTkJc5MkokN2BRZe716VB1JcMKq0iujo1W0yZRjXNATwxUUZW4OIFlqLPOWi2eld2xnTVUyJUF7lSrBg24/MiXYsF5LtBSEcNfCPxU4/4eRh2hVR8Joj3q05GWZt9rDz47c15ETGRScVqUle16BO6m9NGpSKtLh+cOlyLH/TSoFL5lJ2Vmctb6ZhZx7TMob5jNgsMfNrQ4B/60k5c1ZwbXk3tgDawM5MKWDeBtKn201ylzaTxXk0jHBNUsAxUVeSZADLII/lIAhmeQzCB9hqJ0zSug67LWkqMlRU+bUmoIdTGUxbGGsdGgOXjg2hizeyQWfTtJZPF2KeTwV92m84JDEk/lCzsfLWTqawdm/8xb7R/69KrApaOU2gE1Xkp5jJ7Eu+fXjO7aYjcYMd7FANiCj4P4qqMlochePx/FksRkvV5PZajT+CwVayVWEhYWYTH83MsuVd7/S6A+u6aXDdgFr9BlPTOXPZdxqSqvXlJ189vqsp3kR/pWWFQZwoHWZc91j1NheC35wPXYGI+Po4wSO/lZ/yVQO/xMFlQP7AxCQyI8wANP5lCcQ3y+nd/F0nMp4kcwTRMNizuXyPhmJ+W2lj81oKgvo/9MZkOeoTr3on8bvEjhPNwkdb1rzZ4Dwq4c1e9/QAAs8EHy70mjXTPdkNLqtQef218kCI3R8B7S8gVfnty37zbmrhED1i7PEmBy4DhW7SThs8p2jEq41mqkKDLhhRCxQAT4zxIalcVS9kvsMn4YdOWKl92BJu44qm+NR5n3pVsMhL9VAwn6AeQ+cB577zHHuEJ6e5mggTEEy0fGJrIjKKn8IZrx5BqzOp6fLk0eqVFOc9ryOFBU5Ay7BYiQ0C/j89s3HM1TQ/ls4hMSp5O/PTP6mA98lM1/R2k8z05mI/o03ToxwOTE/h3rUUDo13ye5srLYFmgmDUlfGhG6RxcAjV6uEK/EBPCCZVeaOMSqPTx6vAeRHMsqQUjihF+1ndDuQmI+TGejw4ISnRERUM+bOEaD0WBMYRJAkFYo0rYVNDV0Q9Gt25AYmb1K4+I6/a2bu+039XEYUg3kRHisW8i2BEGYzgjKuFHXCXfwwebHI20jNiwhEJd7bhVPKHtEYb/DGIHzGeG0il43QccbckviedXA7ZsRP/Y7jVc4lKX/T9nLaXt497hB4aR95yiMJB3Lv9D7CP6uoi1+wysLWQhzEfbrCOl/VwXyiBq79PkKLUQgyA==
+sidebar_class_name: "post api-method"
+info_path: integrate/public_apis/thrive-stack-api
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import TabItem from "@theme/TabItem";
+
+<h1 className={"openapi__heading"}>API to track groups</h1>
+
+<MethodEndpoint method={"post"} path={"/group"}></MethodEndpoint>
+
+
+
+This action is employed for tracking group identification
+
+## Request
+
+<MimeTabs className={"openapi-tabs__mime"}><TabItem label={"application/json"} value={"application/json-schema"}><details style={{}} className={"openapi-markdown__details mime"} data-collapsed={false} open={true}><summary style={{}} className={"openapi-markdown__details-summary-mime"}><h3 className={"openapi-markdown__details-summary-header-body"}>Body</h3></summary><div style={{"textAlign":"left","marginLeft":"1rem"}}><div style={{"marginTop":"1rem","marginBottom":"1rem"}}>
+
+Group API Request Body
+
+</div></div><ul style={{"marginLeft":"1rem"}}><SchemaItem collapsible={true} className={"schemaItem"}><details style={{}} className={"openapi-markdown__details"}><summary style={{}}><span className={"openapi-schema__container"}><strong className={"openapi-schema__property"}>context</strong><span className={"openapi-schema__name"}> object</span><span className={"openapi-schema__divider"}></span><span className={"openapi-schema__required"}>required</span></span></summary><div style={{"marginLeft":"1rem"}}><div style={{"marginTop":".5rem","marginBottom":".5rem"}}>
+
+map of additional content related to the event
+group_id is a mandatory property in the context, 
+and additional fields can be included.
+
+</div></div></details></SchemaItem><SchemaItem collapsible={false} name={"group_id"} required={true} schemaName={"string"} qualifierMessage={undefined} schema={{"description":"Id of the group from your records","example":"3d8a42f6-49c7-4c5f-8aeb-278d7196f06e","type":"string"}}></SchemaItem><SchemaItem collapsible={false} name={"timestamp"} required={true} schemaName={"date-time"} qualifierMessage={undefined} schema={{"description":"The event's timestamp in the ISO 8601 standard format","example":"2023-11-28T19:26:01Z","format":"date-time","type":"string"}}></SchemaItem><SchemaItem collapsible={true} className={"schemaItem"}><details style={{}} className={"openapi-markdown__details"}><summary style={{}}><span className={"openapi-schema__container"}><strong className={"openapi-schema__property"}>traits</strong><span className={"openapi-schema__name"}> object</span><span className={"openapi-schema__divider"}></span><span className={"openapi-schema__required"}>required</span></span></summary><div style={{"marginLeft":"1rem"}}><div style={{"marginTop":".5rem","marginBottom":".5rem"}}>
+
+Used to store traits about the group
+The 'group_type', 'name', 'industry', 'plan' and 'employees' properties are mandatory,
+while additional fields can be included.
+
+</div></div></details></SchemaItem><SchemaItem collapsible={false} name={"user_id"} required={true} schemaName={"string"} qualifierMessage={undefined} schema={{"description":"Id of the user from your records","example":"3e474abe-5943-41fd-8b7b-4c87ad95b0c7","type":"string"}}></SchemaItem></ul></details></TabItem></MimeTabs><div><div><ApiTabs><TabItem label={"200"} value={"200"}><div></div><div><MimeTabs className={"openapi-tabs__mime"} schemaType={"response"}><TabItem label={"application/json"} value={"application/json"}><SchemaTabs className={"openapi-tabs__schema"}><TabItem label={"Schema"} value={"Schema"}><details style={{}} className={"openapi-markdown__details response"} data-collapsed={false} open={true}><summary style={{}} className={"openapi-markdown__details-summary-response"}><strong>Schema</strong></summary><div style={{"textAlign":"left","marginLeft":"1rem"}}></div><ul style={{"marginLeft":"1rem"}}><SchemaItem collapsible={false} name={"message"} required={false} schemaName={"string"} qualifierMessage={undefined} schema={{"type":"string"}}></SchemaItem><SchemaItem collapsible={false} name={"response_id"} required={false} schemaName={"string"} qualifierMessage={undefined} schema={{"type":"string"}}></SchemaItem><SchemaItem collapsible={false} name={"success"} required={false} schemaName={"boolean"} qualifierMessage={undefined} schema={{"type":"boolean"}}></SchemaItem></ul></details></TabItem><TabItem label={"Example (from schema)"} value={"Example (from schema)"}><ResponseSamples responseExample={"{\n  \"message\": \"string\",\n  \"response_id\": \"string\",\n  \"success\": true\n}"} language={"json"}></ResponseSamples></TabItem></SchemaTabs></TabItem></MimeTabs></div></TabItem></ApiTabs></div></div>
+      
