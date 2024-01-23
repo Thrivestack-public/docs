@@ -2,8 +2,8 @@ name: Staging
 
 on:
   pull_request:
-    types:
-      - closed
+    #types:
+    #  - open
     branches: [ "develop" ]
 
 permissions:
@@ -40,7 +40,7 @@ jobs:
 
     - name: Download public file from S3
       run: |
-        wget https://YOUR_BUCKET_NAME.s3.amazonaws.com/YOUR_OBJECT_KEY -O ./path/to/local/file
+        curl -LJ "https://www.dropbox.com/scl/fi/dmq50gy7b4emnholgsyjq/schema.graphqls?rlkey=1nqpica08cd05dujpsoj4ij7r&dl=1" -o ./schema.graphqls
 
     - name: Generate GraphQL Documentation
       run: yarn docusaurus graphql-to-doc
