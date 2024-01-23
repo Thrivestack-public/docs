@@ -38,6 +38,13 @@ jobs:
     - name: Generate OpenAPI Documentation
       run: yarn docusaurus gen-api-docs all
 
+    - name: Download public file from S3
+      run: |
+        wget https://YOUR_BUCKET_NAME.s3.amazonaws.com/YOUR_OBJECT_KEY -O ./path/to/local/file
+
+    - name: Generate GraphQL Documentation
+      run: yarn docusaurus graphql-to-doc
+
     - run: yarn run build
 
     - name: Uninstall Yarn

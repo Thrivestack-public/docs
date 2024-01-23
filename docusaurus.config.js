@@ -81,10 +81,21 @@ const config = {
             label: 'For GTM Leaders',
           },
           {
-            type: 'docSidebar',
-            sidebarId: 'openApiSidebar',
+            type: 'dropdown',
             position: 'right',
             label: 'APIs',
+            items: [
+              {
+                type: 'docSidebar',
+                sidebarId: 'graphQLApiSidebar',
+                label: 'GraphQL',
+              },
+              {
+                type: 'docSidebar',
+                sidebarId: 'openApiSidebar',
+                label: 'REST',
+              },
+            ]
           },
         ],
       },
@@ -166,6 +177,16 @@ const config = {
         indexBlog: false,
       },
     ],
+    [
+      "@graphql-markdown/docusaurus",
+      {
+        schema: "./schema.graphqls",
+        rootPath: "./docs",
+        loaders: {
+          GraphQLFileLoader: "@graphql-tools/graphql-file-loader", // local file schema
+        },
+      }
+    ]
   ],
 
   themes: ["docusaurus-theme-openapi-docs"],
