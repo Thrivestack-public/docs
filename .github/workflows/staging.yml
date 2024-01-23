@@ -38,7 +38,7 @@ jobs:
     - name: Generate OpenAPI Documentation
       run: yarn docusaurus gen-api-docs all
 
-    - name: Download public file from S3
+    - name: Download GraphQL Schema File
       run: |
         curl -LJ "https://www.dropbox.com/scl/fi/dmq50gy7b4emnholgsyjq/schema.graphqls?rlkey=1nqpica08cd05dujpsoj4ij7r&dl=1" -o ./schema.graphqls
 
