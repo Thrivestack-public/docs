@@ -28,11 +28,108 @@ const sidebars = {
         {
           type: 'category', 
           label: 'Build',
+          link: {
+            type: 'generated-index',
+            title: "Build",
+            description: "Get started with ThriveStack's Build Module",
+            keywords: ["build"],
+          },
           items: [
-            'getting-started/build/self-serve',
-            'getting-started/build/workflow-canvas',
+            {
+              type: 'category', 
+              label: 'Self Serve',
+              link: {
+                type: 'generated-index',
+                title: 'Self Serve',
+                description: "Self Serve Documentation",
+                keywords: ["self-serve"],
+              },
+              items: [
+                'getting-started/build/self-serve/self-serve',
+                'getting-started/build/self-serve/workflow-canvas',
+                'getting-started/build/self-serve/invitation',
+                'getting-started/build/self-serve/triggers',
+                'getting-started/build/self-serve/publish',
+                'getting-started/build/self-serve/promote',
+              ]
+            },
+            {
+              type: 'category', 
+              label: 'Instrumentation',
+              link: {
+                type: 'generated-index',
+                title: "Instrumentation",
+                description: "Get started with ThriveStack's Instrumentation Module",
+                keywords: ["instrumentation"],
+              },
+              items: [
+                {
+                  type: 'category', 
+                  label: 'Identification',
+                  link: {
+                    type: 'generated-index',
+                    title: 'Identification',
+                    description: 'Identification Docs',
+                    keywords: ['identification'],
+                  },
+                  items: [
+                    'getting-started/build/instrumentation/identification/overview',
+                    'getting-started/build/instrumentation/identification/user',
+                    'getting-started/build/instrumentation/identification/group',
+                  ]
+                },
+                {
+                  type: 'category', 
+                  label: 'Events',
+                  items: [
+                  'getting-started/build/instrumentation/events/standard/overview',
+                  {
+                    type: 'category', 
+                    label: 'Standard',
+                    link: {
+                      type: 'generated-index',
+                      title: 'Standard',
+                      description: 'Standard Docs',
+                      keywords: ['standard-events'],
+                    },
+                    items: [
+                      'getting-started/build/instrumentation/events/standard/signed_up',
+                      'getting-started/build/instrumentation/events/standard/account_created',
+                      'getting-started/build/instrumentation/events/standard/account_added_user',
+                      'getting-started/build/instrumentation/events/standard/signed_in',
+                      'getting-started/build/instrumentation/events/standard/signed_out',
+                      'getting-started/build/instrumentation/events/standard/invite_sent',
+                      'getting-started/build/instrumentation/events/standard/trial_started',
+                      'getting-started/build/instrumentation/events/standard/trial_ended',
+                      'getting-started/build/instrumentation/events/standard/account_removed_user',
+                      'getting-started/build/instrumentation/events/standard/account_deleted',
+                    ]
+                  },
+                  ]
+                },
+              ]
+            },
           ]
-        }
+        },
+        {
+          type: 'category', 
+          label: 'Analyze',
+          link: {
+            type: 'generated-index',
+            title: 'Analyze',
+            description: "Get started with ThriveStack's Analyze Module",
+            keywords: ['analyze'],
+          },
+          items: [
+            {
+              type: 'category', 
+              label: 'Reports',
+              items: [
+                'getting-started/analyze/reports/overview'
+              ]
+            },
+          ]
+        },
       ]
     }
   ],
@@ -49,7 +146,7 @@ const sidebars = {
       items: [
         {
           type: 'category', 
-          label: 'Configure',
+          label: 'Customize',
           items: [
             'devs/configure/intro',
           ]
@@ -84,7 +181,7 @@ const sidebars = {
       items: [
         {
           type: 'category', 
-          label: 'Configure',
+          label: 'Customize',
           items: [
             'pms/configure/intro',
           ]
@@ -119,7 +216,7 @@ const sidebars = {
       items: [
         {
           type: 'category', 
-          label: 'Configure',
+          label: 'Customize',
           items: [
             'gtm-leaders/configure/intro',
           ]
