@@ -63,22 +63,27 @@ const config = {
             label: 'Getting Started',
           },
           {
+            type: 'html',
+            position: 'left',
+            value: '<span>|</span>'
+          },
+          {
             type: 'docSidebar',
             sidebarId: 'devsSidebar',
             position: 'left',
-            label: 'For Developers',
+            label: 'Developers',
           },
           {
             type: 'docSidebar',
             sidebarId: 'pmsSidebar',
             position: 'left',
-            label: 'For Product Managers',
+            label: 'Growth',
           },
           {
             type: 'docSidebar',
             sidebarId: 'gtmLeadersSidebar',
             position: 'left',
-            label: 'For GTM Leaders',
+            label: 'GTM Leaders',
           },
           {
             type: 'dropdown',
