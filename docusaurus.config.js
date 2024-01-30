@@ -116,15 +116,15 @@ const config = {
               },
               {
                 label: 'For Developers',
-                to: '/category/for-developers',
+                to: '/category/developers',
               },
               {
                 label: 'For Product Managers',
-                to: '/category/for-product-managers',
+                to: '/category/growth',
               },
               {
                 label: 'For GTM Leaders',
-                to: '/category/for-gtm-leaders',
+                to: '/category/gtm-leaders',
               },
             ],
           },
