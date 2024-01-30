@@ -151,8 +151,9 @@ const sidebars = {
           items: [
             'getting-started/self-serve/self-serve',
             'getting-started/self-serve/workflow-canvas',
-            'getting-started/self-serve/invitation',
             'getting-started/self-serve/triggers',
+            'getting-started/self-serve/invitation',
+            'getting-started/self-serve/onboarding',
             'getting-started/self-serve/publish',
             'getting-started/self-serve/promote',
           ]
