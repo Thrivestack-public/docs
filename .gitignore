@@ -139,4 +139,6 @@ dist
 .yarn/install-state.gz
 .pnp.*
 */.DS_Store
-schema.graphqls
+workflow-schema.graphqls
+onboarding-schema.graphqls
+invitation-schema.graphqls

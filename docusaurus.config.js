@@ -86,21 +86,10 @@ const config = {
             label: 'GTM Leaders',
           },
           {
-            type: 'dropdown',
+            type: 'docSidebar',
+            sidebarId: 'apiSidebar',
             position: 'right',
             label: 'APIs',
-            items: [
-              {
-                type: 'docSidebar',
-                sidebarId: 'graphQLApiSidebar',
-                label: 'GraphQL',
-              },
-              {
-                type: 'docSidebar',
-                sidebarId: 'openApiSidebar',
-                label: 'REST',
-              },
-            ]
           },
         ],
       },
@@ -115,16 +104,16 @@ const config = {
                 to: '/getting-started/intro',
               },
               {
-                label: 'For Developers',
-                to: '/category/developers',
+                label: 'Developers',
+                to: '/category/developers--1',
               },
               {
-                label: 'For Product Managers',
-                to: '/category/growth',
+                label: 'Product Managers',
+                to: '/category/growth--1',
               },
               {
-                label: 'For GTM Leaders',
-                to: '/category/gtm-leaders',
+                label: 'GTM Leaders',
+                to: '/category/gtm-leaders--1',
               },
             ],
           },
@@ -185,13 +174,36 @@ const config = {
     [
       "@graphql-markdown/docusaurus",
       {
-        schema: "./schema.graphqls",
-        rootPath: "./docs",
+        id: "workflow",
+        schema: "./workflow-schema.graphqls",
+        rootPath: "./docs/public_apis",
         loaders: {
           GraphQLFileLoader: "@graphql-tools/graphql-file-loader", // local file schema
         },
       }
-    ]
+    ],
+    [
+      "@graphql-markdown/docusaurus",
+      {
+        id: "onboarding",
+        schema: "./onboarding-schema.graphqls",
+        rootPath: "./docs/public_apis",
+        loaders: {
+          GraphQLFileLoader: "@graphql-tools/graphql-file-loader", // local file schema
+        },
+      }
+    ],
+    [
+      "@graphql-markdown/docusaurus",
+      {
+        id: "invitation",
+        schema: "./invitation-schema.graphqls",
+        rootPath: "./docs/public_apis",
+        loaders: {
+          GraphQLFileLoader: "@graphql-tools/graphql-file-loader", // local file schema
+        },
+      }
+    ],
   ],
 
   themes: ["docusaurus-theme-openapi-docs"],
