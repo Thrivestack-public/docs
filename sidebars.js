@@ -13,7 +13,7 @@
 const dev = [
     {
       type: 'category', 
-      label: 'Developers',
+      label: 'Developers 👩‍💻',
       link: {
         type: 'generated-index',
         title: "Documentation for Developers",
@@ -49,7 +49,7 @@ const dev = [
 const pms = [
     {
       type: 'category', 
-      label: 'Growth',
+      label: 'Growth 🌱',
       link: {
         type: 'generated-index',
         title: "Documentation for Growth Leaders",
@@ -85,7 +85,7 @@ const pms = [
 const gtm = [
     {
       type: 'category', 
-      label: 'GTM Leaders',
+      label: 'GTM Leaders 🚀',
       link: {
         type: 'generated-index',
         title: "Documentation for GTM Leaders",
@@ -125,12 +125,12 @@ const sidebars = {
   getStartedSidebar: [
     {
       type: 'category', 
-      label: 'Getting Started',
+      label: 'Getting Started 🌟',
       items: [
         'getting-started/intro',
         {
           type: 'category', 
-          label: 'Personas',
+          label: 'Personas 👥',
           link: {
             type: 'generated-index',
             title: 'Personas',
@@ -141,7 +141,7 @@ const sidebars = {
         },
         {
           type: 'category', 
-          label: '🛎️ SELF SERVE',
+          label: 'SELF SERVE 🛎️',
           link: {
             type: 'generated-index',
             title: 'Self Serve',
@@ -167,7 +167,7 @@ const sidebars = {
         },
         {
           type: 'category', 
-          label: '📈 ANALYZE',
+          label: 'ANALYZE 📈',
           link: {
             type: 'generated-index',
             title: 'Analyze',
