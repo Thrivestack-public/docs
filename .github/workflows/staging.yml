@@ -2,8 +2,8 @@ name: Staging
 
 on:
   pull_request:
-    #types:
-    #  - open
+    types:
+      - closed
     branches: [ "develop" ]
 
 permissions:
