@@ -40,10 +40,15 @@ jobs:
 
     - name: Download GraphQL Schema File
       run: |
-        curl -LJ "https://www.dropbox.com/scl/fi/dmq50gy7b4emnholgsyjq/schema.graphqls?rlkey=1nqpica08cd05dujpsoj4ij7r&dl=1" -o ./schema.graphqls
+        curl -LJ "https://www.dropbox.com/scl/fi/dmq50gy7b4emnholgsyjq/workflow-schema.graphqls?rlkey=1nqpica08cd05dujpsoj4ij7r&dl=1" -o ./workflow-schema.graphqls
+        curl -LJ "https://www.dropbox.com/scl/fi/xoe6dfmbh089bu76nq5ef/onboarding-schema.graphqls?rlkey=wwen16jnh8zsdprxazd3nb1wb&dl=1" -o ./onboarding-schema.graphqls
+        curl -LJ "https://www.dropbox.com/scl/fi/vheg94xkqqlxr6pwy7f43/invitation-schema.graphqls?rlkey=iqcko18sfh921rmgmget6g4hr&dl=1" -o ./invitation-schema.graphqls
 
     - name: Generate GraphQL Documentation
-      run: yarn docusaurus graphql-to-doc
+      run: |
+        yarn docusaurus graphql-to-doc:workflow
+        yarn docusaurus graphql-to-doc:onboarding
+        yarn docusaurus graphql-to-doc:invitation
 
     - run: yarn run build
 

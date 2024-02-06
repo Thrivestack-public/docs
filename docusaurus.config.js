@@ -86,21 +86,10 @@ const config = {
             label: 'GTM Leaders',
           },
           {
-            type: 'dropdown',
+            type: 'docSidebar',
+            sidebarId: 'apiSidebar',
             position: 'right',
             label: 'APIs',
-            items: [
-              {
-                type: 'docSidebar',
-                sidebarId: 'graphQLApiSidebar',
-                label: 'GraphQL',
-              },
-              {
-                type: 'docSidebar',
-                sidebarId: 'openApiSidebar',
-                label: 'REST',
-              },
-            ]
           },
         ],
       },
@@ -185,13 +174,36 @@ const config = {
     [
       "@graphql-markdown/docusaurus",
       {
-        schema: "./schema.graphqls",
-        rootPath: "./docs",
+        id: "workflow",
+        schema: "./workflow-schema.graphqls",
+        rootPath: "./docs/public_apis",
         loaders: {
           GraphQLFileLoader: "@graphql-tools/graphql-file-loader", // local file schema
         },
       }
-    ]
+    ],
+    [
+      "@graphql-markdown/docusaurus",
+      {
+        id: "onboarding",
+        schema: "./onboarding-schema.graphqls",
+        rootPath: "./docs/public_apis",
+        loaders: {
+          GraphQLFileLoader: "@graphql-tools/graphql-file-loader", // local file schema
+        },
+      }
+    ],
+    [
+      "@graphql-markdown/docusaurus",
+      {
+        id: "invitation",
+        schema: "./invitation-schema.graphqls",
+        rootPath: "./docs/public_apis",
+        loaders: {
+          GraphQLFileLoader: "@graphql-tools/graphql-file-loader", // local file schema
+        },
+      }
+    ],
   ],
 
   themes: ["docusaurus-theme-openapi-docs"],
