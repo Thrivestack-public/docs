@@ -115,16 +115,16 @@ const config = {
                 to: '/getting-started/intro',
               },
               {
-                label: 'For Developers',
-                to: '/category/developers',
+                label: 'Developers',
+                to: '/category/developers--1',
               },
               {
-                label: 'For Product Managers',
-                to: '/category/growth',
+                label: 'Product Managers',
+                to: '/category/growth--1',
               },
               {
-                label: 'For GTM Leaders',
-                to: '/category/gtm-leaders',
+                label: 'GTM Leaders',
+                to: '/category/gtm-leaders--1',
               },
             ],
           },
