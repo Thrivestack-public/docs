@@ -6,7 +6,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Thrive Documenation",
+  title: "ThriveStack Documenation",
   tagline: "Explore our guides and examples to swiftly build scalable infrastructure and turbocharge your product launch—all on one dynamic platform.",
   url: "https://docs.thrivestack.ai",
   //baseUrl: "/docs/",

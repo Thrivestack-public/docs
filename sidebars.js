@@ -13,7 +13,7 @@
 const dev = [
     {
       type: 'category', 
-      label: 'Developers',
+      label: 'Developers 👩‍💻',
       link: {
         type: 'generated-index',
         title: "Documentation for Developers",
@@ -49,7 +49,7 @@ const dev = [
 const pms = [
     {
       type: 'category', 
-      label: 'Growth',
+      label: 'Growth 🌱',
       link: {
         type: 'generated-index',
         title: "Documentation for Growth Leaders",
@@ -85,7 +85,7 @@ const pms = [
 const gtm = [
     {
       type: 'category', 
-      label: 'GTM Leaders',
+      label: 'GTM Leaders 🚀',
       link: {
         type: 'generated-index',
         title: "Documentation for GTM Leaders",
@@ -125,12 +125,12 @@ const sidebars = {
   getStartedSidebar: [
     {
       type: 'category', 
-      label: 'Getting Started',
+      label: 'Getting Started 🌟',
       items: [
         'getting-started/intro',
         {
           type: 'category', 
-          label: 'Personas',
+          label: 'Personas 👥',
           link: {
             type: 'generated-index',
             title: 'Personas',
@@ -141,7 +141,7 @@ const sidebars = {
         },
         {
           type: 'category', 
-          label: '🛎️ SELF SERVE',
+          label: 'SELF SERVE 🛎️',
           link: {
             type: 'generated-index',
             title: 'Self Serve',
@@ -149,18 +149,25 @@ const sidebars = {
             keywords: ["self-serve"],
           },
           items: [
+            {
+              type: 'category',
+              label: 'APIs',
+              items: [
+                'getting-started/self-serve/apis/intro',
+                'getting-started/self-serve/apis/triggers',
+                'getting-started/self-serve/apis/invitation',
+                'getting-started/self-serve/apis/onboarding',
+                'getting-started/self-serve/apis/publish',
+                'getting-started/self-serve/apis/promote',
+              ]
+            },
             'getting-started/self-serve/self-serve',
             'getting-started/self-serve/workflow-canvas',
-            'getting-started/self-serve/triggers',
-            'getting-started/self-serve/invitation',
-            'getting-started/self-serve/onboarding',
-            'getting-started/self-serve/publish',
-            'getting-started/self-serve/promote',
           ]
         },
         {
           type: 'category', 
-          label: '📈 ANALYZE',
+          label: 'ANALYZE 📈',
           link: {
             type: 'generated-index',
             title: 'Analyze',
@@ -168,6 +175,8 @@ const sidebars = {
             keywords: ['analyze'],
           },
           items: [
+          "getting-started/analyze/intro",
+          "getting-started/analyze/authentication",
           {
             type: 'category', 
             label: 'Instrumentation',
@@ -178,6 +187,7 @@ const sidebars = {
               keywords: ["instrumentation"],
             },
             items: [
+              'getting-started/analyze/instrumentation/overview',
               {
                 type: 'category', 
                 label: 'Identification',
@@ -188,7 +198,7 @@ const sidebars = {
                   keywords: ['identification'],
                 },
                 items: [
-                  'getting-started/analyze/instrumentation/identification/overview',
+                  //'getting-started/analyze/instrumentation/identification/overview',
                   'getting-started/analyze/instrumentation/identification/user',
                   'getting-started/analyze/instrumentation/identification/group',
                 ]
@@ -197,7 +207,7 @@ const sidebars = {
                 type: 'category', 
                 label: 'Events',
                 items: [
-                'getting-started/analyze/instrumentation/events/standard/overview',
+                'getting-started/analyze/instrumentation/events/event-tracking',
                 {
                   type: 'category', 
                   label: 'Standard',
@@ -222,13 +232,31 @@ const sidebars = {
                 },
                 ]
               },
+              "getting-started/analyze/instrumentation/page",
             ]
           },
             {
               type: 'category', 
               label: 'Reports',
               items: [
-                'getting-started/analyze/reports/overview'
+                'getting-started/analyze/reports/overview',
+                {
+                  type: 'category', 
+                  label: 'Standard',
+                  link: {
+                    type: 'generated-index',
+                    title: 'Standard',
+                    description: 'Standard Reports Docs',
+                    keywords: ['standard-reports'],
+                  },
+                  items: [
+                    'getting-started/analyze/reports/standard/acquisition',
+                    'getting-started/analyze/reports/standard/activation',
+                    'getting-started/analyze/reports/standard/retention',
+                    'getting-started/analyze/reports/standard/engagement',
+                    'getting-started/analyze/reports/standard/expansion',
+                  ]
+                },
               ]
             },
           ]
