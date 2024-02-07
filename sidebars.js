@@ -182,66 +182,41 @@ const sidebars = {
             keywords: ['analyze'],
           },
           items: [
-          "getting-started/analyze/intro",
+          //"getting-started/analyze/intro", // Delete this, this is empty
+          'getting-started/analyze/instrumentation/overview',
           "getting-started/analyze/authentication",
+          'getting-started/analyze/instrumentation/identification/user',
+          'getting-started/analyze/instrumentation/identification/group',
+          'getting-started/analyze/instrumentation/events/event-tracking',
           {
             type: 'category', 
-            label: 'Instrumentation',
-            link: {
-              type: 'generated-index',
-              title: "Instrumentation",
-              description: "Get started with ThriveStack's Instrumentation Module",
-              keywords: ["instrumentation"],
-            },
+            label: 'Events',
             items: [
-              'getting-started/analyze/instrumentation/overview',
-              {
-                type: 'category', 
-                label: 'Identification',
-                link: {
-                  type: 'generated-index',
-                  title: 'Identification',
-                  description: 'Identification Docs',
-                  keywords: ['identification'],
-                },
-                items: [
-                  //'getting-started/analyze/instrumentation/identification/overview',
-                  'getting-started/analyze/instrumentation/identification/user',
-                  'getting-started/analyze/instrumentation/identification/group',
-                ]
+            {
+              type: 'category', 
+              label: 'Standard',
+              link: {
+                type: 'generated-index',
+                title: 'Standard',
+                description: 'Standard Docs',
+                keywords: ['standard-events'],
               },
-              {
-                type: 'category', 
-                label: 'Events',
-                items: [
-                'getting-started/analyze/instrumentation/events/event-tracking',
-                {
-                  type: 'category', 
-                  label: 'Standard',
-                  link: {
-                    type: 'generated-index',
-                    title: 'Standard',
-                    description: 'Standard Docs',
-                    keywords: ['standard-events'],
-                  },
-                  items: [
-                    'getting-started/analyze/instrumentation/events/standard/signed_up',
-                    'getting-started/analyze/instrumentation/events/standard/account_created',
-                    'getting-started/analyze/instrumentation/events/standard/account_added_user',
-                    'getting-started/analyze/instrumentation/events/standard/signed_in',
-                    'getting-started/analyze/instrumentation/events/standard/signed_out',
-                    'getting-started/analyze/instrumentation/events/standard/invite_sent',
-                    'getting-started/analyze/instrumentation/events/standard/trial_started',
-                    'getting-started/analyze/instrumentation/events/standard/trial_ended',
-                    'getting-started/analyze/instrumentation/events/standard/account_removed_user',
-                    'getting-started/analyze/instrumentation/events/standard/account_deleted',
-                  ]
-                },
-                ]
-              },
-              "getting-started/analyze/instrumentation/page",
+              items: [
+                'getting-started/analyze/instrumentation/events/standard/signed_up',
+                'getting-started/analyze/instrumentation/events/standard/account_created',
+                'getting-started/analyze/instrumentation/events/standard/account_added_user',
+                'getting-started/analyze/instrumentation/events/standard/signed_in',
+                'getting-started/analyze/instrumentation/events/standard/signed_out',
+                'getting-started/analyze/instrumentation/events/standard/invite_sent',
+                'getting-started/analyze/instrumentation/events/standard/trial_started',
+                'getting-started/analyze/instrumentation/events/standard/trial_ended',
+                'getting-started/analyze/instrumentation/events/standard/account_removed_user',
+                'getting-started/analyze/instrumentation/events/standard/account_deleted',
+              ]
+            },
             ]
           },
+
             {
               type: 'category', 
               label: 'Reports',
@@ -277,7 +252,7 @@ const sidebars = {
   apiSidebar: [
     {
       type: "category",
-      label: "Analyze APIs",
+      label: "Analyze 📈",
       link: {
         type: "generated-index",
         title: "API",
@@ -291,7 +266,7 @@ const sidebars = {
     },
     {
       type: "category",
-      label: "Self Serve APIs",
+      label: "Self Serve 🛎️",
       link: {
         type: "generated-index",
         title: "API",
