@@ -1,4 +1,4 @@
-# Event Tracking
+# Track
 
 ## 1. Introduction
 
