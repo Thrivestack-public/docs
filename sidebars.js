@@ -192,26 +192,26 @@ const sidebars = {
             type: 'category', 
             label: 'Events',
             items: [
+            'getting-started/analyze/instrumentation/events/standard/signed_up',
+            'getting-started/analyze/instrumentation/events/standard/account_created',
+            'getting-started/analyze/instrumentation/events/standard/account_added_user',
+            'getting-started/analyze/instrumentation/events/standard/signed_in',
+            'getting-started/analyze/instrumentation/events/standard/signed_out',
+            'getting-started/analyze/instrumentation/events/standard/invite_sent',
+            'getting-started/analyze/instrumentation/events/standard/trial_started',
+            'getting-started/analyze/instrumentation/events/standard/trial_ended',
+            'getting-started/analyze/instrumentation/events/standard/account_removed_user',
+            'getting-started/analyze/instrumentation/events/standard/account_deleted',
             {
               type: 'category', 
-              label: 'Standard',
+              label: 'Custom',
               link: {
                 type: 'generated-index',
-                title: 'Standard',
-                description: 'Standard Docs',
-                keywords: ['standard-events'],
+                title: 'Custom',
+                description: 'Custom Docs',
+                keywords: ['custom-events'],
               },
               items: [
-                'getting-started/analyze/instrumentation/events/standard/signed_up',
-                'getting-started/analyze/instrumentation/events/standard/account_created',
-                'getting-started/analyze/instrumentation/events/standard/account_added_user',
-                'getting-started/analyze/instrumentation/events/standard/signed_in',
-                'getting-started/analyze/instrumentation/events/standard/signed_out',
-                'getting-started/analyze/instrumentation/events/standard/invite_sent',
-                'getting-started/analyze/instrumentation/events/standard/trial_started',
-                'getting-started/analyze/instrumentation/events/standard/trial_ended',
-                'getting-started/analyze/instrumentation/events/standard/account_removed_user',
-                'getting-started/analyze/instrumentation/events/standard/account_deleted',
               ]
             },
             ]
@@ -222,21 +222,21 @@ const sidebars = {
               label: 'Reports',
               items: [
                 'getting-started/analyze/reports/overview',
+                'getting-started/analyze/reports/standard/acquisition',
+                'getting-started/analyze/reports/standard/activation',
+                'getting-started/analyze/reports/standard/retention',
+                'getting-started/analyze/reports/standard/engagement',
+                'getting-started/analyze/reports/standard/expansion',
                 {
                   type: 'category', 
-                  label: 'Standard',
+                  label: 'Custom',
                   link: {
                     type: 'generated-index',
-                    title: 'Standard',
-                    description: 'Standard Reports Docs',
-                    keywords: ['standard-reports'],
+                    title: 'Custom',
+                    description: 'Custom Reports Docs',
+                    keywords: ['custom-reports'],
                   },
                   items: [
-                    'getting-started/analyze/reports/standard/acquisition',
-                    'getting-started/analyze/reports/standard/activation',
-                    'getting-started/analyze/reports/standard/retention',
-                    'getting-started/analyze/reports/standard/engagement',
-                    'getting-started/analyze/reports/standard/expansion',
                   ]
                 },
               ]
@@ -251,6 +251,27 @@ const sidebars = {
   gtmLeadersSidebar: gtm,
   apiSidebar: [
     {
+      type: "html",
+      value: "<span>APIs and References</span><hr style='margin: 5px 0 4px;'>",
+      defaultStyle: true,
+    },
+    "getting-started/apis-non-gen/apis-introduction",
+    {
+      type: "category",
+      label: "Self Serve 🛎️",
+      link: {
+        type: "generated-index",
+        title: "API",
+        description:
+          "Documentation for APIs",
+      },
+      // @ts-ignore
+      items: [
+        "getting-started/apis-non-gen/self-serve-apis-intro",
+        graphql,
+      ]
+    },
+    {
       type: "category",
       label: "Analyze 📈",
       link: {
@@ -264,20 +285,6 @@ const sidebars = {
         require("./docs/public_apis/sidebar.js"),
       ]
     },
-    {
-      type: "category",
-      label: "Self Serve 🛎️",
-      link: {
-        type: "generated-index",
-        title: "API",
-        description:
-          "Documentation for APIs",
-      },
-      // @ts-ignore
-      items: [
-        graphql,
-      ]
-    }
   ],
 };
 
