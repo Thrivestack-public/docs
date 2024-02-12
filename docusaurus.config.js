@@ -177,7 +177,7 @@ const config = {
         id: "workflow",
         schema: "./workflow-schema.graphqls",
         rootPath: "./docs",
-        baseURL: "graphql",
+        baseURL: "graphql/workflow",
         loaders: {
           GraphQLFileLoader: "@graphql-tools/graphql-file-loader", // local file schema
         },
@@ -189,7 +189,7 @@ const config = {
         id: "onboarding",
         schema: "./onboarding-schema.graphqls",
         rootPath: "./docs",
-        baseURL: "graphql",
+        baseURL: "graphql/onboarding",
         loaders: {
           GraphQLFileLoader: "@graphql-tools/graphql-file-loader", // local file schema
         },
@@ -201,7 +201,7 @@ const config = {
         id: "invitation",
         schema: "./invitation-schema.graphqls",
         rootPath: "./docs",
-        baseURL: "graphql",
+        baseURL: "graphql/invitation",
         loaders: {
           GraphQLFileLoader: "@graphql-tools/graphql-file-loader", // local file schema
         },
