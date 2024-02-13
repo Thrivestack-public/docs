@@ -294,6 +294,7 @@ const sidebars = {
       // @ts-ignore
       items: [
         "getting-started/apis-non-gen/self-serve-apis-intro",
+        "getting-started/apis-non-gen/self-serve-apis-try-out",
         graphql,
       ]
     },

@@ -108,7 +108,7 @@ const config = {
                 to: '/category/developers--1',
               },
               {
-                label: 'Product Managers',
+                label: 'Growth',
                 to: '/category/growth--1',
               },
               {
