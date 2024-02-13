@@ -319,7 +319,7 @@ const sidebars = {
     },
     {
       type: "html",
-      value: "<a href='https://www.postman.com/thrivestack-shreyanshd/workspace/thrivestack-apis' style='display:inline-block;background-color:#ff6c37;color:#fff;padding:5px 20px;margin: 10px;border-radius:5px;text-decoration:none;text-align:center;'><svg height='32px' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg' style='vertical-align:middle;margin-right:8px;'><path d='M8 5V19L19 12L8 5Z' fill='white'/></svg>Run In Postman</a>"
+      value: "<a href='https://www.postman.com/thrivestack-shreyanshd/workspace/thrivestack-apis' style='display:inline-block;background-color:#7f56d9;color:#fff;padding:5px 20px;margin: 10px;border-radius:5px;text-decoration:none;text-align:center;'><svg height='32px' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg' style='vertical-align:middle;margin-right:8px;'><path d='M8 5V19L19 12L8 5Z' fill='white'/></svg>Run In Postman</a>"
     }
   ],
 };
