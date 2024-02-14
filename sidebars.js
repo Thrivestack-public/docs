@@ -182,6 +182,7 @@ const sidebars = {
             keywords: ["self-serve"],
           },
           items: [
+            'getting-started/self-serve/start-here',
             {
               type: 'category',
               label: 'APIs',
@@ -282,6 +283,7 @@ const sidebars = {
       defaultStyle: true,
     },
     "getting-started/apis-non-gen/apis-introduction",
+    "getting-started/apis-non-gen/using-the-try-out-options",
     {
       type: "category",
       label: "Self Serve 🛎️",
