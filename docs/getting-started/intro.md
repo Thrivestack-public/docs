@@ -2,24 +2,28 @@
 
 Welcome to the ThriveStack Documentation! ThriveStack enables you to implement PLG for your product within days. With our no-code workflow builders, you can create user workflows and enjoy features like authentication, automatic enrichment, bottom-up CRM, and much more right away.
 
-![](/img/docs/starthere-diagram.png)
+ThriveStack consists of two modules:
 
-With ThriveStack you get,
+![](/img/docs/image.png)
 
-- 🧩 **[No-Code Workflow Orchestration](/getting-started/self-serve/start-here):** Easily create and manage user workflows without writing a single line of code.
-- 🔒 **[Seamless Authentication](/getting-started/self-serve/customization#authentication):** Provide robust and secure user authentication, with options for custom or third-party authentication integration.
-- 👥 **[User and Account Provisioning](/getting-started/self-serve/customization#authentication):** Streamline the provisioning of users and accounts for seamless access to your SaaS product.
-- 🌟 **[Automatic Data Enrichment](/getting-started/self-serve/customization#enrichment):** Enhance your user data automatically for better insights.
-- 💰 **[Flexible Pricing Plans](/getting-started/self-serve/customization#pricing):** Easily integrate pricing plans into user workflows and authentication.
-- 📊 **[Self-Service Performance](/getting-started/analyze/reports/overview):** Access performance data about self-serve workflows to measure and improve user experience.
-- 📈 **[Bottom-Up CRM](/getting-started/analyze/reports/overview):** Streamline your customer relationship management from the ground up.
-- 📣 **[Lifecycle Communications](/getting-started/self-serve/customization#notifications):** Facilitate engaging and effective communication with users throughout their journey.
+## 1. [Self Serve](/getting-started/self-serve/overview)
+A no-code solution 🛠️ that empowers users with the flexibility to create and personalize user-centric workflows. Customization options are available through APIs, enhancing user engagement and workflow adaptability. 🌟
 
-Build Self-Serve in 3 easy steps,
+### Features
+  - 🧩 **No-Code Workflow Orchestration:** Easily create and manage user workflows without writing a single line of code.
+  - 🔒 **Seamless Authentication:** Provide robust and secure user authentication, with options for custom or third-party authentication integration.
+  - 👥 **User and Account Provisioning:** Streamline the provisioning of users and accounts for seamless access to your SaaS product.
+  - and Much More
 
-1. ✏️ **Customize:** Pick and Personalize from our predefined user workflows.
-2. 🔗 **Integrate:** Seamlessly connect ThriveStack with your development environment.
-3. 🎉 **Go Live:** Easily promote your configurations from development to production environments.
+
+## 2. [Analyze](/getting-started/analyze/instrumentation/overview)
+Delivers advanced analytics 📊 and reporting tools. This module aids in the in-depth analysis and optimization of user engagement and performance, supporting informed, data-driven decision-making and strategic enhancements. 🚀
+
+### Features
+- 📈 **Custom Report Generation:** Create tailored reports to meet specific business needs, with the flexibility to focus on key performance indicators.
+- 🔗 **Data Integration:** Seamlessly integrate data from various sources, enhancing the depth and breadth of your analytics.
+- 🧩 **Event Tracking:** Automatically track standard events within your workflows, capturing crucial user interaction data.
+  - and Much More
 
 Begin by familiarzing yourself with ThriveStack's [Self Serve](/getting-started/self-serve/start-here) Builder.
 
