@@ -25,5 +25,5 @@ Delivers advanced analytics 📊 and reporting tools. This module aids in the in
 - 🧩 **Event Tracking:** Automatically track standard events within your workflows, capturing crucial user interaction data.
   - and Much More
 
-Begin by familiarzing yourself with ThriveStack's [Self Serve](/getting-started/self-serve/start-here) Builder.
+Begin by familiarzing yourself with ThriveStack's [Self Serve](/getting-started/self-serve/overview) Module.
 
