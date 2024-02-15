@@ -182,6 +182,7 @@ const sidebars = {
             keywords: ["self-serve"],
           },
           items: [
+            'getting-started/self-serve/overview',
             'getting-started/self-serve/start-here',
             {
               type: 'category',
