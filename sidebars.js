@@ -196,7 +196,7 @@ const sidebars = {
                 'getting-started/self-serve/apis/promote',
               ]
             },
-            'getting-started/self-serve/self-serve',
+            //'getting-started/self-serve/self-serve',
             'getting-started/self-serve/workflow-canvas',
           ]
         },

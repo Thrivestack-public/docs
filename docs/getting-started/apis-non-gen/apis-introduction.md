@@ -14,10 +14,37 @@ or Run the APIs in Postman.
 ThriveStack comprises two distinct modules: ['Self Serve'](/getting-started/self-serve/start-here) and ['Analyze'](/getting-started/analyze/instrumentation/overview)
 In line with this architecture, our APIs are bifurcated accordingly. Each module presents a unique set of APIs and functionalities, tailored to meet the specific requirements of each module.
 
-| Module | Description | APIs |
-|-------------|--------|--------|
-| **[Self Serve 🛎️](/category/self-serve-%EF%B8%8F-1)** | Enhance your Product with streamlined collaboration, seamless onboarding, and efficient workflow management.<br/> **Sample Use Cases:**<br/>1.<br/>2.| [Invitation](/graphql/invitation/directives/auth) <br/> [Onboarding](/graphql/onboarding/directives/auth) <br/> [Publish](/graphql/workflow/directives/deprecated) <br/> [Promote](/graphql/workflow/directives/deprecated)  |
-| **[Analyze 📈](/category/analyze--1)** | Integrate external data or create custom events for specific needs.<br/>**Sample Use Case:**<br/>1.<br/>2. | [/token](/public_apis/token) <br/> [/identify](/public_apis/identify) <br/> [/group](/public_apis/group) <br/> [/track](/public_apis/track) |
+<table>
+  <thead>
+    <tr>
+      <th>Module</th>
+      <th>Description</th>
+      <th>APIs</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong><a href="/category/self-serve-%EF%B8%8F-1">Self Serve 🛎️</a></strong></td>
+      <td>Enhance your Product with streamlined collaboration, seamless onboarding, and efficient workflow management.<br/><strong>Sample Use Cases:</strong><br/>1.<br/>2.</td>
+      <td>
+        <a href="/graphql/invitation/directives/auth">Invitation</a> <br/>
+        <a href="/graphql/onboarding/directives/auth">Onboarding</a> <br/>
+        <a href="/graphql/workflow/directives/deprecated">Publish</a> <br/>
+        <a href="/graphql/workflow/directives/deprecated">Promote</a>
+      </td>
+    </tr>
+    <tr>
+      <td><strong><a href="/category/analyze--1">Analyze 📈</a></strong></td>
+      <td>Integrate external data or create custom events for specific needs.<br/><strong>Sample Use Case:</strong><br/>1.<br/>2.</td>
+      <td>
+        <a href="/public_apis/token">/token</a> <br/>
+        <a href="/public_apis/identify">/identify</a> <br/>
+        <a href="/public_apis/group">/group</a> <br/>
+        <a href="/public_apis/track">/track</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 <br />
 

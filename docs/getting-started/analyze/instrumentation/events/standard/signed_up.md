@@ -4,11 +4,11 @@ The goal is to generate a ‘signed up’ event that enables SaaS builders to tr
 
 ![](/img/docs/events/signed_up.png)
 
-### 1.2. Track API
+## 1.2. Track API
 
 The `/track` endpoint is used to track events or actions performed by users. It allows you to associate and update event information as property.
 
-#### 1.2.1. Event Parameters
+### 1.2.1. Event Parameters
 
 To complete this step, you need to provide four pieces of information: the first is the event name, the second is the user ID, the third is additional properties associated with the event, and the fourth is the timestamp.
 
@@ -20,7 +20,7 @@ To complete this step, you need to provide four pieces of information: the first
 | timestamp   | Date   | Date the user’s account was first created. Recommends using ISO-8601 date strings. |
 | context (optional) | Object | Context is a dictionary of extra information that provides useful context about a datapoint. |
 
-#### 1.2.2. Event Properties
+### 1.2.2. Event Properties
 
 The following properties of how an event is described by a schema:
 
@@ -31,7 +31,7 @@ The following properties of how an event is described by a schema:
 | first_name  | String | The first name of the user.                 |
 | last_name   | String | The last name of the user.                  |
 
-#### 1.2.3. Sample
+### 1.2.3. Sample
 
 A JSON object with the required Event Object fields and any additional event properties.
 
@@ -47,7 +47,7 @@ A JSON object with the required Event Object fields and any additional event pro
 }
 ```
 
-[Try Out](../../../../../integrate/public_apis/track)
+### 1.2.4. [Try Out!](../../../../../integrate/public_apis/track)
 
 ```json
 {
@@ -66,15 +66,15 @@ A JSON object with the required Event Object fields and any additional event pro
 <br/>
 <hr/>
 
-## Signed Up With Invite Accepted Event
+# Signed Up With Invite Accepted Event
 
 The goal is to generate a ‘signed up through invitation’ event that enables SaaS builders to track when users sign up for their product.
 
-### 1.2. Track API
+## 1.2. Track API
 
 The `/track` endpoint is used to track events or actions performed by users. It allows you to associate and update event information as property.
 
-#### 1.2.1. Event Parameters
+### 1.2.1. Event Parameters
 
 To complete this step, you need to provide four pieces of information: the first is the event name, the second is the user ID, the third is additional properties associated with the event, and the fourth is the timestamp.
 
@@ -86,7 +86,7 @@ To complete this step, you need to provide four pieces of information: the first
 | timestamp   | Date   | Date the user’s account was first created. Recommends using ISO-8601 date strings. |
 | context (optional) | Object | Context is a dictionary of extra information that provides useful context about a datapoint. |
 
-#### 1.2.2. Event Properties
+### 1.2.2. Event Properties
 
 The following properties of how an event is described by a schema:
 
@@ -100,7 +100,7 @@ The following properties of how an event is described by a schema:
 | role        | String | The role of the person who invited.         |
 | referred_by | String | The origin of reference via.                |
 
-#### 1.2.3. Sample
+### 1.2.3. Sample
 
 A JSON object with the required Event Object fields and any additional event properties.
 
@@ -116,7 +116,7 @@ A JSON object with the required Event Object fields and any additional event pro
 }
 ```
 
-[Try Out](../../../../../integrate/public_apis/track)
+### 1.2.4. [Try Out!](../../../../../integrate/public_apis/track)
 
 ```json
 {
