@@ -1,16 +1,16 @@
 # Account Added User
 
-## 1. Introduction
+# 1. Introduction
 
 The aim is to generate an ‘account added user’ event that enables SaaS builders to track when a user is added to the account.
 
 ![](/img/docs/events/account_added_user.png)
 
-### 1.2. Track API
+## 1.2. Track API
 
 The `/track` endpoint is used to track events or actions performed by users. It allows you to associate and update event information as property.
 
-#### 1.2.1. Event Parameters
+### 1.2.1. Event Parameters
 
 To complete this step, you need to provide five pieces of information: the first is the event name, the second is the user ID, the third is the group ID, the fourth is additional properties associated with the event, and the fifth is the timestamp.
 
@@ -23,7 +23,7 @@ To complete this step, you need to provide five pieces of information: the first
 | timestamp   | Date   | Date the user’s account was first created. Recommends using ISO-8601 date strings. |
 | context (optional) | Object | Context is a dictionary of extra information that provides useful context about a datapoint. |
 
-#### 1.2.2. Event Properties
+### 1.2.2. Event Properties
 
 The following properties of how an event is described by a schema:
 
@@ -32,7 +32,7 @@ The following properties of how an event is described by a schema:
 | user_role         | String | The permission group for this user in this account. |
 | context.group_id  | String | The id of the account the user is being added to. |
 
-#### 1.2.3. Sample
+### 1.2.3. Sample
 
 A JSON object with the required Event Object fields and any additional event properties.
 
@@ -50,7 +50,7 @@ A JSON object with the required Event Object fields and any additional event pro
 }
 ```
 
-[Try Out](../../../../../integrate/public_apis/track)
+### 1.2.4. [Try Out!](../../../../../integrate/public_apis/track)
 
 ```json
 {

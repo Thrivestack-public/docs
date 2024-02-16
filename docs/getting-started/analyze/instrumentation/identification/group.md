@@ -4,38 +4,38 @@
 
 The Group API call is a method to associate an individual user with a group, such as a company, organization, account, project, or team.
 
-![](/img/docs/group-flowchart.png)
+![Group Identify Flowchart](/img/docs/group-flowchart.png)
 
-### 1.1. Group API
+## 1.1. Group API
 
 The `/group` endpoint is used to group users together based on shared properties or behaviors. It allows you to store and update company information for personalized experiences.
 
-### 1.2. Group Parameters
+## 1.2. Group Parameters
 
 You need to provide four pieces of information: the first is the unique identifier of the user, the second is the unique identifier of the account, the third is additional traits associated with the account, and the fourth is the timestamp.
 
-| Parameter  | Type   | Description                                        |
-|------------|--------|----------------------------------------------------|
-| group_id*  | String | The unique identifier of the group.                |
-| user_id*   | String | The unique identifier of the user.                 |
-| traits*    | Object | Additional traits associated with the group.       |
-| timestamp* | Date   | Date the event was first created. We recommend ISO-8601 date strings. |
-| context (optional) | Object | Context is a dictionary of extra information that provides useful context about a datapoint. |
+| Parameter  | Type   | Description                                                         |
+|------------|--------|---------------------------------------------------------------------|
+| `group_id*`| String | The unique identifier of the group.                                 |
+| `user_id*` | String | The unique identifier of the user.                                  |
+| `traits*`  | Object | Additional traits associated with the group.                        |
+| `timestamp*`| Date  | Date the event was first created. We recommend ISO-8601 date strings.|
+| `context` (optional) | Object | Context is a dictionary of extra information that provides useful context about a datapoint |
 
-### 1.3. Group Traits
+## 1.3. Group Traits
 
-The following traits described as traits:
+The following traits described as a traits:
 
-| Traits    | Type   | Description                                        |
-|-----------|--------|----------------------------------------------------|
-| address   | Object | Street address of a group. This should be a dictionary containing optional city, country, postal_code, state, or street. |
-| avatar    | String | URL to an avatar image for the group.              |
-| description | String | Description of the group, like their personal bio. |
-| email     | String | Email address of group.                            |
-| employees | String | Number of employees of a group, typically used for companies. |
-| phone     | String | Phone number of a group.                           |
-| website   | String | Website of a group.                                |
-| plan      | String | Plan that a group is in.                           |
+| Traits      | Type   | Description                                                                 |
+|-------------|--------|-----------------------------------------------------------------------------|
+| `address`   | Object | Street address of a group. This should be a dictionary containing optional city, country, postal_code, state, or street. |
+| `avatar`    | String | URL to an avatar image for the group.                                      |
+| `description`| String| Description of the group, like their personal bio.                         |
+| `email`     | String | Email address of group.                                                    |
+| `employees` | String | Number of employees of a group, typically used for companies.              |
+| `phone`     | String | Phone number of a group.                                                   |
+| `website`   | String | Website of a group.                                                        |
+| `plan`      | String | Plan that a group is in.                                                   |
 
 ### 1.4. Sample
 

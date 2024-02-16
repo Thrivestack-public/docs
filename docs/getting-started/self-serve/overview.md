@@ -1,7 +1,7 @@
 ---
 hide_table_of_contents: true
 ---
-# Overview
+# Introduction
 
 ThriveStack's Self Serve module offers a user-friendly, no-code approach with customizable API options, enabling effortless creation and personalization of user workflows to enhance user experience and engagement.
 

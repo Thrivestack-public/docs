@@ -76,3 +76,7 @@
   content: "patch";
   background-color: var(--openapi-code-orange);
 }
+
+td {
+  vertical-align: top;
+}
