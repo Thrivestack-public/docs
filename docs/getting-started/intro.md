@@ -3,6 +3,8 @@ hide_table_of_contents: true
 ---
 # Overview 🏁
 
+import { CardContainer } from './cardContainer.tsx';
+
 Welcome to the ThriveStack Documentation! ThriveStack enables you to implement PLG for your product within days. With our no-code workflow builders, you can create user workflows and enjoy features like authentication, automatic enrichment, bottom-up CRM, and much more right away.
 
 ThriveStack consists of two modules:
@@ -44,5 +46,8 @@ Below is a high-level overview diagram illustrating the core components of Thriv
 
 ![](/img/docs/image.png)
 
-Begin by familiarzing yourself with ThriveStack's [Self Serve](/getting-started/self-serve/overview) Module.
+Begin by familiarzing yourself with ThriveStack's [Self Serve](/getting-started/self-serve/overview) Module or Explore the things you can do with ThriveStack, 
+
+<CardContainer />
+
 

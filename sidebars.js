@@ -184,6 +184,7 @@ const sidebars = {
           items: [
             'getting-started/self-serve/overview',
             'getting-started/self-serve/start-here',
+            'getting-started/self-serve/customization',
             {
               type: 'category',
               label: 'APIs',
