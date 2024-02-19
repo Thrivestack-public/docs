@@ -5,7 +5,6 @@ hide_table_of_contents: true
 
 import { CardContainer } from './cardContainer.tsx';
 
-
 Welcome to the ThriveStack Documentation! ThriveStack enables you to implement PLG for your product within days. With our no-code workflow builders, you can create user workflows and enjoy features like authentication, automatic enrichment, bottom-up CRM, and much more right away.
 
 ThriveStack consists of two modules:
