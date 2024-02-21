@@ -67,23 +67,38 @@ const config = {
             position: 'left',
             value: '<span>|</span>'
           },
+          //{
+          //  type: 'docSidebar',
+          //  sidebarId: 'devsSidebar',
+          //  position: 'left',
+          //  label: 'Developers',
+          //},
+          //{
+          //  type: 'docSidebar',
+          //  sidebarId: 'pmsSidebar',
+          //  position: 'left',
+          //  label: 'Growth',
+          //},
+          //{
+          //  type: 'docSidebar',
+          //  sidebarId: 'gtmLeadersSidebar',
+          //  position: 'left',
+          //  label: 'GTM Leaders',
+          //},
           {
-            type: 'docSidebar',
-            sidebarId: 'devsSidebar',
             position: 'left',
-            label: 'Developers',
+            label: 'Self Serve',
+            href: '/getting-started/self-serve/overview'
           },
           {
-            type: 'docSidebar',
-            sidebarId: 'pmsSidebar',
+            type: 'html',
             position: 'left',
-            label: 'Growth',
+            value: '<span>|</span>'
           },
           {
-            type: 'docSidebar',
-            sidebarId: 'gtmLeadersSidebar',
             position: 'left',
-            label: 'GTM Leaders',
+            label: 'Analyze',
+            href: '/getting-started/analyze/instrumentation/overview'
           },
           {
             type: 'docSidebar',
@@ -104,16 +119,12 @@ const config = {
                 to: '/getting-started/intro',
               },
               {
-                label: 'Developers',
-                to: '/category/developers--1',
+                label: 'Self Serve',
+                to: '/getting-started/self-serve/overview',
               },
               {
-                label: 'Growth',
-                to: '/category/growth--1',
-              },
-              {
-                label: 'GTM Leaders',
-                to: '/category/gtm-leaders--1',
+                label: 'Analyze',
+                to: '/getting-started/analyze/instrumentation/overview',
               },
             ],
           },

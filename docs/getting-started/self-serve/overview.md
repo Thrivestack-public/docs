@@ -3,16 +3,22 @@ hide_table_of_contents: true
 ---
 # Introduction
 
+import { NumberBadge } from '../numberBadge.tsx';
+
 ThriveStack's Self Serve module offers a user-friendly, no-code approach with customizable API options, enabling effortless creation and personalization of user workflows to enhance user experience and engagement.
+
+
+
+![](/img/docs/self_serve/overview/self-serve.png)
 
 <table>
   <thead>
     <tr>
       <th></th>
-      <th>Sign Up for Product 📝</th>
-      <th>Step 1: Customize 🛠️</th>
-      <th>Step 2: Integrate 🔗</th>
-      <th>Step 3: Go-Live 🚀</th>
+      <th><NumberBadge number={0} color={'#777'}/> <a href="https://signup.dev.app.thrivestack.ai/auth/sign-up">Sign Up for Product</a> 📝</th>
+      <th><NumberBadge number={1} color={'#9747ff'}/> <a href="/getting-started/self-serve/customize/authentication">Customize </a> 🛠️</th>
+      <th><NumberBadge number={2} color={'#9747ff'}/> <a href="/getting-started/self-serve/integrate/placeholder">Integrate </a> 🔗</th>
+      <th><NumberBadge number={3} color={'#9747ff'}/> <a href="/getting-started/self-serve/go-live/placeholder">Go Live </a> 🚀</th>
     </tr>
   </thead>
   <tbody>

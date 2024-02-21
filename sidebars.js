@@ -161,17 +161,17 @@ const sidebars = {
       label: 'Getting Started 🌟',
       items: [
         'getting-started/intro',
-        {
-          type: 'category', 
-          label: 'Personas 👥',
-          link: {
-            type: 'generated-index',
-            title: 'Personas',
-            description: "Persona Level Documentation",
-            keywords: ["personas"],
-          },
-          items: [...dev, ...pms, ...gtm],
-        },
+        //{
+        //  type: 'category', 
+        //  label: 'Personas 👥',
+        //  link: {
+        //    type: 'generated-index',
+        //    title: 'Personas',
+        //    description: "Persona Level Documentation",
+        //    keywords: ["personas"],
+        //  },
+        //  items: [...dev, ...pms, ...gtm],
+        //},
         {
           type: 'category', 
           label: 'SELF SERVE 🛎️',
@@ -184,7 +184,35 @@ const sidebars = {
           items: [
             'getting-started/self-serve/overview',
             'getting-started/self-serve/start-here',
-            'getting-started/self-serve/customization',
+            {
+              type: 'category',
+              label: 'Customize 🛠️',
+              items: [
+                'getting-started/self-serve/customize/authentication',
+                'getting-started/self-serve/customize/enrichment',
+                'getting-started/self-serve/customize/waitlist',
+                'getting-started/self-serve/customize/onboarding',
+                'getting-started/self-serve/customize/store_leads',
+                'getting-started/self-serve/customize/pricing',
+                'getting-started/self-serve/customize/create_tenant',
+                'getting-started/self-serve/customize/notification',
+                'getting-started/self-serve/customize/redirection',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Integrate 🔗',
+              items: [
+                'getting-started/self-serve/integrate/placeholder',
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Go Live 🚀',
+              items: [
+                'getting-started/self-serve/go-live/placeholder',
+              ]
+            },
             {
               type: 'category',
               label: 'APIs',
@@ -204,19 +232,25 @@ const sidebars = {
         {
           type: 'category', 
           label: 'ANALYZE 📈',
-          link: {
-            type: 'generated-index',
-            title: 'Analyze',
-            description: "Get started with ThriveStack's Analyze Module",
-            keywords: ['analyze'],
-          },
+          //link: {
+          //  type: 'generated-index',
+          //  title: 'Analyze',
+          //  description: "Get started with ThriveStack's Analyze Module",
+          //  keywords: ['analyze'],
+          //},
           items: [
           //"getting-started/analyze/intro", // Delete this, this is empty
           'getting-started/analyze/instrumentation/overview',
-          "getting-started/analyze/authentication",
-          'getting-started/analyze/instrumentation/identification/user',
-          'getting-started/analyze/instrumentation/identification/group',
-          'getting-started/analyze/instrumentation/events/event-tracking',
+          {
+              type: 'category',
+              label: 'APIs',
+              items: [
+                "getting-started/analyze/authentication",
+                'getting-started/analyze/instrumentation/identification/user',
+                'getting-started/analyze/instrumentation/identification/group',
+                'getting-started/analyze/instrumentation/events/event-tracking',
+              ],
+          },
           {
             type: 'category', 
             label: 'Events',

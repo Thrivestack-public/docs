@@ -34,7 +34,7 @@ In line with this architecture, our APIs are bifurcated accordingly. Each module
       </td>
     </tr>
     <tr>
-      <td><strong><a href="/category/analyze--1">Analyze 📈</a></strong></td>
+      <td><strong><a href="/getting-started/analyze/instrumentation/overview">Analyze 📈</a></strong></td>
       <td>Integrate external data or create custom events for specific needs.<br/><strong>Sample Use Case:</strong><br/>1.<br/>2.</td>
       <td>
         <a href="/public_apis/token">/token</a> <br/>
