@@ -118,16 +118,12 @@ const config = {
                 to: '/getting-started/intro',
               },
               {
-                label: 'Developers',
-                to: '/category/developers--1',
+                label: 'Self Serve',
+                to: '/getting-started/self-serve/overview',
               },
               {
-                label: 'Growth',
-                to: '/category/growth--1',
-              },
-              {
-                label: 'GTM Leaders',
-                to: '/category/gtm-leaders--1',
+                label: 'Analyze',
+                to: '/getting-started/analyze/instrumentation/overview',
               },
             ],
           },
