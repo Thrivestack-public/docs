@@ -67,23 +67,37 @@ const config = {
             position: 'left',
             value: '<span>|</span>'
           },
+          //{
+          //  type: 'docSidebar',
+          //  sidebarId: 'devsSidebar',
+          //  position: 'left',
+          //  label: 'Developers',
+          //},
+          //{
+          //  type: 'docSidebar',
+          //  sidebarId: 'pmsSidebar',
+          //  position: 'left',
+          //  label: 'Growth',
+          //},
+          //{
+          //  type: 'docSidebar',
+          //  sidebarId: 'gtmLeadersSidebar',
+          //  position: 'left',
+          //  label: 'GTM Leaders',
+          //},
           {
-            type: 'docSidebar',
-            sidebarId: 'devsSidebar',
+            //type: 'docSidebar',
+            //sidebarId: 'selfServeSidebar',
             position: 'left',
-            label: 'Developers',
+            label: 'Self Serve',
+            href: '/getting-started/self-serve/overview'
           },
           {
-            type: 'docSidebar',
-            sidebarId: 'pmsSidebar',
+            //type: 'docSidebar',
+            //sidebarId: 'selfServeSidebar',
             position: 'left',
-            label: 'Growth',
-          },
-          {
-            type: 'docSidebar',
-            sidebarId: 'gtmLeadersSidebar',
-            position: 'left',
-            label: 'GTM Leaders',
+            label: 'Analyze',
+            href: '/getting-started/analyze/instrumentation/overview'
           },
           {
             type: 'docSidebar',

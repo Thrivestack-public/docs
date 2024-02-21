@@ -161,17 +161,17 @@ const sidebars = {
       label: 'Getting Started 🌟',
       items: [
         'getting-started/intro',
-        {
-          type: 'category', 
-          label: 'Personas 👥',
-          link: {
-            type: 'generated-index',
-            title: 'Personas',
-            description: "Persona Level Documentation",
-            keywords: ["personas"],
-          },
-          items: [...dev, ...pms, ...gtm],
-        },
+        //{
+        //  type: 'category', 
+        //  label: 'Personas 👥',
+        //  link: {
+        //    type: 'generated-index',
+        //    title: 'Personas',
+        //    description: "Persona Level Documentation",
+        //    keywords: ["personas"],
+        //  },
+        //  items: [...dev, ...pms, ...gtm],
+        //},
         {
           type: 'category', 
           label: 'SELF SERVE 🛎️',
@@ -204,19 +204,25 @@ const sidebars = {
         {
           type: 'category', 
           label: 'ANALYZE 📈',
-          link: {
-            type: 'generated-index',
-            title: 'Analyze',
-            description: "Get started with ThriveStack's Analyze Module",
-            keywords: ['analyze'],
-          },
+          //link: {
+          //  type: 'generated-index',
+          //  title: 'Analyze',
+          //  description: "Get started with ThriveStack's Analyze Module",
+          //  keywords: ['analyze'],
+          //},
           items: [
           //"getting-started/analyze/intro", // Delete this, this is empty
           'getting-started/analyze/instrumentation/overview',
-          "getting-started/analyze/authentication",
-          'getting-started/analyze/instrumentation/identification/user',
-          'getting-started/analyze/instrumentation/identification/group',
-          'getting-started/analyze/instrumentation/events/event-tracking',
+          {
+              type: 'category',
+              label: 'APIs',
+              items: [
+                "getting-started/analyze/authentication",
+                'getting-started/analyze/instrumentation/identification/user',
+                'getting-started/analyze/instrumentation/identification/group',
+                'getting-started/analyze/instrumentation/events/event-tracking',
+              ],
+          },
           {
             type: 'category', 
             label: 'Events',
