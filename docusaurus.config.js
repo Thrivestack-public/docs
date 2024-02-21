@@ -86,15 +86,16 @@ const config = {
           //  label: 'GTM Leaders',
           //},
           {
-            //type: 'docSidebar',
-            //sidebarId: 'selfServeSidebar',
             position: 'left',
             label: 'Self Serve',
             href: '/getting-started/self-serve/overview'
           },
           {
-            //type: 'docSidebar',
-            //sidebarId: 'selfServeSidebar',
+            type: 'html',
+            position: 'left',
+            value: '<span>|</span>'
+          },
+          {
             position: 'left',
             label: 'Analyze',
             href: '/getting-started/analyze/instrumentation/overview'
