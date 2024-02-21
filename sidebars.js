@@ -184,7 +184,35 @@ const sidebars = {
           items: [
             'getting-started/self-serve/overview',
             'getting-started/self-serve/start-here',
-            'getting-started/self-serve/customization',
+            {
+              type: 'category',
+              label: 'Customize 🛠️',
+              items: [
+                'getting-started/self-serve/customize/authentication',
+                'getting-started/self-serve/customize/enrichment',
+                'getting-started/self-serve/customize/waitlist',
+                'getting-started/self-serve/customize/onboarding',
+                'getting-started/self-serve/customize/store_leads',
+                'getting-started/self-serve/customize/pricing',
+                'getting-started/self-serve/customize/create_tenant',
+                'getting-started/self-serve/customize/notification',
+                'getting-started/self-serve/customize/redirection',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Integrate 🔗',
+              items: [
+                'getting-started/self-serve/integrate/placeholder',
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Go Live 🚀',
+              items: [
+                'getting-started/self-serve/go-live/placeholder',
+              ]
+            },
             {
               type: 'category',
               label: 'APIs',
