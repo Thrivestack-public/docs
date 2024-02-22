@@ -188,6 +188,7 @@ const sidebars = {
               type: 'category',
               label: 'Customize 🛠️',
               items: [
+                'getting-started/self-serve/customize/http_trigger',
                 'getting-started/self-serve/customize/authentication',
                 'getting-started/self-serve/customize/enrichment',
                 'getting-started/self-serve/customize/waitlist',
@@ -226,7 +227,7 @@ const sidebars = {
               ]
             },
             //'getting-started/self-serve/self-serve',
-            'getting-started/self-serve/workflow-canvas',
+            //'getting-started/self-serve/workflow-canvas',
           ]
         },
         {
@@ -286,10 +287,10 @@ const sidebars = {
               items: [
                 'getting-started/analyze/reports/overview',
                 'getting-started/analyze/reports/standard/acquisition',
-                'getting-started/analyze/reports/standard/activation',
-                'getting-started/analyze/reports/standard/retention',
-                'getting-started/analyze/reports/standard/engagement',
-                'getting-started/analyze/reports/standard/expansion',
+                //'getting-started/analyze/reports/standard/activation',
+                //'getting-started/analyze/reports/standard/retention',
+                //'getting-started/analyze/reports/standard/engagement',
+                //'getting-started/analyze/reports/standard/expansion',
                 {
                   type: 'category', 
                   label: 'Custom',
