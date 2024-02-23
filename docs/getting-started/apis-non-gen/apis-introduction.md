@@ -1,11 +1,16 @@
+---
+hide_table_of_contents: true
+---
 # Start Here 🚀
 
 Explore ThriveStack's API reference documentation. You are even test out the APIs directly from the browser,
 or Run the APIs in Postman.
 
-> 🎉 **Enjoy effortless no-code solutions for standard tasks!** 
->
-> API integrations aren't necessary for Self Serve Creation, Events, and Reports. But for those custom tweaks, 🛠️ our APIs have got you covered.
+:::tip
+ 🎉 **Enjoy effortless no-code solutions for standard tasks!** 
+
+ API integrations aren't necessary for Self Serve Creation, Events, and Reports. But for those custom tweaks, 🛠️ our APIs have got you covered.
+:::
 
 <br />
 
@@ -24,23 +29,69 @@ In line with this architecture, our APIs are bifurcated accordingly. Each module
   </thead>
   <tbody>
     <tr>
-      <td><strong><a href="/category/self-serve-%EF%B8%8F-1">Self Serve 🛎️</a></strong></td>
-      <td>Enhance your Product with streamlined collaboration, seamless onboarding, and efficient workflow management.<br/><strong>Sample Use Cases:</strong><br/>1.<br/>2.</td>
+      <td><strong><a href="/category/self-serve">Self Serve 🛎️</a></strong></td>
+      <td>Enhance your Product with streamlined collaboration, seamless onboarding, and efficient workflow management.<br/><br/><strong>Sample Use Cases:</strong><br/>1.<br/>2.</td>
       <td>
-        <a href="/graphql/invitation/directives/auth">Invitation</a> <br/>
-        <a href="/graphql/onboarding/directives/auth">Onboarding</a> <br/>
-        <a href="/graphql/workflow/directives/deprecated">Publish</a> <br/>
-        <a href="/graphql/workflow/directives/deprecated">Promote</a>
+        <table>
+          <tr>
+            <th>Feature</th>
+            <th>What?</th>
+            <th>How?</th>
+          </tr>
+          <tr>
+            <td>Invitation</td>
+            <td><a href="/getting-started/self-serve/apis/invitation">Details</a></td>
+            <td><a href="/graphql/invitation/directives/auth">Implementation</a></td>
+          </tr>
+          <tr>
+            <td>Onboarding</td>
+            <td><a href="/getting-started/self-serve/apis/onboarding">Details</a></td>
+            <td><a href="/graphql/onboarding/directives/auth">Implementation</a></td>
+          </tr>
+          <tr>
+            <td>Publish</td>
+            <td><a href="/getting-started/self-serve/apis/publish">Details</a></td>
+            <td><a href="/graphql/workflow/directives/deprecated">Implementation</a></td>
+          </tr>
+          <tr>
+            <td>Promote</td>
+            <td><a href="/getting-started/self-serve/apis/promote">Details</a></td>
+            <td><a href="/graphql/workflow/directives/deprecated">Implementation</a></td>
+          </tr>
+        </table>
       </td>
     </tr>
     <tr>
       <td><strong><a href="/getting-started/analyze/instrumentation/overview">Analyze 📈</a></strong></td>
-      <td>Integrate external data or create custom events for specific needs.<br/><strong>Sample Use Case:</strong><br/>1.<br/>2.</td>
+      <td>Integrate external data or create custom events for specific needs.<br/><br/><strong>Sample Use Case:</strong><br/>1.<br/>2.</td>
       <td>
-        <a href="/public_apis/token">/token</a> <br/>
-        <a href="/public_apis/identify">/identify</a> <br/>
-        <a href="/public_apis/group">/group</a> <br/>
-        <a href="/public_apis/track">/track</a>
+        <table>
+          <tr>
+            <th>Feature</th>
+            <th>What?</th>
+            <th>How?</th>
+          </tr>
+          <tr>
+            <td>Token</td>
+            <td><a href="/getting-started/analyze/authentication">Details</a></td>
+            <td><a href="/public_apis/token">Implementation</a></td>
+          </tr>
+          <tr>
+            <td>Identify</td>
+            <td><a href="/getting-started/analyze/instrumentation/identification/user">Details</a></td>
+            <td><a href="/public_apis/identify">Implementation</a></td>
+          </tr>
+          <tr>
+            <td>Group</td>
+            <td><a href="/getting-started/analyze/instrumentation/identification/group">Details</a></td>
+            <td><a href="/public_apis/group">Implementation</a></td>
+          </tr>
+          <tr>
+            <td>Track</td>
+            <td><a href="/getting-started/analyze/instrumentation/events/event-tracking">Details</a></td>
+            <td><a href="/public_apis/track">Implementation</a></td>
+          </tr>
+        </table>
       </td>
     </tr>
   </tbody>
