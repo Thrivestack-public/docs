@@ -88,7 +88,7 @@ ThriveStack's Self Serve module offers a user-friendly, no-code approach with cu
 
 ThriveStack's Self Serve feature offer the following,
 
-- 🧩 **[No-Code Workflow Orchestration](/getting-started/self-serve/start-here):** Easily create and manage user workflows without writing a single line of code.
+- 🧩 **[No-Code Workflow Orchestration](/getting-started/self-serve/features/no_code_orchestration):** Easily create and manage user workflows without writing a single line of code.
 - 🔒 **[Seamless Authentication](/getting-started/self-serve/customization#authentication):** Provide robust and secure user authentication, with options for custom or third-party authentication integration.
 - 👥 **[User and Account Provisioning](/getting-started/self-serve/customization#authentication):** Streamline the provisioning of users and accounts for seamless access to your SaaS product.
 - 🌟 **[Automatic Data Enrichment](/getting-started/self-serve/customization#enrichment):** Enhance your user data automatically for better insights.

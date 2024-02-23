@@ -1,4 +1,4 @@
-# Start Here 🚀
+# Start Here
 
 Welcome to your quick start guide on creating and implementing User Workflows with ThriveStack. We're kicking things off with the Sign-Up Workflow. Let's dive in!
 

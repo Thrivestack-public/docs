@@ -158,7 +158,7 @@ const sidebars = {
   getStartedSidebar: [
     {
       type: 'category', 
-      label: 'Getting Started 🌟',
+      label: 'Getting Started',
       items: [
         'getting-started/intro',
         //{
@@ -174,7 +174,7 @@ const sidebars = {
         //},
         {
           type: 'category', 
-          label: 'SELF SERVE 🛎️',
+          label: 'Self Serve',
           link: {
             type: 'generated-index',
             title: 'Self Serve',
@@ -186,7 +186,7 @@ const sidebars = {
             'getting-started/self-serve/start-here',
             {
               type: 'category',
-              label: 'Customize 🛠️',
+              label: 'Customize',
               items: [
                 'getting-started/self-serve/customize/http_trigger',
                 'getting-started/self-serve/customize/authentication',
@@ -202,14 +202,14 @@ const sidebars = {
             },
             {
               type: 'category',
-              label: 'Integrate 🔗',
+              label: 'Integrate',
               items: [
                 'getting-started/self-serve/integrate/placeholder',
               ]
             },
             {
               type: 'category',
-              label: 'Go Live 🚀',
+              label: 'Go Live',
               items: [
                 'getting-started/self-serve/go-live/placeholder',
               ]
@@ -228,11 +228,18 @@ const sidebars = {
             },
             //'getting-started/self-serve/self-serve',
             //'getting-started/self-serve/workflow-canvas',
+            {
+              type: 'category',
+              label: 'Features',
+              items: [
+                "getting-started/self-serve/features/no_code_orchestration"
+              ]
+            }
           ]
         },
         {
           type: 'category', 
-          label: 'ANALYZE 📈',
+          label: 'Analyze',
           //link: {
           //  type: 'generated-index',
           //  title: 'Analyze',
@@ -323,7 +330,7 @@ const sidebars = {
     "getting-started/apis-non-gen/using-the-try-out-options",
     {
       type: "category",
-      label: "Self Serve 🛎️",
+      label: "Self Serve",
       link: {
         type: "generated-index",
         title: "API",
@@ -339,7 +346,7 @@ const sidebars = {
     },
     {
       type: "category",
-      label: "Analyze 📈",
+      label: "Analyze",
       link: {
         type: "generated-index",
         title: "API",
