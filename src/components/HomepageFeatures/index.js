@@ -7,22 +7,22 @@ import SelfServeDiagram from './Diagrams/selfServe.js';
 const FeatureList = [
   {
     title: 'An Overview',
-    description: (<>Learn how to Enable your product to go from “Contact-Us” to “Sign Up, Try and Buy”</>),
+    description: (<div className={styles.description}>Enable your product to go from <strong>“Contact-Us” to “Sign Up, Try and Buy</strong>”</div>),
     diagram: (<IntroDiagram />),
-    cta: 'Get Started',
+    cta: (<button className={styles.cta_button}>Get Started</button>),
   },
   {
     title: 'Build Self-Serve',
-    description: (<>Implement secure and scalable self-service infrastructure at ludicrous speed with predefined signup blueprints.</>),
+    description: (<div className={styles.description}>Implement secure and scalable self-service infrastructure at ludicrous speed with predefined signup blueprints.</div>),
     diagram: (<SelfServeDiagram />),
-    cta: 'Build Today',
-    capsule: 'Product Engineering',
+    cta: (<button className={`${styles.cta_button} ${styles.product_color}`}>Build Today</button>),
+    capsule:(<div className={`${styles.capsule} ${styles.product_color}`}>Product Engineering</div>),
   },
   {
     title: 'Analyze Customer Journey',
-    description: (<>Implement secure and scalable self-service infrastructure at ludicrous speed with predefined signup blueprints.</>),
-    cta: 'Analyze Now',
-    capsule: 'Growth & Data Analytics',
+    description: (<div className={styles.description}>Implement secure and scalable self-service infrastructure at ludicrous speed with predefined signup blueprints.</div>),
+    cta: (<button className={`${styles.cta_button} ${styles.growth_color}`}>Analyze Now</button>),
+    capsule:(<div className={`${styles.capsule} ${styles.growth_color}`}>Growth & Data Analytics</div>),
   },
 ];
 
@@ -30,8 +30,10 @@ function Feature({diagram, title, description, cta, capsule}) {
   return (
     <div className={styles.feature}> 
       <div className={styles.main}>
-        {capsule && <div className={styles.capsule}>{capsule}</div>}
-        <div className={styles.content}><h1>{title}</h1>{description}</div>
+        {capsule}
+        <div className={styles.content}>
+          <h1>{title}</h1>{description}
+        </div>
         <div className={styles.cta}>{cta}</div>
       </div>
       <div className={styles.diagram}>{diagram}</div>

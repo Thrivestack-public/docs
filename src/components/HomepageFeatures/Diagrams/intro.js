@@ -17,7 +17,7 @@ export default function IntroDiagram(){
     
     <div className={`${intro.box} ${intro.box2}`}>
       <span className={intro.dot}>1</span>
-      <div className={intro.capsule}>
+      <div className={`${intro.capsule} ${intro.product_color}`}>
         <span>Product Engineering</span>
       </div>
        <div className={intro.content}>
@@ -28,7 +28,7 @@ export default function IntroDiagram(){
     
     <div className={`${intro.box} ${intro.box3}`}>
       <span className={intro.dot}>2</span>
-      <div className={intro.capsule}>
+      <div className={`${intro.capsule} ${intro.growth_color}`}>
         <span>Growth & Data Analytics</span>
       </div>
        <div className={intro.content}>

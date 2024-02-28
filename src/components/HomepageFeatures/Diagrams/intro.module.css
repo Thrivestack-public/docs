@@ -128,3 +128,13 @@
   text-decoration: none;
   font-size: 16px;
 }
+
+.product_color {
+  color: white;
+  background-color: black;
+}
+
+.growth_color {
+  color: white;
+  background-color: #b444cc;
+}
