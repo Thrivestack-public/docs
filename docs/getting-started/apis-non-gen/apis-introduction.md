@@ -30,66 +30,48 @@ In line with this architecture, our APIs are bifurcated accordingly. Each module
   <tbody>
     <tr>
       <td><strong><a href="/category/self-serve">Self Serve 🛎️</a></strong></td>
-      <td>Enhance your Product with streamlined collaboration, seamless onboarding, and efficient workflow management.<br/><br/><strong>Sample Use Cases:</strong><br/>1.<br/>2.</td>
+      <td>Enhance your Product with streamlined collaboration, seamless onboarding, and efficient workflow management.<br/><br/><strong>Sample Use Cases:</strong><br/>1. Invite one or multiple users to your product.<br/>2. Publish your no-code user workflow to development environment.</td>
       <td>
         <table>
           <tr>
-            <th>Feature</th>
-            <th>What?</th>
-            <th>How?</th>
+            <td><a href="/getting-started/self-serve/apis/invitation">Invitation</a></td>
+            <td><a href="/graphql/invitation/directives/auth">API Reference</a></td>
           </tr>
           <tr>
-            <td>Invitation</td>
-            <td><a href="/getting-started/self-serve/apis/invitation">Details</a></td>
-            <td><a href="/graphql/invitation/directives/auth">Implementation</a></td>
+            <td><a href="/getting-started/self-serve/apis/onboarding">Onboarding</a></td>
+            <td><a href="/graphql/onboarding/directives/auth">API Reference</a></td>
           </tr>
           <tr>
-            <td>Onboarding</td>
-            <td><a href="/getting-started/self-serve/apis/onboarding">Details</a></td>
-            <td><a href="/graphql/onboarding/directives/auth">Implementation</a></td>
+            <td><a href="/getting-started/self-serve/apis/publish">Publish</a></td>
+            <td><a href="/graphql/workflow/directives/deprecated">API Reference</a></td>
           </tr>
           <tr>
-            <td>Publish</td>
-            <td><a href="/getting-started/self-serve/apis/publish">Details</a></td>
-            <td><a href="/graphql/workflow/directives/deprecated">Implementation</a></td>
-          </tr>
-          <tr>
-            <td>Promote</td>
-            <td><a href="/getting-started/self-serve/apis/promote">Details</a></td>
-            <td><a href="/graphql/workflow/directives/deprecated">Implementation</a></td>
+            <td><a href="/getting-started/self-serve/apis/promote">Promote</a></td>
+            <td><a href="/graphql/workflow/directives/deprecated">API Reference</a></td>
           </tr>
         </table>
       </td>
     </tr>
     <tr>
       <td><strong><a href="/getting-started/analyze/instrumentation/overview">Analyze 📈</a></strong></td>
-      <td>Integrate external data or create custom events for specific needs.<br/><br/><strong>Sample Use Case:</strong><br/>1.<br/>2.</td>
+      <td>Integrate external data or create custom events for specific needs.<br/><br/><strong>Sample Use Case:</strong><br/>1. Track the events or actions performed by the user on you product.<br/>2. Collect information about a newly signed up user.</td>
       <td>
         <table>
           <tr>
-            <th>Feature</th>
-            <th>What?</th>
-            <th>How?</th>
+            <td><a href="/getting-started/analyze/authentication">Token</a></td>
+            <td><a href="/public_apis/token">API Reference</a></td>
           </tr>
           <tr>
-            <td>Token</td>
-            <td><a href="/getting-started/analyze/authentication">Details</a></td>
-            <td><a href="/public_apis/token">Implementation</a></td>
+            <td><a href="/getting-started/analyze/instrumentation/identification/user">Identify</a></td>
+            <td><a href="/public_apis/identify">API Reference</a></td>
           </tr>
           <tr>
-            <td>Identify</td>
-            <td><a href="/getting-started/analyze/instrumentation/identification/user">Details</a></td>
-            <td><a href="/public_apis/identify">Implementation</a></td>
+            <td><a href="/getting-started/analyze/instrumentation/identification/group">Group</a></td>
+            <td><a href="/public_apis/group">API Reference</a></td>
           </tr>
           <tr>
-            <td>Group</td>
-            <td><a href="/getting-started/analyze/instrumentation/identification/group">Details</a></td>
-            <td><a href="/public_apis/group">Implementation</a></td>
-          </tr>
-          <tr>
-            <td>Track</td>
-            <td><a href="/getting-started/analyze/instrumentation/events/event-tracking">Details</a></td>
-            <td><a href="/public_apis/track">Implementation</a></td>
+            <td><a href="/getting-started/analyze/instrumentation/events/event-tracking">Track</a></td>
+            <td><a href="/public_apis/track">API Reference</a></td>
           </tr>
         </table>
       </td>
