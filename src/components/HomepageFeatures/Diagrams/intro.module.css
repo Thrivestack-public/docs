@@ -24,10 +24,11 @@
 }
 
 .box:hover {
-  box-shadow: 0 10px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 8px rgba(0,0,0,0.15);
 }
 
 .dot {
+  color: white;
   position: absolute;
   height: 25px;
   width: 25px;
@@ -127,6 +128,11 @@
   color: blue;
   text-decoration: none;
   font-size: 16px;
+}
+
+.get_started_color {
+  color: white;
+  background-color: #405cf5;
 }
 
 .product_color {

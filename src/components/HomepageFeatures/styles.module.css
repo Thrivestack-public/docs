@@ -8,6 +8,21 @@
   width: 100%;
 }
 
+.dotted_background {
+  background-color: #e5e5f7;
+  background-image: radial-gradient(#444cf7 0.5px, #fefefe 0.5px);
+  background-size: 10px 10px;
+}
+
+.feature_wrapper {
+  /* background-color: black; */
+
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 0.15rem 0;
+}
+
 .feature {
   /* background-color: red; */
 
