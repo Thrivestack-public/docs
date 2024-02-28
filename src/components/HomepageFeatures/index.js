@@ -1,46 +1,43 @@
 import React from 'react';
 import clsx from 'clsx';
 import styles from './styles.module.css';
+import IntroDiagram from './Diagrams/intro.js';
+import SelfServeDiagram from './Diagrams/selfServe.js';
 
 const FeatureList = [
   {
-    title: 'For Developers',
-    Svg: require('@site/static/img/developer.svg').default,
-    description: (
-      <>
-      Implement secure and scalable self-service infrastructure at ludicrous speed with predefined signup blueprints.
-      </>
-    ),
+    title: 'An Overview',
+    description: (<div className={styles.description}>Enable your product to go from <strong>“Contact-Us” to “Sign Up, Try and Buy</strong>”</div>),
+    diagram: (<IntroDiagram />),
+    cta: (<a href="/getting-started/intro"><button  className={styles.cta_button}>Get Started</button></a>),
   },
   {
-    title: 'For GTM Leaders',
-    Svg: require('@site/static/img/gtm.svg').default,
-    description: (
-      <>
-      Ship your product at ludicrous speed with a single platform to - activate, engage, and monetize users.
-      </>
-    ),
+    title: 'Build Self-Serve',
+    description: (<div className={styles.description}>Implement secure and scalable self-service infrastructure at ludicrous speed with predefined signup blueprints.</div>),
+    diagram: (<SelfServeDiagram />),
+    cta: (<a href="/getting-started/self-serve/overview"><button className={`${styles.cta_button} ${styles.product_color}`}>Build Today</button></a>),
+    capsule:(<div className={`${styles.capsule} ${styles.product_color}`}>Product Engineering</div>),
   },
   {
-    title: 'For Product Managers',
-    Svg: require('@site/static/img/pm.svg').default,
-    description: (
-      <>
-      Elevate PLG strategies with our intuitive analytics tool. Gain real-time insights for informed decisions on user engagement, adoption, and conversion metrics.
-      </>
-    ),
+    title: 'Analyze Customer Journey',
+    description: (<div className={styles.description}>Implement secure and scalable self-service infrastructure at ludicrous speed with predefined signup blueprints.</div>),
+    cta: (<a href="/getting-started/analyze/instrumentation/overview"><button className={`${styles.cta_button} ${styles.growth_color}`}>Analyze Now</button></a>),
+    capsule:(<div className={`${styles.capsule} ${styles.growth_color}`}>Growth & Data Analytics</div>),
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({diagram, title, description, cta, capsule}) {
   return (
-    <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
-      </div>
-      <div className="text--center padding-horiz--md">
-        <h3>{title}</h3>
-        <p>{description}</p>
+    <div className={`${styles.feature_wrapper}`}> 
+      <div className={`${styles.feature} ${styles.dotted_background}`}> 
+        <div className={styles.main}>
+          {capsule}
+          <div className={styles.content}>
+            <h1>{title}</h1>{description}
+          </div>
+          <div className={styles.cta}>{cta}</div>
+        </div>
+        <div className={styles.diagram}>{diagram}</div>
       </div>
     </div>
   );
@@ -48,14 +45,10 @@ function Feature({Svg, title, description}) {
 
 export default function HomepageFeatures() {
   return (
-    <section className={styles.features}>
-      <div className="container">
-        <div className="row">
+    <section className={`${styles.features} `}>
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
           ))}
-        </div>
-      </div>
     </section>
   );
 }

@@ -1,0 +1,146 @@
+.container {
+  display: flex;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  padding: 2rem;
+}
+
+.line {
+  position: absolute;
+  border-top: 1px solid #9999;
+}
+
+.box {
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  background-color: #eee;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: box-shadow 0.3s ease;
+  margin-top: 10px;
+}
+
+.box:hover {
+  box-shadow: 0 10px 8px rgba(0,0,0,0.15);
+}
+
+.dot {
+  color: white;
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  background-color: #bbb;
+  border-radius: 50%;
+  left: -10px;
+  top: -5px;
+  
+  display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.capsule{
+  position: absolute;
+  width: 242px;
+  height: 30px;
+
+  background: #D9D9D9;
+  border-radius: 31px;
+
+   top: -10px;
+   right: 10px;
+
+}
+
+.capsule span {
+   display: flex;
+   height: 100%;
+   align-items: center;
+   justify-content: center;
+}
+
+.content {
+  display: flex;
+}
+
+.box1 {
+  top: 100px;
+  text-align: center;
+}
+
+.box1 .content {
+  flex-direction: column;
+}
+
+.box2 {
+  width: 350px;
+  top: 0px;
+  left: 270px;
+}
+
+.box2 .content {
+  margin-left: 20px;
+  margin-right: 20px;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.box3 {
+  width: 400px;
+  top: 200px;
+  left: 270px;
+}
+
+.box3 .content {
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.line1{
+    width: 100px;
+    transform: rotate(-45.56deg);
+    left: 200px;
+    top: 110px;
+}
+
+.line2{
+    width: 100px;
+    transform: rotate(-128.84deg);
+    left: 200px;
+    top: 210px;
+}
+
+.content h1 {
+  margin-top: 12px;
+  font-size: 20px;
+}
+
+.learn_more {
+  display: block;
+  margin-top: 10px;
+  color: blue;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.get_started_color {
+  color: white;
+  background-color: #405cf5;
+}
+
+.product_color {
+  color: white;
+  background-color: black;
+}
+
+.growth_color {
+  color: white;
+  background-color: #b444cc;
+}
