@@ -1,11 +1,50 @@
 .features {
+  /* background-color: black; */
+
   display: flex;
+  flex-direction: column;
   align-items: center;
   padding: 2rem 0;
   width: 100%;
 }
 
-.featureSvg {
-  height: 200px;
-  width: 200px;
+.feature {
+  /* background-color: red; */
+
+  display: flex;
+  margin: 1rem;
+  padding: 2rem;
+  width: 1200px;
+  min-height: 400px;
+}
+
+.main {
+  /* background-color: blue; */
+
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 1rem;
+}
+
+.diagram {
+  /* background-color: aqua; */
+  display: flex;
+  flex: 1;
+}
+
+.capsule {
+  /* background-color: yellow; */
+
+  position: relative;
+  top: -10px;
+  left: -10px;
+}
+
+.content {
+  /* background-color: green; */
+}
+
+.cta {
+  /* background-color: gray; */
 }

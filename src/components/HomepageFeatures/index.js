@@ -1,47 +1,40 @@
 import React from 'react';
 import clsx from 'clsx';
 import styles from './styles.module.css';
+import IntroDiagram from './Diagrams/intro.js';
+import SelfServeDiagram from './Diagrams/selfServe.js';
 
 const FeatureList = [
   {
-    title: 'For Developers',
-    Svg: require('@site/static/img/developer.svg').default,
-    description: (
-      <>
-      Implement secure and scalable self-service infrastructure at ludicrous speed with predefined signup blueprints.
-      </>
-    ),
+    title: 'An Overview',
+    description: (<>Learn how to Enable your product to go from “Contact-Us” to “Sign Up, Try and Buy”</>),
+    diagram: (<IntroDiagram />),
+    cta: 'Get Started',
   },
   {
-    title: 'For GTM Leaders',
-    Svg: require('@site/static/img/gtm.svg').default,
-    description: (
-      <>
-      Ship your product at ludicrous speed with a single platform to - activate, engage, and monetize users.
-      </>
-    ),
+    title: 'Build Self-Serve',
+    description: (<>Implement secure and scalable self-service infrastructure at ludicrous speed with predefined signup blueprints.</>),
+    diagram: (<SelfServeDiagram />),
+    cta: 'Build Today',
+    capsule: 'Product Engineering',
   },
   {
-    title: 'For Product Managers',
-    Svg: require('@site/static/img/pm.svg').default,
-    description: (
-      <>
-      Elevate PLG strategies with our intuitive analytics tool. Gain real-time insights for informed decisions on user engagement, adoption, and conversion metrics.
-      </>
-    ),
+    title: 'Analyze Customer Journey',
+    description: (<>Implement secure and scalable self-service infrastructure at ludicrous speed with predefined signup blueprints.</>),
+    cta: 'Analyze Now',
+    capsule: 'Growth & Data Analytics',
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({diagram, title, description, cta, capsule}) {
   return (
-    <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+    <div className={styles.feature}> 
+      <div className={styles.main}>
+        {capsule && <div className={styles.capsule}>{capsule}</div>}
+        <div className={styles.content}><h1>{title}</h1>{description}</div>
+        <div className={styles.cta}>{cta}</div>
       </div>
-      <div className="text--center padding-horiz--md">
-        <h3>{title}</h3>
-        <p>{description}</p>
-      </div>
+      <div className={styles.diagram}>{diagram}</div>
     </div>
   );
 }
@@ -49,13 +42,9 @@ function Feature({Svg, title, description}) {
 export default function HomepageFeatures() {
   return (
     <section className={styles.features}>
-      <div className="container">
-        <div className="row">
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
           ))}
-        </div>
-      </div>
     </section>
   );
 }
