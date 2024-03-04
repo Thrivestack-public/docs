@@ -2,8 +2,8 @@ name: Dev
 
 on:
   pull_request:
-    types:
-      - closed
+    #types:
+    #  - closed
     branches: [ "develop" ]
 
 permissions:
@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-     APP_ENV: staging
+     APP_ENV: dev
 
     strategy:
       matrix:
