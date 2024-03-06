@@ -167,9 +167,11 @@ const config = {
         docsPluginId: "classic",
         config: {
           public_apis: {
-            specPath: process.env.APP_ENV === 'production' ? 'https://saas-dev-docs-apis-bucket-wqcjov1l3x7su8tl.s3.ap-south-1.amazonaws.com/public_apis.yaml' : 'https://saas-dev-docs-apis-bucket-wqcjov1l3x7su8tl.s3.ap-south-1.amazonaws.com/public_apis.yaml',
+            //specPath: process.env.APP_ENV === 'production' ? 'https://saas-dev-docs-apis-bucket-wqcjov1l3x7su8tl.s3.ap-south-1.amazonaws.com/public_apis.yaml' : 'https://saas-dev-docs-apis-bucket-wqcjov1l3x7su8tl.s3.ap-south-1.amazonaws.com/public_apis.yaml',
+            specPath: "https://www.dropbox.com/scl/fi/pml9nselajw3qge0wor0x/public_apis.yaml?rlkey=pm75rj65izlogtwmcfl143g8p&dl=1",
             outputDir: "docs/public_apis",
-            downloadUrl: process.env.APP_ENV === 'production' ? 'https://saas-dev-docs-apis-bucket-wqcjov1l3x7su8tl.s3.ap-south-1.amazonaws.com/public_apis.yaml' : 'https://saas-dev-docs-apis-bucket-wqcjov1l3x7su8tl.s3.ap-south-1.amazonaws.com/public_apis.yaml',
+            //downloadUrl: process.env.APP_ENV === 'production' ? 'https://saas-dev-docs-apis-bucket-wqcjov1l3x7su8tl.s3.ap-south-1.amazonaws.com/public_apis.yaml' : 'https://saas-dev-docs-apis-bucket-wqcjov1l3x7su8tl.s3.ap-south-1.amazonaws.com/public_apis.yaml',
+            downloadUrl: "https://www.dropbox.com/scl/fi/pml9nselajw3qge0wor0x/public_apis.yaml?rlkey=pm75rj65izlogtwmcfl143g8p&dl=1",
             sidebarOptions: {
               groupPathsBy: "tag",
               categoryLinkSource: "tag",
