@@ -2,8 +2,8 @@ name: Dev
 
 on:
   pull_request:
-    #types:
-    #  - closed
+    types:
+      - closed
     branches: [ "develop" ]
 
 permissions:
