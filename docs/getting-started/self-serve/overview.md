@@ -84,6 +84,12 @@ ThriveStack's Self Serve module offers a user-friendly, no-code approach with cu
   </tbody>
 </table>
 
+<br/>
+
+## All the benefits you receive with Self-Serve Orchestration
+
+![](/img/docs/introduction/thrivestack_intro.gif)
+
 ## Features
 
 ThriveStack's Self Serve feature offer the following,

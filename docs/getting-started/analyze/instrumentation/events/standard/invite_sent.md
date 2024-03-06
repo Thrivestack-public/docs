@@ -1,3 +1,6 @@
+---
+toc_max_heading_level: 4
+---
 # Invite Sent
 
 # 1. Introduction
@@ -5,7 +8,9 @@
 The objective is to generate an 'invite sent' event, enabling you, the SaaS builder, to track when users invite other users.
 
 :::tip
-**Built-In Invitation Tracking:** Each invitation sent via ThriveStack's Self Serve [Invitation API](/getting-started/self-serve/apis/invitation) is automatically tracked.
+**Built-In Invitation Tracking with ThriveStack's Invitation API**
+
+API integrations aren't necessary for tracking the 'Invite Sent' event if you use ThriveStack's Self-Serve [Invitation API](/getting-started/self-serve/apis/invitation)
 :::
 
 ![Invite Sent Event Flowchart](/img/docs/events/invite_sent.png)
@@ -48,14 +53,15 @@ The following properties of how an event is described by a schema:
 
 ### 1.2.3. Explore Use Cases
 
-#### Use Case 1: Track Invitation when a single user is invited
+#### Track Invitation when a single user is invited
 ![Invite Sent Use Case 1](/img/docs/events/invite_sent/usecase1.png)
 
 The diagram visualizes the tracking of invitation events in your SaaS Product. In the first step, 'John,' an existing user, invites 'Amy,' initiating the user engagement process. This step occurs within your product and is already implemented on your end.
 
 In the second step, you need to call ThriveStack's Track API to track the invitation event. Below, you'll find a detailed JSON payload for the 'Invite Sent' event of the Track API, showing the captured properties.
 
-```json {
+```json 
+{
   "event": "invite_sent",
   "properties": {
     "invitee_email": "amy@achme.com",
@@ -70,7 +76,7 @@ In the second step, you need to call ThriveStack's Track API to track the invita
 
 <br/>
 
-#### Use Case 2: Track Invitation when multiple users are invited
+#### Track Invitation when multiple users are invited
 ![Invite Sent Use Case 2](/img/docs/events/invite_sent/usecase2.png)
 The diagram illustrates the process of inviting multiple users in your SaaS Product. 'John,' an existing user, extends invitations to 'Tom' and 'Amy,' prospective users. This step occurs within your product and is already implemented on your end.
 
@@ -105,7 +111,7 @@ In the next step, you need to call ThriveStack's Track API to track the invitati
 
 <br/>
 
-#### Use Case 3: Track Invitation when a user is invited into an existing tenant
+#### Track Invitation when a user is invited into an existing tenant
 ![Invite Sent Use Case 3](/img/docs/events/invite_sent/usecase3.png)
 The diagram outlines the process of inviting a user to an existing tenant within your SaaS Product. 'John,' an established user of an existing tenant, extends an invitation to 'Amy,' a prospective user, to join the same tenant space.
 
@@ -132,7 +138,7 @@ In the request body provided below, a tenant ID should be sent in the 'group_id'
 
 <br/>
 
-#### Use Case 4: Track Invitation when a user is invited to a specific team
+#### Track Invitation when a user is invited to a specific team
 
 ![Invite Sent Use Case 4](/img/docs/events/invite_sent/usecase4.png)
 
@@ -141,7 +147,8 @@ The diagram outlines the process of inviting a user to an existing team within y
 In the second step, you'll need to call ThriveStack's Track API to track the invitation event. Below, you'll find a detailed JSON payload for the 'Invite Sent' event of the Track API, displaying the captured properties.
 
 The name of the team should be sent in the "team_name" property.
-```json {
+```json 
+{
   "event": "invite_sent",
   "properties": {
     "invitee_email": "amy@achme.com",

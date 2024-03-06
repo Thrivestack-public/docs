@@ -9,9 +9,11 @@
 }
 
 .dotted_background {
-  background-color: #e5e5f7;
-  background-image: radial-gradient(#444cf7 0.5px, #fefefe 0.5px);
-  background-size: 10px 10px;
+  background-color: #ffffff;
+  opacity: 1;
+  background-image:  radial-gradient(#c7caff 0.8px, transparent 0.8px), radial-gradient(#c7caff 0.8px, #ffffff 0.8px);
+  background-size: 32px 32px;
+  background-position: 0 0,16px 16px;
 }
 
 .feature_wrapper {
