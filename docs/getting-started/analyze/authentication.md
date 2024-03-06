@@ -4,7 +4,7 @@
 
 ThriveStack has a powerful API that enables you to capture, evaluate, create, update, and delete nearly all of your information in ThriveStack. You can use it to pull information into your app, update metadata programmatically, capture events from any language that can send HTTP requests, and more.
 
-![ThriveStack Authentication Flowchart](/img/docs/auth-flowchart.png)
+![ThriveStack Authentication Flowchart](/img/docs/analyze/apis/auth-flowchart.png)
 
 The API is available for all users and instances. It contains two types of endpoints:
 

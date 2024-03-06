@@ -7,9 +7,9 @@ Explore ThriveStack's API reference documentation. You are even test out the API
 or Run the APIs in Postman.
 
 :::tip
- 🎉 **Enjoy effortless no-code solutions for standard tasks!** 
+ **Event tracking is pre-built into the no-code self-serve workflows!**
 
- API integrations aren't necessary for Self Serve Creation, Events, and Reports. But for those custom tweaks, 🛠️ our APIs have got you covered.
+API integrations aren't required for Tracking (Events, Users, or Groups) if you use ThriveStack's no-code workflows. However, for custom workflows, our APIs have got you covered.
 :::
 
 <br />

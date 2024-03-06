@@ -4,7 +4,7 @@
 
 The actions your users execute, and the features that describe those actions, can be recorded with the Track API call.
 
-![Track Flowchart](/img/docs/track-flowchart.png)
+![Track Flowchart](/img/docs/analyze/apis/track-flowchart.png)
 
 ## 1.2. Track API
 

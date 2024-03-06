@@ -44,7 +44,7 @@ ThriveStack consists of two modules:
 
 Below is a high-level overview diagram illustrating the core components of ThriveStack:
 
-![](/img/docs/introduction/thrivestack_intro.gif)
+![](/img/docs/image.png)
 
 Begin by familiarzing yourself with ThriveStack's [Self Serve](/getting-started/self-serve/overview) Module or Explore the things you can do with ThriveStack, 
 

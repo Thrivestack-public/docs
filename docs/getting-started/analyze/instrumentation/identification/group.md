@@ -4,7 +4,7 @@
 
 The Group API call is a method to associate an individual user with a group, such as a company, organization, account, project, or team.
 
-![Group Identify Flowchart](/img/docs/group-flowchart.png)
+![Group Identify Flowchart](/img/docs/analyze/apis/group-flowchart.png)
 
 ## 1.1. Group API
 

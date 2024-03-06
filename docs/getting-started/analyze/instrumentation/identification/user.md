@@ -4,7 +4,7 @@
 
 The Identify call is a method that allows you to associate a user with their actions and record traits about them.
 
-![User Identify Flowchart](/img/docs/identify-flowchart.png)
+![User Identify Flowchart](/img/docs/analyze/apis/identify-flowchart.png)
 
 ## 1.1. Identify API
 

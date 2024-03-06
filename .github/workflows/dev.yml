@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-     APP_ENV: staging
+     APP_ENV: dev
 
     strategy:
       matrix:
