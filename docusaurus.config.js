@@ -89,20 +89,32 @@ const config = {
           //  label: 'GTM Leaders',
           //},
           {
+            type: 'docSidebar',
+            sidebarId: 'buildSidebar',
             position: 'left',
-            label: 'Self Serve',
-            href: '/getting-started/self-serve/overview'
+            label: 'Build',
           },
+          //{
+          //  position: 'left',
+          //  label: 'Self Serve',
+          //  href: '/getting-started/self-serve/overview'
+          //},
           {
             type: 'html',
             position: 'left',
             value: '<span>|</span>'
           },
           {
+            type: 'docSidebar',
+            sidebarId: 'analyzeSidebar',
             position: 'left',
             label: 'Analyze',
-            href: '/getting-started/analyze/instrumentation/overview'
           },
+          //{
+          //  position: 'left',
+          //  label: 'Analyze',
+          //  href: '/getting-started/analyze/instrumentation/overview'
+          //},
           {
             type: 'docSidebar',
             sidebarId: 'apiSidebar',
