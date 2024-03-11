@@ -15,7 +15,7 @@ export default function IntroDiagram(){
             <li><FontAwesomeIcon className={`${styles.bullet} ${styles.bullet_build}`} icon={faCircleCheck} />Telemetry</li>
             <li><FontAwesomeIcon className={`${styles.bullet} ${styles.bullet_build}`} icon={faCircleCheck} />In-App Features</li>
           </ul>
-          <a href="">Start Building Today</a>
+          <a href="/getting-started/self-serve/overview">Start Building Today</a>
         </div>
         
         <div className={`${styles.box} ${styles.analyze}`}>
@@ -26,7 +26,7 @@ export default function IntroDiagram(){
             <li><FontAwesomeIcon className={`${styles.bullet} ${styles.bullet_analyze}`} icon={faCircleCheck} />Pricing Plans</li>
             <li><FontAwesomeIcon className={`${styles.bullet} ${styles.bullet_analyze}`} icon={faCircleCheck} />Goals & Alerts</li>
           </ul>
-          <a href="">Start Analyzing Today</a>
+          <a href="/getting-started/analyze/instrumentation/overview">Start Analyzing Today</a>
         </div>
         
         {false && <div className={styles.box}>
