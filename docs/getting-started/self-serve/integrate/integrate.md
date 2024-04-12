@@ -2,7 +2,6 @@
 
 ## 1. With Your Authentication
 
-
 <details>
 
 <summary> 
@@ -657,20 +656,457 @@ Thrivestack will redirect the user to this page.
 <hr />
 
 ## 2. With ThriveStack's Authentication
-### 2.1 Template 1: Prosumer
-#### 2.1.1 Receive provisioned tenant (and enrichment) data from us and provide acknowledgment
-#### 2.1.2 Flow control is transferred to you for user onboarding; Thrivestack awaits your acknowledgment
-#### 2.1.3 User is redirected to your product home page
 
-<br />
+<details>
+
+<summary> 
+
+### 2.1 Template 1: Prosumer
+
+</summary>
+
+<details>
+
+<summary> 
+
+#### 2.1.1 Receive provisioned tenant (and enrichment) data from us and provide acknowledgment
+
+</summary>
+
+:::note
+By this point, ThriveStack will have:
+- Enriched the user/account data
+- Placed the user on a waitlist (if applicable)
+- Associated a pricing plan
+- Provisioned a tenant
+:::
+
+ThriveStack provisions tenant data and sends it to your application. Once you recieve the tenant data, you can provision the tenant at your end, if you choose to.
+At this point, ThriveStack would be waiting for the acknowledgement from your application.
+
+This happens in two steps,
+
+** a. Configure webhook to recieve tenant data **
+
+// TODO: Add a correct link
+
+Configure your webhook [here](#). ThriveStack will send the tenant data (along with user enrichment) to your webhook in the following format.
+
+```javascript
+{
+  "tenant_provisioning_data" : {
+    "ts_tenant_id" : "string",
+    "is_ts_provisioning_success": true,
+  },
+  "enrichment_data": {
+    "ip": "string",
+    "fuzzy": "boolean",
+    "domain": "string",
+    "type": "string",
+    "company": {
+      "name": "string",
+      "tags": [
+        "string"
+      ],
+      "metrics": {
+        "alexaUsRank": "integer",
+        "alexaGlobalRank": "integer",
+        "employees": "integer",
+        "employeesRange": "string",
+        "raised": "integer"
+      },
+      "...": "string"
+    },
+    "geoIP": {
+      "city": "string",
+      "state": "string",
+      "stateCode": "string",
+      "country": "string",
+      "countryCode": "string"
+    },
+    "confidenceScore": "string",
+    "role": "string",
+    "seniority": "string"
+  }
+}
+```
+
+** b. Send tenant provisioning acknowledgement **
+
+Once tenant provisioning is completed at your application, your application send acknowledgement to ThriveStack. The acknowledgement API call resemble the following code.
+
+// TODO: Add correct endpoint
+
+```bash
+curl -X POST http://example.com/api/workflow \  # Replace with your actual URL
+-H "Content-Type: application/json" \
+-H "Authorization: Bearer {{token}}" \
+-d '{
+  "workflowDesignTimeId": "4a238be4-3db2-43b2-b5f6-f131c6a4f154",
+  "workflowRuntimeId": "a13d3ee3-2bd4-404e-9a96-2a5769bb936e",
+  "tenantId": "eae34b09-d0c9-47c0-96a9-d7e5e681e9d7",
+  "tenantName": "ExampleCorp",
+  "userEmailId": "user@example.com",
+  "thrivestackTenantId": "88f8b02b-414a-4022-9c25-771b2c9e25dd"
+}'
+```
+
+Success Response
+```
+{
+  "status": 200,
+  "data": {
+    "message": "Acknowledment recieved"
+  }
+}
+```
+Failure Response
+```
+{
+  "status": 403,
+  "data": {
+    "error_code": "FORBIDDEN",
+    "error_message": "You do not have permission to access this resource."
+  }
+}
+```
+
+</details>
+
+<details>
+
+<summary> 
+
+#### 2.1.2 Flow control is transferred to you for user onboarding
+
+</summary>
+
+// TODO: Link to Onboarding Checklist.
+
+For the prosumer template workflow, this the final user redirection.
+You can configure the page where you want to redirect the user at the [Onboarding Checklist](#). 
+Thrivestack will redirect the user to this page.
+
+With this redirection ThriveStack will also set the authentication token in the Cookie specific to you app domain.
+
+
+:::note
+After this point, ThriveStack will:
+- Store the leads
+- Send Welcome Email to the user
+
+You would have the access to:
+- PLG CRM
+- PLG Analytics
+:::
+
+</details>
+
+</details>
+
+<details>
+
+<summary> 
 
 ### 2.2 Template 2: COGS Efficient B2B SaaS
-#### 2.2.1 Flow control is transferred to you for user onboarding; Thrivestack awaits your acknowledgment
+
+</summary>
+
+<details>
+
+<summary> 
+
+#### 2.2.1 Flow control is transferred to you for user onboarding; Thrivestack awaits for user redirection
+
+</summary>
+
+:::note
+By this point, ThriveStack will have:
+- Enriched the user/account data
+- Placed the user on a waitlist (if applicable)
+:::
+
+ThriveStack will redirect the user to your onboarding page. Once onboarding is complete, we await the user's return to ThriveStack.
+
+This comprises of two steps,
+
+a. ThriveStack redirects user to a pre-configured page
+
+Configure the redirection page at ThriveStack's [Onboarding Checklist](#).
+During this redirection, ThriveStack will share a URL in the parameter which will be used in the next step.
+
+The URL would look something like this.
+
+```
+https://<YOUR-ONBOARDING-URL_PAGE>?redirect_url="TODO"
+```
+
+b. Redirect the user back to ThriveStack once the onboarding is complete
+
+During the last redirection ThriveStack will send a URL in the URL paramter. This URL recieved in the URL parameter is the redirection page
+where you redirect the user to.
+
+
+</details>
+
+
+<details>
+
+<summary> 
+
 #### 2.2.2 Receive provisioned tenant (and enrichment) data from us and provide acknowledgment
+
+</summary>
+
+:::note
+By this point, ThriveStack will have:
+- Associated a pricing plan
+- Provisioned a tenant
+:::
+
+ThriveStack provisions tenant data and sends it to your application. Once you recieve the tenant data, you can provision the tenant at your end, if you choose to.
+At this point, ThriveStack would be waiting for the acknowledgement from your application.
+
+This happens in two steps,
+
+** a. Configure webhook to recieve tenant data **
+
+// TODO: Add a correct link
+
+Configure your webhook [here](#). ThriveStack will send the tenant data (along with user enrichment) to your webhook in the following format.
+
+```javascript
+{
+  "tenant_provisioning_data" : {
+    "ts_tenant_id" : "string",
+    "is_ts_provisioning_success": true,
+  },
+  "enrichment_data": {
+    "ip": "string",
+    "fuzzy": "boolean",
+    "domain": "string",
+    "type": "string",
+    "company": {
+      "name": "string",
+      "tags": [
+        "string"
+      ],
+      "metrics": {
+        "alexaUsRank": "integer",
+        "alexaGlobalRank": "integer",
+        "employees": "integer",
+        "employeesRange": "string",
+        "raised": "integer"
+      },
+      "...": "string"
+    },
+    "geoIP": {
+      "city": "string",
+      "state": "string",
+      "stateCode": "string",
+      "country": "string",
+      "countryCode": "string"
+    },
+    "confidenceScore": "string",
+    "role": "string",
+    "seniority": "string"
+  }
+}
+```
+
+** b. Send tenant provisioning acknowledgement **
+
+Once tenant provisioning is completed at your application, your application send acknowledgement to ThriveStack. The acknowledgement API call resemble the following code.
+
+// TODO: Add correct endpoint
+
+```bash
+curl -X POST http://example.com/api/workflow \  # Replace with your actual URL
+-H "Content-Type: application/json" \
+-H "Authorization: Bearer {{token}}" \
+-d '{
+  "workflowDesignTimeId": "4a238be4-3db2-43b2-b5f6-f131c6a4f154",
+  "workflowRuntimeId": "a13d3ee3-2bd4-404e-9a96-2a5769bb936e",
+  "tenantId": "eae34b09-d0c9-47c0-96a9-d7e5e681e9d7",
+  "tenantName": "ExampleCorp",
+  "userEmailId": "user@example.com",
+  "thrivestackTenantId": "88f8b02b-414a-4022-9c25-771b2c9e25dd"
+}'
+```
+
+Success Response
+```
+{
+  "status": 200,
+  "data": {
+    "message": "Acknowledment recieved"
+  }
+}
+```
+Failure Response
+```
+{
+  "status": 403,
+  "data": {
+    "error_code": "FORBIDDEN",
+    "error_message": "You do not have permission to access this resource."
+  }
+}
+```
+
+</details>
+
+
+<details>
+
+<summary> 
+
 #### 2.2.3 User is redirected to your product home page
 
-<br />
+</summary>
+
+For this template,  this the final user redirection. 
+You can configure the page where you want to redirect the user at the [Success Redirection Page Checklist.](#) 
+Thrivestack will redirect the user to this page.
+
+With this redirection ThriveStack will also set the authentication token in the Cookie specific to you app domain.
+
+</details>
+
+</details>
+
+<details>
+
+<summary> 
 
 ### 2.3 Template 3: Increased Workload on your platform
+
+</summary>
+
+<details>
+
+<summary> 
+
 #### 2.3.1 Receive provisioned tenant (and enrichment) data from us and provide acknowledgment
+
+</summary>
+
+:::note
+By this point, ThriveStack will have:
+- Enriched the user/account data
+- Placed the user on a waitlist (if applicable)
+- Associated a pricing plan
+- Provisioned a tenant
+:::
+
+ThriveStack provisions tenant data and sends it to your application. Once you recieve the tenant data, you can provision the tenant at your end, if you choose to.
+At this point, ThriveStack would be waiting for the acknowledgement from your application.
+
+This happens in two steps,
+
+** a. Configure webhook to recieve tenant data **
+
+// TODO: Add a correct link
+
+Configure your webhook [here](#). ThriveStack will send the tenant data (along with user enrichment) to your webhook in the following format.
+
+```javascript
+{
+  "tenant_provisioning_data" : {
+    "ts_tenant_id" : "string",
+    "is_ts_provisioning_success": true,
+  },
+  "enrichment_data": {
+    "ip": "string",
+    "fuzzy": "boolean",
+    "domain": "string",
+    "type": "string",
+    "company": {
+      "name": "string",
+      "tags": [
+        "string"
+      ],
+      "metrics": {
+        "alexaUsRank": "integer",
+        "alexaGlobalRank": "integer",
+        "employees": "integer",
+        "employeesRange": "string",
+        "raised": "integer"
+      },
+      "...": "string"
+    },
+    "geoIP": {
+      "city": "string",
+      "state": "string",
+      "stateCode": "string",
+      "country": "string",
+      "countryCode": "string"
+    },
+    "confidenceScore": "string",
+    "role": "string",
+    "seniority": "string"
+  }
+}
+```
+
+** b. Send tenant provisioning acknowledgement **
+
+Once tenant provisioning is completed at your application, your application send acknowledgement to ThriveStack. The acknowledgement API call resemble the following code.
+
+// TODO: Add correct endpoint
+
+```bash
+curl -X POST http://example.com/api/workflow \  # Replace with your actual URL
+-H "Content-Type: application/json" \
+-H "Authorization: Bearer {{token}}" \
+-d '{
+  "workflowDesignTimeId": "4a238be4-3db2-43b2-b5f6-f131c6a4f154",
+  "workflowRuntimeId": "a13d3ee3-2bd4-404e-9a96-2a5769bb936e",
+  "tenantId": "eae34b09-d0c9-47c0-96a9-d7e5e681e9d7",
+  "tenantName": "ExampleCorp",
+  "userEmailId": "user@example.com",
+  "thrivestackTenantId": "88f8b02b-414a-4022-9c25-771b2c9e25dd"
+}'
+```
+
+Success Response
+```
+{
+  "status": 200,
+  "data": {
+    "message": "Acknowledment recieved"
+  }
+}
+```
+Failure Response
+```
+{
+  "status": 403,
+  "data": {
+    "error_code": "FORBIDDEN",
+    "error_message": "You do not have permission to access this resource."
+  }
+}
+```
+
+</details>
+
+
+<details>
+
+<summary> 
+
 #### 2.3.2 User is redirected to your product home page
+
+</summary>
+
+For this template,  this the final user redirection. 
+You can configure the page where you want to redirect the user at the [Success Redirection Page Checklist.](#) 
+Thrivestack will redirect the user to this page.
+
+With this redirection ThriveStack will also set the authentication token in the Cookie specific to you app domain.
+
+</details>
+
+
+</details>
