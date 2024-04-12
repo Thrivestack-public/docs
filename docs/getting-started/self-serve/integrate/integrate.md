@@ -1,6 +1,6 @@
 # Integrate your application with ThriveStack
 
-## 1. With Your Authentication
+## 1. Bring Your own Authentication
 
 <details>
 
@@ -26,7 +26,7 @@ To achieve this, there are two parts,
 
 To send the authentication data to ThriveStack, your API call should look like the following code:
 
-// TODO: Add correct endpoint
+// TODO: Add the correct endpoint
 
 ```bash
 curl -X POST /trigger \
@@ -44,7 +44,7 @@ curl -X POST /trigger \
 ```
 To obtain the __workflow_id__, [visit this page](#).
 
-// TODO: Add correct page link
+// TODO: Add the correct page link
 // TODO: Redirect URL
 
 
@@ -81,7 +81,7 @@ Redirect the user to __redirect_url__ obtained in the success response for the l
 
 <summary> 
 
-#### 1.1.2 Receive provisioned tenant (and enrichment) data from us and provide acknowledgment
+#### 1.1.2 Receive provisioned tenant (and enrichment) data from us and provide acknowledgement
 
 </summary>
 
@@ -93,12 +93,12 @@ By this point, ThriveStack will have:
 - Provisioned a tenant
 :::
 
-ThriveStack provisions tenant data and sends it to your application. Once you recieve the tenant data, you can provision the tenant at your end, if you choose to.
-At this point, ThriveStack would be waiting for the acknowledgement from your application.
+ThriveStack provisions tenant data and sends it to your application. Once you receive the tenant data, you can provision the tenant at your end, if you choose to.
+At this point, ThriveStack will be waiting for the acknowledgement from your application.
 
 This happens in two steps,
 
-** a. Configure webhook to recieve tenant data **
+** a. Configure webhook to receive tenant data **
 
 // TODO: Add a correct link
 
@@ -145,9 +145,9 @@ Configure your webhook [here](#). ThriveStack will send the tenant data (along w
 
 ** b. Send tenant provisioning acknowledgement **
 
-Once tenant provisioning is completed at your application, your application send acknowledgement to ThriveStack. The acknowledgement API call resemble the following code.
+Once tenant provisioning is completed at your application, your application sends an acknowledgement to ThriveStack. The acknowledgement API call resembles the following code.
 
-// TODO: Add correct endpoint
+// TODO: Add the correct endpoint
 
 ```bash
 curl -X POST http://example.com/api/workflow \  # Replace with your actual URL
@@ -168,7 +168,7 @@ Success Response
 {
   "status": 200,
   "data": {
-    "message": "Acknowledment recieved"
+    "message": "Acknowledgement received"
   }
 }
 ```
@@ -196,13 +196,13 @@ Failure Response
 
 // TODO: Link to Onboarding Checklist.
 
-For the prosumer template workflow, this the final user redirection.
+For the prosumer template workflow, this is the final user redirection.
 You can configure the page where you want to redirect the user at the [Onboarding Checklist](#). Thrivestack will redirect the user to this page.
 
 :::note
 After this point, ThriveStack will:
 - Store the leads
-- Send Welcome Email to the user
+- Send a Welcome Email to the user
 
 You would have the access to:
 - PLG CRM
@@ -239,7 +239,7 @@ To achieve this, there are two parts,
 
 To send the authentication data to ThriveStack, your API call should look like the following code:
 
-// TODO: Add correct endpoint
+// TODO: Add the correct endpoint
 
 ```bash
 curl -X POST /trigger \
@@ -257,7 +257,7 @@ curl -X POST /trigger \
 ```
 To obtain the __workflow_id__, [visit this page](#).
 
-// TODO: Add correct page link
+// TODO: Add the correct page link
 // TODO: Redirect URL
 
 
@@ -306,9 +306,9 @@ By this point, ThriveStack will have:
 
 ThriveStack will redirect the user to your onboarding page. Once onboarding is complete, we await the user's return to ThriveStack.
 
-This comprises of two steps,
+This comprises two steps,
 
-a. ThriveStack redirects user to a pre-configured page
+a. ThriveStack redirects the user to a pre-configured page
 
 Configure the redirection page at ThriveStack's [Onboarding Checklist](#).
 During this redirection, ThriveStack will share a URL in the parameter which will be used in the next step.
@@ -321,7 +321,7 @@ https://<YOUR-ONBOARDING-URL_PAGE>?redirect_url="TODO"
 
 b. Redirect the user back to ThriveStack once the onboarding is complete
 
-During the last redirection ThriveStack will send a URL in the URL paramter. This URL recieved in the URL parameter is the redirection page
+During the last redirection, ThriveStack will send a URL in the URL parameter. This URL received in the URL parameter is the redirection page
 where you redirect the user to.
 
 
@@ -332,7 +332,7 @@ where you redirect the user to.
 
 <summary> 
 
-#### 1.2.3 Receive provisioned tenant (and enrichment) data from us and provide acknowledgment
+#### 1.2.3 Receive provisioned tenant (and enrichment) data from us and provide acknowledgement
 
 </summary>
 
@@ -342,12 +342,12 @@ By this point, ThriveStack will have:
 - Provisioned a tenant
 :::
 
-ThriveStack provisions tenant data and sends it to your application. Once you recieve the tenant data, you can provision the tenant at your end, if you choose to.
-At this point, ThriveStack would be waiting for the acknowledgement from your application.
+ThriveStack provisions tenant data and sends it to your application. Once you receive the tenant data, you can provision the tenant at your end, if you choose to.
+At this point, ThriveStack will be waiting for the acknowledgement from your application.
 
 This happens in two steps,
 
-** a. Configure webhook to recieve tenant data **
+** a. Configure webhook to receive tenant data **
 
 // TODO: Add a correct link
 
@@ -394,9 +394,9 @@ Configure your webhook [here](#). ThriveStack will send the tenant data (along w
 
 ** b. Send tenant provisioning acknowledgement **
 
-Once tenant provisioning is completed at your application, your application send acknowledgement to ThriveStack. The acknowledgement API call resemble the following code.
+Once tenant provisioning is completed at your application, your application sends an acknowledgement to ThriveStack. The acknowledgement API call resembles the following code.
 
-// TODO: Add correct endpoint
+// TODO: Add the correct endpoint
 
 ```bash
 curl -X POST http://example.com/api/workflow \  # Replace with your actual URL
@@ -417,7 +417,7 @@ Success Response
 {
   "status": 200,
   "data": {
-    "message": "Acknowledment recieved"
+    "message": "Acknowledgement received"
   }
 }
 ```
@@ -443,7 +443,7 @@ Failure Response
 
 </summary>
 
-For this template,  this the final user redirection. 
+For this template,  this is the final user redirection. 
 You can configure the page where you want to redirect the user at the [Success Redirection Page Checklist.](#) 
 Thrivestack will redirect the user to this page.
 
@@ -476,7 +476,7 @@ To achieve this, there are two parts,
 
 To send the authentication data to ThriveStack, your API call should look like the following code:
 
-// TODO: Add correct endpoint
+// TODO: Add the correct endpoint
 
 ```bash
 curl -X POST /trigger \
@@ -494,7 +494,7 @@ curl -X POST /trigger \
 ```
 To obtain the __workflow_id__, [visit this page](#).
 
-// TODO: Add correct page link
+// TODO: Add the correct page link
 // TODO: Redirect URL
 
 
@@ -530,7 +530,7 @@ Redirect the user to __redirect_url__ obtained in the success response for the l
 
 <summary> 
 
-#### 1.3.2 Receive provisioned tenant (and enrichment) data from us and provide acknowledgment
+#### 1.3.2 Receive provisioned tenant (and enrichment) data from us and provide acknowledgement
 
 </summary>
 
@@ -542,12 +542,12 @@ By this point, ThriveStack will have:
 - Provisioned a tenant
 :::
 
-ThriveStack provisions tenant data and sends it to your application. Once you recieve the tenant data, you can provision the tenant at your end, if you choose to.
-At this point, ThriveStack would be waiting for the acknowledgement from your application.
+ThriveStack provisions tenant data and sends it to your application. Once you receive the tenant data, you can provision the tenant at your end, if you choose to.
+At this point, ThriveStack will be waiting for the acknowledgement from your application.
 
 This happens in two steps,
 
-** a. Configure webhook to recieve tenant data **
+** a. Configure webhook to receive tenant data **
 
 // TODO: Add a correct link
 
@@ -594,9 +594,9 @@ Configure your webhook [here](#). ThriveStack will send the tenant data (along w
 
 ** b. Send tenant provisioning acknowledgement **
 
-Once tenant provisioning is completed at your application, your application send acknowledgement to ThriveStack. The acknowledgement API call resemble the following code.
+Once tenant provisioning is completed at your application, your application sends an acknowledgement to ThriveStack. The acknowledgement API call resembles the following code.
 
-// TODO: Add correct endpoint
+// TODO: Add the correct endpoint
 
 ```bash
 curl -X POST http://example.com/api/workflow \  # Replace with your actual URL
@@ -617,7 +617,7 @@ Success Response
 {
   "status": 200,
   "data": {
-    "message": "Acknowledment recieved"
+    "message": "Acknowledgement recieved"
   }
 }
 ```
@@ -644,7 +644,7 @@ Failure Response
 
 </summary>
 
-For this template,  this the final user redirection. 
+For this template,  this is the final user redirection. 
 You can configure the page where you want to redirect the user at the [Success Redirection Page Checklist.](#) 
 Thrivestack will redirect the user to this page.
 
@@ -669,7 +669,7 @@ Thrivestack will redirect the user to this page.
 
 <summary> 
 
-#### 2.1.1 Receive provisioned tenant (and enrichment) data from us and provide acknowledgment
+#### 2.1.1 Receive provisioned tenant (and enrichment) data from us and provide acknowledgement
 
 </summary>
 
@@ -681,12 +681,12 @@ By this point, ThriveStack will have:
 - Provisioned a tenant
 :::
 
-ThriveStack provisions tenant data and sends it to your application. Once you recieve the tenant data, you can provision the tenant at your end, if you choose to.
-At this point, ThriveStack would be waiting for the acknowledgement from your application.
+ThriveStack provisions tenant data and sends it to your application. Once you receive the tenant data, you can provision the tenant at your end, if you choose to.
+At this point, ThriveStack will be waiting for the acknowledgement from your application.
 
 This happens in two steps,
 
-** a. Configure webhook to recieve tenant data **
+** a. Configure webhook to receive tenant data **
 
 // TODO: Add a correct link
 
@@ -733,9 +733,9 @@ Configure your webhook [here](#). ThriveStack will send the tenant data (along w
 
 ** b. Send tenant provisioning acknowledgement **
 
-Once tenant provisioning is completed at your application, your application send acknowledgement to ThriveStack. The acknowledgement API call resemble the following code.
+Once tenant provisioning is completed at your application, your application sends an acknowledgement to ThriveStack. The acknowledgement API call resembles the following code.
 
-// TODO: Add correct endpoint
+// TODO: Add the correct endpoint
 
 ```bash
 curl -X POST http://example.com/api/workflow \  # Replace with your actual URL
@@ -756,7 +756,7 @@ Success Response
 {
   "status": 200,
   "data": {
-    "message": "Acknowledment recieved"
+    "message": "Acknowledgement recieved"
   }
 }
 ```
@@ -783,17 +783,17 @@ Failure Response
 
 // TODO: Link to Onboarding Checklist.
 
-For the prosumer template workflow, this the final user redirection.
+For the prosumer template workflow, this is the final user redirection.
 You can configure the page where you want to redirect the user at the [Onboarding Checklist](#). 
 Thrivestack will redirect the user to this page.
 
-With this redirection ThriveStack will also set the authentication token in the Cookie specific to you app domain.
+With this redirection, ThriveStack will also set the authentication token in the Cookie specific to your app domain.
 
 
 :::note
 After this point, ThriveStack will:
 - Store the leads
-- Send Welcome Email to the user
+- Send a Welcome Email to the user
 
 You would have the access to:
 - PLG CRM
@@ -828,9 +828,9 @@ By this point, ThriveStack will have:
 
 ThriveStack will redirect the user to your onboarding page. Once onboarding is complete, we await the user's return to ThriveStack.
 
-This comprises of two steps,
+This comprises two steps,
 
-a. ThriveStack redirects user to a pre-configured page
+a. ThriveStack redirects the user to a pre-configured page
 
 Configure the redirection page at ThriveStack's [Onboarding Checklist](#).
 During this redirection, ThriveStack will share a URL in the parameter which will be used in the next step.
@@ -843,7 +843,7 @@ https://<YOUR-ONBOARDING-URL_PAGE>?redirect_url="TODO"
 
 b. Redirect the user back to ThriveStack once the onboarding is complete
 
-During the last redirection ThriveStack will send a URL in the URL paramter. This URL recieved in the URL parameter is the redirection page
+During the last redirection, ThriveStack will send a URL in the URL parameter. This URL received in the URL parameter is the redirection page
 where you redirect the user to.
 
 
@@ -854,7 +854,7 @@ where you redirect the user to.
 
 <summary> 
 
-#### 2.2.2 Receive provisioned tenant (and enrichment) data from us and provide acknowledgment
+#### 2.2.2 Receive provisioned tenant (and enrichment) data from us and provide acknowledgement
 
 </summary>
 
@@ -864,12 +864,12 @@ By this point, ThriveStack will have:
 - Provisioned a tenant
 :::
 
-ThriveStack provisions tenant data and sends it to your application. Once you recieve the tenant data, you can provision the tenant at your end, if you choose to.
-At this point, ThriveStack would be waiting for the acknowledgement from your application.
+ThriveStack provisions tenant data and sends it to your application. Once you receive the tenant data, you can provision the tenant at your end, if you choose to.
+At this point, ThriveStack will be waiting for the acknowledgement from your application.
 
 This happens in two steps,
 
-** a. Configure webhook to recieve tenant data **
+** a. Configure webhook to receive tenant data **
 
 // TODO: Add a correct link
 
@@ -916,9 +916,9 @@ Configure your webhook [here](#). ThriveStack will send the tenant data (along w
 
 ** b. Send tenant provisioning acknowledgement **
 
-Once tenant provisioning is completed at your application, your application send acknowledgement to ThriveStack. The acknowledgement API call resemble the following code.
+Once tenant provisioning is completed at your application, your application sends an acknowledgement to ThriveStack. The acknowledgement API call resembles the following code.
 
-// TODO: Add correct endpoint
+// TODO: Add the correct endpoint
 
 ```bash
 curl -X POST http://example.com/api/workflow \  # Replace with your actual URL
@@ -939,7 +939,7 @@ Success Response
 {
   "status": 200,
   "data": {
-    "message": "Acknowledment recieved"
+    "message": "Acknowledgement recieved"
   }
 }
 ```
@@ -965,11 +965,11 @@ Failure Response
 
 </summary>
 
-For this template,  this the final user redirection. 
+For this template,  this is the final user redirection. 
 You can configure the page where you want to redirect the user at the [Success Redirection Page Checklist.](#) 
 Thrivestack will redirect the user to this page.
 
-With this redirection ThriveStack will also set the authentication token in the Cookie specific to you app domain.
+With this redirection, ThriveStack will also set the authentication token in the Cookie specific to your app domain.
 
 </details>
 
@@ -987,7 +987,7 @@ With this redirection ThriveStack will also set the authentication token in the 
 
 <summary> 
 
-#### 2.3.1 Receive provisioned tenant (and enrichment) data from us and provide acknowledgment
+#### 2.3.1 Receive provisioned tenant (and enrichment) data from us and provide acknowledgement
 
 </summary>
 
@@ -999,12 +999,12 @@ By this point, ThriveStack will have:
 - Provisioned a tenant
 :::
 
-ThriveStack provisions tenant data and sends it to your application. Once you recieve the tenant data, you can provision the tenant at your end, if you choose to.
-At this point, ThriveStack would be waiting for the acknowledgement from your application.
+ThriveStack provisions tenant data and sends it to your application. Once you receive the tenant data, you can provision the tenant at your end, if you choose to.
+At this point, ThriveStack will be waiting for the acknowledgement from your application.
 
 This happens in two steps,
 
-** a. Configure webhook to recieve tenant data **
+** a. Configure webhook to receive tenant data **
 
 // TODO: Add a correct link
 
@@ -1051,9 +1051,9 @@ Configure your webhook [here](#). ThriveStack will send the tenant data (along w
 
 ** b. Send tenant provisioning acknowledgement **
 
-Once tenant provisioning is completed at your application, your application send acknowledgement to ThriveStack. The acknowledgement API call resemble the following code.
+Once tenant provisioning is completed at your application, your application sends an acknowledgement to ThriveStack. The acknowledgement API call resembles the following code.
 
-// TODO: Add correct endpoint
+// TODO: Add the correct endpoint
 
 ```bash
 curl -X POST http://example.com/api/workflow \  # Replace with your actual URL
@@ -1074,7 +1074,7 @@ Success Response
 {
   "status": 200,
   "data": {
-    "message": "Acknowledment recieved"
+    "message": "Acknowledgement recieved"
   }
 }
 ```
@@ -1100,11 +1100,11 @@ Failure Response
 
 </summary>
 
-For this template,  this the final user redirection. 
+For this template,  this is the final user redirection. 
 You can configure the page where you want to redirect the user at the [Success Redirection Page Checklist.](#) 
 Thrivestack will redirect the user to this page.
 
-With this redirection ThriveStack will also set the authentication token in the Cookie specific to you app domain.
+With this redirection, ThriveStack will also set the authentication token in the Cookie specific to your app domain.
 
 </details>
 
