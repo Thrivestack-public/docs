@@ -42,7 +42,8 @@ const build = [
               type: 'category',
               label: 'Integrate',
               items: [
-                'getting-started/self-serve/integrate/placeholder',
+                //'getting-started/self-serve/integrate/placeholder',
+                'getting-started/self-serve/integrate/integrate',
               ]
             },
             {

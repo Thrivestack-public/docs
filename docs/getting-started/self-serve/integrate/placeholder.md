@@ -185,8 +185,44 @@ You would have the access to:
 
 ### 1.2 Template 2: COGS Efficient B2B SaaS
 #### 1.2.1 Send user authentication/authorization data to ThriveStack
-#### 1.2.2 Flow control is transferred to you for user onboarding; Thrivestack awaits your the onboarding data
+#### 1.2.2 Flow control is transferred to you for user onboarding; Thrivestack awaits for user redirection
+
+:::note
+By this point, ThriveStack will have:
+- Enriched the user/account data
+- Placed the user on a waitlist (if applicable)
+:::
+
+ThriveStack will redirect the user to your onboarding page. Once onboarding is complete, we await the user's return to ThriveStack.
+
+This comprises of two steps,
+
+a. ThriveStack redirects user to a pre-configured page
+
+Configure the redirection page at ThriveStack's [Onboarding Checklist](#).
+During this redirection, ThriveStack will share a URL in the parameter which will be used in the next step.
+
+The URL would look something like this.
+
+```
+https://<YOUR-ONBOARDING-URL_PAGE>?redirect_url="TODO"
+```
+
+b. Redirect the user back to ThriveStack once the onboarding is complete
+
+During the last redirection ThriveStack will send a URL in the URL paramter. This URL recieved in the URL parameter is the redirection page
+where you redirect the user to.
+
+
 #### 1.2.3 Receive provisioned tenant (and enrichment) data from us and provide acknowledgment
+:::note
+By this point, ThriveStack will have:
+- Associated a pricing plan
+- Provisioned a tenant
+:::
+
+??
+
 #### 1.2.4 User is redirected to your product home page
 
 <br />
