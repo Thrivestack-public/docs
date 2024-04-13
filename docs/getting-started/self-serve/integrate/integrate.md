@@ -26,10 +26,8 @@ To achieve this, there are two parts,
 
 To send the authentication data to ThriveStack, your API call should look like the following code:
 
-// TODO: Add the correct endpoint
-
 ```bash
-curl -X POST /trigger \
+curl -X POST {{THRIVESTACK-BASEURL}}/trigger \
 -H "Content-Type: application/json" \
 -H "Authorization: Bearer {{token}}" \
 -d '{
@@ -42,11 +40,7 @@ curl -X POST /trigger \
   "workflow_id": "string" // Get this workflow_id from the Workflows Page
 }'
 ```
-To obtain the __workflow_id__, [visit this page](#).
-
-// TODO: Add the correct page link
-// TODO: Redirect URL
-
+To obtain the __workflow_id__, from your Integration Checklist Page.
 
 Success Response
 ```
@@ -54,7 +48,7 @@ Success Response
   "status": 200,
   "data": {
     "workflow_runtime_id": "aebm-etuki-mklou-ywedt",
-    "redirect_url": ""
+    "redirect_url": "{{THRIVESTACK-REDIRECT-URL}}"
     "message": "Successful"
   }
 }
@@ -100,9 +94,7 @@ This happens in two steps,
 
 ** a. Configure webhook to receive tenant data **
 
-// TODO: Add a correct link
-
-Configure your webhook [here](#). ThriveStack will send the tenant data (along with user enrichment) to your webhook in the following format.
+Configure your webhook ThriveStack Integration Checklist. ThriveStack will send the tenant data (along with user enrichment) to your webhook in the following format.
 
 ```javascript
 {
@@ -147,10 +139,8 @@ Configure your webhook [here](#). ThriveStack will send the tenant data (along w
 
 Once tenant provisioning is completed at your application, your application sends an acknowledgement to ThriveStack. The acknowledgement API call resembles the following code.
 
-// TODO: Add the correct endpoint
-
 ```bash
-curl -X POST http://example.com/api/workflow \  # Replace with your actual URL
+curl -X POST {{THRIVESTACK-BASEURL}}/workflow \
 -H "Content-Type: application/json" \
 -H "Authorization: Bearer {{token}}" \
 -d '{
@@ -194,10 +184,8 @@ Failure Response
 
 </summary>
 
-// TODO: Link to Onboarding Checklist.
-
 For the prosumer template workflow, this is the final user redirection.
-You can configure the page where you want to redirect the user at the [Onboarding Checklist](#). Thrivestack will redirect the user to this page.
+You can configure the page where you want to redirect the user at the Onboarding Checklist. Thrivestack will redirect the user to this page.
 
 :::note
 After this point, ThriveStack will:
@@ -239,10 +227,8 @@ To achieve this, there are two parts,
 
 To send the authentication data to ThriveStack, your API call should look like the following code:
 
-// TODO: Add the correct endpoint
-
 ```bash
-curl -X POST /trigger \
+curl -X POST {{THRIVESTACK-BASEURL}}/trigger \
 -H "Content-Type: application/json" \
 -H "Authorization: Bearer {{token}}" \
 -d '{
@@ -255,11 +241,8 @@ curl -X POST /trigger \
   "workflow_id": "string" // Get this workflow_id from the Workflows Page
 }'
 ```
-To obtain the __workflow_id__, [visit this page](#).
 
-// TODO: Add the correct page link
-// TODO: Redirect URL
-
+To obtain the __workflow_id__, from your Integration Checklist Page.
 
 Success Response
 ```
@@ -267,7 +250,7 @@ Success Response
   "status": 200,
   "data": {
     "workflow_runtime_id": "aebm-etuki-mklou-ywedt",
-    "redirect_url": ""
+    "redirect_url": "{{THRIVESTACK-REDIRECT-URL}}"
     "message": "Successful"
   }
 }
@@ -316,7 +299,7 @@ During this redirection, ThriveStack will share a URL in the parameter which wil
 The URL would look something like this.
 
 ```
-https://<YOUR-ONBOARDING-URL_PAGE>?redirect_url="TODO"
+https://<YOUR-ONBOARDING-URL_PAGE>?redirect_url="{{THRIVESTACK-REDIRECT-URL}}"
 ```
 
 b. Redirect the user back to ThriveStack once the onboarding is complete
@@ -349,9 +332,7 @@ This happens in two steps,
 
 ** a. Configure webhook to receive tenant data **
 
-// TODO: Add a correct link
-
-Configure your webhook [here](#). ThriveStack will send the tenant data (along with user enrichment) to your webhook in the following format.
+Configure your webhook ThriveStack Integration Checklist. ThriveStack will send the tenant data (along with user enrichment) to your webhook in the following format.
 
 ```javascript
 {
@@ -396,10 +377,8 @@ Configure your webhook [here](#). ThriveStack will send the tenant data (along w
 
 Once tenant provisioning is completed at your application, your application sends an acknowledgement to ThriveStack. The acknowledgement API call resembles the following code.
 
-// TODO: Add the correct endpoint
-
 ```bash
-curl -X POST http://example.com/api/workflow \  # Replace with your actual URL
+curl -X POST {{THRIVESTACK-BASEURL}}/workflow \
 -H "Content-Type: application/json" \
 -H "Authorization: Bearer {{token}}" \
 -d '{
@@ -476,10 +455,8 @@ To achieve this, there are two parts,
 
 To send the authentication data to ThriveStack, your API call should look like the following code:
 
-// TODO: Add the correct endpoint
-
 ```bash
-curl -X POST /trigger \
+curl -X POST {{THRIVESTACK-BASEURL}}/trigger \
 -H "Content-Type: application/json" \
 -H "Authorization: Bearer {{token}}" \
 -d '{
@@ -492,11 +469,8 @@ curl -X POST /trigger \
   "workflow_id": "string" // Get this workflow_id from the Workflows Page
 }'
 ```
-To obtain the __workflow_id__, [visit this page](#).
 
-// TODO: Add the correct page link
-// TODO: Redirect URL
-
+To obtain the __workflow_id__, from your Integration Checklist Page.
 
 Success Response
 ```
@@ -504,7 +478,7 @@ Success Response
   "status": 200,
   "data": {
     "workflow_runtime_id": "aebm-etuki-mklou-ywedt",
-    "redirect_url": ""
+    "redirect_url": "{{THRIVESTACK-REDIRECT-URL}}"
     "message": "Successful"
   }
 }
@@ -548,8 +522,6 @@ At this point, ThriveStack will be waiting for the acknowledgement from your app
 This happens in two steps,
 
 ** a. Configure webhook to receive tenant data **
-
-// TODO: Add a correct link
 
 Configure your webhook [here](#). ThriveStack will send the tenant data (along with user enrichment) to your webhook in the following format.
 
@@ -596,10 +568,8 @@ Configure your webhook [here](#). ThriveStack will send the tenant data (along w
 
 Once tenant provisioning is completed at your application, your application sends an acknowledgement to ThriveStack. The acknowledgement API call resembles the following code.
 
-// TODO: Add the correct endpoint
-
 ```bash
-curl -X POST http://example.com/api/workflow \  # Replace with your actual URL
+curl -X POST {{THRIVESTACK-BASEURL}}/workflow \
 -H "Content-Type: application/json" \
 -H "Authorization: Bearer {{token}}" \
 -d '{
@@ -688,8 +658,6 @@ This happens in two steps,
 
 ** a. Configure webhook to receive tenant data **
 
-// TODO: Add a correct link
-
 Configure your webhook [here](#). ThriveStack will send the tenant data (along with user enrichment) to your webhook in the following format.
 
 ```javascript
@@ -735,10 +703,8 @@ Configure your webhook [here](#). ThriveStack will send the tenant data (along w
 
 Once tenant provisioning is completed at your application, your application sends an acknowledgement to ThriveStack. The acknowledgement API call resembles the following code.
 
-// TODO: Add the correct endpoint
-
 ```bash
-curl -X POST http://example.com/api/workflow \  # Replace with your actual URL
+curl -X POST {{THRIVESTACK-BASEURL}}/workflow \
 -H "Content-Type: application/json" \
 -H "Authorization: Bearer {{token}}" \
 -d '{
@@ -781,10 +747,8 @@ Failure Response
 
 </summary>
 
-// TODO: Link to Onboarding Checklist.
-
 For the prosumer template workflow, this is the final user redirection.
-You can configure the page where you want to redirect the user at the [Onboarding Checklist](#). 
+You can configure the page where you want to redirect the user at the Onboarding Checklist. 
 Thrivestack will redirect the user to this page.
 
 With this redirection, ThriveStack will also set the authentication token in the Cookie specific to your app domain.
@@ -832,13 +796,13 @@ This comprises two steps,
 
 a. ThriveStack redirects the user to a pre-configured page
 
-Configure the redirection page at ThriveStack's [Onboarding Checklist](#).
+Configure the redirection page at ThriveStack's Onboarding Checklist.
 During this redirection, ThriveStack will share a URL in the parameter which will be used in the next step.
 
 The URL would look something like this.
 
 ```
-https://<YOUR-ONBOARDING-URL_PAGE>?redirect_url="TODO"
+https://<YOUR-ONBOARDING-URL_PAGE>?redirect_url="{{THRIVESTACK-REDIRECT-URL}}"
 ```
 
 b. Redirect the user back to ThriveStack once the onboarding is complete
@@ -871,9 +835,7 @@ This happens in two steps,
 
 ** a. Configure webhook to receive tenant data **
 
-// TODO: Add a correct link
-
-Configure your webhook [here](#). ThriveStack will send the tenant data (along with user enrichment) to your webhook in the following format.
+Configure your webhook ThriveStack Integration Checklist. ThriveStack will send the tenant data (along with user enrichment) to your webhook in the following format.
 
 ```javascript
 {
@@ -918,10 +880,8 @@ Configure your webhook [here](#). ThriveStack will send the tenant data (along w
 
 Once tenant provisioning is completed at your application, your application sends an acknowledgement to ThriveStack. The acknowledgement API call resembles the following code.
 
-// TODO: Add the correct endpoint
-
 ```bash
-curl -X POST http://example.com/api/workflow \  # Replace with your actual URL
+curl -X POST {{THRIVESTACK-BASEURL}}/workflow \
 -H "Content-Type: application/json" \
 -H "Authorization: Bearer {{token}}" \
 -d '{
@@ -1006,8 +966,6 @@ This happens in two steps,
 
 ** a. Configure webhook to receive tenant data **
 
-// TODO: Add a correct link
-
 Configure your webhook [here](#). ThriveStack will send the tenant data (along with user enrichment) to your webhook in the following format.
 
 ```javascript
@@ -1053,10 +1011,8 @@ Configure your webhook [here](#). ThriveStack will send the tenant data (along w
 
 Once tenant provisioning is completed at your application, your application sends an acknowledgement to ThriveStack. The acknowledgement API call resembles the following code.
 
-// TODO: Add the correct endpoint
-
 ```bash
-curl -X POST http://example.com/api/workflow \  # Replace with your actual URL
+curl -X POST {{THRIVESTACK-BASEURL}}/workflow \
 -H "Content-Type: application/json" \
 -H "Authorization: Bearer {{token}}" \
 -d '{
