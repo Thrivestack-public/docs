@@ -15,7 +15,7 @@ ThriveStack's Self Serve module offers a user-friendly, no-code approach with cu
   <thead>
     <tr>
       <th></th>
-      <th><NumberBadge number={0} color={'#777'}/> <a href="https://signup.dev.app.thrivestack.ai/auth/sign-up">Sign Up for Product</a> 📝</th>
+      <th><NumberBadge number={0} color={'#777'}/> <a href="https://dev.app.thrivestack.ai/auth/sign-up">Sign Up for Product</a> 📝</th>
       <th><NumberBadge number={1} color={'#9747ff'}/> <a href="/getting-started/self-serve/customize/authentication">Customize </a> 🛠️</th>
       <th><NumberBadge number={2} color={'#9747ff'}/> <a href="/getting-started/self-serve/integrate">Integrate </a> 🔗</th>
       <th><NumberBadge number={3} color={'#9747ff'}/> <a href="/getting-started/self-serve/go-live/placeholder">Go Live </a> 🚀</th>
