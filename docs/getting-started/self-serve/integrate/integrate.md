@@ -12,16 +12,27 @@
 
 ![](/img/docs/self_serve/integrate/without_ts_auth_template1.png)
 
-The **Prosumer Template** provides a rapid method to incorporate self-service capabilities into your product. 
-Minimal construction effort is required from your application. 
-ThriveStack handles the bulk of the self-service tasks, 
-including User Enrichment, User Waitlisting, Pricing Plan Association, Tenant Provisioning, and more. 
-This template also delivers automated PLG CRM and PLG Analytics functionality.
+The Prosumer Template equips typical prosumer applications (such as Figma, Canva, and Miro) with essential Product-Led Growth (PLG) capabilities. In this context, each tenant usually begins as an individual user and gradually transitions to a teams or enterprise plan. Due to light weight nature of prosumer tenants, onboarding usually occurs after the user-tenant relationship is established.
+ 
+**Key Benefits:**
+ 
+1. Effortless Integration:
+Thrivestack handles critical self-service tasks, including User Waitlisting, User & Account Enrichment, Free Pricing Plan Association, Tenant Provisioning, and Welcome notifications.
+Developers are relieved from instrumenting standard SaaS events related to user Signup and Login, freeing them to focus on other priorities.
+2. Unlock Core PLG Capabilities:
+By leveraging the template, you gain access to two pivotal functionalities:
+PLG CRM: Understand and engage with users & accounts effectively.
+PLG Analytics: Extract valuable insights for growth and GTM strategies.
+ 
+ 
+**Integration Points:**
 
-This template requires integration at three places,
-1. Send User Authentication Data to ThriveStack; Trigger Workflow
-2. Receive provisioned tenant (and enrichment) data from us and provide acknowledgement
-3. Flow control is transferred to you for user onboarding
+1. Authentication and Workflow Trigger:
+Enable authentication or bring your own Identity Provider (IdP) by sending user authentication data to Thrivestack. This triggers the workflow.
+2. Tenant Data Reception:
+Receive provisioned tenant data (including enrichment) from Thrivestack and provide acknowledgment.
+3. User Onboarding Control:
+Flow control is then transferred to your application for seamless user onboarding.
 
 <details>
 
@@ -672,6 +683,29 @@ Thrivestack will redirect the user to this page.
 
 ![](/img/docs/self_serve/integrate/with_ts_auth_template1.png)
 
+
+The Prosumer Template equips typical prosumer applications (such as Figma, Canva, and Miro) with essential Product-Led Growth (PLG) capabilities. In this context, each tenant usually begins as an individual user and gradually transitions to a teams or enterprise plan. Due to light weight nature of prosumer tenants, onboarding usually occurs after the user-tenant relationship is established.
+ 
+**Key Benefits:**
+ 
+1. Effortless Integration:
+Thrivestack handles critical self-service tasks, including User Waitlisting, User & Account Enrichment, Free Pricing Plan Association, Tenant Provisioning, and Welcome notifications.
+Developers are relieved from instrumenting standard SaaS events related to user Signup and Login, freeing them to focus on other priorities.
+2. Unlock Core PLG Capabilities:
+By leveraging the template, you gain access to two pivotal functionalities:
+PLG CRM: Understand and engage with users & accounts effectively.
+PLG Analytics: Extract valuable insights for growth and GTM strategies.
+ 
+ 
+**Integration Points:**
+
+1. Authentication and Workflow Trigger:
+Enable authentication or bring your own Identity Provider (IdP) by sending user authentication data to Thrivestack. This triggers the workflow.
+2. Tenant Data Reception:
+Receive provisioned tenant data (including enrichment) from Thrivestack and provide acknowledgment.
+3. User Onboarding Control:
+Flow control is then transferred to your application for seamless user onboarding.
+
 <details>
 
 <summary> 
@@ -814,6 +848,15 @@ You would have the access to:
 </summary>
 
 ![](/img/docs/self_serve/integrate/with_ts_auth_template2.png)
+
+The **COGS Efficient B2B SaaS Template** is designed for B2B applications that incur significant tenant hosting costs. 
+This template requires slightly more development effort than the Prosumer Template and includes automatic PLG CRM and PLG Analytics.
+
+This template requires integration at three places,
+1. Send User Authentication Data to ThriveStack; Trigger Workflow
+2. Flow control is transferred to you for user onboarding; Thrivestack awaits for user redirection
+3. Receive provisioned tenant (and enrichment) data from us and provide acknowledgement
+4. User is redirected to your product home page
 
 <details>
 
@@ -983,6 +1026,16 @@ With this redirection, ThriveStack will also set the authentication token in the
 </summary>
 
 ![](/img/docs/self_serve/integrate/with_ts_auth_template3.png)
+
+The **Traditional SaaS Template** takes the lease effort to get started but most effort to go live.
+Your application handles most of the self-service operations, 
+with ThriveStack providing support in areas such as User Waitlisting, Tenant Provisioning, and Lead Storage. 
+This template also necessitates the integration of business telemetry within your application.
+
+This template requires integration at three places,
+1. Send User Authentication Data to ThriveStack; Trigger Workflow
+2. Receive provisioned tenant (and enrichment) data from us and provide acknowledgement
+3. User is redirected to your product home page
 
 <details>
 
