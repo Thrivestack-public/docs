@@ -699,11 +699,9 @@ PLG Analytics: Extract valuable insights for growth and GTM strategies.
  
 **Integration Points:**
 
-1. Authentication and Workflow Trigger:
-Enable authentication or bring your own Identity Provider (IdP) by sending user authentication data to Thrivestack. This triggers the workflow.
-2. Tenant Data Reception:
+1. Tenant Data Reception:
 Receive provisioned tenant data (including enrichment) from Thrivestack and provide acknowledgment.
-3. User Onboarding Control:
+2. User Onboarding Control:
 Flow control is then transferred to your application for seamless user onboarding.
 
 <details>
@@ -853,10 +851,9 @@ The **COGS Efficient B2B SaaS Template** is designed for B2B applications that i
 This template requires slightly more development effort than the Prosumer Template and includes automatic PLG CRM and PLG Analytics.
 
 This template requires integration at three places,
-1. Send User Authentication Data to ThriveStack; Trigger Workflow
-2. Flow control is transferred to you for user onboarding; Thrivestack awaits for user redirection
-3. Receive provisioned tenant (and enrichment) data from us and provide acknowledgement
-4. User is redirected to your product home page
+1. Flow control is transferred to you for user onboarding; Thrivestack awaits for user redirection
+2. Receive provisioned tenant (and enrichment) data from us and provide acknowledgement
+3. User is redirected to your product home page
 
 <details>
 
@@ -1033,9 +1030,8 @@ with ThriveStack providing support in areas such as User Waitlisting, Tenant Pro
 This template also necessitates the integration of business telemetry within your application.
 
 This template requires integration at three places,
-1. Send User Authentication Data to ThriveStack; Trigger Workflow
-2. Receive provisioned tenant (and enrichment) data from us and provide acknowledgement
-3. User is redirected to your product home page
+1. Receive provisioned tenant (and enrichment) data from us and provide acknowledgement
+2. User is redirected to your product home page
 
 <details>
 
