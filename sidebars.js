@@ -44,6 +44,7 @@ const build = [
               items: [
                 //'getting-started/self-serve/integrate/placeholder',
                 'getting-started/self-serve/integrate/integrate',
+                'getting-started/self-serve/integrate/sample-app',
               ]
             },
             {
