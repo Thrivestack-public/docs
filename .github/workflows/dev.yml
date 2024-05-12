@@ -64,7 +64,7 @@ jobs:
         role-session-name: OIDCSession
 
     - name: Print ARN
-      run: echo "AWS_ROLE_ARN: ${{ secrets.PROD_AWS_IAM_ROLE_ARN }}"
+      run: echo "AWS_ROLE_ARN: $secrets.PROD_AWS_IAM_ROLE_ARN"
 
     - name: Copy files to staging S3 bucket
       run: |
