@@ -142,3 +142,5 @@ dist
 workflow-schema.graphqls
 onboarding-schema.graphqls
 invitation-schema.graphqls
+
+.DS_Store
