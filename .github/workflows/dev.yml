@@ -1,10 +1,12 @@
 name: Dev
 
 on:
-  pull_request:
-    types:
-      - closed
-    branches: [ "develop" ]
+  push:
+    branches: [ develop ]
+      #  pull_request:
+      #    types:
+      #      - closed
+      #    branches: [ "develop" ]
 
 permissions:
       id-token: write
@@ -29,6 +31,17 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+
+    - name: configure aws credentials
+      uses: aws-actions/configure-aws-credentials@v1.7.0
+      with:
+        role-to-assume: arn:aws:iam::211125658117:role/GitHubAction-AssumeRoleWithAction
+        role-session-name: GitHub_to_AWS_via_FederatedOIDC
+        aws-region: us-east-1
+
+    - name: Sts GetCallerIdentity
+      run: |
+        aws sts get-caller-identity
 
     - name: Install Yarn
       run: npm install -g yarn
