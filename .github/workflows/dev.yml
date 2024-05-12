@@ -31,7 +31,7 @@ jobs:
         cache: 'npm'
     
     - name: Print branch name
-      run: echo "Branch head SHA: ${{ github.sha }}"
+      run: echo "branch head: ${{ github.head_ref || github.ref_name }} "
 
     - name: Install Yarn
       run: npm install -g yarn
