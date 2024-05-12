@@ -29,8 +29,9 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-
-    - run: echo "Branch head SHA: ${{ github.sha }}"
+    
+    - name: Print branch name
+      run: echo "Branch head SHA: ${{ github.sha }}"
 
     - name: Install Yarn
       run: npm install -g yarn
@@ -65,7 +66,8 @@ jobs:
         role-to-assume: ${{ secrets.DEV_AWS_IAM_ROLE_ARN }}
         role-session-name: OIDCSession
 
-    - run: echo "AWS_ROLE_ARN: ${{ secrets.PROD_AWS_IAM_ROLE_ARN }}"
+    - name: Print ARN
+      run: echo "AWS_ROLE_ARN: ${{ secrets.PROD_AWS_IAM_ROLE_ARN }}"
 
     - name: Copy files to staging S3 bucket
       run: |
