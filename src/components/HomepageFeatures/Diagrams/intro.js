@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
 import styles from './intro.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faScrewdriverWrench, faMagnifyingGlassChart, faChartLine, faCircleCheck } from '@fortawesome/free-solid-svg-icons'
