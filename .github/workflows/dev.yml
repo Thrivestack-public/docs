@@ -63,9 +63,6 @@ jobs:
         role-to-assume: ${{ secrets.DEV_AWS_IAM_ROLE_ARN }}
         role-session-name: OIDCSession
 
-    - name: Print ARN
-      run: echo "AWS_ROLE_ARN: $secrets.PROD_AWS_IAM_ROLE_ARN"
-
     - name: Copy files to staging S3 bucket
       run: |
         aws s3 sync ./build/ s3://${{ secrets.DEV_AWS_S3_BUCKET_NAME }}
