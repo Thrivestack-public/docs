@@ -3,7 +3,6 @@ import styles from './intro.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faScrewdriverWrench, faMagnifyingGlassChart, faChartLine, faCircleCheck } from '@fortawesome/free-solid-svg-icons'
 
-
 export default function IntroDiagram(){
   return (
   <div className={styles.container}>
