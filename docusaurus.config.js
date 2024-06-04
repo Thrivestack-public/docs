@@ -6,8 +6,8 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Thrive Documenation",
-  tagline: "Explore our guides and examples to swiftly build scalable infrastructure and turbocharge your product launch—all on one dynamic platform.",
+  title: "Documentation",
+  tagline: "Explore our guides to Build, Analyze and Drive Product-Led Growth",
   url: "https://docs.thrivestack.ai",
   //baseUrl: "/docs/",
   baseUrl: "/",
@@ -44,6 +44,9 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      colorMode: {
+        disableSwitch: true,
+      },
       docs: {
         sidebar: {
           hideable: true,
@@ -63,33 +66,65 @@ const config = {
             label: 'Getting Started',
           },
           {
-            type: 'docSidebar',
-            sidebarId: 'devsSidebar',
+            type: 'html',
             position: 'left',
-            label: 'For Developers',
+            value: '<span>|</span>'
+          },
+          //{
+          //  type: 'docSidebar',
+          //  sidebarId: 'devsSidebar',
+          //  position: 'left',
+          //  label: 'Developers',
+          //},
+          //{
+          //  type: 'docSidebar',
+          //  sidebarId: 'pmsSidebar',
+          //  position: 'left',
+          //  label: 'Growth',
+          //},
+          //{
+          //  type: 'docSidebar',
+          //  sidebarId: 'gtmLeadersSidebar',
+          //  position: 'left',
+          //  label: 'GTM Leaders',
+          //},
+          {
+            type: 'docSidebar',
+            sidebarId: 'buildSidebar',
+            position: 'left',
+            label: 'Build',
+          },
+          //{
+          //  position: 'left',
+          //  label: 'Self Serve',
+          //  href: '/getting-started/self-serve/overview'
+          //},
+          {
+            type: 'html',
+            position: 'left',
+            value: '<span>|</span>'
           },
           {
             type: 'docSidebar',
-            sidebarId: 'pmsSidebar',
+            sidebarId: 'analyzeSidebar',
             position: 'left',
-            label: 'For Product Managers',
+            label: 'Analyze',
           },
+          //{
+          //  position: 'left',
+          //  label: 'Analyze',
+          //  href: '/getting-started/analyze/instrumentation/overview'
+          //},
           {
             type: 'docSidebar',
-            sidebarId: 'gtmLeadersSidebar',
-            position: 'left',
-            label: 'For GTM Leaders',
-          },
-          {
-            type: 'docSidebar',
-            sidebarId: 'openApiSidebar',
+            sidebarId: 'apiSidebar',
             position: 'right',
             label: 'APIs',
           },
         ],
       },
       footer: {
-        style: "dark",
+        style: "light",
         links: [
           {
             title: 'Docs',
@@ -99,16 +134,12 @@ const config = {
                 to: '/getting-started/intro',
               },
               {
-                label: 'For Developers',
-                to: '/category/for-developers',
+                label: 'Self Serve',
+                to: '/getting-started/self-serve/overview',
               },
               {
-                label: 'For Product Managers',
-                to: '/category/for-product-managers',
-              },
-              {
-                label: 'For GTM Leaders',
-                to: '/category/for-gtm-leaders',
+                label: 'Analyze',
+                to: '/getting-started/analyze/instrumentation/overview',
               },
             ],
           },
@@ -148,9 +179,11 @@ const config = {
         docsPluginId: "classic",
         config: {
           public_apis: {
-            specPath: process.env.APP_ENV === 'production' ? 'https://saas-dev-docs-apis-bucket-wqcjov1l3x7su8tl.s3.ap-south-1.amazonaws.com/public_apis.yaml' : 'https://saas-dev-docs-apis-bucket-wqcjov1l3x7su8tl.s3.ap-south-1.amazonaws.com/public_apis.yaml',
+            //specPath: process.env.APP_ENV === 'production' ? 'https://saas-dev-docs-apis-bucket-wqcjov1l3x7su8tl.s3.ap-south-1.amazonaws.com/public_apis.yaml' : 'https://saas-dev-docs-apis-bucket-wqcjov1l3x7su8tl.s3.ap-south-1.amazonaws.com/public_apis.yaml',
+            specPath: "https://www.dropbox.com/scl/fi/pml9nselajw3qge0wor0x/public_apis.yaml?rlkey=pm75rj65izlogtwmcfl143g8p&dl=1",
             outputDir: "docs/public_apis",
-            downloadUrl: process.env.APP_ENV === 'production' ? 'https://saas-dev-docs-apis-bucket-wqcjov1l3x7su8tl.s3.ap-south-1.amazonaws.com/public_apis.yaml' : 'https://saas-dev-docs-apis-bucket-wqcjov1l3x7su8tl.s3.ap-south-1.amazonaws.com/public_apis.yaml',
+            //downloadUrl: process.env.APP_ENV === 'production' ? 'https://saas-dev-docs-apis-bucket-wqcjov1l3x7su8tl.s3.ap-south-1.amazonaws.com/public_apis.yaml' : 'https://saas-dev-docs-apis-bucket-wqcjov1l3x7su8tl.s3.ap-south-1.amazonaws.com/public_apis.yaml',
+            downloadUrl: "https://www.dropbox.com/scl/fi/pml9nselajw3qge0wor0x/public_apis.yaml?rlkey=pm75rj65izlogtwmcfl143g8p&dl=1",
             sidebarOptions: {
               groupPathsBy: "tag",
               categoryLinkSource: "tag",
@@ -165,6 +198,42 @@ const config = {
         indexDocs: true,
         indexBlog: false,
       },
+    ],
+    [
+      "@graphql-markdown/docusaurus",
+      {
+        id: "workflow",
+        schema: "./workflow-schema.graphqls",
+        rootPath: "./docs",
+        baseURL: "graphql/workflow",
+        loaders: {
+          GraphQLFileLoader: "@graphql-tools/graphql-file-loader", // local file schema
+        },
+      }
+    ],
+    [
+      "@graphql-markdown/docusaurus",
+      {
+        id: "onboarding",
+        schema: "./onboarding-schema.graphqls",
+        rootPath: "./docs",
+        baseURL: "graphql/onboarding",
+        loaders: {
+          GraphQLFileLoader: "@graphql-tools/graphql-file-loader", // local file schema
+        },
+      }
+    ],
+    [
+      "@graphql-markdown/docusaurus",
+      {
+        id: "invitation",
+        schema: "./invitation-schema.graphqls",
+        rootPath: "./docs",
+        baseURL: "graphql/invitation",
+        loaders: {
+          GraphQLFileLoader: "@graphql-tools/graphql-file-loader", // local file schema
+        },
+      }
     ],
   ],
 

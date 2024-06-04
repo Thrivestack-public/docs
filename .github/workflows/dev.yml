@@ -1,0 +1,93 @@
+name: Dev
+
+on:
+  push:
+    branches: [ develop ]
+      #  pull_request:
+      #    types:
+      #      - closed
+      #    branches: [ "develop" ]
+
+permissions:
+      id-token: write
+      contents: read
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    env:
+     APP_ENV: dev
+
+    strategy:
+      matrix:
+        node-version: [21.x]
+
+    permissions:
+      id-token: write
+      contents: read
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+
+    - name: configure aws credentials
+      uses: aws-actions/configure-aws-credentials@v1.7.0
+      with:
+        role-to-assume: arn:aws:iam::211125658117:role/GitHubAction-AssumeRoleWithAction
+        role-session-name: GitHub_to_AWS_via_FederatedOIDC
+        aws-region: us-east-1
+
+    - name: Sts GetCallerIdentity
+      run: |
+        aws sts get-caller-identity
+
+    - name: Install Yarn
+      run: npm install -g yarn
+
+    - run: yarn install
+
+    - name: Generate OpenAPI Documentation
+      run: yarn docusaurus gen-api-docs all
+
+    - name: Download GraphQL Schema File
+      run: |
+        curl -LJ "https://www.dropbox.com/scl/fi/dmq50gy7b4emnholgsyjq/workflow-schema.graphqls?rlkey=1nqpica08cd05dujpsoj4ij7r&dl=1" -o ./workflow-schema.graphqls
+        curl -LJ "https://www.dropbox.com/scl/fi/xoe6dfmbh089bu76nq5ef/onboarding-schema.graphqls?rlkey=wwen16jnh8zsdprxazd3nb1wb&dl=1" -o ./onboarding-schema.graphqls
+        curl -LJ "https://www.dropbox.com/scl/fi/vheg94xkqqlxr6pwy7f43/invitation-schema.graphqls?rlkey=iqcko18sfh921rmgmget6g4hr&dl=1" -o ./invitation-schema.graphqls
+
+    - name: Generate GraphQL Documentation
+      run: |
+        yarn docusaurus graphql-to-doc:workflow
+        yarn docusaurus graphql-to-doc:onboarding
+        yarn docusaurus graphql-to-doc:invitation
+
+    - run: yarn run build
+
+    - name: Uninstall Yarn
+      if: always()
+      run: npm uninstall -g yarn
+
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-region: us-east-1
+        role-to-assume: ${{ secrets.DEV_AWS_IAM_ROLE_ARN }}
+        role-session-name: OIDCSession
+
+    - name: Copy files to staging S3 bucket
+      run: |
+        aws s3 sync ./build/ s3://${{ secrets.DEV_AWS_S3_BUCKET_NAME }}
+
+    - name: Invalidate CloudFront Stale Distribution
+      run: |
+        distribution_id=$(aws cloudfront list-distributions --query "DistributionList.Items[?Origins.Items[?DomainName=='${{ secrets.DEV_AWS_S3_BUCKET_NAME }}.s3.us-east-1.amazonaws.com']].Id" --output text)
+         
+        echo "CloudFront Distribution ID: $distribution_id"
+        aws cloudfront create-invalidation --distribution-id $distribution_id --paths "/*"
+        echo "Invalidation Started For CloudFront Distribution ID: $distribution_id"
