@@ -1,10 +1,8 @@
-name: Main CI
+name: Main
 
 on:
-  pull_request:
-    types:
-      - closed
-    branches: [ "main" ]
+  push:
+    branches: [ main ]
 
 permissions:
       id-token: write
@@ -16,11 +14,15 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-     APP_ENV: production
+     APP_ENV: main
 
     strategy:
       matrix:
         node-version: [21.x]
+
+    permissions:
+      id-token: write
+      contents: read
 
     steps:
     - uses: actions/checkout@v3
@@ -29,6 +31,17 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+
+    - name: configure aws credentials
+      uses: aws-actions/configure-aws-credentials@v1.7.0
+      with:
+        role-to-assume: arn:aws:iam::211125658117:role/GitHubAction-AssumeRoleWithAction
+        role-session-name: GitHub_to_AWS_via_FederatedOIDC
+        aws-region: us-east-1
+
+    - name: Sts GetCallerIdentity
+      run: |
+        aws sts get-caller-identity
 
     - name: Install Yarn
       run: npm install -g yarn
