@@ -16,11 +16,15 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-     APP_ENV: production
+     APP_ENV: dev
 
     strategy:
       matrix:
         node-version: [21.x]
+
+    permissions:
+      id-token: write
+      contents: read
 
     steps:
     - uses: actions/checkout@v3
@@ -29,6 +33,13 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+
+    - name: configure aws credentials
+      uses: aws-actions/configure-aws-credentials@v1.7.0
+      with:
+        aws-access-key-id: ${{ secrets.PROD_AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.PROD_AWS_SECRET_ACCESS_KEY }}
+        aws-region: us-east-1
 
     - name: Install Yarn
       run: npm install -g yarn
@@ -55,13 +66,6 @@ jobs:
     - name: Uninstall Yarn
       if: always()
       run: npm uninstall -g yarn
-
-    - name: Configure AWS credentials
-      uses: aws-actions/configure-aws-credentials@v1
-      with:
-        aws-region: us-east-1
-        role-to-assume: ${{ secrets.PROD_AWS_IAM_ROLE_ARN }}
-        role-session-name: OIDCSession
 
     - name: Copy files to staging S3 bucket
       run: |
