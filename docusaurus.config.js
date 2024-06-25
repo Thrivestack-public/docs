@@ -115,12 +115,14 @@ const config = {
           //  label: 'Analyze',
           //  href: '/getting-started/analyze/instrumentation/overview'
           //},
-          {
-            type: 'docSidebar',
-            sidebarId: 'apiSidebar',
-            position: 'right',
-            label: 'APIs',
-          },
+
+          // APIs Sidebar hidden
+          //{
+          //  type: 'docSidebar',
+          //  sidebarId: 'apiSidebar',
+          //  position: 'right',
+          //  label: 'APIs',
+          //},
         ],
       },
       footer: {
