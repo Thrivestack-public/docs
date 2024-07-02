@@ -346,54 +346,54 @@ const sidebars = {
   gtmLeadersSidebar: gtm,
 
   // Uncomment to show API Sidebar
-  //apiSidebar: [
-  //  {
-  //    type: "html",
-  //    value: "<span>APIs and References</span><hr style='margin: 8px 0 4px;'>",
-  //    defaultStyle: true,
-  //  },
-  //  "getting-started/apis-non-gen/apis-introduction",
-  //  "getting-started/apis-non-gen/using-the-try-out-options",
-  //  {
-  //    type: "category",
-  //    label: "Self Serve",
-  //    link: {
-  //      type: "generated-index",
-  //      title: "API",
-  //      description:
-  //        "Documentation for APIs",
-  //    },
-  //    // @ts-ignore
-  //    items: [
-  //      "getting-started/apis-non-gen/self-serve-apis-intro",
-  //      "getting-started/apis-non-gen/self-serve-apis-try-out",
-  //      graphql,
-  //    ]
-  //  },
-  //  {
-  //    type: "category",
-  //    label: "Analyze",
-  //    link: {
-  //      type: "generated-index",
-  //      title: "API",
-  //      description:
-  //        "Documentation for APIs",
-  //    },
-  //    // @ts-ignore
-  //    items: [
-  //      require("./docs/public_apis/sidebar.js"),
-  //    ]
-  //  },
-  //  {
-  //    type: "html",
-  //    value: "<hr style='margin: 3px 0 4px;'>",
-  //    defaultStyle: true,
-  //  },
-  //  {
-  //    type: "html",
-  //    value: "<a href='https://www.postman.com/thrivestack-shreyanshd/workspace/thrivestack-apis' style='display:inline-block;background-color:#7f56d9;color:#fff;padding:5px 20px;margin: 10px;border-radius:5px;text-decoration:none;text-align:center;'><svg height='32px' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg' style='vertical-align:middle;margin-right:8px;'><path d='M8 5V19L19 12L8 5Z' fill='white'/></svg>Run In Postman</a>"
-  //  }
-  //],
+  apiSidebar: [
+    {
+      type: "html",
+      value: "<span>APIs and References</span><hr style='margin: 8px 0 4px;'>",
+      defaultStyle: true,
+    },
+    "getting-started/apis-non-gen/apis-introduction",
+    "getting-started/apis-non-gen/using-the-try-out-options",
+    //{
+    //  type: "category",
+    //  label: "Self Serve",
+    //  link: {
+    //    type: "generated-index",
+    //    title: "API",
+    //    description:
+    //      "Documentation for APIs",
+    //  },
+    //  // @ts-ignore
+    //  items: [
+    //    "getting-started/apis-non-gen/self-serve-apis-intro",
+    //    "getting-started/apis-non-gen/self-serve-apis-try-out",
+    //    graphql,
+    //  ]
+    //},
+    {
+      type: "category",
+      label: "Analyze",
+      link: {
+        type: "generated-index",
+        title: "API",
+        description:
+          "Documentation for APIs",
+      },
+      // @ts-ignore
+      items: [
+        require("./docs/public_apis/sidebar.js"),
+      ]
+    },
+    {
+      type: "html",
+      value: "<hr style='margin: 3px 0 4px;'>",
+      defaultStyle: true,
+    },
+    {
+      type: "html",
+      value: "<a href='https://www.postman.com/thrivestack-shreyanshd/workspace/thrivestack-apis' style='display:inline-block;background-color:#7f56d9;color:#fff;padding:5px 20px;margin: 10px;border-radius:5px;text-decoration:none;text-align:center;'><svg height='32px' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg' style='vertical-align:middle;margin-right:8px;'><path d='M8 5V19L19 12L8 5Z' fill='white'/></svg>Run In Postman</a>"
+    }
+  ],
 };
 
 module.exports = sidebars;
