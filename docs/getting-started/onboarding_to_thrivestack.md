@@ -67,18 +67,104 @@ If your application handles user authentication, the workflow will be triggered 
 
   3. Click on the 'Trigger workflow now' button to initiate the workflow.
 
-Users, Accounts, Enrichment Data, and other metrics related to this signup/login using the workflow can be found in ThriveStack's [Drive](#drive) and [Analyze](#analyze) sections.
+Users, Accounts, Enrichment Data, and other metrics related to this signup/login are readily available in ThriveStack's [Drive](#drive) and [Analyze](#analyze) sections. 
+All standard events in the workflow are automatically instrumented, requiring no additional setup from you. For more details about these events, please read [here](/getting-started/analyze/instrumentation/events/standard/events_overview).
 
 ## Integrate with your Development Environment _(30-45 mins)_
 
+With just the core integration options configured, you were able to trigger and test the self-serve workflows, view metrics, user and account enrichment data, and log standard events.
+
+Below are the detailed integration steps for a deeper and more personalized integration with your application.
+
 ### Custom Domain
+
+Configuring a custom domain allows ThriveStack to host self-serve workflow pages on your designated domain, such as `ts.your-domain.com` or `ts.figma.com`.
+
+1. Navigate to the 'Setup Custom Domain' section within the integration checklist and create a new configuration variable.
+
+2. Enter your Custom Domain (e.g., `jira.com` or `your-domain.ai`) and proceed to verify its DNS settings.
+
+3. After verification, the 'Sub Domain' field will be automatically filled (e.g., `ts.your-domain.ai`). Select 'Create DNS Records' and wait for the process to complete.
+
+4. Save your configurations. The subdomain will then be mapped to ThriveStack, finalizing the setup.
 
 ### Frontend Integration
 
+#### Triggering Self-Serve Workflow Post User Authentication (For Applications Implementing Their Own Authentication)
+
+When implementing your own authentication, it is crucial to manage the user flow after authentication. ThriveStack facilitates this with JavaScript SDKs and Web APIs designed to trigger workflows post-authentication.
+
+Here are the essential steps:
+
+1. Authenticate the user attempting to log in or sign up.
+
+2. Obtain a ThriveStack token via a proxy web API, which you need to implement. ThriveStack provides a 'Dummy' endpoint for testing purposes until your actual web API is operational.
+
+3. Use this token to initiate the ThriveStack self-serve workflows.
+
+For a comprehensive guide, refer to the 'Frontend Integration' section in the integration checklist.
+
 ### Backend Integration
 
-## Review
+#### A. Tenant Acknowledgement Webhook
+
+Effective orchestration of multiple components is often necessary for successful tenant provisioning, which may range from simply adding a new entry in your database to more complex tasks like creating multiple pods/services in your cluster. To accommodate the diverse tenant provisioning needs of SaaS builders, ThriveStack facilitates the following:
+
+1. Sends tenant creation or join data to a webhook at your application's backend, which you need to implement.
+2. Provisions the tenant within your application.
+3. Once the tenant is provisioned, you must send an acknowledgment message to us via a Web API provided by ThriveStack.
+
+For further details, refer to the 'Backend Integration' checklist item.
+
+#### B. Secure Backend Endpoint to Get ThriveStack Token
+
+This endpoint is critical for securely obtaining the ThriveStack token using your secret key. Once in production, the `tokenEndpoint` specified in the ThriveStack constructor should point to this custom endpoint. The implementation of this endpoint ensures the ThriveStack secret key remains protected and is not exposed in the frontend:
+
+- Implement an API endpoint on your server that accepts an optional authentication token from your user session.
+- This endpoint should communicate securely with ThriveStack's API using your secret key and return the ThriveStack token to the frontend.
+- Ensure this endpoint is accessible only to authenticated users to prevent unauthorized access.
+
+For more information, review the 'Backend Integration' checklist item.
 
 ## Analyze
 
+When using ThriveStack's self-serve, the platform automatically generates and logs essential telemetry events. These events are pivotal for creating detailed reports, such as:
+
+### Acquisition Report:
+This report tracks new users who sign up or join your platform during a specific period. Metrics include the number of registrations, referral sources (e.g., organic search, social media), and the effectiveness of marketing campaigns. It aims to gauge the success of your user acquisition strategies.
+- **Events expected:** `['signed_up', 'account_created', 'account_added_user']`
+
+### Activation Report (Coming Soon):
+Activation involves users taking meaningful actions within your product post-signup. The upcoming activation report will measure engagement with critical features, such as completing a profile, making a purchase, or utilizing specific functionalities. This report helps identify and optimize potential bottlenecks in the user journey to improve activation rates.
+- **Events expected:** `['setup_event', 'aha_event', 'habit_event']`
+
+### Retention Report:
+Retention focuses on the continuity of user engagement over time. Metrics include daily, weekly, or monthly active users (DAU, WAU, MAU) and churn rates, providing insights into user satisfaction, product stickiness, and the impact of feature changes.
+- **Events expected:** `['signed_up', 'signed_in']`
+
+ThriveStack’s internal management of these events provides a hassle-free experience for developers. There is no need for manual instrumentation or event logging configuration—it is all handled transparently. This seamless integration allows you to concentrate on developing excellent features while ThriveStack takes care of collecting and analyzing valuable telemetry data for impactful reporting.
+
 ## Drive
+
+When using ThriveStack’s self-serve platform, the system automatically generates dashboards and widgets based on various events. These dashboards support the Go-to-Market (GTM) team by generating sales leads and informing sales strategies through actionable signals. The GTM team can leverage numerous filters to derive a broad spectrum of insights from these dashboards.
+
+Following are the key functionalities available in the ThriveStack Drive section:
+
+### Overall Dashboards
+These dashboards provide comprehensive widgets related to accounts and users, featuring various filters for detailed analysis:
+- **Time Range:** Filter data based on specific time periods.
+- **Account Status:** Filter accounts by their current status.
+- **Pricing Plan Applied:** Filter accounts based on applied pricing plans.
+- **Country:** Filter data by the country of the accounts.
+- **Additional Filters:** Employ further filters for in-depth analysis as needed.
+
+### Account List
+The Account List offers a detailed compilation of all accounts added to the product, with features such as:
+- **Account Details:** Displays account domain, account country, and the pricing plans applied to each account.
+- **Filtering Options:** Provides the ability to filter accounts based on various criteria, assisting in targeted analysis and strategy formulation.
+
+### User List
+The User List encompasses all users added to the product, providing:
+- **User Contact Details:** Information on how to contact each user.
+- **Employment Details:** Information about the user's employment, including company and designation.
+- **User's Account Information:** Details about the account associated with each user.
