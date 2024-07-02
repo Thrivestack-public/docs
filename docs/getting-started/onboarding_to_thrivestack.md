@@ -29,7 +29,7 @@ Things you will address in this step:
 
 After completing the customization step, you will be directed to the 'Integrate' screen. This step facilitates the integration of ThriveStack with your application. 
 The integration process includes multiple checklist items to refine your setup. However, in this section, we will focus only on the core integration options that are 
-essential for running the self-serve workflow and connecting it to your application.
+essential for triggering & testing the self-serve workflow.
 
 ### Application Domain
 
@@ -66,6 +66,8 @@ If your application handles user authentication, the workflow will be triggered 
   2. Retrieve your security credentials from the [Developer Dashboard](https://app.thrivestack.ai/build/api-keys) and input them into the form.
 
   3. Click on the 'Trigger workflow now' button to initiate the workflow.
+
+Users, Accounts, Enrichment Data, and other metrics related to this signup/login using the workflow can be found in ThriveStack's [Drive](#drive) and [Analyze](#analyze) sections.
 
 ## Integrate with your Development Environment _(30-45 mins)_
 
