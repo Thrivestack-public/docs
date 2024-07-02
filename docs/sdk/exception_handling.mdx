@@ -1,0 +1,116 @@
+# ThriveStack Error Handling Guide
+
+This guide provides details on the errors thrown by the `ThriveStack` class methods and how to handle them appropriately in your application.
+
+## Errors and Handling Strategies
+
+### 1. Initialization Errors
+
+**Error Message**:  
+"Failed to initialize due to HTTP error `{status}`: `{errorText}`. Please check your authentication token, product, and environment IDs."
+
+#### Description
+This error occurs during the initialization process if the HTTP request to fetch the token fails. This might be due to server-side errors or incorrect client-side configuration.
+
+#### Possible Causes
+- Invalid `productId`, `environmentId`, or `authToken`.
+- Network connectivity issues.
+- Server downtime or configuration errors at the token endpoint.
+
+#### How to Handle
+```javascript
+const thrive = new ThriveStack(productId, environmentId, tokenEndpoint);
+
+try {
+    await thrive.init(authToken);
+} catch (error) {
+    console.error('Initialization error:', error.message);
+    // Analyze the error message and handle the exception based on its type.
+    if (error.message.includes('HTTP error 401')) {
+        console.error('Authentication failed. Please verify your authToken is correct and has not expired.');
+        // Handle or log the authentication error, perhaps prompting for re-authentication.
+    } else if (error.message.includes('HTTP error 404')) {
+        console.error('Invalid endpoint. Please verify the tokenEndpoint or check the server configuration.');
+        // Handle or log the endpoint error, possibly by rechecking endpoint configurations.
+    } else if (error.message.includes('HTTP error 500')) {
+        console.error('Server error. Please try again later or contact server support if the issue persists.');
+        // Server-side error: Try again later or contact support if the problem persists.
+    } else {
+        // General network or other HTTP errors not covered above.
+        console.error('Please check your network connectivity and try again.');
+    }
+    // Consider implementing additional error handling based on your application's needs.
+}
+```
+
+
+### 2. Workflow Triggering Errors
+
+**Error Messages**:  
+"Failed to trigger workflow due to HTTP error `{status}`: `{errorText}`."
+"ThriveStack instance is not initialized. Please ensure you have successfully called 'init' with valid parameters before triggering workflows."
+
+#### Description
+This error occurs when the attempt to trigger a workflow through the `ThriveStack` API fails. This could be due to a range of issues from server-side problems to incorrect parameters provided by the client.
+
+#### Possible Causes
+- Incorrect or invalid `workflowIds`, `emailId`, `userId`, or `userToken`.
+- The ThriveStack instance has not been initialized properly or the authentication token has expired or is invalid.
+- Network issues that prevent reaching the API endpoint.
+- Server-side errors at the API endpoint that handles the workflow triggering.
+
+#### How to Handle
+This error should be caught and handled gracefully in your application to provide feedback to the user and potentially to log the error for further analysis. Here is an example of how you can handle this error:
+
+```javascript
+try {
+    await thrive.triggerWorkflowAndRedirect(workflowIds, emailId, userId, userToken);
+} catch (error) {
+    if (error.message.includes('HTTP error')) {
+        console.error('Workflow triggering failed due to a server or network issue:', error.message);
+        // Handle server or network issues, possibly by retrying the request.
+    } else {
+        console.error('Workflow triggering failed:', error.message);
+        // Handle other types of errors, perhaps by checking parameters or reinitializing the instance.
+    }
+}
+```
+
+### 3. Telemetry Sending Errors
+
+**Error Message**:  
+"Failed to send telemetry data due to HTTP error `{status}` - `{responseText}`."
+"ThriveStack instance is not initialized. Please ensure you have successfully called 'init' with valid parameters before triggering workflows."
+
+#### Description
+This error occurs when there is a failure in sending telemetry data via the `ThriveStack` API. This could be due to server response issues, authentication problems, or network connectivity issues.
+
+#### Possible Causes
+- Invalid or expired API token which could be causing authentication failures.
+- Server-side issues such as downtime or configuration errors at the telemetry endpoint.
+- Incorrectly formatted telemetry data.
+- Network issues that prevent the API call from completing successfully.
+
+#### How to Handle
+It's important to handle this error to ensure telemetry data integrity and to maintain robust application monitoring. Here is an example of how you can handle this error:
+
+```javascript
+try {
+    const telemetryData = {
+        event: 'userAction',
+        data: {
+            actionType: 'click',
+            itemId: 'button1'
+        }
+    };
+    await thrive.sendTelemetry(telemetryData);
+} catch (error) {
+    if (error.message.includes('HTTP error')) {
+        console.error('Telemetry data sending failed due to a server or network issue:', error.message);
+        // Handle server or network issues, possibly by logging the error and retrying the request.
+    } else {
+        console.error('Telemetry data sending failed:', error.message);
+        // Handle other types of errors, perhaps by validating the telemetry data format.
+    }
+}
+```

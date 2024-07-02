@@ -115,6 +115,7 @@ const config = {
           //  label: 'Analyze',
           //  href: '/getting-started/analyze/instrumentation/overview'
           //},
+
           {
             type: 'docSidebar',
             sidebarId: 'apiSidebar',

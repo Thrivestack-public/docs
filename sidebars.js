@@ -106,7 +106,8 @@ const analyze = [
             type: 'category', 
             label: 'Events',
             items: [
-            'getting-started/analyze/instrumentation/events/standard/signed_up',
+            'getting-started/analyze/instrumentation/events/standard/events_overview',
+            'getting-started/analyze/instrumentation/events/standard/signed_up',  
             'getting-started/analyze/instrumentation/events/standard/account_created',
             'getting-started/analyze/instrumentation/events/standard/account_added_user',
             'getting-started/analyze/instrumentation/events/standard/signed_in',
@@ -155,6 +156,17 @@ const analyze = [
                 },
               ]
             },
+          ]
+        }
+]
+
+const sdk = [
+{
+          type: 'category', 
+          label: 'SDK',
+          items: [
+          'sdk/introduction',
+          'sdk/exception_handling',
           ]
         }
 ]
@@ -323,6 +335,7 @@ const sidebars = {
         //},
         build,
         analyze,
+        sdk,
       ]
     }
   ],
@@ -331,6 +344,8 @@ const sidebars = {
   devsSidebar: dev,
   pmsSidebar: pms,
   gtmLeadersSidebar: gtm,
+
+  // Uncomment to show API Sidebar
   apiSidebar: [
     {
       type: "html",
@@ -339,22 +354,22 @@ const sidebars = {
     },
     "getting-started/apis-non-gen/apis-introduction",
     "getting-started/apis-non-gen/using-the-try-out-options",
-    {
-      type: "category",
-      label: "Self Serve",
-      link: {
-        type: "generated-index",
-        title: "API",
-        description:
-          "Documentation for APIs",
-      },
-      // @ts-ignore
-      items: [
-        "getting-started/apis-non-gen/self-serve-apis-intro",
-        "getting-started/apis-non-gen/self-serve-apis-try-out",
-        graphql,
-      ]
-    },
+    //{
+    //  type: "category",
+    //  label: "Self Serve",
+    //  link: {
+    //    type: "generated-index",
+    //    title: "API",
+    //    description:
+    //      "Documentation for APIs",
+    //  },
+    //  // @ts-ignore
+    //  items: [
+    //    "getting-started/apis-non-gen/self-serve-apis-intro",
+    //    "getting-started/apis-non-gen/self-serve-apis-try-out",
+    //    graphql,
+    //  ]
+    //},
     {
       type: "category",
       label: "Analyze",
