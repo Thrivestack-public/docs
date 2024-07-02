@@ -106,7 +106,8 @@ const analyze = [
             type: 'category', 
             label: 'Events',
             items: [
-            'getting-started/analyze/instrumentation/events/standard/signed_up',
+            'getting-started/analyze/instrumentation/events/standard/events_overview',
+            'getting-started/analyze/instrumentation/events/standard/signed_up',  
             'getting-started/analyze/instrumentation/events/standard/account_created',
             'getting-started/analyze/instrumentation/events/standard/account_added_user',
             'getting-started/analyze/instrumentation/events/standard/signed_in',
