@@ -39,7 +39,7 @@ The following traits described as a traits:
 
 ### 1.4. Sample
 
-A JSON object with the required Identify Object fields and any additional traits associated with account. [Try Out](../../../../integrate/public_apis/group)
+A JSON object with the required Identify Object fields and any additional traits associated with account.
 
 ```json
 {

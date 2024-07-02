@@ -35,7 +35,7 @@ The following properties of how an event is described by:
 
 #### 1.2.3. Sample
 
-A JSON object with the required Event Object fields and any additional event properties. [Try Out](../../../../integrate/public_apis/track)
+A JSON object with the required Event Object fields and any additional event properties.
 
 
 ```json

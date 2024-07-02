@@ -44,7 +44,7 @@ The following traits described as a traits:
 
 ## 1.4. Sample
 
-A JSON object with the required Identify Object fields and any additional traits associated with user. [Try this API out](/public_apis/identify)
+A JSON object with the required Identify Object fields and any additional traits associated with user.
 
 ```json
 {

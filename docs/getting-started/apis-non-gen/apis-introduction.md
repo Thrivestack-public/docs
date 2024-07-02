@@ -29,7 +29,7 @@ In line with this architecture, our APIs are bifurcated accordingly. Each module
   </thead>
   <tbody>
     <tr>
-      <td><strong><a href="/category/self-serve">Self Serve 🛎️</a></strong></td>
+      <td><strong><a href="">Self Serve 🛎️</a></strong></td>
       <td>Enhance your Product with streamlined collaboration, seamless onboarding, and efficient workflow management.<br/><br/><strong>Sample Use Cases:</strong><br/>1. Invite one or multiple users to your product.<br/>2. Publish your no-code user workflow to development environment.</td>
       <td>
         <table>
@@ -59,19 +59,19 @@ In line with this architecture, our APIs are bifurcated accordingly. Each module
         <table>
           <tr>
             <td><a href="/getting-started/analyze/authentication">Token</a></td>
-            <td><a href="/public_apis/token">API Reference</a></td>
+            <td><a href="">API Reference</a></td>
           </tr>
           <tr>
             <td><a href="/getting-started/analyze/instrumentation/identification/user">Identify</a></td>
-            <td><a href="/public_apis/identify">API Reference</a></td>
+            <td><a href="">API Reference</a></td>
           </tr>
           <tr>
             <td><a href="/getting-started/analyze/instrumentation/identification/group">Group</a></td>
-            <td><a href="/public_apis/group">API Reference</a></td>
+            <td><a href="">API Reference</a></td>
           </tr>
           <tr>
             <td><a href="/getting-started/analyze/instrumentation/events/event-tracking">Track</a></td>
-            <td><a href="/public_apis/track">API Reference</a></td>
+            <td><a href="">API Reference</a></td>
           </tr>
         </table>
       </td>
@@ -102,7 +102,7 @@ Explore the APIs in various ways:
 1. **[Run in Postman](https://www.postman.com/thrivestack-shreyanshd/workspace/thrivestack-apis) 🏃:** Click the 'Run in Postman' button to access ThriveStack's Postman workspace. Here, you can directly execute requests or download/fork the Postman Collections for extended testing.
 
 2. **Use the Built-in 'Try Out' Feature 🔍:**
-    - **REST APIs 🌐:** Each REST API reference page includes a dedicated '[Try Out](/public_apis/token#request)' section for immediate testing.
+    - **REST APIs 🌐:** Each REST API reference page includes a dedicated 'Try Out' section for immediate testing.
     - **GraphQL APIs 🔗:** Utilize the [GraphQL Explorer](/getting-started/apis-non-gen/self-serve-apis-try-out) for an interactive API exploration experience.
 
 

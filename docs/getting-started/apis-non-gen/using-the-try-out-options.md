@@ -30,7 +30,7 @@
 
 1. Get the [API Token](#).
 
-2. Go to the API Reference page of your choice, for example the [/identify](/public_apis/identify) API reference guide.
+2. Go to the API Reference page of your choice, for example the '/identify' API reference guide.
 
 3. Navigate to the 'Request' section found in the right most pane of the documenation.
 ![](/img/docs/apis/guide/rest-request-token.png)
