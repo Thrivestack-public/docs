@@ -229,15 +229,22 @@ When using ThriveStack's self-serve, the platform automatically generates and lo
 This report tracks new users who sign up or join your platform during a specific period. Metrics include the number of registrations, referral sources (e.g., organic search, social media), and the effectiveness of marketing campaigns. It aims to gauge the success of your user acquisition strategies.
 - **Events expected:** `['signed_up', 'account_created', 'account_added_user']`
 
-### Activation Report (Coming Soon):
-Activation involves users taking meaningful actions within your product post-signup. The upcoming activation report will measure engagement with critical features, such as completing a profile, making a purchase, or utilizing specific functionalities. This report helps identify and optimize potential bottlenecks in the user journey to improve activation rates.
-- **Events expected:** `['setup_event', 'aha_event', 'habit_event']`
-
 ### Retention Report:
 Retention focuses on the continuity of user engagement over time. Metrics include daily, weekly, or monthly active users (DAU, WAU, MAU) and churn rates, providing insights into user satisfaction, product stickiness, and the impact of feature changes.
 - **Events expected:** `['signed_up', 'signed_in']`
 
-ThriveStack’s internal management of these events provides a hassle-free experience for developers. There is no need for manual instrumentation or event logging configuration—it is all handled transparently. This seamless integration allows you to concentrate on developing excellent features while ThriveStack takes care of collecting and analyzing valuable telemetry data for impactful reporting.
+### Virality Report
+
+This report provides a comprehensive analysis of your product's virality over a selected time period. It aims to address three critical questions:
+
+1. **How Viral is Your Product?** - Measures the extent to which your product is being shared and recommended within user networks.
+2. **Causes of Virality:** - Identifies key drivers of virality, including influential users and features that encourage sharing.
+3. **Challenges to Enhancing Virality:** - Examines obstacles that might be hindering the product's viral growth and suggests actionable strategies for improvement.
+
+ThriveStack’s internal management of these events provides a hassle-free experience for developers. There is no need for manual 
+instrumentation or event logging configuration—it is all handled transparently. This seamless integration allows you to focus on 
+developing excellent features while ThriveStack takes care of collecting and analyzing valuable telemetry data for impactful reporting. 
+For more information about Event Tracking, read [here](/getting-started/analyze/instrumentation/events/standard/events_overview).
 
 </details>
 
