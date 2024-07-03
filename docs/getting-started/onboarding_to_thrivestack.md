@@ -31,6 +31,37 @@ After completing the customization step, you will be directed to the 'Integrate'
 The integration process includes multiple checklist items to refine your setup. However, in this section, we will focus only on the core integration options that are 
 essential for triggering & testing the self-serve workflow.
 
+#### Configuration Variable
+
+Before we explore the core options, let's briefly review 'Creating Configuration Variables' within ThriveStack. The integration checklist includes various steps necessary for integrating ThriveStack with a user's SaaS application. Each checklist item represents a specific configuration task, allowing you to save and name multiple configurations, with only one active at a time.
+
+For example:
+- **Custom Domain:** You can save different domains like `jira.com` and `your-domain.ai`, and switch between them as needed.
+- **Success Redirection Page:** This is where ThriveStack redirects the end user after the workflow completes. You might have one configuration for `/home` and another for `/dashboard`, with the ability to switch between them.
+
+This flexibility in managing configurations enhances testing efficiency and integration customization.
+
+** A. Creating New Configuration Variable **
+
+1. **Initiate Creation:**
+   - Navigate to the configuration variable dropdown and select '+ Create variable'.
+
+2. **Naming the Configuration:**
+   - In the modal that appears, enter the name for your configuration. We automatically prepend semantic prefixes to enhance clarity. For instance, if you name an 'application domain' configuration `test`, it becomes `Application_Domain_Development_test`. This full name will be displayed before you finalize creation.
+
+3. **Create the Variable:**
+   - Click on 'Create' to establish the configuration variable `Application_Domain_Development_test`.
+
+4. **Enter Configuration Data:**
+   - Add the actual configuration data for the checklist item. For an 'Application Domain', this might be something like `your-domain.com` or `figma.com`.
+
+5. **Save Changes:**
+   - Once all mandatory fields are filled, the 'Save changes' button will activate. Click it to save your configuration variable.
+
+** B. Switching Configuration Variable **
+
+// Work in progess
+
 ### Application Domain
 
 In this configuration step, you need to specify your 'Application Domain'—the domain where your application is hosted, such as `miro.com`, `jira.com`, or `localhost:9000`
@@ -84,7 +115,8 @@ Configuring a custom domain allows ThriveStack to host self-serve workflow pages
 
 2. Enter your Custom Domain (e.g., `jira.com` or `your-domain.ai`) and proceed to verify its DNS settings.
 
-3. After verification, the 'Sub Domain' field will be automatically filled (e.g., `ts.your-domain.ai`). Select 'Create DNS Records' and wait for the process to complete.
+3. After verification, the 'Sub Domain' field will be automatically filled (e.g., `ts.your-domain.ai`). Select 'Create DNS Records' 
+and Create DNS (CNAME, TXT) records with your domain provider (e.g., GoDaddy).
 
 4. Save your configurations. The subdomain will then be mapped to ThriveStack, finalizing the setup.
 
