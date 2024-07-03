@@ -19,11 +19,11 @@ Additionally, you can choose from pre-made self-serve templates, which we will d
 
 Things you will address in this step:
 
-- **Business Type:** Who will be using your product? Are you targeting businesses (B2B) or consumers (B2C)?
+**A. Business Type:** Who will be using your product? Are you targeting businesses (B2B) or consumers (B2C)?
 
-- **Authentication Type:** Is user authentication already implemented in your application? If not, ThriveStack will assist you in setting up authentication.
+**B. Authentication Type:** Is user authentication already implemented in your application? If not, ThriveStack will assist you in setting up authentication.
 
-- **Self Serve Templates:** Since every SaaS product serves its customers uniquely, self-serve workflows can vary. Templates provide an easy starting point. Here is a brief description of each template:
+**C. Self Serve Templates:** Since every SaaS product serves its customers uniquely, self-serve workflows can vary. Templates provide an easy starting point. Here is a brief description of each template:
   - **[Prosumer](https://resources.thrivestack.ai/i/143920594/prosumer-templates-templates):** In this template, tenants typically start as individual users and eventually transition to a team or enterprise plan.
 
   - **[COGS Efficient](https://resources.thrivestack.ai/i/143920594/cogs-efficiency-templates-templates):** In this model, every customer receives a dedicated backend. Your teams deploy it manually through interactions between sales and customers, or you deploy infrastructure components selectively based on the features customers choose.
