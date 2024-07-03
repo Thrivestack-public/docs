@@ -4,7 +4,14 @@ This document will guide you through the onboarding process on the ThriveStack p
 ThriveStack Self-Serve workflows into your application. You will learn the basics of 'Customizing Self-Serve', 'Configuring Core Options',
 'Triggering & Testing', and more.
 
-## Customize Self-Serve _(2 mins)_
+
+<details>
+
+<summary>
+
+## 1. Customize Self-Serve _(2 mins)_
+
+</summary>
 
 After successfully signing up for ThriveStack and entering your basic details, you will land on the 'Customize' screen. 
 This step aims to understand who will be using your product and whether you have user authentication set up in your product. 
@@ -17,15 +24,23 @@ Things you will address in this step:
 - **Authentication Type:** Is user authentication already implemented in your application? If not, ThriveStack will assist you in setting up authentication.
 
 - **Self Serve Templates:** Since every SaaS product serves its customers uniquely, self-serve workflows can vary. Templates provide an easy starting point. Here is a brief description of each template:
-  - **Prosumer:** In this template, tenants typically start as individual users and eventually transition to a team or enterprise plan.
+  - **[Prosumer](https://resources.thrivestack.ai/i/143920594/prosumer-templates-templates):** In this template, tenants typically start as individual users and eventually transition to a team or enterprise plan.
 
-  - **COGS Efficient:** In this model, every customer receives a dedicated backend. Your teams deploy it manually through interactions between sales and customers, or you deploy infrastructure components selectively based on the features customers choose.
+  - **[COGS Efficient](https://resources.thrivestack.ai/i/143920594/cogs-efficiency-templates-templates):** In this model, every customer receives a dedicated backend. Your teams deploy it manually through interactions between sales and customers, or you deploy infrastructure components selectively based on the features customers choose.
 
-  - **Traditional SaaS:** Best suited for SaaS companies with a sales-led organizational structure. Your teams, having recently started exploring Product-Led Growth (PLG), are building a stronger commitment to self-serve strategies.
+  - **[Traditional SaaS](https://resources.thrivestack.ai/i/143920594/traditional-saas-templates-templates):** Best suited for SaaS companies with a sales-led organizational structure. Your teams, having recently started exploring Product-Led Growth (PLG), are building a stronger commitment to self-serve strategies.
 
   Read more about the templates [here](https://resources.thrivestack.ai/p/announcing-self-serve-templates).
 
-## Configure Core Options _(2-3 mins)_
+</details>
+
+<details>
+
+<summary>
+
+## 2. Configure Core Options _(2-3 mins)_
+
+</summary>
 
 After completing the customization step, you will be directed to the 'Integrate' screen. This step facilitates the integration of ThriveStack with your application. 
 The integration process includes multiple checklist items to refine your setup. However, in this section, we will focus only on the core integration options that are 
@@ -79,23 +94,31 @@ the first time. These default configurations are designed to help you quickly tr
 a new configuration variable.
 :::
 
-### Application Domain
+### A. Application Domain
 
 In this configuration step, you need to specify your 'Application Domain'—the domain where your application is hosted, such as `acme.com`, `acme-labs.com`, or `localhost:9000`
 for local testing. This domain is crucial for configuring the subsequent steps.
 
-### Onboarding Redirects
+### B. Onboarding Redirects
 
 This setting specifies the endpoint that directs users to your onboarding page, such as `/onboarding` or `/on-board`. ThriveStack will redirect users to the page you 
 configure, allowing them to complete the onboarding process. This URL will be prefixed with one of the application domains configured in the previous step. 
 Depending on your chosen template, you may need to redirect users back to ThriveStack, passing the 'redirect_url' in the URL parameters.
 
-### On-Success Redirects
+### C. On-Success Redirects
 
 This setting determines the landing page where users will arrive once they complete the entire workflow. Common endpoints include `/dashboard` or `/home`. 
 This URL will also be prefixed with one of the application domains you configured previously.
 
-## Trigger & Test _(5 mins)_
+</details>
+
+<details>
+
+<summary>
+
+## 3. Trigger & Test _(5 mins)_
+
+</summary>
 
 Once the core options are correctly configured, you can test the self-serve workflows by triggering them. Click on the 'Preview Icon' to access the trigger start page. The content of this page depends on the 'Authentication' type you selected during the 'Customize' step.
 
@@ -118,7 +141,22 @@ If your application handles user authentication, the workflow will be triggered 
 Users, Accounts, Enrichment Data, and other metrics related to this signup/login are readily available in ThriveStack's [Drive](#drive) and [Analyze](#analyze) sections. 
 All standard events in the workflow are automatically instrumented, requiring no additional setup from you. For more details about these events, please read [here](/getting-started/analyze/instrumentation/events/standard/events_overview).
 
+</details>
+
+In just 10 minutes, we've customized, configured core options, and triggered workflows. This quick exercise provided a basic understanding 
+of ThriveStack's self-serve workflows and how you can personalize them according to your preferences.
+
+In the following sections, we'll delve deeper into the extensive capabilities of ThriveStack, giving you a high-level overview of what more 
+you can achieve with the platform.
+
+
+<details>
+
+<summary>
+
 ## Integrate with your Development Environment _(30-45 mins)_
+
+</summary>
 
 With just the core integration options configured, you were able to trigger and test the self-serve workflows, view metrics, user and account enrichment data, and log standard events.
 
@@ -175,7 +213,15 @@ This endpoint is critical for securely obtaining the ThriveStack token using you
 
 For more information, review the 'Backend Integration' checklist item.
 
+</details>
+
+<details>
+
+<summary>
+
 ## Analyze
+
+</summary>
 
 When using ThriveStack's self-serve, the platform automatically generates and logs essential telemetry events. These events are pivotal for creating detailed reports, such as:
 
@@ -193,7 +239,15 @@ Retention focuses on the continuity of user engagement over time. Metrics includ
 
 ThriveStack’s internal management of these events provides a hassle-free experience for developers. There is no need for manual instrumentation or event logging configuration—it is all handled transparently. This seamless integration allows you to concentrate on developing excellent features while ThriveStack takes care of collecting and analyzing valuable telemetry data for impactful reporting.
 
+</details>
+
+<details>
+
+<summary>
+
 ## Drive
+
+</summary>
 
 When using ThriveStack’s self-serve platform, the system automatically generates dashboards and widgets based on various events. These dashboards support the Go-to-Market (GTM) team by generating sales leads and informing sales strategies through actionable signals. The GTM team can leverage numerous filters to derive a broad spectrum of insights from these dashboards.
 
@@ -217,3 +271,5 @@ The User List encompasses all users added to the product, providing:
 - **User Contact Details:** Information on how to contact each user.
 - **Employment Details:** Information about the user's employment, including company and designation.
 - **User's Account Information:** Details about the account associated with each user.
+
+</details>
