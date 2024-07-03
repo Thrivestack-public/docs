@@ -117,6 +117,11 @@ const analyze = [
             'getting-started/analyze/instrumentation/events/standard/trial_ended',
             'getting-started/analyze/instrumentation/events/standard/account_removed_user',
             'getting-started/analyze/instrumentation/events/standard/account_deleted',
+            'getting-started/analyze/instrumentation/events/standard/user_waitlisted',
+            'getting-started/analyze/instrumentation/events/standard/user_enriched',
+            'getting-started/analyze/instrumentation/events/standard/tenant_waitlisted',
+            'getting-started/analyze/instrumentation/events/standard/group_enriched',
+            'getting-started/analyze/instrumentation/events/standard/custom_events',
             {
               type: 'category', 
               label: 'Custom',
