@@ -36,12 +36,12 @@ essential for triggering & testing the self-serve workflow.
 Before we explore the core options, let's briefly review 'Creating Configuration Variables' within ThriveStack. The integration checklist includes various steps necessary for integrating ThriveStack with a user's SaaS application. Each checklist item represents a specific configuration task, allowing you to save and name multiple configurations, with only one active at a time.
 
 For example:
-- **Custom Domain:** You can save different domains like `jira.com` and `your-domain.ai`, and switch between them as needed.
+- **Custom Domain:** You can save different domains like `acme-labs.com` and `your-domain.ai`, and switch between them as needed.
 - **Success Redirection Page:** This is where ThriveStack redirects the end user after the workflow completes. You might have one configuration for `/home` and another for `/dashboard`, with the ability to switch between them.
 
 This flexibility in managing configurations enhances testing efficiency and integration customization.
 
-** A. Creating New Configuration Variable **
+**A. Creating New Configuration Variable**
 
 1. **Initiate Creation:**
    - Navigate to the configuration variable dropdown and select '+ Create variable'.
@@ -53,18 +53,35 @@ This flexibility in managing configurations enhances testing efficiency and inte
    - Click on 'Create' to establish the configuration variable `Application_Domain_Development_test`.
 
 4. **Enter Configuration Data:**
-   - Add the actual configuration data for the checklist item. For an 'Application Domain', this might be something like `your-domain.com` or `figma.com`.
+   - Add the actual configuration data for the checklist item. For an 'Application Domain', this might be something like `your-domain.com` or `acme.com`.
 
 5. **Save Changes:**
    - Once all mandatory fields are filled, the 'Save changes' button will activate. Click it to save your configuration variable.
 
-** B. Switching Configuration Variable **
+**B. Switching Configuration Variable**
 
-// Work in progess
+If you have multiple configurations saved for an integration checklist item, you can easily switch between them. Follow these steps:
+
+1. **Access the Dropdown:**
+   - Click on the configuration variable dropdown menu.
+
+2. **Select a Configuration:**
+   - Choose the configuration variable you wish to apply. Once selected, the new configuration data will appear in the checklist item.
+
+3. **Save Changes:**
+   - Click on 'Save changes' to apply the new configuration to the checklist item.
+
+:::note
+ThriveStack includes 'Default Configurations' out of the box, which are pre-applied to the integration checklist when you access it for 
+the first time. These default configurations are designed to help you quickly trigger, test, and experience the self-serve workflows.
+
+**Please Note:** Default Configurations are not editable. If you wish to modify the values in the integration checklist, you must create 
+a new configuration variable.
+:::
 
 ### Application Domain
 
-In this configuration step, you need to specify your 'Application Domain'—the domain where your application is hosted, such as `miro.com`, `jira.com`, or `localhost:9000`
+In this configuration step, you need to specify your 'Application Domain'—the domain where your application is hosted, such as `acme.com`, `acme-labs.com`, or `localhost:9000`
 for local testing. This domain is crucial for configuring the subsequent steps.
 
 ### Onboarding Redirects
@@ -109,11 +126,11 @@ Below are the detailed integration steps for a deeper and more personalized inte
 
 ### Custom Domain
 
-Configuring a custom domain allows ThriveStack to host self-serve workflow pages on your designated domain, such as `ts.your-domain.com` or `ts.figma.com`.
+Configuring a custom domain allows ThriveStack to host self-serve workflow pages on your designated domain, such as `ts.your-domain.com` or `ts.acme.com`.
 
 1. Navigate to the 'Setup Custom Domain' section within the integration checklist and create a new configuration variable.
 
-2. Enter your Custom Domain (e.g., `jira.com` or `your-domain.ai`) and proceed to verify its DNS settings.
+2. Enter your Custom Domain (e.g., `acme-labs.com` or `your-domain.ai`) and proceed to verify its DNS settings.
 
 3. After verification, the 'Sub Domain' field will be automatically filled (e.g., `ts.your-domain.ai`). Select 'Create DNS Records' 
 and Create DNS (CNAME, TXT) records with your domain provider (e.g., GoDaddy).
