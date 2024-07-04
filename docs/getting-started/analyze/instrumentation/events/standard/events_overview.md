@@ -17,8 +17,8 @@ In SaaS applications, tracking events is crucial for understanding user behavior
 | Account      | [account_added_user](/getting-started/analyze/instrumentation/events/standard/account_added_user)                     | Self Serve | User added to an account or organization             | Acquisition                      |
 | Account      | [tenant_waitlisted](/getting-started/analyze/instrumentation/events/standard/tenant_waitlisted)                       | Self Serve | Tenant/organization-level waitlisting                | Acquisition                      |
 | Account      | [group_enriched](/getting-started/analyze/instrumentation/events/standard/group_enriched)                             | Self Serve | Data enrichment for groups or teams                  | N/A                              |
-| Custom       | [subscription_upgraded](/getting-started/analyze/instrumentation/events/standard/custom_events#subscription_upgraded) | Custom     | User subscription upgrades                           | Activation, Revenue              |
-| Custom       | [feature_used](/getting-started/analyze/instrumentation/events/standard/custom_events#feature_used)                   | Custom     | Utilization of specific features                     | Activation, Product Development  |
+| Custom       | [subscription_upgraded](/getting-started/analyze/instrumentation/events/standard/custom_events) | Custom     | User subscription upgrades                           | Activation, Revenue              |
+| Custom       | [feature_used](/getting-started/analyze/instrumentation/events/standard/custom_events)                   | Custom     | Utilization of specific features                     | Activation, Product Development  |
 
 ## Key Takeaways
 
