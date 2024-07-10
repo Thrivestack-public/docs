@@ -328,6 +328,7 @@ const sidebars = {
       items: [
         'getting-started/intro',
         'getting-started/onboarding_to_thrivestack',
+        'getting-started/customer_onboarding',
         //{
         //  type: 'category', 
         //  label: 'Personas 👥',
