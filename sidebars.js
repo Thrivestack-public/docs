@@ -13,19 +13,15 @@ const build = [
 {
           type: 'category', 
           label: 'Self Serve',
-          //link: {
-          //  type: 'generated-index',
-          //  title: 'Self Serve',
-          //  description: "Self Serve Documentation",
-          //  keywords: ["self-serve"],
-          //},
           items: [
             'getting-started/self-serve/overview',
             'getting-started/self-serve/start-here',
+            'getting-started/test',
             {
               type: 'category',
               label: 'Customize',
               items: [
+                'getting-started/test',
                 'getting-started/self-serve/customize/http_trigger',
                 'getting-started/self-serve/customize/authentication',
                 'getting-started/self-serve/customize/enrichment',
@@ -42,7 +38,6 @@ const build = [
               type: 'category',
               label: 'Integrate',
               items: [
-                //'getting-started/self-serve/integrate/placeholder',
                 'getting-started/self-serve/integrate/integrate',
                 'getting-started/self-serve/integrate/sample-app',
               ]
@@ -317,6 +312,38 @@ const graphql = [
   },
 ]
 
+const onboarding = [
+  {
+    type: 'category', 
+    label: 'Customer Onboarding',
+    items: [
+      // 'getting-started/customer_onboarding',
+      {
+        type: 'category', 
+        label: 'Milestone 1 - Experience Self-Serve',
+        items: [
+          'getting-started/customer_onboarding/milestone1/customize_and_configure',
+        ]
+      },
+      {
+        type: 'category', 
+        label: 'Milestone 2 - Integrate with your Application',
+        items: [
+          'getting-started/customer_onboarding/milestone2/p1-integrate_with_your_app',
+          'getting-started/customer_onboarding/milestone2/p2-integrate_with_your_app',
+        ]
+      },
+      {
+        type: 'category', 
+        label: 'Milestone 3',
+        items: [
+          'getting-started/customer_onboarding/milestone3',
+        ]
+      }
+    ]
+  }
+]
+
 // @ts-check
 
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
@@ -327,8 +354,8 @@ const sidebars = {
       label: 'Getting Started',
       items: [
         'getting-started/intro',
-        'getting-started/onboarding_to_thrivestack',
-        'getting-started/customer_onboarding',
+        //'getting-started/onboarding_to_thrivestack', // Shreyansh Customer Onboarding Documentation
+        onboarding,
         //{
         //  type: 'category', 
         //  label: 'Personas 👥',
