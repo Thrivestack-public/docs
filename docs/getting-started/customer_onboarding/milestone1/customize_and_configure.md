@@ -10,7 +10,7 @@ Milestone 1 in Customer onboarding is to be able to see how easily Self-Serve ca
 
 In this step, we will help you:
 
-1. Signup to [www.ThriveStack.ai](www.ThriveStack.ai)
+1. Signup to www.ThriveStack.ai
 
 2. Customize Self-Serve for your business
 

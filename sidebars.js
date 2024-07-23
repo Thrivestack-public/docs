@@ -335,7 +335,7 @@ const onboarding = [
       },
       {
         type: 'category', 
-        label: 'Milestone 3',
+        label: 'Milestone 3 - Setup Analyze and Drive',
         items: [
           'getting-started/customer_onboarding/milestone3/setup_analyze',
           'getting-started/customer_onboarding/milestone3/setup_drive',
