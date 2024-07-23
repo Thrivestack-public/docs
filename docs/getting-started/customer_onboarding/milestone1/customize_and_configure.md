@@ -1,18 +1,17 @@
 --- 
-hide_table_of_contents: true
+toc_min_heading_level: 2
+toc_max_heading_level: 5
+title: Experience Self-Serve With Default Configuration 
 ---
 
-# Experience Self-Serve With Default Configuration 
-
-------------------------------------------------------------------
 
 Milestone 1 in Customer onboarding is to be able to see how easily Self-Serve can be customized and see it in action, as soon as possible. This step normally takes an hour (tentatively).
 
 In this step, we will help you:
 
-1. Signup to www.ThriveStack.ai
+#### 1. Signup to www.ThriveStack.ai
 
-2. Customize Self-Serve for your business
+#### 2. Customize Self-Serve for your business
 
    2.1. After you have clicked on the magic link you received in your inbox, you will be able to:
 
@@ -42,7 +41,7 @@ In this step, we will help you:
 
    - 2.6.2. Second email demonstrates the notification that your GTM Team will receive when your End Users sign up.
 
-3. Complete Self-Serve with ThriveStack’s default configuration. You can change these configurations to your environment specific configuration any time
+#### 3. Complete Self-Serve with ThriveStack’s default configuration. You can change these configurations to your environment specific configuration any time
 
    3.1. With the above steps completed, you have successfully Customized your Self-Serve, and now you are ready to experience firsthand what your End Users will experience, and, ready to integrate with your Product’s development environment. You should see an “Integration checklist” now
 
@@ -68,7 +67,7 @@ In this step, we will help you:
    
    ![](/img/customer_onboarding/default-config.png)
 
-4. Experience Self-Serve Signup or Login you just configured above, and experience what your End Users will experience
+#### 4. Experience Self-Serve Signup or Login you just configured above, and experience what your End Users will experience
 
    4.1. Invite 1-2 of your colleagues from the Engineering Team to experience and test it together.
 
@@ -100,7 +99,7 @@ Current Roles do not restrict the product usage for the invited Users. They will
 
    4.4. Try logging-in as an end-user 
 
-5. Experience ANALYZE: PLG Reports
+#### 5. Experience ANALYZE: PLG Reports
 
    5.1. Navigate to “/analyze/report-dashboard” from the App or click on the   menu on the top left, next to Thrivestack’s logo, then click on “Analyze”, and then click on “Dashboard” menu to access the list of out of the box Report.
 
@@ -126,7 +125,7 @@ Current Roles do not restrict the product usage for the invited Users. They will
 
    ![](/img/customer_onboarding/retention-report-widgets.png)
 
-6. Experience DRIVE: PLG CRM
+#### 6. Experience DRIVE: PLG CRM
 
    6.1. To Navigate to “/drive/dashboard” from the App or click on the “three horizontal line menu” on the top left, next to Thrivestack’s logo, click on “Drive”, and then click on “Accounts” or “Users” menu to access the Accounts and User list signing up to your Product
 

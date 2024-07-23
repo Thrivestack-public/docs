@@ -1,12 +1,12 @@
 --- 
-hide_table_of_contents: true
+toc_min_heading_level: 2
+toc_max_heading_level: 5
+title: Phase I - With Minimal Mandatory Configuration
 ---
 
-# Phase I - With Minimal Mandatory Configuration
+ Milestone 2 in Customer Onboarding is to integrate your Product with ThriveStack, in your Product’s development environment. This step normally takes a day’s effort for an engineer; however, this can span 1-2 days depending on the bandwidth available and skill.
 
-### Milestone 2 in Customer Onboarding is to integrate your Product with ThriveStack, in your Product’s development environment. This step normally takes a day’s effort for an engineer; however, this can span 1-2 days depending on the bandwidth available and skill.
-
-1. Pre-requisite for Milestone 2:
+1. #### Pre-requisite for Milestone 2:
 
     1.1. You have customized and completed the setup for Self-Serve with ThriveStack’s default configuration.
 
@@ -16,9 +16,9 @@ hide_table_of_contents: true
 
     1.4. You or your Team member is aware of your Product’s environmental configurations and has access to it.
 
-### Milestone 2 – Part 1 - Mandatory configuration for integration to your Product – 1hr - 4hrs
+### Milestone 2 – Phase 1 - Mandatory configuration for integration to your Product – 1hr - 4hrs
 
-1. Configure Application domain
+1. #### Configure Application domain
 
    1.1.  Enter “Your Application Domain” where Product’s development environment is hosted. All further redirections from ThriveStack to your Product will be done using this configuration. Here’s an example of what your app domain might look like:
 
@@ -26,7 +26,7 @@ hide_table_of_contents: true
 
    ![](/img/customer_onboarding/app-domain-checklist.png)
 
-2.  Onboarding Redirects
+2.  #### Onboarding Redirects
 
    ![](/img/customer_onboarding/onboarding-redirects.png)
 
@@ -50,7 +50,7 @@ hide_table_of_contents: true
    2.3.  Once the onboarding is completed, redirect the End User to the return URL (decoded) mentioned in point 2
 
 
-3. On-Success Redirects
+3. #### On-Success Redirects
 
 ![](/img/customer_onboarding/on-success-redirects.png)
 
