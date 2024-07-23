@@ -317,7 +317,7 @@ const onboarding = [
     type: 'category', 
     label: 'Customer Onboarding',
     items: [
-      // 'getting-started/customer_onboarding',
+      'getting-started/customer_onboarding/customer_onboarding_overview',
       {
         type: 'category', 
         label: 'Milestone 1 - Experience Self-Serve',
