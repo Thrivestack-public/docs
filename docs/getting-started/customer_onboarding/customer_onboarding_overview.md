@@ -1,17 +1,30 @@
 # Overview
 
-1. **Milestone 1 - Experience Self-Serve (Effort - 1 hr)**
+1. **Milestone 1 - Customise and Configure Self-Serve for your business (Effort - 1 hr)**
    1. [Signup & Customize Self-Serve](milestone1/customize_and_configure#1-signup-to-wwwthrivestackai)
    2. [Configure Self-Serve with TS default configuration](milestone1/customize_and_configure#2-customize-self-serve-for-your-business)
    3. [Experience Self-Serve just like your End Users](milestone1/customize_and_configure#4-experience-self-serve-signup-or-login-you-just-configured-above-and-experience-what-your-end-users-will-experience)
    4. [Experience Analyze - Out of Box Reports](milestone1/customize_and_configure#5-experience-analyze-plg-reports)
    5. [Experience Drive - User List & Account List](milestone1/customize_and_configure#6-experience-drive-plg-crm)
 
+<!-- Pre-requisite for the next call
+    Who do we need
+What will we accomplish in the next call -->
+
+:::note
+
+   - For Milestone 2 you will need to invite members from your Engineering Team for the Integration
+
+:::
+
 2. **Milestone 2 - Integrate with your development environment (Effort - 1-2 days)**
    - **Phase 1 - Integrate your development environment with mandatory configuration (Effort - 1 hr)**
      1. [Application Domain](milestone2/p1-integrate_with_your_app#configure-application-domain)
      2. [Redirect to your Onboarding Application - Onboarding Redirects](milestone2/p1-integrate_with_your_app#onboarding-redirects)
      3. [Final redirect to your application - On-Success Redirects](milestone2/p1-integrate_with_your_app#on-success-redirects)
+
+     <!-- Goal is to enable your engineering Team to be able to configure, Test and validate Self-Serve within your product by themselves
+     We are also enabling your GTM -->
 
    - **Phase 2 - Integrate in with your development environment with additional configuration (Effort - 1 day)**
      1. [Frontend Integration](milestone2/p2-integrate_with_your_app#frontend-integration)
