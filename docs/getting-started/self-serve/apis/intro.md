@@ -4,6 +4,7 @@ Introducing Thrive Stack's Self-Serve APIs, a suite of tools designed to enhance
 
 - [API Trigger](./triggers)
 - [Invitation](./invitation)
+- [User Management](./userManagement)
 - [Onboarding](./onboarding)
 - [Publish Workflow](./publish)
 - [Promote Workflow](./promote)
