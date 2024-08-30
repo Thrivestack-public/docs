@@ -67,7 +67,8 @@ const build = [
               type: 'category',
               label: 'Features',
               items: [
-                "getting-started/self-serve/features/no_code_orchestration"
+                "getting-started/self-serve/features/no_code_orchestration",
+                "getting-started/self-serve/features/invitation_ui_library"
               ]
             }
           ]
