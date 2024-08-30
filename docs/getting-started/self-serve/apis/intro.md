@@ -8,3 +8,5 @@ Introducing Thrive Stack's Self-Serve APIs, a suite of tools designed to enhance
 - [Onboarding](./onboarding)
 - [Publish Workflow](./publish)
 - [Promote Workflow](./promote)
+- [Teams](./teams)
+- [Roles](./roles)
