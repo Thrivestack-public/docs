@@ -13,7 +13,7 @@ This API endpoint is used to retrieve the roles associated with a specific accou
 
 ## Headers
 
-- `Authorization: Bearer <token>`: Replace `<token>` with a valid Thrivestack Management token to validate request. (Ref: [Token API](https://docs.app.thrivestack.ai/getting-started/analyze/authentication)) (Valid Scope: `user_management`)
+- `Authorization`:  Bearer <token>, Replace `<token>` with a valid Thrivestack Management token to validate request. (Ref: [Token API](https://docs.app.thrivestack.ai/getting-started/analyze/authentication)) (Valid Scope: `user_management`)
 - `Content-Type: application/json`: Indicates that the request body is in JSON format.
 
 ## Request Body
@@ -79,7 +79,7 @@ This API endpoint is used to update role details for given account_id. The reque
 
 ## Headers
 
-- `Authorization: Bearer <token>`: Replace `<token>` with a valid Thrivestack Management token to validate request. (Ref: [Token API](https://docs.app.thrivestack.ai/getting-started/analyze/authentication)) (Valid Scope: `user_management`)
+- `Authorization`:  Bearer <token>, Replace `<token>` with a valid Thrivestack Management token to validate request. (Ref: [Token API](https://docs.app.thrivestack.ai/getting-started/analyze/authentication)) (Valid Scope: `user_management`)
 - `Content-Type: application/json`: Indicates that the request body is in JSON format.
 
 ## Request Body
