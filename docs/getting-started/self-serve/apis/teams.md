@@ -8,7 +8,7 @@ This API endpoint is used to retrieve the teams associated with a specific accou
 
 ## Endpoint
 
-**URL:** `https://api.app.thrivestack.ai/api/team/list`
+**URL:** `https://api.dev.app.thrivestack.ai/api/team/list`
 **Method:** `POST`
 
 ## Headers
@@ -34,7 +34,7 @@ The request body should be in JSON format and contains the following parameter:
 
 ```bash
 curl '
-https://api.app.thrivestack.ai/api/team/list'
+https://api.dev.app.thrivestack.ai/api/team/list'
   -H 'Authorization: Bearer <token>'
   -H 'Content-Type: application/json'
   --data-raw '{"tenant_id":"137e6fc0-46e0-4997-8ef5-6c8c14c1fab4"}'
@@ -70,7 +70,7 @@ This API endpoint is used to update team details for given tenant_id. The reques
 
 ## Endpoint
 
-**URL:** `https://api.app.thrivestack.ai/api/team/update`
+**URL:** `https://api.dev.app.thrivestack.ai/api/team/update`
 **Method:** `POST`
 
 ## Headers
@@ -108,7 +108,7 @@ The request body should be in JSON format and contains the following parameters:
 ### Example cURL
 
 ```bash
-curl 'https://api.app.thrivestack.ai/api/user/update'
+curl 'https://api.dev.app.thrivestack.ai/api/user/update'
   -H 'Authorization: Bearer <token>'
   -H 'Content-Type: application/json'
   --data-raw '{
