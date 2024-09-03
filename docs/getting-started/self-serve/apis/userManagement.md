@@ -8,12 +8,12 @@ This API endpoint retrieves a list of users for given Account. The API allows fi
 
 ## Endpoint
 
-**URL:** `https://api.dev.app.thrivestack.ai/api/user/list`
+**URL:** `https://api.app.thrivestack.ai/api/user/list`
 **Method:** `POST`
 
 ## Headers
 
-- `Authorization: Bearer <token>`: Replace `<token>` with a valid Thrivestack Management token to validate request. (Ref: [Token API](https://docs.app.thrivestack.ai/getting-started/analyze/authentication))
+- `Authorization: Bearer <token>`: Replace `<token>` with a valid Thrivestack Management token to validate request. (Ref: [Token API](https://docs.app.thrivestack.ai/getting-started/analyze/authentication)) (Valid Scope: `user_management`)
 - `Content-Type: application/json`: Indicates that the request body is in JSON format.
 
 ## Request Body
@@ -25,7 +25,7 @@ The request body should be in JSON format and contains the following parameters:
   - `key` (string): The field on which to apply the filter. In this example, the filter is applied on the `name` field.
   - `operator` (string): The operator to use for filtering. In this example, the operator is `contains`, which checks if the field contains a certain value.
   - `value` (string): The value to search for in the specified field.
-- `page_size` (integer): The number of users to return per page. In this example, it is set to 10,000.
+- `page_size` (integer): The number of users to return per page. In this example, it is set to 10.
 - `page_no` (integer): The page number to return. In this example, it is set to 0 (first page).
 
 ### Example Request Body
@@ -48,7 +48,7 @@ The request body should be in JSON format and contains the following parameters:
 ### Example Request
 
 ```bash
-curl 'https://api.dev.app.thrivestack.ai/api/user/list' \
+curl 'https://api.app.thrivestack.ai/api/user/list' \
   -H 'Content-Type: application/json' \
   --data-raw '{"account_id":"137e6fc0-46e0-4997-8ef5-6c8c14c1fab4","filters":[{"key":"status","operator":"contains","value":"Deleted"}],"page_size":10000,"page_no":0}'
 ```
@@ -61,7 +61,7 @@ curl 'https://api.dev.app.thrivestack.ai/api/user/list' \
         {
             "user_id": "f0162f13-2930-4eab-9ad5-2c5ac8e3fa97",
             "email_id": "najete4016@luvnish.com",
-            "name": "SQT",
+            "name": "user1",
             "role": [
                 {
                     "id": "1f23a5f0-042b-4906-8351-182942ad83e7",
@@ -88,70 +88,6 @@ Ensure that the **account_id** is correct and valid for the user list you wish t
 The **filters** can be adjusted to match different fields and operators based on the API’s capabilities.
 The pagination parameters (page_size and page_no) should be set according to the needs of the data retrieval process.
 
-# User Roles API
-
-This API endpoint is used to retrieve the roles associated with a specific account in the application. The request requires the account ID to be included in the request body.
-
-## Endpoint
-
-**URL:** `https://api.dev.app.thrivestack.ai/api/user/roles`
-**Method:** `POST`
-
-## Headers
-
-- `Authorization: Bearer <token>`: Replace `<token>` with a valid Thrivestack Management token to validate request. (Ref: [Token API](https://docs.app.thrivestack.ai/getting-started/analyze/authentication))
-- `Content-Type: application/json`: Indicates that the request body is in JSON format.
-
-## Request Body
-
-The request body should be in JSON format and contains the following parameter:
-
-- `account_id` (string): The unique identifier of the account for which the roles are being requested.
-
-### Example Request Body
-
-```json
-{
-  "account_id": "137e6fc0-46e0-4997-8ef5-6c8c14c1fab4"
-}
-```
-
-### Example Request
-
-```bash
-curl '
-https://api.dev.app.thrivestack.ai/api/user/roles'
-  -H 'Content-Type: application/json'
-  --data-raw '{"AccountId":"137e6fc0-46e0-4997-8ef5-6c8c14c1fab4"}'
-```
-
-### Example Response
-
-```json
-{
-  "roles": [
-    {
-      "id": "1f23a5f0-042b-4906-8351-182942ad83e7",
-      "name": "editor"
-    },
-    {
-      "id": "57073fb3-d66d-4165-9cdc-86db4f73930e",
-      "name": "admin"
-    },
-    {
-      "id": "6c4a4869-1d02-4db7-ab79-a7e8cfcfe325",
-      "name": "viewer"
-    }
-  ],
-  "status": true
-}
-```
-
-### Notes
-
-Ensure that the **AccountId** provided is valid and corresponds to an existing account in the system.
-The response includes a **list of roles** associated with the specified account.
-The **status: true** field in the response indicates that the request was successful.
 
 # User Update API
 
@@ -159,12 +95,12 @@ This API endpoint is used to update user details in account for given user_id. T
 
 ## Endpoint
 
-**URL:** `https://api.dev.app.thrivestack.ai/api/user/update`
+**URL:** `https://api.app.thrivestack.ai/api/user/update`
 **Method:** `POST`
 
 ## Headers
 
-- `Authorization: Bearer <token>`: Replace `<token>` with a valid Thrivestack Management token to validate request. (Ref: [Token API](https://docs.app.thrivestack.ai/getting-started/analyze/authentication))
+- `Authorization: Bearer <token>`: Replace `<token>` with a valid Thrivestack Management token to validate request. (Ref: [Token API](https://docs.app.thrivestack.ai/getting-started/analyze/authentication)) (Valid Scope: `user_management`)
 - `Content-Type: application/json`: Indicates that the request body is in JSON format.
 
 ## Request Body
@@ -205,7 +141,7 @@ The request body should be in JSON format and contains the following parameters:
 ### Example request
 
 ```bash
-curl 'https://api.dev.app.thrivestack.ai/api/user/update' \
+curl 'https://api.app.thrivestack.ai/api/user/update' \
 
   -H 'Authorization: Bearer <token>' \
   -H 'Content-Type: application/json' \
