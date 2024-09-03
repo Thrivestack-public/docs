@@ -13,7 +13,7 @@ This API endpoint retrieves a list of users for given Account. The API allows fi
 
 ## Headers
 
-- `Authorization`:  Bearer <token>, Replace `<token>` with a valid Thrivestack Management token to validate request. (Ref: [Token API](https://docs.app.thrivestack.ai/getting-started/analyze/authentication)) (Valid Scope: `user_management`)
+- `Authorization: Bearer <token>`: Replace `<token>` with a valid Thrivestack Management token to validate request. (Ref: [Token API](https://docs.app.thrivestack.ai/getting-started/analyze/authentication)) (Valid Scope: `user_management`)
 - `Content-Type: application/json`: Indicates that the request body is in JSON format.
 
 ## Request Body
@@ -100,7 +100,7 @@ This API endpoint is used to update user details in account for given user_id. T
 
 ## Headers
 
-- `Authorization`:  Bearer <token>, Replace `<token>` with a valid Thrivestack Management token to validate request. (Ref: [Token API](https://docs.app.thrivestack.ai/getting-started/analyze/authentication)) (Valid Scope: `user_management`)
+- `Authorization: Bearer <token>`: Replace `<token>` with a valid Thrivestack Management token to validate request. (Ref: [Token API](https://docs.app.thrivestack.ai/getting-started/analyze/authentication)) (Valid Scope: `user_management`)
 - `Content-Type: application/json`: Indicates that the request body is in JSON format.
 
 ## Request Body
