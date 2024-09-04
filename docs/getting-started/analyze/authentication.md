@@ -32,7 +32,7 @@ This API endpoint is used to generate OAuth 2.0 token which will be used to auth
 
 ## Endpoint
 
-**URL:** `https://api.dev.app.thrivestack.ai/api/team/update`
+**URL:** `https://api.dev.app.thrivestack.ai/api/token`
 **Method:** `POST`
 
 ## Headers
