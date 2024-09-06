@@ -1,4 +1,4 @@
-# Retention
+# Retention Report
 ### Overview
 This documentation defines the Retention Report, explaining its importance in understanding user loyalty and product engagement in B2B SaaS. It covers key metrics like retention rate and cohort analysis, alongside the report’s widgets, such as retention scores, graphs, and cohort analysis across different timeframes. Additionally, it provides an integration guide for setting up the retention report, either through a self-serve workflow or via telemetry APIs for tracking user sign-ups, sign-ins, and account creations.
 
@@ -15,7 +15,10 @@ For e.g. If you start with 1000 users at the beginning of the month and 200 of t
   
 ##### 2.Cohort Analysis:
 -	Cohort Analysis: Examines specific groups of customers or employees who started at the same time to understand their retention patterns.
-- To generate a retention report, we will analyse events such as user sign-ups, account creations, and user sign-ins. By tracking these events and measuring how many users remain active over time, we can create an accurate retention report that reflects user engagement and retention trends.
+
+
+To generate a retention report, we will analyse events such as user sign-ups, account creations, and user sign-ins. By tracking these events and measuring how many users remain active over time, we can create an accurate retention report that reflects user engagement and retention trends.
+![ThriveStack Acquisition Report Flowchart](/img/docs/analyze/reports/Retention_Report.png)
 
 # Comprehensive Review of the Retention Report. 
 Before diving into what a retention report consists of, we need to understand some key concepts to better grasp the report. 
