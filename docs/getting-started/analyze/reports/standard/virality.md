@@ -21,11 +21,10 @@ This virality report encompass the of concepts like:
 - Time to Invite (TTI) refers to the average time it takes for a newly signed-up user to invite others after joining. 
 A short TTI indicates that users are quickly engaging with the product and inviting others, contributing to faster viral spread. If TTI is high, it may signal that users are not immediately engaged or there is friction in the invite process. 
 
+To generate a virality report, we will analyse events like signups and track the number of signups, as well as the invites sent by each user. This data helps in creating an accurate virality report.
 
-### What all questions that the virality report helps to solve is:
-(foto)
-To generate a virality report, we will analyse events like signups and track the number of signups, as well as the invites sent by each user. This data helps in creating an accurate virality report. 
-(foto)
+![ThriveStack Acquisition Report Flowchart](/img/docs/analyze/reports/Virality_Report.png)
+
 ### What does a virality report consist of?
 
 Now, let’s analyse the widgets in detail :
@@ -67,10 +66,7 @@ If you prefer not to use the self-serve option, you can send telemetry events vi
 - **Identify Call:**
   - For user signup 
  
- 
- 
 
-I
   
 Your doubts are not yet cleared? Contact support at support@thrivestack.ai 
  
