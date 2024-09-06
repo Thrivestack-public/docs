@@ -16,8 +16,8 @@ For e.g. If you start with 1000 users at the beginning of the month and 200 of t
 ##### 2.Cohort Analysis:
 -	Cohort Analysis: Examines specific groups of customers or employees who started at the same time to understand their retention patterns.
 
-
 To generate a retention report, we will analyse events such as user sign-ups, account creations, and user sign-ins. By tracking these events and measuring how many users remain active over time, we can create an accurate retention report that reflects user engagement and retention trends.
+
 ![ThriveStack Acquisition Report Flowchart](/img/docs/analyze/reports/Retention_Report.png)
 
 # Comprehensive Review of the Retention Report. 
@@ -28,7 +28,7 @@ The retention report consists of two tabs: Users and Accounts, which are both CR
 
 | ***Tabs*** |  ***Widgets*** | ***Description*** | ***Axes*** |
 | -------- | ------------ | -------------- | -------- |
-| ***Users***    | Retention score | The retention score for the user is provided, showing their position on the retention scale.| N/A |
+| ***Users*** | Retention score | The retention score for the user is provided, showing their position on the retention scale.| N/A |
 |          | Retention graph | The graph that charts the retention score over time. | X axis:Percentage of the retention Y ,axis: date |
 |          | Key metrics(LTR) | The graph shows the retentions rate of users over weeks, months and year. | X axis: the retention rate Y, axis: date |
 |          | Retention cohort | Cohort retention analysis tracks how distinct groups of users engage with the product over a period of time.|   N/A    |
@@ -36,7 +36,6 @@ The retention report consists of two tabs: Users and Accounts, which are both CR
 |          | Retention graph | The graph that charts the retention score over time. | X axis:Percentage of the retention Y ,axis: date |
 |          | Key metrics(LTR) | The graph shows the retentions rate of accounts over weeks, months and year. | X axis: the retention rate Y, axis: date |
 |          | Retention cohort | Cohort retention analysis tracks how distinct groups of accounts engage with the product over a period of time.|   N/A    |
-
 
 **Note**: 
 - Users can toggle between viewing the count and the percentage change. It also includes a time range filter.
