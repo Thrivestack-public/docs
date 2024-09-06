@@ -29,18 +29,18 @@ To generate a virality report, we will analyse events like signups and track the
 
 Now, let’s analyse the widgets in detail :
 
-| **Tabs**  | **Widgets** | **Description** | **Axes** |
-| -------- | ----------- | --------------- | -------- |
-| ***User*** | Overall Analysis of virality | Virality coefficient factor(k), Number of invites sent, Conversion rate( c), Time to Invite (TTA), Time to Accept (TTA) | N/A |
-|           | Virality trend - Daily | Chart that tracks the  daily virality coefficient over a period | axis: Days Y axis: virality coefficient factor|
-|            | Virality trend - Weekly | Chart that tracks the  weekly virality coefficient over a period | X axis: Days Y axis: virality coefficient factor |
-|           | Virality trend - Monthly | Chart that tracks the  monthly virality coefficient over a period | X axis: Days Y axis: virality coefficient factor |
-|           | Time to Send the Invite (TTI) | Chart that tracks the  Time taken by the user to send the invitation | X	axis: Time Y	axis: Days | 
-|           | Graph that represents the users that sent the invites | Chart that tracks the percentage of users sent one or more invites| X axis: Percentage of  Y axis: Days |
-|           | Time to Accept the Invite (TTA) | Chart that tracks the time take to accept the invitation | X	axis: Time , Y	axis: Days 
-|           | Table that shows the top 5 accounts that drive invitation | This table will help to get the details of the number of invitations sent by the accounts |N/A|
-|           | Table that shows top features that drive virality | This table will help to get the details of the features that increases | N/A |
-|           |Table that shows the users that drive virality | This table will help to get the details of the number of invitations sent by the users |  N/A |
+| **Widgets** | **Description** | **Axes** |
+| ----------- | --------------- | -------- |
+ |Overall Analysis of virality | Virality coefficient factor(k), Number of invites sent, Conversion rate( c), Time to Invite (TTA), Time to Accept (TTA) | N/A |
+|Virality trend - Daily | Chart that tracks the  daily virality coefficient over a period | axis: Days Y axis: virality coefficient factor|
+| Virality trend - Weekly | Chart that tracks the  weekly virality coefficient over a period | X axis: Days Y axis: virality coefficient factor |
+|Virality trend - Monthly | Chart that tracks the  monthly virality coefficient over a period | X axis: Days Y axis: virality coefficient factor |
+|Time to Send the Invite (TTI) | Chart that tracks the  Time taken by the user to send the invitation | X	axis: Time Y	axis: Days | 
+|Graph that represents the users that sent the invites | Chart that tracks the percentage of users sent one or more invites| X axis: Percentage of  Y axis: Days |
+|Time to Accept the Invite (TTA) | Chart that tracks the time take to accept the invitation | X	axis: Time , Y	axis: Days 
+|Table that shows the top 5 accounts that drive invitation | This table will help to get the details of the number of invitations sent by the accounts |N/A|
+|Table that shows top features that drive virality | This table will help to get the details of the features that increases | N/A |
+|Table that shows the users that drive virality | This table will help to get the details of the number of invitations sent by the users |  N/A |
 
 **Note**: For each widget, we are provided with filters for different time periods (daily, weekly,monthly). 
 
