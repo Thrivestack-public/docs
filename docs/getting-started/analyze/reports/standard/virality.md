@@ -23,7 +23,7 @@ A short TTI indicates that users are quickly engaging with the product and invit
 
 To generate a virality report, we will analyse events like signups and track the number of signups, as well as the invites sent by each user. This data helps in creating an accurate virality report.
 
-![ThriveStack Acquisition Report Flowchart](/img/docs/analyze/reports/Virality_Report.png)
+![ThriveStack Virality Report Flowchart](/img/docs/analyze/reports/virality_report.png)
 
 ### What does a virality report consist of?
 
