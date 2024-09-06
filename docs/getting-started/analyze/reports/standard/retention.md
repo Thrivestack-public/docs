@@ -18,7 +18,7 @@ For e.g. If you start with 1000 users at the beginning of the month and 200 of t
 
 To generate a retention report, we will analyse events such as user sign-ups, account creations, and user sign-ins. By tracking these events and measuring how many users remain active over time, we can create an accurate retention report that reflects user engagement and retention trends.
 
-![ThriveStack Acquisition Report Flowchart](/img/docs/analyze/reports/Retention_Report.png)
+![ThriveStack Retention Report Flowchart](/img/docs/analyze/reports/retention_report.png)
 
 # Comprehensive Review of the Retention Report. 
 Before diving into what a retention report consists of, we need to understand some key concepts to better grasp the report. 
