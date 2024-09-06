@@ -140,7 +140,8 @@ const analyze = [
                 'getting-started/analyze/reports/overview',
                 'getting-started/analyze/reports/standard/acquisition',
                 //'getting-started/analyze/reports/standard/activation',
-                //'getting-started/analyze/reports/standard/retention',
+                'getting-started/analyze/reports/standard/retention',
+                'getting-started/analyze/reports/standard/virality',
                 //'getting-started/analyze/reports/standard/engagement',
                 //'getting-started/analyze/reports/standard/expansion',
                 {
