@@ -63,14 +63,5 @@ If you prefer not to use the self-serve option, you can send telemetry events vi
 
 - **Identify Call:**
   - For user signup.
- 
-  
+   
 Your doubts are not yet cleared? Contact support at support@thrivestack.ai .
- 
- 
-
-
-
-
-
-
