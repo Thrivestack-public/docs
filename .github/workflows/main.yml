@@ -73,6 +73,6 @@ jobs:
       run: |
         distribution_id=$(aws cloudfront list-distributions --query "DistributionList.Items[?Origins.Items[?DomainName=='${{ secrets.PROD_AWS_S3_BUCKET_NAME }}.s3.us-east-1.amazonaws.com']].Id" --output text)
          
-        echo "CloudFront Distribution ID: ${distribution_id}"
-        aws cloudfront create-invalidation --distribution-id ${distribution_id} --paths "/*"
-        echo "Invalidation Started For CloudFront Distribution ID: ${distribution_id}"
+        echo "CloudFront Distribution ID: $distribution_id"
+        aws cloudfront create-invalidation --distribution-id $distribution_id --paths "/*"
+        echo "Invalidation Started For CloudFront Distribution ID: $distribution_id"
