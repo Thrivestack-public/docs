@@ -1,3 +1,5 @@
+# Acquisition Report
+
 ### Overview
 
 This documentation covers the definition of Acquisition Report, along with an overview of the report’s widgets, such as daily, weekly, and monthly counts with delta changes and trend charts. Finally, it offers a guide on integrating the report, including self-serve steps or via instrumentation API.
