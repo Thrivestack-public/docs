@@ -1,14 +1,15 @@
 # Identify
 
-## 1. Introduction
+## 1.What is Identify Call
+An identify call is a type of API request that helps identify and track who the user is. This call is used to attach important information about the user to a unique user profile in a system, usually for tracking purposes.
 
-The Identify call is a method that allows you to associate a user with their actions and record traits about them.
+##### The flow shows how a SaaS system can recognize and track user actions from the point they are identified (with details) to tracking their interactions with the platform. If they aren't identified, they remain anonymous.
 
 ![User Identify Flowchart](/img/docs/analyze/apis/identify-flowchart.png)
 
 ## 1.1. Identify API
-
-The `/identify` call is used to identify users and associate traits with their profiles. It allows you to store and update user information for personalized experiences.
+An Identify API is designed to handle and manage user identify information within an application.
+The `/identify` call is used to identify users and associate traits with their profiles.
 
 ## 1.2. Identify Parameters
 
@@ -42,17 +43,60 @@ The following traits described as a traits:
 | `username`      | String | User’s username. This should be unique to each user, like the usernames of Twitter or GitHub. |
 | `website`       | String | Website of a user                                                |
 
-## 1.4. Sample
+
+### 1.4. Identify call Authentication Flow
+(illustration)
+
+1.***User Authentication***: User authenticates using OAuth provider (e.g., Google, Microsoft, Okta).
+2.***Access Token Issued***: After successful authentication, the IdP returns an access token.
+3.***Identity Call***: You make an API call to the user info/identity endpoint using the access token.
+4.***Receive User Data***: The IdP responds with the user's profile data, which you can use in your application.
+
+### 1.5 Common Scopes for the identify call
+The access token should be generated with appropriate scopes to allow access to the user's identify information. Some common scopes include:
+`openid`: OpenID Connect scope for retrieving basic user information.
+`profile`: To get additional profile information (like name, picture).
+`email`: To get the user's email.
+
+### 1.6. Sample
 
 A JSON object with the required Identify Object fields and any additional traits associated with user. [Try this API out](/public_apis/identify)
-
+## End Point
+URL:`https://api.dev.app.thrivestack.ai/api/identify` Method: `POST`
+#### Sample JSON request
 ```json
 {
   "user_id": "user123",
   "traits": {
-    "name": "FirstName LastName",
-    "email": "firstname.lastname@example.com"
+    "name": "first_name last_name",
+    "email": "first_name.last_name@example.com"
   },
   "timestamp": "20-11-23T22:28:55.111Z"
+}
+```
+#### Sample response
+The response will depend on the specific API you’re interacting with. Typically, it might include an acknowledgment that the data has been received and processed.
+#### 1.Successful response
+
+```json
+  {
+  "status": "success",
+  "message": "User identity updated successfully",
+  "data": {
+    "user_id": "user123",
+    "traits": {
+      "name": "first_name last_name",
+      "email": "first_name.last_name@example.com"
+    },
+    "timestamp": "20-11-23T22:28:55.111Z"
+}
+  }
+```
+#### 2.Error Response
+```json
+{
+  "status": "error",
+  "message": "Invalid user ID or missing fields",
+  "error_code": "INVALID_REQUEST"
 }
 ```
