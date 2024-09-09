@@ -1,13 +1,12 @@
-# Group
+# Group Call
 
-## 1. Introduction
-
-The Group API call is a method to associate an individual user with a group, such as a company, organization, account, project, or team.
+## 1.What is a group call?
+A "group call" generally refers to API calls or functions that involve managing or interacting with individual user with a group, such as a company, organization, account, project, or team.
 
 ![Group Identify Flowchart](/img/docs/analyze/apis/group-flowchart.png)
 
 ## 1.1. Group API
-
+A group api typically refers to a set of API endpoints or functions designed to manage and interact with groups,company or team.
 The `/group` endpoint is used to group users together based on shared properties or behaviors. It allows you to store and update company information for personalized experiences.
 
 ## 1.2. Group Parameters
@@ -16,10 +15,10 @@ You need to provide four pieces of information: the first is the unique identifi
 
 | Parameter  | Type   | Description                                                         |
 |------------|--------|---------------------------------------------------------------------|
-| `group_id*`| String | The unique identifier of the group.                                 |
-| `user_id*` | String | The unique identifier of the user.                                  |
-| `traits*`  | Object | Additional traits associated with the group.                        |
-| `timestamp*`| Date  | Date the event was first created. We recommend ISO-8601 date strings.|
+| `group_id`| String | The unique identifier of the group.                                 |
+| `user_id` | String | The unique identifier of the user.                                  |
+| `traits`  | Object | Additional traits associated with the group.                        |
+| `timestamp`| Date  | Date the event was first created. We recommend ISO-8601 date strings.|
 | `context` (optional) | Object | Context is a dictionary of extra information that provides useful context about a datapoint |
 
 ## 1.3. Group Traits
@@ -54,4 +53,29 @@ A JSON object with the required Identify Object fields and any additional traits
   "timestamp": "20-11-23T22:28:55.111Z"
 }
 ```
-
+#### Successful Response
+```json
+{
+  "status": "success",
+  "message": "Group updated successfully",
+  "data": {
+    "user_id": "user123",
+    "group_id": "account123",
+    "traits": {
+      "name": "account name",
+      "industry": "industry belongs to",
+      "plan": "name of plan associate with account",
+      "employees": "total number of employees account have"
+    },
+    "timestamp": "20-11-23T22:28:55.111Z"
+} 
+}
+```
+#### Error Response
+```json
+{
+  "status": "error",
+  "message": "Invalid group ID or missing fields",
+  "error_code": "INVALID_REQUEST"
+}
+``` 
