@@ -1,4 +1,4 @@
-# Page (Optional)
+<!-- # Page (Optional)
 
 ## 1. Introduction
 
@@ -64,4 +64,4 @@ A JSON object with the required Event Object fields and any additional page prop
   "user_id": "766b3aef-5904-46fe-af05-a293fee8h345",
   "timestamp": "20-11-23T22:28:55.111Z"
 }
-```
+```-->
