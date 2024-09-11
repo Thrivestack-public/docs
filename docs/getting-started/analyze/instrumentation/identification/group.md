@@ -78,7 +78,7 @@ URL :`https://api.dev.app.thrivestack.ai/api/group`
 Method:`POST`
 
 ### 1.5 Headers
-- `Authorization: Bearer <token>` Replace <token> with a valid Thrivestack Management token that includes the required scopes. (Ref: [Token API Documentatin](https://docs.app.thrivestack.ai/getting-started/analyze/authentication)) (Valid Scopes: group_api, telemetry_apis)
+- `Authorization: Bearer <token>` Replace <token> with a valid Thrivestack Management token to validate request. (Ref: [Token API Documentation](https://docs.app.thrivestack.ai/getting-started/analyze/authentication)) (Valid Scopes: group_api, telemetry_apis)
 - `Content-Type: application/json` Indicates that the request body is in the JSON format.
 
 ### 1.6 Sample
