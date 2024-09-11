@@ -95,7 +95,7 @@ const analyze = [
                 'getting-started/analyze/instrumentation/identification/user',
                 'getting-started/analyze/instrumentation/identification/group',
                 'getting-started/analyze/instrumentation/events/event-tracking',
-                'getting-started/analyze/instrumentation/page',
+                //'getting-started/analyze/instrumentation/page',
               ],
           },
           {
