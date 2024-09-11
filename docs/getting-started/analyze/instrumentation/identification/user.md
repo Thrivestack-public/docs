@@ -8,7 +8,7 @@ An identify call is a type of API request that helps identify and track who the 
 ![User Identify Flowchart](/img/docs/analyze/apis/identify-flowchart.png)
 
 ### 1.1 Identify API
-An Identify API is designed to handle and manage user identity information within an application.
+An Identify API is designed to handle and manage user identify information within an application.
 - The `/identify` call is used to identify users and associate traits with their profiles. It allows you to store and update user information for personalized experiences.
 
 ### 1.2 Identify Parameters
@@ -38,7 +38,7 @@ The following traits described as a traits:
 |`enrichment_full_name`               | string | The complete name of the user, typically a combination of their first and last name|                                       
 |`enrichment_avatar`                  | string | The URL or file path to the users’s profile picture or avatar.|                                                       
 |`enrichment_email_provider`          | string | The provider of the user's email service (e.g., Gmail, Outlook, custom domain). |
-|`enrichment_phone`                   |[]string | A list of phone numbers associated with the user.|                                     
+|`enrichment_phone`                   | Array[string] | A list of phone numbers associated with the user.|                                     
 |`enrichment_city`                    | string | The city where the user is located.| 
 |`enrichment_state`                   | string | The state or province where the user is located.   |                                                     
 |`enrichment_state_code`              | string | The abbreviated code for the state  |                                                  
@@ -64,7 +64,7 @@ URL:`https://api.dev.app.thrivestack.ai/api/identify`
 Method: `POST`
 
 ### 1.5 Headers
-- `Authorization: Bearer <token>` Replace <token> with a valid Thrivestack Management token to validate request. (Ref: [Token API](https://docs.app.thrivestack.ai/getting-started/analyze/authentication)) (Valid Scope: user_management) 
+- `Authorization: Bearer <token>` Replace <token> with a valid Thrivestack Management token that includes the required scopes. (Ref: [Token API Documentatin](https://docs.app.thrivestack.ai/getting-started/analyze/authentication)) (Valid Scopes: identify_api, telemetry_apis)
 - `Content-Type: application/json` Indicates that the request body is in the JSON format.
 
 ### 1.6 Sample
@@ -76,8 +76,8 @@ A JSON object with the required Identify Object fields and any additional traits
 {
   "user_id": "user123",
   "traits": {
-    "name": "FirstName LastName",
-    "email": "FirstName.LastName@example.com"
+    "name": "John Doe",
+    "email": "John.Doe@coloruz.com"
   },
   "timestamp": "20-11-23T22:28:55.111Z"
 }
@@ -92,8 +92,8 @@ A JSON object with the required Identify Object fields and any additional traits
   "data": {
     "user_id": "user123",
     "traits": {
-      "name": "FirstName LastName",
-      "email": "FirstName.LastName@example.com"
+      "name": "John Doe",
+      "email": "John.Doe@coloruz.com"
     },
     "timestamp": "20-11-23T22:28:55.111Z"
 }

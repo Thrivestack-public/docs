@@ -44,7 +44,7 @@ URL :`https://api.dev.app.thrivestack.ai/api/track`
 Method:`POST`
 
 ### 1.5 Headers
-- `Authorization: Bearer <token>`  Replace <token> with a valid Thrivestack Management token to validate request. (Ref: [Token API](https://docs.app.thrivestack.ai/getting-started/analyze/authentication)) (Valid Scope: user_management) 
+- `Authorization: Bearer <token>`  Replace <token> with a valid Thrivestack Management token that includes the required scopes. (Ref: [Token API Documentatin](https://docs.app.thrivestack.ai/getting-started/analyze/authentication)) (Valid Scopes: track_api, telemetry_apis) 
 - `Content-Type: application/json` indicates that the request body is in the JSON format.
 
 #### 1.6 Sample
@@ -54,10 +54,12 @@ A JSON object with the required Event Object fields and any additional event pro
 #### Sample JSON Request
 ```json
 {
-    "event": "event_name",
+    "event": "User Registered",
     "properties": {
-        "property1": "value1",
-        "property2": "value2"
+        "email": "JohnDoe@coloruz.com",
+        "name": "John Doe",
+        "first name": "John",
+        "last name":"Doe"
     },
     "user_id": "user123",
     "timestamp": "20-11-23T22:28:55.111Z"
@@ -70,21 +72,23 @@ A JSON object with the required Event Object fields and any additional event pro
     "status": "success",
     "message": "Event recorded successfully",
     "event": {
-        "name": "event_name",
+        "name": "User Registered",
         "properties": {
-            "property1": "value1",
-            "property2": "value2"
+            "email": "JohnDoe@coloruz.com",
+            "name": "John Doe",
+            "first name": "John ",
+            "last name":"Doe"
         },
         "user_id": "user123",
         "timestamp": "2023-11-20T22:28:55.111Z"
     }
 }
 ```
-#### 2.Error Resonse
+#### 2.Error Response
 ```json
 {
     "status": "error",
     "message": "Failed to record the event",
-    "error_details": "Details about the error (e.g., missing fields, invalid format)"
+    "error_code": "INVALID_REQUEST"
 }
 ```

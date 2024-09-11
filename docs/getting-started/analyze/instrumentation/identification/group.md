@@ -35,14 +35,14 @@ The following traits described as a traits:
 | `enrichment_name`                     | string    | Name of the group,used in general communication.  |
 | `enrichment_legal_name`               | string    | This is the group’s official name as registered with legal authorities.  |
 | `enrichment_domain`                   | string    | The primary web domain associated with the group (e.g., `example.com`).   |
-| `enrichment_domain_aliases`           | []string  | A list of alternative domain names that point to the groups's website.  |
-| `enrichment_phone_numbers`            | []string  | Contact number of the group.|
-| `enrichment_email_addresses`          | []string  | Email Address of the group. |
+| `enrichment_domain_aliases`           | Array[string]  | A list of alternative domain names that point to the groups's website.  |
+| `enrichment_phone_numbers`            | Array[string]  | Contact number of the group.|
+| `enrichment_email_addresses`          | Array[string]  | Email Address of the group. |
 | `enrichment_sector`                   | string    | The broad sector in which the group operates, such as technology, healthcare, finance, etc  |
 | `enrichment_industry_group`           | string    | A more specific grouping within the broader sector. For example, within the technology sector, industry groups might include software or hardware. |
 | `enrichment_industry`                 | string    | A more detailed classification of the group’s business activities within the industry group.   |
 | `enrichment_sub_industry`             | string    | An even more specific classification within the industry, providing finer granularity. For example, within the software industry, this could be enterprise software or consumer software.    |
-| `enrichment_tags`                     | []string  | A list of keywords or labels that describe various aspects of the group, such as products, services, or characteristics.  |
+| `enrichment_tags`                     | Array[string]  | A list of keywords or labels that describe various aspects of the group, such as products, services, or characteristics.  |
 | `enrichment_description`              | string    | A textual description of the group, providing an overview of what it does, its mission, products, or services.  |
 | `enrichment_founder_year`             | int       | the year the group was established |
 | `enrichment_location`                 | string    | A general description of where the group is based, which may include the city, state, or region  |
@@ -71,14 +71,14 @@ The following traits described as a traits:
 | `enrichment_raised`                   | string    | The total amount of funding or investment the group has raised. This is particularly relevant for startups and private companies. |
 | `enrichment_annual_revenue`           | string    | Annual Revenue of the group |
 | `enrichment_tech`                     | string    | The technologies or technical platforms the group uses or specializes in. |
-| `enrichment_tech_categories`          | []string  | A list of categories or types of technology that the group is involved in or provides (e.g., cloud computing, cybersecurity).  |
+| `enrichment_tech_categories`          | Array[string]  | A list of categories or types of technology that the group is involved in or provides (e.g., cloud computing, cybersecurity).  |
 
 ### 1.4 End points
 URL :`https://api.dev.app.thrivestack.ai/api/group` 
 Method:`POST`
 
 ### 1.5 Headers
-- `Authorization: Bearer <token>` Replace <token> with a valid Thrivestack Management token to validate request. (Ref: [Token API](https://docs.app.thrivestack.ai/getting-started/analyze/authentication) ) (Valid Scope: user_management)
+- `Authorization: Bearer <token>` Replace <token> with a valid Thrivestack Management token that includes the required scopes. (Ref: [Token API Documentatin](https://docs.app.thrivestack.ai/getting-started/analyze/authentication)) (Valid Scopes: group_api, telemetry_apis)
 - `Content-Type: application/json` Indicates that the request body is in the JSON format.
 
 ### 1.6 Sample
@@ -91,10 +91,10 @@ A JSON object with the required Identify Object fields and any additional traits
   "user_id": "user123",
   "group_id": "account123",
   "traits": {
-    "enrichment_name": "account name",
-    "industry": "industry belongs to",
-    "plan": "name of plan associate with account",
-    "employees": "total number of employees account have"
+    "enrichment_name": "Acma labs",
+    "industry": "IT services",
+    "plan": "free plan",
+    "employees": "100"
   },
   "timestamp": "20-11-23T22:28:55.111Z"
 }
@@ -109,10 +109,10 @@ A JSON object with the required Identify Object fields and any additional traits
     "user_id": "user123",
     "group_id": "account123",
     "traits": {
-      "name": "account name",
-      "industry": "industry belongs to",
-      "plan": "name of plan associate with account",
-      "employees": "total number of employees account have"
+      "name": "Acma labs",
+      "industry": "IT  services",
+      "plan": "Free plan",
+      "employees": "100"
     },
     "timestamp": "20-11-23T22:28:55.111Z"
 } 
