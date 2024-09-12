@@ -3,8 +3,6 @@
 ## 1.Introduction
 An identify call is a type of API request that helps identify and track who the user is. This call is used to attach important information about the user to a unique user profile in a system, usually for tracking purposes.
 
-##### The flow shows how a SaaS system can recognize and track user actions from the point they are identified (with details) to tracking their interactions with the platform. If they aren't identified, they remain anonymous.
-
 ![User Identify Flowchart](/img/docs/analyze/apis/identify-flowchart.png)
 
 ### 1.1 Identify API
@@ -60,7 +58,7 @@ The following traits described as a traits:
 |`enrichment_active_at`               | string | The date or timestamp when the user became active  |                                                                    
 
 ### 1.4 End Point
-URL:`https://api.dev.app.thrivestack.ai/api/identify`
+URL: `https://api.dev.app.thrivestack.ai/api/identify`
 Method: `POST`
 
 ### 1.5 Headers
@@ -74,37 +72,30 @@ A JSON object with the required Identify Object fields and any additional traits
 #### Sample JSON request
 ```json
 {
-  "user_id": "user123",
+  "user_id": "3e474abe-5943-41fd-8b7b-4c87ad95b0c7",
   "traits": {
     "name": "John Doe",
-    "email": "John.Doe@coloruz.com"
+    "email": "John.Doe@acmelabs.com"
   },
   "timestamp": "20-11-23T22:28:55.111Z"
 }
 ```
 #### Sample response
 #### 1.Successful response
-
+`Status code`: `200`
 ```json
   {
-  "status": "success",
-  "message": "User identity updated successfully",
-  "data": {
-    "user_id": "user123",
-    "traits": {
-      "name": "John Doe",
-      "email": "John.Doe@coloruz.com"
-    },
-    "timestamp": "20-11-23T22:28:55.111Z"
-}
+  "success": true,
+  "message": "User(s) identified successfully",
+  "response_id": "f9a32c2f-29d9-476a-b0d6-f256809da9ec"
   }
 ```
 #### 2.Error Response
-In some cases, if there was an issue with the request (such as missing parameters or invalid data), the response might look like this:
+An error can occur for various reasons. The `status code` returned may be `400`, `401`, `403`, or `500` depending on the type of error.
 ```json
 {
-  "status": "error",
-  "message": "Invalid user ID or missing fields",
-  "error_code": "INVALID_REQUEST"
+  "success": false,
+  "message": "Failed to identify the user(s) due to an error.",
+  "response_id": "f9a32c2f-29d9-476a-b0d6-f256809da9ec"
 }
 ```
