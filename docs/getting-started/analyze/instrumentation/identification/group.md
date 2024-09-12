@@ -78,7 +78,7 @@ URL :`https://api.dev.app.thrivestack.ai/api/group`
 Method:`POST`
 
 ### 1.5 Headers
-- `Authorization: Bearer <token>` Replace <token> with a valid Thrivestack Management token to validate request. (Ref: [Token API Documentation](https://docs.app.thrivestack.ai/getting-started/analyze/authentication)) (Valid Scopes: group_api, telemetry_apis)
+- `Authorization: Bearer <token>` Replace `<token>` with a valid Thrivestack Management token to validate request. (Ref: [Token API Documentation](https://docs.app.thrivestack.ai/getting-started/analyze/authentication)) (Valid Scopes: group_api, telemetry_apis)
 - `Content-Type: application/json` Indicates that the request body is in the JSON format.
 
 ### 1.6 Sample
@@ -88,12 +88,12 @@ A JSON object with the required Identify Object fields and any additional traits
 #### Sample JSON request
 ```json
 {
-  "user_id": "user123",
-  "group_id": "account123",
+  "user_id": "3e474abe-5943-41fd-8b7b-4c87ad95b0c7",
+  "group_id": "3d8a42f6-49c7-4c5f-8aeb-278d7196f06e",
   "traits": {
-    "enrichment_name": "Acma labs",
-    "industry": "IT services",
-    "plan": "free plan",
+    "enrichment_name": "Acma Labs",
+    "industry": "IT Services",
+    "plan": "Free Plan",
     "employees": "100"
   },
   "timestamp": "20-11-23T22:28:55.111Z"
@@ -101,29 +101,20 @@ A JSON object with the required Identify Object fields and any additional traits
 ```
 #### Sample response
 #### 1.Successful Response
+`Status code`:`200`
 ```json
 {
-  "status": "success",
-  "message": "Group updated successfully",
-  "data": {
-    "user_id": "user123",
-    "group_id": "account123",
-    "traits": {
-      "name": "Acma labs",
-      "industry": "IT  services",
-      "plan": "Free plan",
-      "employees": "100"
-    },
-    "timestamp": "20-11-23T22:28:55.111Z"
-} 
+  "success":true,
+  "message": "Group(s) grouped successfully",
+  "response_id":"0e63350f-8655-4290-bfa8-6a88b9ad3a40"
 }
 ```
 #### 2.Error Response
-In some cases, if there was an issue with the request (such as missing parameters or invalid data), the response might look like this:
+An error can occur for various reasons. The `status codes` returned may be `400`, `401`, `403`, or `500` depending on the type of error.
 ```json
 {
-  "status": "error",
-  "message": "Invalid group ID or missing fields",
-  "error_code": "INVALID_REQUEST"
+  "success":false,
+  "message": "Failed to group the group(s) due to an error.",
+  "response_id":"0e63350f-8655-4290-bfa8-6a88b9ad3a40"
 }
 ``` 

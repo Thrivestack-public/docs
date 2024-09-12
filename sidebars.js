@@ -64,6 +64,9 @@ const build = [
                 'getting-started/self-serve/apis/onboarding',
                 'getting-started/self-serve/apis/publish',
                 'getting-started/self-serve/apis/promote',
+                'getting-started/self-serve/apis/roles',
+                'getting-started/self-serve/apis/userManagement',
+                'getting-started/self-serve/apis/teams',
               ]
             },
             //'getting-started/self-serve/self-serve',
