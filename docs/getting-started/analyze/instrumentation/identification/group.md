@@ -91,7 +91,7 @@ A JSON object with the required Identify Object fields and any additional traits
   "user_id": "3e474abe-5943-41fd-8b7b-4c87ad95b0c7",
   "group_id": "3d8a42f6-49c7-4c5f-8aeb-278d7196f06e",
   "traits": {
-    "enrichment_name": "Acma Labs",
+    "enrichment_name": "Acme Labs",
     "industry": "IT Services",
     "plan": "Free Plan",
     "employees": "100"

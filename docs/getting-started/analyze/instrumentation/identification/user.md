@@ -75,7 +75,7 @@ A JSON object with the required Identify Object fields and any additional traits
   "user_id": "3e474abe-5943-41fd-8b7b-4c87ad95b0c7",
   "traits": {
     "name": "John Doe",
-    "email": "John.Doe@acmalabs.com"
+    "email": "John.Doe@acmelabs.com"
   },
   "timestamp": "20-11-23T22:28:55.111Z"
 }

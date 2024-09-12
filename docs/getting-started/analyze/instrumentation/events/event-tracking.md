@@ -56,7 +56,7 @@ A JSON object with the required Event Object fields and any additional event pro
 {
     "event": "User Registered",
     "properties": {
-        "email": "JohnDoe@acmalabs.com",
+        "email": "JohnDoe@acmelabs.com",
         "name": "John Doe",
         "first name": "John",
         "last name": "Doe"
