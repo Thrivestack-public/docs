@@ -74,8 +74,8 @@ The following traits described as a traits:
 | `enrichment_tech_categories`          | Array[string]  | A list of categories or types of technology that the group is involved in or provides (e.g., cloud computing, cybersecurity).  |
 
 ### 1.4 End points
-URL :`https://api.dev.app.thrivestack.ai/api/group` 
-Method:`POST`
+URL: `https://api.dev.app.thrivestack.ai/api/group` 
+Method: `POST`
 
 ### 1.5 Headers
 - `Authorization: Bearer <token>` Replace `<token>` with a valid Thrivestack Management token to validate request. (Ref: [Token API Documentation](https://docs.app.thrivestack.ai/getting-started/analyze/authentication)) (Valid Scopes: group_api, telemetry_apis)
@@ -101,20 +101,20 @@ A JSON object with the required Identify Object fields and any additional traits
 ```
 #### Sample response
 #### 1.Successful Response
-`Status code`:`200`
+`Status code`: `200`
 ```json
 {
-  "success":true,
+  "success": true,
   "message": "Group(s) grouped successfully",
-  "response_id":"0e63350f-8655-4290-bfa8-6a88b9ad3a40"
+  "response_id": "0e63350f-8655-4290-bfa8-6a88b9ad3a40"
 }
 ```
 #### 2.Error Response
-An error can occur for various reasons. The `status codes` returned may be `400`, `401`, `403`, or `500` depending on the type of error.
+An error can occur for various reasons. The `status code` returned may be `400`, `401`, `403`, or `500` depending on the type of error.
 ```json
 {
-  "success":false,
+  "success": false,
   "message": "Failed to group the group(s) due to an error.",
-  "response_id":"0e63350f-8655-4290-bfa8-6a88b9ad3a40"
+  "response_id": "0e63350f-8655-4290-bfa8-6a88b9ad3a40"
 }
 ``` 

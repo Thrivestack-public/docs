@@ -40,8 +40,8 @@ The following properties of how an event is described by:
 
 ### 1.4 End point
 
-URL :`https://api.dev.app.thrivestack.ai/api/track`
-Method:`POST`
+URL: `https://api.dev.app.thrivestack.ai/api/track`
+Method: `POST`
 
 ### 1.5 Headers
 - `Authorization: Bearer <token>`  Replace `<token>` with a valid Thrivestack Management token to validate request. (Ref: [Token API Documentation](https://docs.app.thrivestack.ai/getting-started/analyze/authentication)) (Valid Scopes: track_api, telemetry_apis) 
@@ -56,10 +56,10 @@ A JSON object with the required Event Object fields and any additional event pro
 {
     "event": "User Registered",
     "properties": {
-        "email": "JohnDoe@coloruz.com",
+        "email": "JohnDoe@acmalabs.com",
         "name": "John Doe",
         "first name": "John",
-        "last name":"Doe"
+        "last name": "Doe"
     },
     "user_id": "3e474abe-5943-41fd-8b7b-4c87ad95b0c7",
     "timestamp": "20-11-23T22:28:55.111Z"
@@ -67,20 +67,20 @@ A JSON object with the required Event Object fields and any additional event pro
 ```
 #### Sample JSON Response
 #### 1.Successful Response
-`Status code`:`200`
+`Status code`: `200`
 ```json
 {
-    "success":true,
+    "success": true,
     "message": "Event(s) tracked successfully",
-    "response_id":"db78083b-efda-4618-bd97-9a37afca4860"
+    "response_id": "db78083b-efda-4618-bd97-9a37afca4860"
 }
 ```
 #### 2.Error Response
-An error can occur for various reasons. The `status codes` returned may be `400`, `401`, `403`, or `500` depending on the type of error.
+An error can occur for various reasons. The `status code` returned may be `400`, `401`, `403`, or `500` depending on the type of error.
 ```json
 {
-    "success":false,
+    "success": false,
     "message": "Failed to track the event(s) due to an error.",
-    "response_id":"db78083b-efda-4618-bd97-9a37afca4860"
+    "response_id": "db78083b-efda-4618-bd97-9a37afca4860"
 }
 ```

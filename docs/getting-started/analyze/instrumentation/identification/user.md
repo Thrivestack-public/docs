@@ -58,7 +58,7 @@ The following traits described as a traits:
 |`enrichment_active_at`               | string | The date or timestamp when the user became active  |                                                                    
 
 ### 1.4 End Point
-URL:`https://api.dev.app.thrivestack.ai/api/identify`
+URL: `https://api.dev.app.thrivestack.ai/api/identify`
 Method: `POST`
 
 ### 1.5 Headers
@@ -75,27 +75,27 @@ A JSON object with the required Identify Object fields and any additional traits
   "user_id": "3e474abe-5943-41fd-8b7b-4c87ad95b0c7",
   "traits": {
     "name": "John Doe",
-    "email": "John.Doe@coloruz.com"
+    "email": "John.Doe@acmalabs.com"
   },
   "timestamp": "20-11-23T22:28:55.111Z"
 }
 ```
 #### Sample response
 #### 1.Successful response
-`Status code`:`200`
+`Status code`: `200`
 ```json
   {
-  "success":true,
+  "success": true,
   "message": "User(s) identified successfully",
-  "response_id":"f9a32c2f-29d9-476a-b0d6-f256809da9ec"
+  "response_id": "f9a32c2f-29d9-476a-b0d6-f256809da9ec"
   }
 ```
 #### 2.Error Response
-An error can occur for various reasons. The `status codes` returned may be `400`, `401`, `403`, or `500` depending on the type of error.
+An error can occur for various reasons. The `status code` returned may be `400`, `401`, `403`, or `500` depending on the type of error.
 ```json
 {
-  "success":false,
+  "success": false,
   "message": "Failed to identify the user(s) due to an error.",
-  "response_id":"f9a32c2f-29d9-476a-b0d6-f256809da9ec"
+  "response_id": "f9a32c2f-29d9-476a-b0d6-f256809da9ec"
 }
 ```
