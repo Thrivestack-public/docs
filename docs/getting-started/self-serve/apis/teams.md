@@ -1,4 +1,4 @@
-# Teams API
+# Teams
 
 The Team API provides a set of endpoints for managing teams related to account within the application. These endpoints allow developers to perform various operations such as retrieving and updating teams attached to an account.
 
