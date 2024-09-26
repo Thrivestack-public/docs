@@ -1,4 +1,4 @@
-# Role API
+# Role
 
 The Role API provides a set of endpoints for managing roles related to users within the application. These endpoints allow developers to perform various operations such as retrieving and updating roles attached to users.
 
