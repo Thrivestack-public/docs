@@ -12,6 +12,9 @@ Thrivestack uses OAuth 2.0 for authentication, which is more secure compared to 
 
 ## Steps to Generate an Access Token
 
+If you've already created an API key, you can skip to **Step 2: Generate an Access Token**
+
+
 ### 1. Create an API Key
 If an API key is not created already, then create one by following the steps below:
 
