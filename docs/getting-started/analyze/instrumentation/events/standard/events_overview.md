@@ -4,6 +4,9 @@
 
 In SaaS applications, tracking events is crucial for understanding user behavior, optimizing features, and driving growth. This guide outlines essential events, including both pre-built and custom events, along with their impact on various reports.
 
+![](/events_overview.png)
+
+
 ## Event Objects and Their Influence
 
 | Event Object | Event Name                                                                                                            | Included   | Purpose                                              | Influenced Reports               |
