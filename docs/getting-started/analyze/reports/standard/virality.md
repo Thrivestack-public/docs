@@ -25,7 +25,7 @@ To generate a virality report, we will analyse events like signups and track the
 
 ![ThriveStack Virality Report Flowchart](/img/docs/analyze/reports/virality_report.png)
 
-### What does a virality report consist of?
+#### What does a virality report consist of?
 
 Now, let’s analyse the widgets in detail :
 
@@ -44,26 +44,23 @@ Now, let’s analyse the widgets in detail :
 
 **Note**: For each widget, we are provided with filters for different time periods (daily, weekly,monthly). 
 
-### Integration of Data for Report Setup
+### Integration Steps for Acquisition Report Setup
 
-There are two ways currently by which you can integrate data to generate an Virality Report:
-##### 1.Configure Self-serve workflow :
-You don’t have to do anything; everything else will be done by us for you.[Set up Self-Serve](https://dev.app.thrivestack.ai/build/setup/quick-start/)
-##### 2.Telemetry APIs
+To generate an Virality Report, you can choose **one of the following two methods** based on your preference:
 
-If you prefer not to use the self-serve option, you can send telemetry events via telemetry APIs. Here is the [link to the API documentation](https://link-to-api-docs.com).
+1. **Configure Self-Serve Workflow**:
+    - With the self-serve, you need to set it up initially. Once configured, the self-serve system will automatically handle all your standard events, such as user signups, account creations, and other relevant events.. [Set up Self-Serve](https://dev.app.thrivestack.ai/build/setup/quick-start/)
+2. **Configure Telemetry APIs**:
+    - If you prefer not to use the self-serve option, you can send telemetry events via telemetry APIs. Here is the [link to the API documentation](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/overview). 
 
 ### Expected events and API calls are:
 
 - **Track API:**
-  - `signed_up` event
-  - `account_created` event
-  - `account_added_user` event
-
-- **Group Call:**
-  - For account creation
+  - [invite_sent](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/events/standard/invite_sent) event
+  - [signed_up](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/events/standard/signed_up) event
 
 - **Identify Call:**
-  - For user signup 
+  - For [user signup](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/identification/user)
+
  
 Your doubts are not yet cleared? Contact support at support@thrivestack.ai 
