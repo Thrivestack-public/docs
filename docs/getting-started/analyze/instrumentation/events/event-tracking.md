@@ -49,21 +49,28 @@ Method: `POST`
 
 #### 1.6 Sample
 
-A JSON object with the required Event Object fields and any additional event properties. [Try Out](../../../../integrate/public_apis/track)
+A JSON object with the required Event Object fields and any additional event properties.
 
-#### Sample JSON Request
-```json
-{
-    "event": "User Registered",
+#### Sample cURL
+```bash
+curl --location 'https://api.dev.app.thrivestack.ai/api/track' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsImlkIjoiZjk5OTI4MmMtYjZjZi00YjQ4LTliMWEtOTAyMWVlM2Q3NmI0IiwidHlwIjoiSldUIn0.eyJhdWQiOiJ1c2VyX21hbmFnZW1lbnQiLCJleHAiOjE3MjUwMTQwOTcsImp0aSI6ImY5OTkyODJjLWI2Y2YtNGI0OC05YjFhLTkwMjFlZTNkNzZiNCIsImlhdCI6MTcyNDkzNjA5NywiaXNzIjoiVGhyaXZlU3RhY2sifQ.dCfke26t69Xd9mKbvVH9GPCueMxnSRrL5qJwUm02giXVO1Ne8jTBH5oSAo2nisE3h6ri8FpCEfTn7qTfkBYmXyCwRGUFBkqCwZAtYWrp8ugmAlp2exsuCzFLGF5UQiwHi5qcOzsDEUa7s7UODNl7nThNwArlqTwkJp-XEc9BXCjw2mX3_9Hc0H_ozbg8pWjXIcBqLjuXjVI-VIT3P46wd3_PVJve8Hm-rOuoMkwprihJCbYavihecNff_lE2f2KIzUruIJyLeXqohd1XkVxG3xSrviDqXEbsVBA-o3rHoLZqEHC2lSm99S1Ot7DsVR19Vo5INgV4cvdsmYMfdsyXDw' \
+--data-raw '[
+	{
+    "event": "signed_up",
     "properties": {
-        "email": "JohnDoe@acmelabs.com",
-        "name": "John Doe",
-        "first name": "John",
-        "last name": "Doe"
+      "email": "JohnDoe@acmelabs.com",
+      "name": "John Doe",
+      "first name": "John",
+      "last name": "Doe"
     },
     "user_id": "3e474abe-5943-41fd-8b7b-4c87ad95b0c7",
-    "timestamp": "20-11-23T22:28:55.111Z"
-}
+    "timestamp": "20-11-23T22:28:55.111Z",
+    "context": {
+	    "group_id": "55444abe-41fd-5943-d95b-4c87ad95b674"
+    }
+}]'
 ```
 #### Sample JSON Response
 #### 1.Successful Response
