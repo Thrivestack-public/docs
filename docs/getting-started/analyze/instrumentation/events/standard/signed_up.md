@@ -42,7 +42,7 @@ A JSON object with the required Event Object fields and any additional event pro
     {
     "event_name": "signed_up",
     "properties": {
-      "email": "ankitGupta@acmelabs.com",
+      "email": "JohnDoe@acmelabs.com",
       "name": "John Doe",
       "first name": "John",
       "last name": "Doe"
@@ -65,7 +65,7 @@ curl --location 'https://api.app.thrivestack.ai/api/track' \
     {
     "event_name": "signed_up",
     "properties": {
-      "email": "ankitGupta@acmelabs.com",
+      "email": "JohnDoe@acmelabs.com",
       "name": "John Doe",
       "first name": "John",
       "last name": "Doe"
