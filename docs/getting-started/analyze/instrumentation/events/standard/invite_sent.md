@@ -148,34 +148,48 @@ In the second step, you'll need to call ThriveStack's Track API to track the inv
 
 The name of the team should be sent in the "team_name" property.
 ```json 
-{
-  "event": "invite_sent",
-  "properties": {
-    "invitee_email": "amy@achme.com",
-    "invitee_first_name": "Amy",
-    "invitee_last_name": "Frank",
-    "invitee_role": "Developer",
-    "team_name": "platform"
-  },
-  "user_id": "766b3aef-5904-46fe-af05-a293fee8h345",
-  "timestamp": "20-11-23T22:28:55.111Z"
-}
+[
+    {
+        "event_name": "invite_sent",
+        "properties": {
+            "feature_name": "CUSTOMER_JOURNEY",
+            "invitee_email": "shawnankunding@opportunityspace,inc..com",
+            "invitee_first_name": "Shawn",
+            "invitee_last_name": "Ankunding",
+            "invitee_role": "Editor"
+        },
+        "user_id": "3e474abe-5943-41fd-8b7b-4c87ad95b0c7",
+        "timestamp": "20-11-23T22:28:55.111Z",
+        "context": {
+            "group_id": "55444abe-41fd-5943-d95b-4c87ad95b674"
+        }
+    }
+]
 ```
 
-### 1.2.5. Try Out the APIs
+### 1.2.5. Sample cURL
 
 Experience the APIs firsthand by using the [Try Out](/integrate/public_apis/track) feature in your web browser. For assistance on navigating the 'Try Out' functionality, consult the [Guide](/getting-started/apis-non-gen/using-the-try-out-options).
 
-```json
-{
-  "event": "invite_sent",
-  "properties": {
-    "invitee_email": "mark.wood@example.com",
-    "invitee_first_name": "Mark",
-    "invitee_last_name": "Wood",
-    "invitee_role": "Developer"
-  },
-  "user_id": "766b3aef-5904-46fe-af05-a293fee8h345",
-  "timestamp": "20-11-23T22:28:55.111Z"
-}
+```bash
+curl --location 'https://api.dev.app.thrivestack.ai/api/track' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsImlkIjoiZjk5OTI4MmMtYjZjZi00YjQ4LTliMWEtOTAyMWVlM2Q3NmI0IiwidHlwIjoiSldUIn0.eyJhdWQiOiJ1c2VyX21hbmFnZW1lbnQiLCJleHAiOjE3MjUwMTQwOTcsImp0aSI6ImY5OTkyODJjLWI2Y2YtNGI0OC05YjFhLTkwMjFlZTNkNzZiNCIsImlhdCI6MTcyNDkzNjA5NywiaXNzIjoiVGhyaXZlU3RhY2sifQ.dCfke26t69Xd9mKbvVH9GPCueMxnSRrL5qJwUm02giXVO1Ne8jTBH5oSAo2nisE3h6ri8FpCEfTn7qTfkBYmXyCwRGUFBkqCwZAtYWrp8ugmAlp2exsuCzFLGF5UQiwHi5qcOzsDEUa7s7UODNl7nThNwArlqTwkJp-XEc9BXCjw2mX3_9Hc0H_ozbg8pWjXIcBqLjuXjVI-VIT3P46wd3_PVJve8Hm-rOuoMkwprihJCbYavihecNff_lE2f2KIzUruIJyLeXqohd1XkVxG3xSrviDqXEbsVBA-o3rHoLZqEHC2lSm99S1Ot7DsVR19Vo5INgV4cvdsmYMfdsyXDw' \
+--data-raw '[
+    {
+        "event_name": "invite_sent",
+        "properties": {
+            "feature_name": "CUSTOMER_JOURNEY",
+            "invitee_email": "shawnankunding@opportunityspace,inc..com",
+            "invitee_first_name": "Shawn",
+            "invitee_last_name": "Ankunding",
+            "invitee_role": "Editor"
+        },
+        "user_id": "3e474abe-5943-41fd-8b7b-4c87ad95b0c7",
+        "timestamp": "20-11-23T22:28:55.111Z",
+        "context": {
+            "group_id": "55444abe-41fd-5943-d95b-4c87ad95b674"
+        }
+    }
+]'
 ```
