@@ -39,16 +39,19 @@ A JSON object with the required Event Object fields and any additional event pro
 ```json
 [
     {
-    "event_name": "account_created",
-    "properties": {
-      "account_name": "acme.com"
-    },
-    "user_id": "2520abb7-e6d4-45ec-8bc5-9a5c13ba06ca",
-    "timestamp": "2023-12-14T16:07:33.571125Z",
-    "context": {
-        "group_id": "25c972d3-685d-4106-a862-4fc37da0eca4"
+        "event_name": "account_created",
+        "properties": {
+            "account_domain": "acme.com",
+            "account_id": "7149d9cb-416a-4cd7-bf4c-dcd7f71421b8",
+            "account_name": "acme.com"
+        },
+        "user_id": "5p442d0e-11b8-43d2-a933-04f62bb832e1",
+        "timestamp": "2024-10-20T15:51:36.088000Z",
+        "context": {
+            "group_id": "7149d9cb-416a-4cd7-bf4c-dcd7f71421b8"
+        }
     }
-}]
+]
 ```
 
 ### 1.2.4. Sample cURL
@@ -59,15 +62,18 @@ curl --location 'https://api.app.thrivestack.ai/api/track' \
 --header 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsImlkIjoiNWZiY2E4YmUtNzk0OC00ZGQ3LTgxZGItZDZiMTFjNjhlYjgwIiwidHlwIjoiSldUIn0.eyJhdWQiOiJ0ZWxlbWV0cnlfYXBpcyIsImV4cCI6MTcyOTQ5MzkyOCwianRpIjoiNWZiY2E4YmUtNzk0OC00ZGQ3LTgxZGItZDZiMTFjNjhlYjgwIiwiaWF0IjoxNzI5NDE1OTI4LCJpc3MiOiJUaHJpdmVTdGFjayJ9.a34Mo3gGJfL_n6ls9Y3KP3IIpHJdqEOchZyAZF0hov-VujecPLJblZ-8WXs7KzZEwyo7DVVeIAygPUz0Xs9a56tA2ZW_6GxRWpw6zS-LLh8FNI1Ekk33hsoloW4WeGOAG8xybghJJH3w6R_H59jubrVNFnaz8YqBbiYou9klowTAjZBg-6IH5eGovGs0xzmaEFpC_0PphZ11wQKC0ZiMI3qz83GnC01VZZe5KjOmEON--B1qtN04pBNnEeCjuNFhBS1uhzAd_7FlRMiiUU29QOve8OXFHCXskvsFIHuUnSE3ZqDduFpKTMnK74VxuevjGsI8X7kIkz1SYnS72sFtUg' \
 --data '[
     {
-    "event_name": "account_created",
-    "properties": {
-      "account_name": "acme.com"
-    },
-    "user_id": "2520abb7-e6d4-45ec-8bc5-9a5c13ba06ca",
-    "timestamp": "2023-12-14T16:07:33.571125Z",
-    "context": {
-        "group_id": "25c972d3-685d-4106-a862-4fc37da0eca4"
+        "event_name": "account_created",
+        "properties": {
+            "account_domain": "acme.com",
+            "account_id": "7149d9cb-416a-4cd7-bf4c-dcd7f71421b8",
+            "account_name": "acme.com"
+        },
+        "user_id": "5p442d0e-11b8-43d2-a933-04f62bb832e1",
+        "timestamp": "2024-10-20T15:51:36.088000Z",
+        "context": {
+            "group_id": "7149d9cb-416a-4cd7-bf4c-dcd7f71421b8"
+        }
     }
-}]
+]
 '
 ```
