@@ -38,29 +38,42 @@ The following properties of how an event is described by a schema:
 A JSON object with the required Event Object fields and any additional event properties.
 
 ```json
-{
-    "event": "event_name",
+[
+    {
+    "event_name": "signed_up",
     "properties": {
-        "property1": "value1",
-        "property2": "value2"
+      "email": "ankitGupta@acmelabs.com",
+      "name": "John Doe",
+      "first name": "John",
+      "last name": "Doe"
     },
-    "user_id": "user123",
-    "timestamp": "20-11-23T22:28:55.111Z"
-}
+    "user_id": "2520abb7-e6d4-45ec-8bc5-9a5c13ba06ca",
+    "timestamp": "2023-12-14T16:07:33.571125Z",
+    "context": {
+        "group_id": "25c972d3-685d-4106-a862-4fc37da0eca4"
+    }
+}]
 ```
 
-### 1.2.4. [Try Out!](../../../../../integrate/public_apis/track)
+### 1.2.4. Sample cURL
 
-```json
-{
-    "event": "signed_up",
+```bash
+curl --location 'https://api.app.thrivestack.ai/api/track' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsImlkIjoiNWZiY2E4YmUtNzk0OC00ZGQ3LTgxZGItZDZiMTFjNjhlYjgwIiwidHlwIjoiSldUIn0.eyJhdWQiOiJ0ZWxlbWV0cnlfYXBpcyIsImV4cCI6MTcyOTQ5MzkyOCwianRpIjoiNWZiY2E4YmUtNzk0OC00ZGQ3LTgxZGItZDZiMTFjNjhlYjgwIiwiaWF0IjoxNzI5NDE1OTI4LCJpc3MiOiJUaHJpdmVTdGFjayJ9.a34Mo3gGJfL_n6ls9Y3KP3IIpHJdqEOchZyAZF0hov-VujecPLJblZ-8WXs7KzZEwyo7DVVeIAygPUz0Xs9a56tA2ZW_6GxRWpw6zS-LLh8FNI1Ekk33hsoloW4WeGOAG8xybghJJH3w6R_H59jubrVNFnaz8YqBbiYou9klowTAjZBg-6IH5eGovGs0xzmaEFpC_0PphZ11wQKC0ZiMI3qz83GnC01VZZe5KjOmEON--B1qtN04pBNnEeCjuNFhBS1uhzAd_7FlRMiiUU29QOve8OXFHCXskvsFIHuUnSE3ZqDduFpKTMnK74VxuevjGsI8X7kIkz1SYnS72sFtUg' \
+--data-raw '[
+    {
+    "event_name": "signed_up",
     "properties": {
-        "email": "john.doe@example.com",
-        "name": "John Doe",
-        "first_name": "John",
-        "last_name": "Doe"
+      "email": "ankitGupta@acmelabs.com",
+      "name": "John Doe",
+      "first name": "John",
+      "last name": "Doe"
     },
-    "user_id": "766b3aef-5904-46fe-af05-a293fee8h345",
-    "timestamp": "20-11-23T22:28:55.111Z"
-}
+    "user_id": "2520abb7-e6d4-45ec-8bc5-9a5c13ba06ca",
+    "timestamp": "2023-12-14T16:07:33.571125Z",
+    "context": {
+        "group_id": "25c972d3-685d-4106-a862-4fc37da0eca4"
+    }
+}]'
 ```
