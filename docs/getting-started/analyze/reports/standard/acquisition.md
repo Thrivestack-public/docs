@@ -53,7 +53,6 @@ To generate an Retention Report, you can choose **one of the following two metho
   - [signed_up](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/events/standard/signed_up) event.
   - [account_created](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/events/standard/account_created) event
   - [account_created](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/events/standard/account_created) event
-  - [signed_in](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/events/standard/signed_in) event
   
 
 - **Group Call:**
@@ -63,7 +62,7 @@ To generate an Retention Report, you can choose **one of the following two metho
   - For [user signup](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/identification/user)
 
 - ** API call sequence **
-![ThriveStack Acquisition Report API Flow Chart](/image.png)
+![ThriveStack Acquisition Report API Flow Chart](/acquisition_flow.png)
 
    
 Your doubts are not yet cleared? Contact support at support@thrivestack.ai .
