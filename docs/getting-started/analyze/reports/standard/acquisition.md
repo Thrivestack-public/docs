@@ -38,21 +38,29 @@ This report consists of two tabs, representing two CRM objects: User and Account
 
 **Note**: Users can toggle between viewing the count and the percentage change. It also includes a time range filter.
 
-### Integration of Data for Report Setup
+### Integration Steps for Acquisition Report Setup
 
-There are two ways currently by which you can integrate data to generate an Acquisition Report:
+To generate an Retention Report, you can choose **one of the following two methods** based on your preference:
 
 1. **Configure Self-Serve Workflow**:
-    - You don’t have to do anything; everything else will be done by us for you. [Set up Self-Serve](https://dev.app.thrivestack.ai/build/setup/quick-start/)
-2. **Telemetry APIs**:
+    - With the self-serve, you need to set it up initially. Once configured, the self-serve system will automatically handle all your standard events, such as user signups, account creations, and other relevant events.. [Set up Self-Serve](https://dev.app.thrivestack.ai/build/setup/quick-start/)
+2. **Configure Telemetry APIs**:
     - If you prefer not to use the self-serve option, you can send telemetry events via telemetry APIs. Here is the [link to the API documentation](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/overview). 
-    - Expected events and API calls are:
-        - **Track API**:
-            - [signed_up](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/events/standard/signed_up) event
-            - [account_created](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/events/standard/account_created) event
-            - [account_created](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/events/standard/account_created) event
-        - **Group Call**:
-            - For [account creation](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/identification/group)
-        - **Identify Call**:
-            - For [user signup](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/identification/user)
-This flexibility ensures that you can choose the integration method that best suits your needs.
+
+### Expected events and API calls are:
+
+- **Track API:**
+  - [signed_up](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/events/standard/signed_up) event.
+  - [account_created](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/events/standard/account_created) event
+  - [account_created](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/events/standard/account_created) event
+  - [signed_in](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/events/standard/signed_in) event
+  
+
+- **Group Call:**
+  - For [account creation](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/identification/group)
+
+- **Identify Call:**
+  - For [user signup](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/identification/user)
+
+   
+Your doubts are not yet cleared? Contact support at support@thrivestack.ai .
