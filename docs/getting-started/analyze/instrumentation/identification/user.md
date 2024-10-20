@@ -58,7 +58,7 @@ The following traits described as a traits:
 |`enrichment_active_at`               | string | The date or timestamp when the user became active  |                                                                    
 
 ### 1.4 End Point
-URL: `https://api.dev.app.thrivestack.ai/api/identify`
+URL: `https://api.app.thrivestack.ai/api/identify`
 Method: `POST`
 
 ### 1.5 Headers
@@ -67,18 +67,38 @@ Method: `POST`
 
 ### 1.6 Sample
 
-A JSON object with the required Identify Object fields and any additional traits associated with user. [Try this API out](/public_apis/identify)
+A JSON object with the required Identify Object fields and any additional traits associated with user.
 
-#### Sample JSON request
-```json
-{
-  "user_id": "3e474abe-5943-41fd-8b7b-4c87ad95b0c7",
-  "traits": {
-    "name": "John Doe",
-    "email": "John.Doe@acmelabs.com"
-  },
-  "timestamp": "20-11-23T22:28:55.111Z"
-}
+#### Sample cURL
+```bash
+curl --location 'https://api.app.thrivestack.ai/api/track' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsImlkIjoiZjk5OTI4MmMtYjZjZi00YjQ4LTliMWEtOTAyMWVlM2Q3NmI0IiwidHlwIjoiSldUIn0.eyJhdWQiOiJ1c2VyX21hbmFnZW1lbnQiLCJleHAiOjE3MjUwMTQwOTcsImp0aSI6ImY5OTkyODJjLWI2Y2YtNGI0OC05YjFhLTkwMjFlZTNkNzZiNCIsImlhdCI6MTcyNDkzNjA5NywiaXNzIjoiVGhyaXZlU3RhY2sifQ.dCfke26t69Xd9mKbvVH9GPCueMxnSRrL5qJwUm02giXVO1Ne8jTBH5oSAo2nisE3h6ri8FpCEfTn7qTfkBYmXyCwRGUFBkqCwZAtYWrp8ugmAlp2exsuCzFLGF5UQiwHi5qcOzsDEUa7s7UODNl7nThNwArlqTwkJp-XEc9BXCjw2mX3_9Hc0H_ozbg8pWjXIcBqLjuXjVI-VIT3P46wd3_PVJve8Hm-rOuoMkwprihJCbYavihecNff_lE2f2KIzUruIJyLeXqohd1XkVxG3xSrviDqXEbsVBA-o3rHoLZqEHC2lSm99S1Ot7DsVR19Vo5INgV4cvdsmYMfdsyXDw' \
+--data-raw '[
+	{
+    "user_id": "1820abb7-e6d4-45ec-8bc5-9a5c13ba06ca",
+    "traits": {
+	    "enrichment_avatar": "https://example.com/avatar.jpg",
+	    "enrichment_first_name": "John",
+	    "enrichment_last_name": "Doe",
+	    "email": "JohnDoe@acmelabs.com",
+	    "enrichment_employment_title": "Chief Technology Officer",
+	    "enrichment_phone": ["+1234567890", "+0987654321"],
+	    "enrichment_github_handle": "johndoe",
+	    "enrichment_linkedin_handle": "johndoe",
+	    "enrichment_twitter_handle": "johndoe",
+	    "enrichment_location": "San Francisco, CA",
+	    "enrichment_employment_name": "Acme Labs",
+	    "enrichment_employment_domain": "acmelabs.com"
+	  },
+    "context": {
+      "group_id": "7cc972d3-685d-4106-a862-4fc37da0eca4",
+      "browser": "Mozilla/5.0 (Windows CE) AppleWebKit/5342 (KHTML, like Gecko) Chrome/39.0.800.0 Mobile Safari/5342",
+      "ip": "239.247.115.212"
+    },
+    "timestamp": "2023-12-14T16:07:33.571125Z"
+    }
+}]'
 ```
 #### Sample response
 #### 1.Successful response
