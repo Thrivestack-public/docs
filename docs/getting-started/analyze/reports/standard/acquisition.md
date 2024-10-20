@@ -48,12 +48,11 @@ There are two ways currently by which you can integrate data to generate an Acqu
     - If you prefer not to use the self-serve option, you can send telemetry events via telemetry APIs. Here is the [link to the API documentation](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/overview). 
     - Expected events and API calls are:
         - **Track API**:
-            - `signed_up` event
-            - `account_created` event
-            - `account_added_user` event
+            - [signed_up](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/events/standard/signed_up) event
+            - [account_created](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/events/standard/account_created) event
+            - [account_created](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/events/standard/account_created) event
         - **Group Call**:
-            - For account creation
+            - For [account creation](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/identification/group)
         - **Identify Call**:
-            - For user signup
-
+            - For [user signup](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/identification/user)
 This flexibility ensures that you can choose the integration method that best suits your needs.
