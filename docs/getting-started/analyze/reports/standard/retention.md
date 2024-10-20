@@ -64,6 +64,9 @@ To generate an Retention Report, you can choose **one of the following two metho
 
 - **Identify Call:**
   - For [user signup](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/identification/user)
+ 
+- ** API call sequence **
+![ThriveStack Acquisition Report API Flow Chart](/retention_flow.png)
 
    
 Your doubts are not yet cleared? Contact support at support@thrivestack.ai .
