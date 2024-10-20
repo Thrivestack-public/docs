@@ -74,7 +74,7 @@ The following traits described as a traits:
 | `enrichment_tech_categories`          | Array[string]  | A list of categories or types of technology that the group is involved in or provides (e.g., cloud computing, cybersecurity).  |
 
 ### 1.4 End points
-URL: `https://api.dev.app.thrivestack.ai/api/group` 
+URL: `https://api.app.thrivestack.ai/api/group` 
 Method: `POST`
 
 ### 1.5 Headers
@@ -83,21 +83,29 @@ Method: `POST`
 
 ### 1.6 Sample
 
-A JSON object with the required Identify Object fields and any additional traits associated with account. [Try Out](../../../../integrate/public_apis/group)
+A JSON object with the required Identify Object fields and any additional traits associated with account.
 
-#### Sample JSON request
-```json
-{
-  "user_id": "3e474abe-5943-41fd-8b7b-4c87ad95b0c7",
-  "group_id": "3d8a42f6-49c7-4c5f-8aeb-278d7196f06e",
-  "traits": {
-    "enrichment_name": "Acme Labs",
-    "industry": "IT Services",
-    "plan": "Free Plan",
-    "employees": "100"
-  },
-  "timestamp": "20-11-23T22:28:55.111Z"
-}
+#### Sample cURL
+```bash
+curl --location 'https://api.app.thrivestack.ai/api/track' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsImlkIjoiZjk5OTI4MmMtYjZjZi00YjQ4LTliMWEtOTAyMWVlM2Q3NmI0IiwidHlwIjoiSldUIn0.eyJhdWQiOiJ1c2VyX21hbmFnZW1lbnQiLCJleHAiOjE3MjUwMTQwOTcsImp0aSI6ImY5OTkyODJjLWI2Y2YtNGI0OC05YjFhLTkwMjFlZTNkNzZiNCIsImlhdCI6MTcyNDkzNjA5NywiaXNzIjoiVGhyaXZlU3RhY2sifQ.dCfke26t69Xd9mKbvVH9GPCueMxnSRrL5qJwUm02giXVO1Ne8jTBH5oSAo2nisE3h6ri8FpCEfTn7qTfkBYmXyCwRGUFBkqCwZAtYWrp8ugmAlp2exsuCzFLGF5UQiwHi5qcOzsDEUa7s7UODNl7nThNwArlqTwkJp-XEc9BXCjw2mX3_9Hc0H_ozbg8pWjXIcBqLjuXjVI-VIT3P46wd3_PVJve8Hm-rOuoMkwprihJCbYavihecNff_lE2f2KIzUruIJyLeXqohd1XkVxG3xSrviDqXEbsVBA-o3rHoLZqEHC2lSm99S1Ot7DsVR19Vo5INgV4cvdsmYMfdsyXDw' \
+--data-raw '[
+	{
+    "user_id": "1820abb7-e6d4-45ec-8bc5-9a5c13ba06ca",
+    "traits": {
+      "group_type": "Team",
+      "industry": "Telecommunications",
+      "name": "Acme",
+      "domain": "acme.com",
+      "planName": "Basic"
+	  },
+    "context": {
+      "group_id": "7cc972d3-685d-4106-a862-4fc37da0eca4"
+    },
+    "timestamp": "2023-12-14T16:07:33.571125Z"
+   }
+]'
 ```
 #### Sample response
 #### 1.Successful Response
