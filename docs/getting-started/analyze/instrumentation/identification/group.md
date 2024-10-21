@@ -1,7 +1,5 @@
 # Group
 
-# Identify
-
 ## Overview
 The Group API call allows you to associate an individual user with a specific group, such as a company, organization, account, project, or team.
 
@@ -20,17 +18,23 @@ In addition to the `groupId`, the Group API accepts traits specific to the group
 
 **Method:** `POST`
 
-## Request Headers:
+
+<hr/>
+
+## Request Headers
 
 | Header Name     | Description                                       | Example Value           |
 |-----------------|---------------------------------------------------|-------------------------|
 | `Authorization` | Bearer token for authentication | `Bearer <token>`        |
 | `Content-Type`  | Media type of request body                        | `application/json`      |
 
+
+<hr/>
+
 ## Request Body 
 > **Note:** A maximum of **1,000 group events or 2 MB of data**, whichever is smaller, can be sent in a single API request. Alternatively, if **100 groups** are being updated, they can be batched into one request. Exceeding either the event or size limit will result in a `400 Bad Request` response.
->
-### Fields:
+
+### Fields
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
 | `group_id` | String | Yes | The unique identifier of the group associated with the user. |
@@ -89,7 +93,7 @@ Group traits are used to build a detailed profile of a group. The following trai
 | `enrichment_tech` | string | The technologies or technical platforms the group uses or specializes in. |
 | `enrichment_tech_categories` | Array[string] | A list of categories or types of technology that the group is involved in or provides (e.g., cloud computing, cybersecurity). |
 
-### JSON Example:
+### JSON Example
 ```json
 [
 	{
@@ -109,15 +113,17 @@ Group traits are used to build a detailed profile of a group. The following trai
 ]
 ```
 
+<hr/>
+
 ## Response Body 
-### Fields:
+### Fields
 
 | Field Name | Type | Description |
 | --- | --- | --- |
 | `success` | Bool | Indicates if user was successfully identified |
 | `response_id` | String | A unique identifier for the response |
 | `message` | String | Any additional information about the request status |
-### JSON Example:
+### JSON Example
 ```json
 {
   "success": true,
@@ -126,7 +132,7 @@ Group traits are used to build a detailed profile of a group. The following trai
 }
 ```
 
-### Response Codes:
+### Response Codes
 
 | Code | Description |
 | --- | --- |
@@ -135,8 +141,10 @@ Group traits are used to build a detailed profile of a group. The following trai
 | `401` | Access token missing or invalid |
 | `500` | Internal Server Error, a generic error occurred on the server |
 
+<hr/>
 
 ## Example cURL
+
 
 ```bash
 curl --location 'https://api.app.thrivestack.ai/api/group' \
@@ -160,6 +168,8 @@ curl --location 'https://api.app.thrivestack.ai/api/group' \
    }
 ]'
 ```
+
+<hr/>
 
 ## Authorization scopes
 Requires one of the following OAuth scopes:

@@ -7,15 +7,19 @@ The Token API allows clients to authenticate with the Thrivestack API by obtaini
 
 **Method:** `POST`
 
-## Request Headers:
+<hr/>
+
+## Request Headers
 
 | Header Name     | Description                      | Example Value           |
 |-----------------|----------------------------------|-------------------------|
 | `Content-Type`  | Media type of request body       | `application/json`      |
 
+<hr/>
+
 ## Request Body 
 
-### Fields:
+### Fields
 | Field Name   | Type   | Required | Description                                                                                           |
 |--------------|--------|----------|-------------------------------------------------------------------------------------------------------|
 | `key_id`     | String | Yes      | The unique identifier of the API key                                                                  |
@@ -23,7 +27,7 @@ The Token API allows clients to authenticate with the Thrivestack API by obtaini
 | `scopes`     | String | Yes      | The authorization for particular APIs. Find more [Scopes](./authentication#scopes)                    |
 | `expiry`     | Int    | No       | The expiry of the token in minutes, which cannot be more than one day. (Default: 60)                  |
 
-### JSON Example:
+### JSON Example
 ```json
 {
     "key_id":"f999282c-b6cf-4b48-9b1a-9021ee3d76b4",
@@ -33,14 +37,17 @@ The Token API allows clients to authenticate with the Thrivestack API by obtaini
 }
 ```
 
+<hr/>
+
 ## Response Body 
-### Fields:
+
+### Fields
 
 | Field Name   | Type   | Description                                                                          |
 |--------------|--------|--------------------------------------------------------------------------------------|
 | `token`      | String | The authentication token for the session.                                            |
 | `response_id`| String | A unique identifier for the response.                                                |
-### JSON Example:
+### JSON Example
 ```json
 {
     "token": "eyJhbGciOiJSUzI1NiIsImlkIjoiZjk5OTI4MmMtYjZjZi00YjQ4LTliMWEtOTAyMWVlM2Q3NmI0IiwidHlwIjoiSldUIn0.eyJhdWQiOiJ1c2VyX21hbmFnZW1lbnQiLCJleHAiOjE3MjUwMTQwOTcsImp0aSI6ImY5OTkyODJjLWI2Y2YtNGI0OC05YjFhLTkwMjFlZTNkNzZiNCIsImlhdCI6MTcyNDkzNjA5NywiaXNzIjoiVGhyaXZlU3RhY2sifQ.dCfke26t69Xd9mKbvVH9GPCueMxnSRrL5qJwUm02giXVO1Ne8jTBH5oSAo2nisE3h6ri8FpCEfTn7qTfkBYmXyCwRGUFBkqCwZAtYWrp8ugmAlp2exsuCzFLGF5UQiwHi5qcOzsDEUa7s7UODNl7nThNwArlqTwkJp-XEc9BXCjw2mX3_9Hc0H_ozbg8pWjXIcBqLjuXjVI-VIT3P46wd3_PVJve8Hm-rOuoMkwprihJCbYavihecNff_lE2f2KIzUruIJyLeXqohd1XkVxG3xSrviDqXEbsVBA-o3rHoLZqEHC2lSm99S1Ot7DsVR19Vo5INgV4cvdsmYMfdsyXDw",
@@ -48,7 +55,7 @@ The Token API allows clients to authenticate with the Thrivestack API by obtaini
 }
 ```
 
-### Response Codes:
+### Response Codes
 
 | Code  | Description                                                   |
 |-------|---------------------------------------------------------------|
@@ -56,6 +63,8 @@ The Token API allows clients to authenticate with the Thrivestack API by obtaini
 | `400` | Bad Request, invalid input data                               |
 | `500` | Internal Server Error, a generic error occurred on the server |
 
+
+<hr/>
 
 ## Example cURL
 
