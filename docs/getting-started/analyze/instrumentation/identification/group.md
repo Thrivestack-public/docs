@@ -1,91 +1,143 @@
 # Group
 
-## 1.Introduction
-The Group API call is a method used to associate an individual user with a group entity, such as a company, organization, account, project, or team. This call allows you to assign users to specific groups, manage group memberships, and update or retrieve information related to these associations. 
+# Identify
 
-![Group Identify Flowchart](/img/docs/analyze/apis/group-flowchart.png)
+## Overview
+The Group API call allows you to associate an individual user with a specific group, such as a company, organization, account, project, or team.
 
-### 1.1 Group API
-A Group API typically refers to a set of API endpoints or functions designed to manage and interact with groups, companies, or teams.
-- The `/group` endpoint is used to associate users with specific groups, allowing you to create, update, and retrieve group information for better organization and personalized experiences.
+This call enables you to identify the account or organization to which your users belong. There are two key identifiers in a Group call:
 
-### 1.2 Group Parameters
-Group parameters are the attributes or data fields used when interacting with a Group API to define, manage, or retrieve information about groups.
-You need to provide four pieces of information:
-1. Unique identifier of the user
-2. Unique identifier of the account
-3. Additional traits associated with the account
-4. A Timestamp.
+- **`userId`**: Refers to the individual user.
+- **`groupId`**: Refers to the specific group or organization.
 
-| Parameter  | Type   | Description                                                         |
-|------------|--------|---------------------------------------------------------------------|
-| `group_id`| String | The unique identifier of the group. |
-| `user_id` | String | The unique identifier of the user.  |
-| `traits`  | Object | Additional traits associated with the group. |
-| `timestamp`| Date  | The date and time when the event was created, recommended in ISO-8601 format.|
-| `context` (optional) | Object | Context is a dictionary of extra information that provides useful context about a datapoint |
+A user can be associated with multiple groups, each represented by a different `groupId`, but will have only one `userId` linked to each of those groups. Note that not all platforms support multiple group associations for a single user.
 
-### 1.3 Group Traits
+In addition to the `groupId`, the Group API accepts traits specific to the group, such as industry or number of employees, which pertain to that particular account. Similar to the traits in an Identify call, you can update these traits by calling the same attribute with a new value.
 
-Traits are the additional attributes or characteristics associated with a group. 
-The following traits described as a traits:
+<!-- ![Group Identify Flowchart](/img/docs/analyze/apis/group-flowchart.png) -->
 
-| Traits      | Type   | Description                                                                 |
-|-------------|--------|-----------------------------------------------------------------------------|
-| `enrichment_name`                     | string    | Name of the group,used in general communication.  |
-| `enrichment_legal_name`               | string    | This is the group’s official name as registered with legal authorities.  |
-| `enrichment_domain`                   | string    | The primary web domain associated with the group (e.g., `example.com`).   |
-| `enrichment_domain_aliases`           | Array[string]  | A list of alternative domain names that point to the groups's website.  |
-| `enrichment_phone_numbers`            | Array[string]  | Contact number of the group.|
-| `enrichment_email_addresses`          | Array[string]  | Email Address of the group. |
-| `enrichment_sector`                   | string    | The broad sector in which the group operates, such as technology, healthcare, finance, etc  |
-| `enrichment_industry_group`           | string    | A more specific grouping within the broader sector. For example, within the technology sector, industry groups might include software or hardware. |
-| `enrichment_industry`                 | string    | A more detailed classification of the group’s business activities within the industry group.   |
-| `enrichment_sub_industry`             | string    | An even more specific classification within the industry, providing finer granularity. For example, within the software industry, this could be enterprise software or consumer software.    |
-| `enrichment_tags`                     | Array[string]  | A list of keywords or labels that describe various aspects of the group, such as products, services, or characteristics.  |
-| `enrichment_description`              | string    | A textual description of the group, providing an overview of what it does, its mission, products, or services.  |
-| `enrichment_founder_year`             | int       | the year the group was established |
-| `enrichment_location`                 | string    | A general description of where the group is based, which may include the city, state, or region  |
-| `enrichment_time_zone`                | string    | The time zone in which the groups's primary operations are based.  |
-| `enrichment_street_number`            | string    | The street number where the group is located   |
-| `enrichment_street_name`              | string    | Name of the street to which the group is belonged |
-| `enrichment_street_address`           | string    | Address of the street where the group is located |
-| `enrichment_city`                     | string    | The city the group belongs to |
-| `enrichment_postal_code`              | string    | The postal code of the group's location |
-| `enrichment_state`                    | string    | The group's state of residence  |
-| `enrichment_state_code`               | string    | The state's code where the group is located  |
-| `enrichment_country`                  | string    | The group's Country  of residence  |
-| `enrichment_country_code`             | string    | The Country's code where the group is located |
-| `enrichment_logo`                     | string    | The URL or file path to the groups’s logo image   |
-| `enrichment_linkedin_handle`          | string    | Linkedin profile link  of the group |
-| `enrichment_facebook_handle`          | string    | Github profile link of the group  |
-| `enrichment_twitter_handle`           | string    | Twitter profile link of the group  |
-| `enrichment_crunchbase_handle`        | string    | Crunch base profile link of the group |
-| `enrichment_email_provider`           | string    | The provider of the groups’s email services  |
-| `enrichment_type`                     | string    | The type or category of the group, which could indicate its business model or structure (e.g., private, public, non-profit). |
-| `enrichment_phone`                    | string    | Phone number of the group  |
-| `enrichment_traffic_rank`             | string    | A ranking indicating the group’s website traffic relative to other websites.    |
-| `enrichment_employees`                | int       | Number of employees in the group  |
-| `enrichment_employees_range`          | string    | A range or estimate of the number of employees, often used when exact numbers are not available   |
-| `enrichment_market_cap`               | string    | The market capitalization of the group, which is the total value of its outstanding shares of stock. |
-| `enrichment_raised`                   | string    | The total amount of funding or investment the group has raised. This is particularly relevant for startups and private companies. |
-| `enrichment_annual_revenue`           | string    | Annual Revenue of the group |
-| `enrichment_tech`                     | string    | The technologies or technical platforms the group uses or specializes in. |
-| `enrichment_tech_categories`          | Array[string]  | A list of categories or types of technology that the group is involved in or provides (e.g., cloud computing, cybersecurity).  |
+**URL:** `https://api.app.thrivestack.ai/api/group`
 
-### 1.4 End points
-URL: `https://api.app.thrivestack.ai/api/group` 
-Method: `POST`
+**Method:** `POST`
 
-### 1.5 Headers
-- `Authorization: Bearer <token>` Replace `<token>` with a valid Thrivestack Management token to validate request. (Ref: [Token API Documentation](https://docs.app.thrivestack.ai/getting-started/analyze/authentication)) (Valid Scopes: group_api, telemetry_apis)
-- `Content-Type: application/json` Indicates that the request body is in the JSON format.
+## Request Headers:
 
-### 1.6 Sample
+| Header Name     | Description                                       | Example Value           |
+|-----------------|---------------------------------------------------|-------------------------|
+| `Authorization` | Bearer token for authentication | `Bearer <token>`        |
+| `Content-Type`  | Media type of request body                        | `application/json`      |
 
-A JSON object with the required Identify Object fields and any additional traits associated with account.
+## Request Body 
+> **Note:** A maximum of **1,000 group events or 2 MB of data**, whichever is smaller, can be sent in a single API request. Alternatively, if **100 groups** are being updated, they can be batched into one request. Exceeding either the event or size limit will result in a `400 Bad Request` response.
+>
+### Fields:
+| Field | Type | Required | Description |
+| --- | --- | --- | --- |
+| `group_id` | String | Yes | The unique identifier of the group associated with the user. |
+| `user_id` | String | Yes | The unique identifier of the user triggering the event |
+| `timestamp` | Date | Yes | The event timestamp in UTC using the ISO 8601 format |
+| `traits` | Object | No | A map storing traits about the user. Refer Group Traits Section |
+| `context` | Object | No | A map containing additional context related to the event |
 
-#### Sample cURL
+### Group Traits
+Group traits are used to build a detailed profile of a group. The following traits are accepted as part of the request, it is mandate to send `group_type`
+
+| Trait | Type | Description |
+| --- | --- | --- |
+| `group_type` | string (Required) | Type of the group, such as Account, Team |
+| `name` | string  | Name of the group |
+| `planName` | string | Pricing plan of that group, if applicable |
+| `domain` | string | domain of the account, if applicable |
+| `enrichment_name` | string | Name of the group, used in general communication. |
+| `enrichment_legal_name` | string | This is the group’s official name as registered with legal authorities. |
+| `enrichment_domain` | string | The primary web domain associated with the group (e.g., example.com). |
+| `enrichment_domain_aliases` | Array[string] | A list of alternative domain names that point to the group's website. |
+| `enrichment_phone_numbers` | Array[string] | Contact numbers of the group. |
+| `enrichment_email_addresses` | Array[string] | Email addresses of the group. |
+| `enrichment_sector` | string | The broad sector in which the group operates, such as technology, healthcare, finance, etc. |
+| `enrichment_industry_group` | string | A more specific grouping within the broader sector (e.g., software or hardware in technology). |
+| `enrichment_industry` | string | A more detailed classification of the group’s business activities within the industry group. |
+| `enrichment_sub_industry` | string | An even more specific classification within the industry, providing finer granularity (e.g., enterprise software). |
+| `enrichment_tags` | Array[string] | A list of keywords or labels that describe various aspects of the group, such as products, services, or characteristics. |
+| `enrichment_description` | string | A textual description of the group, providing an overview of what it does, its mission, products, or services. |
+| `enrichment_founder_year` | int | The year the group was established. |
+| `enrichment_location` | string | A general description of where the group is based, which may include the city, state, or region. |
+| `enrichment_time_zone` | string | The time zone in which the group's primary operations are based. |
+| `enrichment_street_number` | string | The street number where the group is located. |
+| `enrichment_street_name` | string | Name of the street to which the group belongs. |
+| `enrichment_street_address` | string | Address of the street where the group is located. |
+| `enrichment_city` | string | The city the group belongs to. |
+| `enrichment_postal_code` | string | The postal code of the group's location. |
+| `enrichment_state` | string | The group's state of residence. |
+| `enrichment_state_code` | string | The state's code where the group is located. |
+| `enrichment_country` | string | The group's country of residence. |
+| `enrichment_country_code` | string | The country's code where the group is located. |
+| `enrichment_logo` | string | The URL or file path to the group's logo image. |
+| `enrichment_linkedin_handle` | string | LinkedIn profile link of the group. |
+| `enrichment_facebook_handle` | string | Facebook profile link of the group. |
+| `enrichment_twitter_handle` | string | Twitter profile link of the group. |
+| `enrichment_crunchbase_handle` | string | Crunchbase profile link of the group. |
+| `enrichment_email_provider` | string | The provider of the group's email services. |
+| `enrichment_type` | string | The type or category of the group, indicating its business model or structure (e.g., private, public, non-profit). |
+| `enrichment_phone` | string | Phone number of the group. |
+| `enrichment_traffic_rank` | string | A ranking indicating the group’s website traffic relative to other websites. |
+| `enrichment_employees` | int | Number of employees in the group. |
+| `enrichment_employees_range` | string | A range or estimate of the number of employees, often used when exact numbers are not available. |
+| `enrichment_market_cap` | string | The market capitalization of the group, which is the total value of its outstanding shares of stock. |
+| `enrichment_raised` | string | The total amount of funding or investment the group has raised, relevant for startups and private companies. |
+| `enrichment_annual_revenue` | string | Annual revenue of the group. |
+| `enrichment_tech` | string | The technologies or technical platforms the group uses or specializes in. |
+| `enrichment_tech_categories` | Array[string] | A list of categories or types of technology that the group is involved in or provides (e.g., cloud computing, cybersecurity). |
+
+### JSON Example:
+```json
+[
+	{
+    "user_id": "1820abb7-e6d4-45ec-8bc5-9a5c13ba06ca",
+    "traits": {
+      "group_type": "Team",
+      "industry": "Telecommunications",
+      "name": "Acme",
+      "domain": "acme.com",
+      "planName": "Basic"
+	  },
+    "context": {
+      "group_id": "7cc972d3-685d-4106-a862-4fc37da0eca4"
+    },
+    "timestamp": "2023-12-14T16:07:33.571125Z"
+    }
+]
+```
+
+## Response Body 
+### Fields:
+
+| Field Name | Type | Description |
+| --- | --- | --- |
+| `success` | Bool | Indicates if user was successfully identified |
+| `response_id` | String | A unique identifier for the response |
+| `message` | String | Any additional information about the request status |
+### JSON Example:
+```json
+{
+  "success": true,
+  "response_id": "7e51e59e-abf7-4610-858c-d759dd2d1a06",
+  "message": "Group(s) updated successfully"
+}
+```
+
+### Response Codes:
+
+| Code | Description |
+| --- | --- |
+| `200` | Group(s) updated successfully |
+| `400` | Bad Request, invalid input data |
+| `401` | Access token missing or invalid |
+| `500` | Internal Server Error, a generic error occurred on the server |
+
+
+## Example cURL
+
 ```bash
 curl --location 'https://api.app.thrivestack.ai/api/group' \
 --header 'Content-Type: application/json' \
@@ -108,22 +160,8 @@ curl --location 'https://api.app.thrivestack.ai/api/group' \
    }
 ]'
 ```
-#### Sample response
-#### 1.Successful Response
-`Status code`: `200`
-```json
-{
-  "success": true,
-  "message": "Group(s) grouped successfully",
-  "response_id": "0e63350f-8655-4290-bfa8-6a88b9ad3a40"
-}
-```
-#### 2.Error Response
-An error can occur for various reasons. The `status code` returned may be `400`, `401`, `403`, or `500` depending on the type of error.
-```json
-{
-  "success": false,
-  "message": "Failed to group the group(s) due to an error.",
-  "response_id": "0e63350f-8655-4290-bfa8-6a88b9ad3a40"
-}
-``` 
+
+## Authorization scopes
+Requires one of the following OAuth scopes:
+- `telemetry_apis`
+- `group_api`

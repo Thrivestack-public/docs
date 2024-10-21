@@ -8,7 +8,7 @@ This API endpoint is used to retrieve the roles associated with a specific accou
 
 ## Endpoint
 
-**URL:** `https://api.dev.app.thrivestack.ai/api/role/list`
+**URL:** `https://api.app.thrivestack.ai/api/role/list`
 **Method:** `POST`
 
 ## Headers
@@ -34,7 +34,7 @@ The request body should be in JSON format and contains the following parameter:
 
 ```bash
 curl '
-https://api.dev.app.thrivestack.ai/api/role/list'
+https://api.dev.thrivestack.ai/api/role/list'
   -H 'Authorization: Bearer <token>'
   -H 'Content-Type: application/json'
   --data-raw '{"account_id":"137e6fc0-46e0-4997-8ef5-6c8c14c1fab4"}'
@@ -74,7 +74,7 @@ This API endpoint is used to update role details for given account_id. The reque
 
 ## Endpoint
 
-**URL:** `https://api.dev.app.thrivestack.ai/api/role/update`
+**URL:** `https://api.app.thrivestack.ai/api/role/update`
 **Method:** `POST`
 
 ## Headers
@@ -116,7 +116,7 @@ The request body should be in JSON format and contains the following parameters:
 ### Example cURL
 
 ```bash
-curl 'https://api.dev.app.thrivestack.ai/api/user/update'
+curl 'https://api.app.thrivestack.ai/api/user/update'
   -H 'Authorization: Bearer <token>'
   -H 'Content-Type: application/json'
   --data-raw '{
