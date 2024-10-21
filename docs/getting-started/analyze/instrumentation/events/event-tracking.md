@@ -12,18 +12,22 @@ This API provides a standardized way to collect telemetry events such as user ac
 
 **Method:** `POST`
 
-## Request Headers:
+<hr/>
+
+## Request Headers
 
 | Header Name | Description | Example Value |
 | --- | --- | --- |
 | `Authorization` | Bearer token for authentication | `Bearer <token>` |
 | `Content-Type` | Media type of request body | application/json |
 
+<hr/>
+
 ## Request Body
 
 > **Note:** A maximum of **1,000 events or 2 MB of data**, whichever is smaller, can be sent in a single API request. Alternatively, if **100 events** are being tracked, they can be batched into one request. Exceeding either the event or size limit will result in a `400 Bad Request` response.
 
-### Fields:
+### Fields
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
@@ -34,7 +38,7 @@ This API provides a standardized way to collect telemetry events such as user ac
 | `context` | Object | No | A map containing additional context related to the event |
 
 
-### JSON Example:
+### JSON Example
 
 ```json
 [
@@ -55,9 +59,11 @@ This API provides a standardized way to collect telemetry events such as user ac
 ]
 ```
 
+<hr/>
+
 ## Response Body
 
-### Fields:
+### Fields
 
 | Field Name | Type | Description |
 | --- | --- | --- |
@@ -65,7 +71,7 @@ This API provides a standardized way to collect telemetry events such as user ac
 | `response_id` | String | A unique identifier for the response |
 | `message` | String | Any additional information about the request status |
 
-### JSON Example:
+### JSON Example
 
 ```json
 {
@@ -75,7 +81,7 @@ This API provides a standardized way to collect telemetry events such as user ac
 }
 ```
 
-### Response Codes:
+### Response Codes
 
 | Code | Description |
 | --- | --- |
@@ -83,6 +89,8 @@ This API provides a standardized way to collect telemetry events such as user ac
 | `400` | Bad Request, invalid input data |
 | `401` | Access token missing or invalid |
 | `500` | Internal Server Error, a generic error occurred on the server |
+
+<hr/>
 
 ## Example cURL
 
@@ -106,6 +114,7 @@ curl --location 'https://api.app.thrivestack.ai/api/track' \
     }
 }]'
 ```
+<hr/>
 
 ## Authorization scopes
 

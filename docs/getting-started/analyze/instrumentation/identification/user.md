@@ -14,17 +14,21 @@ Thrivestack recommends that you make an Identify call:
 
 **Method:** `POST`
 
-## Request Headers:
+<hr/>
+
+## Request Headers
 
 | Header Name     | Description                                       | Example Value           |
 |-----------------|---------------------------------------------------|-------------------------|
 | `Authorization` | Bearer token for authentication | `Bearer <token>`        |
 | `Content-Type`  | Media type of request body                        | `application/json`      |
 
+<hr/>
+
 ## Request Body 
 > **Note:** A maximum of **1,000 identify events or 2 MB of data**, whichever is smaller, can be sent in a single API request. Alternatively, if **100 users** are being identified, they can be batched into one request. Exceeding either the event or size limit will result in a `400 Bad Request` response.
->
-### Fields:
+
+### Fields
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
 | `user_id` | String | Yes | The unique identifier of the user triggering the event |
@@ -33,7 +37,8 @@ Thrivestack recommends that you make an Identify call:
 | `context` | Object | No | A map containing additional context related to the event |
 
 ### User Traits
-User traits are used to build a detailed profile of the user. The following traits are accepted as part of the request:
+User traits are used to build a detailed profile of the user. The following traits are accepted as part of the request
+
 | Trait Key | Type | Description |
 | --- | --- | --- |
 | `enrichment_first_name` | string | User's first name. |
@@ -62,7 +67,7 @@ User traits are used to build a detailed profile of the user. The following trai
 | `enrichment_inactive_at` | string | The date or timestamp when the user became inactive. |
 | `enrichment_active_at` | string | The date or timestamp when the user became active. |
 
-### JSON Example:
+### JSON Example
 ```json
 [
 	{
@@ -90,16 +95,18 @@ User traits are used to build a detailed profile of the user. The following trai
     }
 ]
 ```
+<hr/>
 
 ## Response Body 
-### Fields:
+### Fields
 
 | Field Name | Type | Description |
 | --- | --- | --- |
 | `success` | Bool | Indicates if user was successfully identified |
 | `response_id` | String | A unique identifier for the response |
-| `message` | String | Any additional information about the request status |                                            |
-### JSON Example:
+| `message` | String | Any additional information about the request status |
+
+### JSON Example
 ```json
 {
   "success": true,
@@ -108,7 +115,7 @@ User traits are used to build a detailed profile of the user. The following trai
 }
 ```
 
-### Response Codes:
+### Response Codes
 
 | Code | Description |
 | --- | --- |
@@ -117,6 +124,7 @@ User traits are used to build a detailed profile of the user. The following trai
 | `401` | Access token missing or invalid |
 | `500` | Internal Server Error, a generic error occurred on the server |
 
+<hr/>
 
 ## Example cURL
 
@@ -150,6 +158,8 @@ curl --location 'https://api.app.thrivestack.ai/api/track' \
     }
 }]'
 ```
+
+<hr/>
 
 ## Authorization scopes
 Requires one of the following OAuth scopes:
