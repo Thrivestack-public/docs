@@ -55,6 +55,21 @@ To generate an Virality Report, you can choose **one of the following two method
 
 ### Expected events and API calls are:
 
+- **Total API And Sequence: 7**
+
+- Invitation
+  - 1. [invite_sent](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/events/standard/invite_sent) event
+   
+- Signup [skip if acquisition settup already done ]
+  - 1. [signed_up](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/events/standard/signed_up)
+  - 2. [identify](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/identification/user)
+  - 3. [account_created](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/events/standard/account_created)
+  - 4. [account_added_user](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/events/standard/account_added_user)
+  - 5. [group](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/identification/group)
+  - 6. [identify](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/identification/user) with GroupId in parameter
+   
+![ThriveStack Acquisition Report API Flow Chart](/virality_flow.png)
+
 - **Track API:**
   - [invite_sent](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/events/standard/invite_sent) event
   - [signed_up](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/events/standard/signed_up) event
@@ -62,8 +77,8 @@ To generate an Virality Report, you can choose **one of the following two method
 - **Identify Call:**
   - For [user signup](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/identification/user)
  
-- ** API call sequence **
-![ThriveStack Acquisition Report API Flow Chart](/virality_flow.png)
+
+
 
  
 Your doubts are not yet cleared? Contact support at support@thrivestack.ai 
