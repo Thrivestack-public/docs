@@ -50,12 +50,12 @@ To generate an Retention Report, you can choose **one of the following two metho
 ### Expected events and API calls are:
 
 - **Total API And Sequence: 6**
-  - /track [signed_up](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/events/standard/signed_up)
-  - /identify [identify](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/identification/user)
-  - /track [account_created](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/events/standard/account_created)
-  - /track [account_added_user](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/events/standard/account_added_user)
-  - /group [group](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/identification/group)
-  - /identify [identify](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/identification/user) with GroupId in parameter
+  - 1. [signed_up](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/events/standard/signed_up)
+  - 2. [identify](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/identification/user)
+  - 3. [account_created](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/events/standard/account_created)
+  - 4. [account_added_user](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/events/standard/account_added_user)
+  - 5. [group](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/identification/group)
+  - 6. [identify](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/identification/user) with GroupId in parameter
  
 ![ThriveStack Acquisition Report API Flow Chart](/acquisition_flow.png)
     
