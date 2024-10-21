@@ -52,10 +52,24 @@ To generate an Retention Report, you can choose **one of the following two metho
 
 ### Expected events and API calls are:
 
+- **Total API And Sequence: 7**
+- Signup [skip if acquisition settup already done ]
+  - 1. [signed_up](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/events/standard/signed_up)
+  - 2. [identify](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/identification/user)
+  - 3. [account_created](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/events/standard/account_created)
+  - 4. [account_added_user](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/events/standard/account_added_user)
+  - 5. [group](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/identification/group)
+  - 6. [identify](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/identification/user) with GroupId in parameter
+- Login
+  - 1. [signed_in](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/events/standard/signed_in)
+   
+
+![ThriveStack Acquisition Report API Flow Chart](/retention_flow.png)
+
 - **Track API:**
   - [signed_up](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/events/standard/signed_up) event.
   - [account_created](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/events/standard/account_created) event
-  - [account_created](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/events/standard/account_created) event
+  - [account_added_user](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/events/standard/account_added_user) event
   - [signed_in](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/events/standard/signed_in) event
   
 
@@ -65,8 +79,7 @@ To generate an Retention Report, you can choose **one of the following two metho
 - **Identify Call:**
   - For [user signup](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/identification/user)
  
-- ** API call sequence **
-![ThriveStack Acquisition Report API Flow Chart](/retention_flow.png)
+
 
    
 Your doubts are not yet cleared? Contact support at support@thrivestack.ai .
