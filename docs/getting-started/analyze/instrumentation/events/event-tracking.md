@@ -16,7 +16,7 @@ This API provides a standardized way to collect telemetry events such as user ac
 
 | Header Name | Description | Example Value |
 | --- | --- | --- |
-| `Authorization` | Bearer token for authentication | Bearer <token> |
+| `Authorization` | Bearer token for authentication | `Bearer <token>` |
 | `Content-Type` | Media type of request body | application/json |
 
 ## Request Body
@@ -32,6 +32,7 @@ This API provides a standardized way to collect telemetry events such as user ac
 | `timestamp` | Date | Yes | The event timestamp in UTC using the ISO 8601 format. |
 | `properties` | Object | No | A map containing event-specific details. Mandatory fields depend on the event type |
 | `context` | Object | No | A map containing additional context related to the event |
+
 
 ### JSON Example:
 
