@@ -24,10 +24,10 @@ In SaaS applications, tracking events is crucial for understanding user behavior
 | Custom       | [feature_used](/getting-started/analyze/instrumentation/events/standard/custom_events)                   | Custom     | Utilization of specific features                     | Activation, Product Development  |
 
 
-### 1.2.1. Event Feild Parameter Overview
+### 1.2.1. Event Field Parameter Overview
 
 
-| Parameter(Feild)   | Type   | Description                                           | Example |
+| Parameter(Field)   | Type   | Description                                           | Example |
 |-------------|--------|-------------------------------------------------------|-----------------
 | event_name  | String | The name of the event being tracked.                  | "signup_up" |
 | properties  | Object | Additional properties associated with the event.       | ```{email: JoeDao@acme.com} ```|
