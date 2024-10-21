@@ -1,0 +1,447 @@
+{
+	"info": {
+		"_postman_id": "6d778328-ba93-48d6-8d06-6d3d656dfb8b",
+		"name": "Business Telem V3-working",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25261684",
+		"_collection_link": "https://galactic-zodiac-762227.postman.co/workspace/My-Workspace~5737a954-0bc2-4786-86b9-0a14789b6853/collection/25261684-6d778328-ba93-48d6-8d06-6d3d656dfb8b?action=share&source=collection_link&creator=25261684"
+	},
+	"item": [
+		{
+			"name": "Create_Token_from_Key",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.globals.set(\"user_id\", '\"7408c7fe-1b2f-48d0-9759-0ae092285832\"');",
+							"pm.globals.set(\"group_id\", '\"d25a8895-e043-481a-8551-95385dedb4b6\"');",
+							"pm.globals.set(\"email_id\", '\"testUser@acme.com\"');",
+							"pm.globals.set(\"name\", '\"testUser\"');",
+							"pm.globals.set(\"domain\", '\"acme.com\"');"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"key_id\": \"5fbca8be-7948-4dd7-81db-d6b11c68eb80\",\n    \"private_key\": \"-----BEGIN RSA PRIVATE KEY-----\\nMIIEowIBAAKCAQEAvuS1tLnZX34k6R5mLVa4/zK4JWn3PS3INWvepun9hIaJ80NO\\nu8/UFrwos1lfCMm9xDa51p4QrqZoVUWAAw5vSHaI0N82AxHqcMPJCu8+hA81uoJJ\\n3Z1ZZYsrRsUd1gZYXid8nJs8tswAyUdojeSh6waFjXnstYolXC6e9d9Lv0/xhrZk\\nc2b5D8awTJ69okxJnxCApOtF+rmnwEc3/sW+uU/GE7W/BunNYoeIlRLiMgUL77Pz\\nYyn5q+JiNxVJxAXpQfNQ+MCHCJJ2E92QRRwlwrWmMQYR182WDjTLC39sCeLhLrLs\\nuq+r9dzucBh9Wwm7Cf/Q4YpR/ehFtBimLMRAOQIDAQABAoIBAFn44C/LPMoGYY1C\\nl7Qc4NrfY+22cSJztp5/NhUDykqxQsnWWoCo5vTEQIavw9wXggq+JH8kRwaaRiiS\\ntlA6eHb172xLGGEAC7iUfuhZdOS3aoJ6sCf05tK2cnJLq9FZckMGZ3REsqwRoPk9\\nX+ko7qwgicfxxICYGR3Gl4OZeFE1optTtB2FkkJb8erJhULO1edAgFTwpgPHURnC\\nJAZdqHhD736hM1gusSHPgot4zEHo+ENYjL/yJZBBPUSoMcNKU5GbxsLovPgBRuPc\\nQcveZyozSeugyHIwgzYoQAwbXOphyQVr0ls8w081jQjsg+wV7XJtqYSzZ6kyZXmK\\nNwpY5xUCgYEAyqgKe2PH4tXrvok4Dh5k8t1K8B8ix8XSHfmpVYDPeCYig6JBam2o\\nTHMDBKwgau38tjE2cH3s/r/nKJWebGizRLqw8A6arF8k3QWJaEgQUCi9gBwrjN21\\nb5TJBwyAF83vhY4dBIalF5tQBvkPFytEmA80qyW06i0E0hbtb6BQV3cCgYEA8SQF\\nUJsuaJTz0Eh1CAJOttpAGAxgUQSzQHhcpTuwBZmDeHl83fb7S6yntdoeFiTm5HkS\\n30ZYtOuTrprQT47J+IIxT6EHf0ZplmT776F7S8E3X/r09OtvBODn+ObtJ2IPZFpB\\n0kxdZxP5IblPKImTx1sSQbOru1W3MqN6dKTecc8CgYAuD+PSB+v28wiSVj4Xd3Ea\\ngpH14h3VqnEHvydt98kwVfqiUM7tkd8fAUU+WqFDrLQz9RualgS4IoY4A0nu+h1F\\nEeoFpkwhwb5vPkLtIPQURC5OYBjF+96xbfADWiQDRRucD6Eo1jHQG80kyJdVfNAq\\nf8pI3FkyoOjnl66AIMAiIQKBgHDO/BmIbz6HqEPhEbbMdYx/L4rQh2J/g2f+psC5\\n2o/UEDgVBYBFYaw2OkMNphOP8eAib9y56RfCOVVuoVMGpp+2MGFjIMG+6/hqh53D\\n+o0m98PUADJvzYEHwh2j0oAhFLhKrQ43oV5ubpcDPO/m5JZXmYPZDNbXs5th9RCK\\nbHHrAoGBALLdP/nZZtllJ4xDaWAeNt72AC4mtyGgOZfpb4AO4pebYcO8G8q4tnse\\nDLOJAJVZuMF8HMqh94GPYOQ/RyRbtgi2dtOrLDhMo9Vn8DTu3ehUiwpv1hruCk2E\\nz8eHTbAWijXIOPi54dVYWx8WUFSKF68DBz5onOy/2UeYzNqLd/jX\\n-----END RSA PRIVATE KEY-----\\n\",\n    \"scopes\": [\n        \"telemetry_apis\"\n    ],\n    \"expiry\": 1300\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.app.thrivestack.ai/api/token",
+					"protocol": "https",
+					"host": [
+						"api",
+						"app",
+						"thrivestack",
+						"ai"
+					],
+					"path": [
+						"api",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "track_signed_up",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"// Get current date and time",
+							"let currentDate = new Date();",
+							"",
+							"// Convert to ISO string with milliseconds",
+							"let isoString = currentDate.toISOString();",
+							"",
+							"// Format the string to include microseconds (6 digits for precision)",
+							"let formattedDate = isoString.replace(/\\.\\d{3}Z$/, '.' + ('000000' + currentDate.getMilliseconds() * 1000).slice(-6) + 'Z');",
+							"",
+							"formattedDate = `\"${formattedDate}\"`;",
+							"",
+							"// Set as a global or environment variable if needed",
+							"pm.globals.set(\"current_time\", formattedDate);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImlkIjoiNWZiY2E4YmUtNzk0OC00ZGQ3LTgxZGItZDZiMTFjNjhlYjgwIiwidHlwIjoiSldUIn0.eyJhdWQiOiJ0ZWxlbWV0cnlfYXBpcyIsImV4cCI6MTcyOTU5MDg1NiwianRpIjoiNWZiY2E4YmUtNzk0OC00ZGQ3LTgxZGItZDZiMTFjNjhlYjgwIiwiaWF0IjoxNzI5NTEyODU2LCJpc3MiOiJUaHJpdmVTdGFjayJ9.RAImwOdWQUsK9ZPilxZe87SyNmWjvbC8YmbVc2GhLcH4g0hfQbxpeN7HUHk9cNdSw6PDQuNY3rpAKlCGeRBECUFVgAwCW5xSfNIc4_qlNeys9Sy0aQGeZ_9bhZFiDADOsVaspQnXI0MiE54UAlHnz4rU21YiDOgt5OQbdhmX9v8vW6AGRdwIS8WGADbCjdu8uFmaCEJqK4EsKTvJrxgyBGc_JC_A7ssYUbPmKpOuat6Vanlumw_kq32lYn7fSdL7gMXLYJykd6jV8uLUJsKQQd3w8L0DQFt40YPJmRm-68XhmBCDwQf0aUFuhbkOotZw-7-OJ4kuNoa6e6p62O_KqQ"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"event_name\": \"signed_up\",\n        \"properties\": {\n            \"email\": {{email_id}},\n            \"name\": {{name}}\n        },\n        \"user_id\": {{user_id}},\n        \"timestamp\": {{current_time}}\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.app.thrivestack.ai/api/track",
+					"protocol": "https",
+					"host": [
+						"api",
+						"app",
+						"thrivestack",
+						"ai"
+					],
+					"path": [
+						"api",
+						"track"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Identify",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"// Get current date and time",
+							"let currentDate = new Date();",
+							"",
+							"// Convert to ISO string with milliseconds",
+							"let isoString = currentDate.toISOString();",
+							"",
+							"// Format the string to include microseconds (6 digits for precision)",
+							"let formattedDate = isoString.replace(/\\.\\d{3}Z$/, '.' + ('000000' + currentDate.getMilliseconds() * 1000).slice(-6) + 'Z');",
+							"",
+							"formattedDate = `\"${formattedDate}\"`;",
+							"",
+							"// Set as a global or environment variable if needed",
+							"pm.globals.set(\"current_time\", formattedDate);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImlkIjoiNWZiY2E4YmUtNzk0OC00ZGQ3LTgxZGItZDZiMTFjNjhlYjgwIiwidHlwIjoiSldUIn0.eyJhdWQiOiJ0ZWxlbWV0cnlfYXBpcyIsImV4cCI6MTcyOTU5MDg1NiwianRpIjoiNWZiY2E4YmUtNzk0OC00ZGQ3LTgxZGItZDZiMTFjNjhlYjgwIiwiaWF0IjoxNzI5NTEyODU2LCJpc3MiOiJUaHJpdmVTdGFjayJ9.RAImwOdWQUsK9ZPilxZe87SyNmWjvbC8YmbVc2GhLcH4g0hfQbxpeN7HUHk9cNdSw6PDQuNY3rpAKlCGeRBECUFVgAwCW5xSfNIc4_qlNeys9Sy0aQGeZ_9bhZFiDADOsVaspQnXI0MiE54UAlHnz4rU21YiDOgt5OQbdhmX9v8vW6AGRdwIS8WGADbCjdu8uFmaCEJqK4EsKTvJrxgyBGc_JC_A7ssYUbPmKpOuat6Vanlumw_kq32lYn7fSdL7gMXLYJykd6jV8uLUJsKQQd3w8L0DQFt40YPJmRm-68XhmBCDwQf0aUFuhbkOotZw-7-OJ4kuNoa6e6p62O_KqQ"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"user_id\": {{user_id}},\n        \"traits\": {\n            \"email\":{{email_id}},\n            \"name\": {{name}}\n        },\n        \"timestamp\": {{current_time}}\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.app.thrivestack.ai/api/identify",
+					"protocol": "https",
+					"host": [
+						"api",
+						"app",
+						"thrivestack",
+						"ai"
+					],
+					"path": [
+						"api",
+						"identify"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "track_account_create\\",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"// Get current date and time",
+							"let currentDate = new Date();",
+							"",
+							"// Convert to ISO string with milliseconds",
+							"let isoString = currentDate.toISOString();",
+							"",
+							"// Format the string to include microseconds (6 digits for precision)",
+							"let formattedDate = isoString.replace(/\\.\\d{3}Z$/, '.' + ('000000' + currentDate.getMilliseconds() * 1000).slice(-6) + 'Z');",
+							"",
+							"formattedDate = `\"${formattedDate}\"`;",
+							"",
+							"// Set as a global or environment variable if needed",
+							"pm.globals.set(\"current_time\", formattedDate);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImlkIjoiNWZiY2E4YmUtNzk0OC00ZGQ3LTgxZGItZDZiMTFjNjhlYjgwIiwidHlwIjoiSldUIn0.eyJhdWQiOiJ0ZWxlbWV0cnlfYXBpcyIsImV4cCI6MTcyOTU5MDg1NiwianRpIjoiNWZiY2E4YmUtNzk0OC00ZGQ3LTgxZGItZDZiMTFjNjhlYjgwIiwiaWF0IjoxNzI5NTEyODU2LCJpc3MiOiJUaHJpdmVTdGFjayJ9.RAImwOdWQUsK9ZPilxZe87SyNmWjvbC8YmbVc2GhLcH4g0hfQbxpeN7HUHk9cNdSw6PDQuNY3rpAKlCGeRBECUFVgAwCW5xSfNIc4_qlNeys9Sy0aQGeZ_9bhZFiDADOsVaspQnXI0MiE54UAlHnz4rU21YiDOgt5OQbdhmX9v8vW6AGRdwIS8WGADbCjdu8uFmaCEJqK4EsKTvJrxgyBGc_JC_A7ssYUbPmKpOuat6Vanlumw_kq32lYn7fSdL7gMXLYJykd6jV8uLUJsKQQd3w8L0DQFt40YPJmRm-68XhmBCDwQf0aUFuhbkOotZw-7-OJ4kuNoa6e6p62O_KqQ"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"event_name\": \"account_created\",\n        \"properties\": {\n            \"account_domain\": {{domain}},\n            \"account_id\": \"7149d9cb-416a-4cd7-bf4c-dcd7f71421b8\",\n            \"account_name\":{{domain}}\n        },\n        \"user_id\": {{user_id}},\n        \"timestamp\": {{current_time}},\n        \"context\": {\n            \"group_id\": {{group_id}}\n        }\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.app.thrivestack.ai/api/track",
+					"protocol": "https",
+					"host": [
+						"api",
+						"app",
+						"thrivestack",
+						"ai"
+					],
+					"path": [
+						"api",
+						"track"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "track_account_added_user",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"// Get current date and time",
+							"let currentDate = new Date();",
+							"",
+							"// Convert to ISO string with milliseconds",
+							"let isoString = currentDate.toISOString();",
+							"",
+							"// Format the string to include microseconds (6 digits for precision)",
+							"let formattedDate = isoString.replace(/\\.\\d{3}Z$/, '.' + ('000000' + currentDate.getMilliseconds() * 1000).slice(-6) + 'Z');",
+							"",
+							"formattedDate = `\"${formattedDate}\"`;",
+							"",
+							"// Set as a global or environment variable if needed",
+							"pm.globals.set(\"current_time\", formattedDate);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImlkIjoiNWZiY2E4YmUtNzk0OC00ZGQ3LTgxZGItZDZiMTFjNjhlYjgwIiwidHlwIjoiSldUIn0.eyJhdWQiOiJ0ZWxlbWV0cnlfYXBpcyIsImV4cCI6MTcyOTU5MDg1NiwianRpIjoiNWZiY2E4YmUtNzk0OC00ZGQ3LTgxZGItZDZiMTFjNjhlYjgwIiwiaWF0IjoxNzI5NTEyODU2LCJpc3MiOiJUaHJpdmVTdGFjayJ9.RAImwOdWQUsK9ZPilxZe87SyNmWjvbC8YmbVc2GhLcH4g0hfQbxpeN7HUHk9cNdSw6PDQuNY3rpAKlCGeRBECUFVgAwCW5xSfNIc4_qlNeys9Sy0aQGeZ_9bhZFiDADOsVaspQnXI0MiE54UAlHnz4rU21YiDOgt5OQbdhmX9v8vW6AGRdwIS8WGADbCjdu8uFmaCEJqK4EsKTvJrxgyBGc_JC_A7ssYUbPmKpOuat6Vanlumw_kq32lYn7fSdL7gMXLYJykd6jV8uLUJsKQQd3w8L0DQFt40YPJmRm-68XhmBCDwQf0aUFuhbkOotZw-7-OJ4kuNoa6e6p62O_KqQ"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"event_name\": \"account_added_user\",\n        \"properties\": {\n            \"account_name\": {{domain}},\n            \"user_email\": {{email_id}}\n        },\n        \"user_id\": {{user_id}},\n        \"timestamp\": {{current_time}},\n        \"context\": {\n            \"group_id\": {{group_id}}\n        }\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.app.thrivestack.ai/api/track",
+					"protocol": "https",
+					"host": [
+						"api",
+						"app",
+						"thrivestack",
+						"ai"
+					],
+					"path": [
+						"api",
+						"track"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "group Copy",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"// Get current date and time",
+							"let currentDate = new Date();",
+							"",
+							"// Convert to ISO string with milliseconds",
+							"let isoString = currentDate.toISOString();",
+							"",
+							"// Format the string to include microseconds (6 digits for precision)",
+							"let formattedDate = isoString.replace(/\\.\\d{3}Z$/, '.' + ('000000' + currentDate.getMilliseconds() * 1000).slice(-6) + 'Z');",
+							"",
+							"formattedDate = `\"${formattedDate}\"`;",
+							"",
+							"// Set as a global or environment variable if needed",
+							"pm.globals.set(\"current_time\", formattedDate);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImlkIjoiNWZiY2E4YmUtNzk0OC00ZGQ3LTgxZGItZDZiMTFjNjhlYjgwIiwidHlwIjoiSldUIn0.eyJhdWQiOiJ0ZWxlbWV0cnlfYXBpcyIsImV4cCI6MTcyOTU5MDg1NiwianRpIjoiNWZiY2E4YmUtNzk0OC00ZGQ3LTgxZGItZDZiMTFjNjhlYjgwIiwiaWF0IjoxNzI5NTEyODU2LCJpc3MiOiJUaHJpdmVTdGFjayJ9.RAImwOdWQUsK9ZPilxZe87SyNmWjvbC8YmbVc2GhLcH4g0hfQbxpeN7HUHk9cNdSw6PDQuNY3rpAKlCGeRBECUFVgAwCW5xSfNIc4_qlNeys9Sy0aQGeZ_9bhZFiDADOsVaspQnXI0MiE54UAlHnz4rU21YiDOgt5OQbdhmX9v8vW6AGRdwIS8WGADbCjdu8uFmaCEJqK4EsKTvJrxgyBGc_JC_A7ssYUbPmKpOuat6Vanlumw_kq32lYn7fSdL7gMXLYJykd6jV8uLUJsKQQd3w8L0DQFt40YPJmRm-68XhmBCDwQf0aUFuhbkOotZw-7-OJ4kuNoa6e6p62O_KqQ"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"user_id\": {{user_id}},\n        \"group_id\": {{group_id}},\n        \"traits\": {\n            \"group_type\": \"Account\",\n            \"name\": {{domain}},\n            \"planId\": \"eb4e38a5-9d5e-4f19-b2ce-ffb711c4f75e\",\n            \"planName\": \"Free Trial\"\n        },\n        \"context\": {\n            \"group_id\": {{group_id}},\n            \"group_type\": \"Account\"\n        },\n        \"timestamp\": {{current_time}}\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.app.thrivestack.ai/api/group",
+					"protocol": "https",
+					"host": [
+						"api",
+						"app",
+						"thrivestack",
+						"ai"
+					],
+					"path": [
+						"api",
+						"group"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Identify Copy 2",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"// Get current date and time",
+							"let currentDate = new Date();",
+							"",
+							"// Convert to ISO string with milliseconds",
+							"let isoString = currentDate.toISOString();",
+							"",
+							"// Format the string to include microseconds (6 digits for precision)",
+							"let formattedDate = isoString.replace(/\\.\\d{3}Z$/, '.' + ('000000' + currentDate.getMilliseconds() * 1000).slice(-6) + 'Z');",
+							"",
+							"formattedDate = `\"${formattedDate}\"`;",
+							"",
+							"// Set as a global or environment variable if needed",
+							"pm.globals.set(\"current_time\", formattedDate);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImlkIjoiNWZiY2E4YmUtNzk0OC00ZGQ3LTgxZGItZDZiMTFjNjhlYjgwIiwidHlwIjoiSldUIn0.eyJhdWQiOiJ0ZWxlbWV0cnlfYXBpcyIsImV4cCI6MTcyOTU5MDg1NiwianRpIjoiNWZiY2E4YmUtNzk0OC00ZGQ3LTgxZGItZDZiMTFjNjhlYjgwIiwiaWF0IjoxNzI5NTEyODU2LCJpc3MiOiJUaHJpdmVTdGFjayJ9.RAImwOdWQUsK9ZPilxZe87SyNmWjvbC8YmbVc2GhLcH4g0hfQbxpeN7HUHk9cNdSw6PDQuNY3rpAKlCGeRBECUFVgAwCW5xSfNIc4_qlNeys9Sy0aQGeZ_9bhZFiDADOsVaspQnXI0MiE54UAlHnz4rU21YiDOgt5OQbdhmX9v8vW6AGRdwIS8WGADbCjdu8uFmaCEJqK4EsKTvJrxgyBGc_JC_A7ssYUbPmKpOuat6Vanlumw_kq32lYn7fSdL7gMXLYJykd6jV8uLUJsKQQd3w8L0DQFt40YPJmRm-68XhmBCDwQf0aUFuhbkOotZw-7-OJ4kuNoa6e6p62O_KqQ"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"user_id\": {{user_id}},\n        \"traits\": {\n            \"enrichment_active_at\": \"\",\n            \"enrichment_avatar\": \"\",\n            \"enrichment_city\": \"\",\n            \"enrichment_country\": \"\",\n            \"enrichment_country_code\": \"\",\n            \"enrichment_email_provider\": \"\",\n            \"enrichment_employment_domain\": \"\",\n            \"enrichment_employment_name\": \"\",\n            \"enrichment_employment_role\": \"\",\n            \"enrichment_employment_seniority\": \"\",\n            \"enrichment_employment_sub_role\": \"\",\n            \"enrichment_employment_title\": \"\",\n            \"enrichment_facebook_handle\": \"\",\n            \"enrichment_first_name\": \"\",\n            \"enrichment_full_name\": \"\",\n            \"enrichment_github_handle\": \"\",\n            \"enrichment_inactive_at\": \"\",\n            \"enrichment_last_name\": \"\",\n            \"enrichment_linkedin_handle\": \"\",\n            \"enrichment_location\": \"\",\n            \"enrichment_phone\": [],\n            \"enrichment_state\": \"\",\n            \"enrichment_state_code\": \"\",\n            \"enrichment_time_zone\": \"\",\n            \"enrichment_twitter_handle\": \"\"\n        },\n        \"context\": {\n            \"group_id\": {{group_id}}\n        },\n        \"timestamp\": {{current_time}}\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.app.thrivestack.ai/api/identify",
+					"protocol": "https",
+					"host": [
+						"api",
+						"app",
+						"thrivestack",
+						"ai"
+					],
+					"path": [
+						"api",
+						"identify"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
