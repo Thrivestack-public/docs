@@ -95,6 +95,7 @@ const analyze = [
               label: 'APIs',
               items: [
                 "getting-started/analyze/authentication",
+                "getting-started/analyze/token",
                 'getting-started/analyze/instrumentation/identification/user',
                 'getting-started/analyze/instrumentation/identification/group',
                 'getting-started/analyze/instrumentation/events/event-tracking',

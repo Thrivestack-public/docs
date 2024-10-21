@@ -1,42 +1,30 @@
 # Introduction
-
+## Overview
 👋 Welcome to ThriveStack's Analyze Module! This guide will walk you through all the features provided by ThriveStack for Instrumentation and Reporting.
 
 This guide is divided into the following sections:
-- [Instrumentation](#instrumentation): Understand your customers and their actions on your SaaS product.
+- [Instrumentation](#instrumentation): Understand your users and their actions on your SaaS product.
 - [Reporting](#reporting): Access insights about products with intuitive reports.
 
 <hr/>
 
 ## Instrumentation
+ThriveStack's **Instrumentation** framework enables tracking and analysis of user interactions through key concepts and APIs. Below is an overview of how these work together:
 
-ThriveStack's Instrumentation encompasses the following key concepts:
+### Key Concepts and APIs
+- **[Users → Identify API](./identification/user)**
+    - Purpose: Identifies users by capturing their unique details, such as name and email.
+    - Focus: Who is the user?
 
-### Users 
-Customers utilizing your product, each with unique identifiers and mandatory information such as name and email. [Learn more](./identification/user)
+- **[Groups → Group API](./identification/group)**
+    - Purpose: Links users to specific accounts or organizations they belong to.
+    - Focus: What account or organization does the user belong to?
 
-### Groups 
-Organizations or accounts to which users belong. [Learn more](./identification/group)
+- **[Events → Track API](./events/event-tracking)**
+    - Purpose: Records user actions and interactions with the product (events).
+    - Focus: What are the users doing?
 
-### Traits
-Additional information tracked about users or groups.
-
-### Events
-Data reflecting user interactions with your product. [Learn more](./events/event-tracking)
-
-ThriveStack's instrumentation APIs enable you to effectively track and analyze various aspects of user engagement, providing valuable data to optimize your product's performance and user experience.
-
-This guide is structured to cover the following key areas:
-
-- [Identify](./identification/user): Who is the user?
-- [Group](./identification/group): What account or organization do they belong to?
-- [Track](./events/event-tracking): What are they doing?
-- [Page](./page): What webpage are they on?
-
-By leveraging ThriveStack's instrumentation APIs, you can unlock a wealth of information about user interactions, enabling you to make informed decisions and drive growth for your SaaS product. Let's dive in!
-
-
-_Explore ThriveStack's Instrumentation APIs [here](./overview)._
+By leveraging ThriveStack's **Identify**, **Group**, and **Track** APIs, you gain powerful insights into user behavior and engagement, allowing you to optimize your product for better performance and user experience.
 
 <hr/>
 

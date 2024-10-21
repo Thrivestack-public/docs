@@ -8,7 +8,7 @@ This API endpoint retrieves a list of users for given Account. The API allows fi
 
 ## Endpoint
 
-**URL:** `https://api.dev.app.thrivestack.ai/api/user/list`
+**URL:** `https://api.app.thrivestack.ai/api/user/list`
 **Method:** `POST`
 
 ## Headers
@@ -48,7 +48,7 @@ The request body should be in JSON format and contains the following parameters:
 ### Example Request
 
 ```bash
-curl 'https://api.dev.app.thrivestack.ai/api/user/list' \
+curl 'https://api.app.thrivestack.ai/api/user/list' \
   -H 'Content-Type: application/json' \
   --data-raw '{"account_id":"137e6fc0-46e0-4997-8ef5-6c8c14c1fab4","filters":[{"key":"status","operator":"contains","value":"Deleted"}],"page_size":10000,"page_no":0}'
 ```
@@ -95,7 +95,7 @@ This API endpoint is used to update user details in account for given user_id. T
 
 ## Endpoint
 
-**URL:** `https://api.dev.app.thrivestack.ai/api/user/update`
+**URL:** `https://api.app.thrivestack.ai/api/user/update`
 **Method:** `POST`
 
 ## Headers
@@ -141,7 +141,7 @@ The request body should be in JSON format and contains the following parameters:
 ### Example request
 
 ```bash
-curl 'https://api.dev.app.thrivestack.ai/api/user/update' \
+curl 'https://api.app.thrivestack.ai/api/user/update' \
 
   -H 'Authorization: Bearer <token>' \
   -H 'Content-Type: application/json' \
