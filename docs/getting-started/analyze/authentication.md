@@ -27,7 +27,7 @@ Scopes are used to limit the actions that can be performed with a t
 <hr/>
 
 ## Steps to Generate an Access Token
-If you've already created an API key, you can skip to [Step 2: Generate an Access Token](##2-generate-an-access-token-via-token-api)
+If you've already created an API key, you can skip to [Step 2: Generate an Access Token](#2-generate-an-access-token-via-token-api)
 
 ### 1. Create an API Key
 If you don't have an API key yet, follow these steps to create one:
