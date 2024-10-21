@@ -49,10 +49,21 @@ To generate an Retention Report, you can choose **one of the following two metho
 
 ### Expected events and API calls are:
 
+- **Total API And Sequence: 6**
+  - /track [signed_up](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/events/standard/signed_up)
+  - /identify [identify](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/identification/user)
+  - /track [account_created](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/events/standard/account_created)
+  - /track [account_added_user](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/events/standard/account_added_user)
+  - /group [group](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/identification/group)
+  - /identify [identify](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/identification/user) with GroupId in parameter
+ 
+![ThriveStack Acquisition Report API Flow Chart](/acquisition_flow.png)
+    
+
 - **Track API:**
   - [signed_up](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/events/standard/signed_up) event.
   - [account_created](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/events/standard/account_created) event
-  - [account_created](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/events/standard/account_created) event
+  - [account_added_user](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/events/standard/account_added_user) event
   
 
 - **Group Call:**
@@ -61,8 +72,7 @@ To generate an Retention Report, you can choose **one of the following two metho
 - **Identify Call:**
   - For [user signup](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/identification/user)
 
-- ** API call sequence **
-![ThriveStack Acquisition Report API Flow Chart](/acquisition_flow.png)
+
 
    
 Your doubts are not yet cleared? Contact support at support@thrivestack.ai .
