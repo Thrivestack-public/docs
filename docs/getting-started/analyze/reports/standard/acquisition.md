@@ -71,6 +71,13 @@ To generate an Retention Report, you can choose **one of the following two metho
 
 - **Identify Call:**
   - For [user signup](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/identification/user)
+ 
+- **Please find Postman Collection**
+  - Download postman collection [here](https://raw.githubusercontent.com/Thrivestack-public/docs/refs/heads/develop/static/%20Telem%20API%20working.postman_collection.json)
+  - Import this postman collection and run it as shown in below gif:
+ 
+![ThriveStack Acquisition Report Postman collection](https://github.com/Thrivestack-public/docs/blob/develop/static/Telem_API_Collection_run.gif)
+    
 
 
 
