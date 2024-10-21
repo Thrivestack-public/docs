@@ -23,6 +23,21 @@ In SaaS applications, tracking events is crucial for understanding user behavior
 | Custom       | [subscription_upgraded](/getting-started/analyze/instrumentation/events/standard/custom_events) | Custom     | User subscription upgrades                           | Activation, Revenue              |
 | Custom       | [feature_used](/getting-started/analyze/instrumentation/events/standard/custom_events)                   | Custom     | Utilization of specific features                     | Activation, Product Development  |
 
+
+### 1.2.1. Event Feild Parameter Overview
+
+
+| Parameter(Feild)   | Type   | Description                                           | Example |
+|-------------|--------|-------------------------------------------------------|-----------------
+| event_name  | String | The name of the event being tracked.                  | "signup_up" |
+| properties  | Object | Additional properties associated with the event.       | ```{email: JoeDao@acme.com} ```|
+| user_id     | String | The unique identifier of the user triggering the event. | "31bfa753-d39f-43e9-b081-8ce6d2f40dc6" |
+| timestamp   | Date   | Date the user’s account was first created. Recommends using ISO-8601 date strings. | "2023-12-14T16:07:33.571125Z" |
+| context  | Object | Context is a dictionary of extra information that provides useful context about a datapoint. | ```{group_id : "3db920b6-d98b-4e9b-bda3-d23b925e0759"} ``` |
+| group_id  | Object | The unique identifier of the group. Can be Account, Team, Workspace. | "3db920b6-d98b-4e9b-bda3-d23b925e0759" |
+| traits  | Object | Additional properties associated with the event. | ```{email: JoeDao@acme.com} ```|
+
+
 ## Key Takeaways
 
 ### Event Influence on Reports:
