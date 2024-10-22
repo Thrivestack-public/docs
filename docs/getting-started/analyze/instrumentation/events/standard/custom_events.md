@@ -6,7 +6,7 @@ Tracking the "[Your Custom Event]" allows SaaS builders to monitor specific acti
 
 <!-- ![](/img/docs/events/custom_event.png) -->
 
-> To send the "[Your Custom Event]", the _Track API_ is used. For more details, refer to the [Track API](/getting-started/analyze/instrumentation/events/event-tracking).
+> To send this event, the _Track API_ is used. For more details, [click here](/getting-started/analyze/instrumentation/events/event-tracking).
 
 <hr/>
 

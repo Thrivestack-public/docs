@@ -6,7 +6,7 @@ Tracking the "account_created" event helps SaaS builders monitor when a new acco
 
 <!-- ![](/img/docs/events/account_created.png) -->
 
-> To send the "account_created" event, the _Track API_ is used. For more details, refer to the [Track API](/getting-started/analyze/instrumentation/events/event-tracking).
+> To send this event, the _Track API_ is used. For more details, [click here](/getting-started/analyze/instrumentation/events/event-tracking).
 
 <hr/>
 

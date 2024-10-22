@@ -11,7 +11,7 @@ API integrations aren't necessary for tracking the 'Invite Sent' event if you us
 
 <!-- ![Invite Sent Event Flowchart](/img/docs/events/invite_sent.png) -->
 
-> To send the "invite_sent" event, the _Track API_ is used. For more details, refer to the [Track API](/getting-started/analyze/instrumentation/events/event-tracking)
+> To send this event, the _Track API_ is used. For more details, [click here](/getting-started/analyze/instrumentation/events/event-tracking).
 
 <hr/>
 
