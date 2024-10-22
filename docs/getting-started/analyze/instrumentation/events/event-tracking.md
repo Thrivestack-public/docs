@@ -49,7 +49,7 @@ This API provides a standardized way to collect telemetry events such as user ac
             "name": "testUser"
         },
         "user_id": "7408c7fe-1b2f-48d0-9759-0ae09e285832",
-        "timestamp": "2024-10-21T13:19:34.684000Z"
+        "timestamp": "2024-10-20T15:51:35.059000Z"
     }
 ]
 ```
@@ -101,7 +101,7 @@ curl --location 'https://api.app.thrivestack.ai/api/track' \
             "name": "testUser"
         },
         "user_id": "7408c7fe-1b2f-48d0-9759-0ae09e285832",
-        "timestamp": "2024-10-21T13:19:34.684000Z"
+        "timestamp": "2024-10-20T15:51:35.059000Z"
     }
 ]'
 ```

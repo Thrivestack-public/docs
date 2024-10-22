@@ -46,7 +46,7 @@ A JSON object with the required Event Object fields and any additional event pro
   "context": {
     "group_id": "account_123"
   },
-  "timestamp": "2023-11-02T00:30:08.276Z"
+  "timestamp": "2024-10-20T15:51:35.059000Z"
 }
 ```
 
@@ -62,6 +62,6 @@ A JSON object with the required Event Object fields and any additional event pro
   "context": {
     "group_id": "47464e5b-4727-11ee-aeb6-fefbf8354ds3"
   },
-  "timestamp": "2023-11-02T00:30:08.276Z"
+  "timestamp": "2024-10-20T15:51:35.059000Z"
 }
 ```

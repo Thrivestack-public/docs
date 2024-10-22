@@ -59,7 +59,7 @@ The `context` field provides additional metadata that gives more context for the
       "feature_name": "CUSTOMER_JOURNEY"
     },
     "user_id": "766b3aef-5904-46fe-af05-a293fee8h345",
-    "timestamp": "20-11-23T22:28:55.111Z",
+    "timestamp": "2024-10-20T15:51:35.059000Z",
     "context": {
       "group_id": "bp497d1a-0159-4009-9454-8a1b0e7c0a60"
     }
@@ -85,7 +85,7 @@ curl --location 'https://api.app.thrivestack.ai/api/track' \
         "invitee_role": "Developer"
       },
       "user_id": "766b3aef-5904-46fe-af05-a293fee8h345",
-      "timestamp": "20-11-23T22:28:55.111Z",
+      "timestamp": "2024-10-20T15:51:35.059000Z",
       "context": {
         "group_id": "bp497d1a-0159-4009-9454-8a1b0e7c0a60"
       }

@@ -51,7 +51,7 @@ The `context` field provides additional metadata that gives more context for the
       "user_name": "John Doe"
     },
     "user_id": "3e474abe-5943-41fd-8b7b-4c87ad95b0c7",
-    "timestamp": "20-11-23T22:28:55.111Z",
+    "timestamp": "2024-10-20T15:51:35.059000Z",
     "context": {
 	    "group_id": "55444abe-41fd-5943-d95b-4c87ad95b674"
     }
@@ -74,7 +74,7 @@ curl --location 'https://api.app.thrivestack.ai/api/track' \
       "user_name": "John Doe"
     },
     "user_id": "3e474abe-5943-41fd-8b7b-4c87ad95b0c7",
-    "timestamp": "20-11-23T22:28:55.111Z",
+    "timestamp": "2024-10-20T15:51:35.059000Z",
     "context": {
 	    "group_id": "55444abe-41fd-5943-d95b-4c87ad95b674"
     }

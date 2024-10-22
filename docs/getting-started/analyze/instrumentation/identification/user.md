@@ -76,7 +76,7 @@ User traits are used to build a detailed profile of the user. The following trai
             "email":"testUser@acme.com",
             "name": "testUser"
         },
-        "timestamp": "2024-10-21T13:19:34.684000Z"
+        "timestamp": "2024-10-20T15:51:35.059000Z"
     }
 ]
 ```
@@ -114,20 +114,17 @@ User traits are used to build a detailed profile of the user. The following trai
 ## Example cURL
 
 ```bash
-curl --location 'https://api.app.thrivestack.ai/api/track' \
---header 'Content-Type: application/json' \
---header 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsImlkIjoiZjk5OTI4MmMtYjZjZi00YjQ4LTliMWEtOTAyMWVlM2Q3NmI0IiwidHlwIjoiSldUIn0.eyJhdWQiOiJ1c2VyX21hbmFnZW1lbnQiLCJleHAiOjE3MjUwMTQwOTcsImp0aSI6ImY5OTkyODJjLWI2Y2YtNGI0OC05YjFhLTkwMjFlZTNkNzZiNCIsImlhdCI6MTcyNDkzNjA5NywiaXNzIjoiVGhyaXZlU3RhY2sifQ.dCfke26t69Xd9mKbvVH9GPCueMxnSRrL5qJwUm02giXVO1Ne8jTBH5oSAo2nisE3h6ri8FpCEfTn7qTfkBYmXyCwRGUFBkqCwZAtYWrp8ugmAlp2exsuCzFLGF5UQiwHi5qcOzsDEUa7s7UODNl7nThNwArlqTwkJp-XEc9BXCjw2mX3_9Hc0H_ozbg8pWjXIcBqLjuXjVI-VIT3P46wd3_PVJve8Hm-rOuoMkwprihJCbYavihecNff_lE2f2KIzUruIJyLeXqohd1XkVxG3xSrviDqXEbsVBA-o3rHoLZqEHC2lSm99S1Ot7DsVR19Vo5INgV4cvdsmYMfdsyXDw' \
---data-raw 'curl --location 'https://api.app.thrivestack.ai/api/identify' \
+curl --location 'https://api.app.thrivestack.ai/api/identify' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsImlkIjoiNWZiY2E4YmUtNzk0OC00ZGQ3LTgxZGItZDZiMTFjNjhlYjgwIiwidHlwIjoiSldUIn0.eyJhdWQiOiJ0ZWxlbWV0cnlfYXBpcyIsImV4cCI6MTcyOTU5MDg1NiwianRpIjoiNWZiY2E4YmUtNzk0OC00ZGQ3LTgxZGItZDZiMTFjNjhlYjgwIiwiaWF0IjoxNzI5NTEyODU2LCJpc3MiOiJUaHJpdmVTdGFjayJ9.RAImwOdWQUsK9ZPilxZe87SyNmWjvbC8YmbVc2GhLcH4g0hfQbxpeN7HUHk9cNdSw6PDQuNY3rpAKlCGeRBECUFVgAwCW5xSfNIc4_qlNeys9Sy0aQGeZ_9bhZFiDADOsVaspQnXI0MiE54UAlHnz4rU21YiDOgt5OQbdhmX9v8vW6AGRdwIS8WGADbCjdu8uFmaCEJqK4EsKTvJrxgyBGc_JC_A7ssYUbPmKpOuat6Vanlumw_kq32lYn7fSdL7gMXLYJykd6jV8uLUJsKQQd3w8L0DQFt40YPJmRm-68XhmBCDwQf0aUFuhbkOotZw-7-OJ4kuNoa6e6p62O_KqQ' \
 --data-raw '[
     {
         "user_id": "7408c7fe-1b2f-48d0-9759-0ae09e285832",
         "traits": {
-            "email":"testUser@acme.com",
+            "email": "testUser@acme.com",
             "name": "testUser"
         },
-        "timestamp": "2024-10-21T13:19:34.684000Z"
+        "timestamp": "2024-10-20T15:51:35.059000Z"
     }
 ]'
 ```
