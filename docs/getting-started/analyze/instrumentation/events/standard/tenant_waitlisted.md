@@ -1,64 +1,83 @@
 # Tenant Waitlisted
 
-## 1. Introduction
+## Overview
 
-The goal is to generate a 'Tenant Waitlisted' event that enables SaaS builders to track when an account/tenant has been put on a waitlist in their product.
+Tracking the "tenant_waitlisted" event helps SaaS builders monitor when an account or tenant has been placed on a waitlist in their product. This event provides insights into account management and user interest.
 
-## 1.2. Track API
+<!-- ![](/img/docs/events/tenant_waitlisted.png) -->
 
-The `/track` endpoint is used to track events or actions performed by users. It allows you to associate and update event information as a property.
+> To send the "tenant_waitlisted" event, the _Track API_ is used. For more details, refer to the [Track API](/getting-started/analyze/instrumentation/events/event-tracking).
 
-### 1.2.1. Event Parameters
+<hr/>
 
-To complete this step, you need to provide five pieces of information: the event name, the user ID, the group ID, additional properties associated with the event, and the timestamp.
+## Event Details for Track API
 
-| Parameter            | Type   | Description                                                                        |
-| -------------------- | ------ | ---------------------------------------------------------------------------------- |
-| `event_name`         | String | The name of the event being tracked.                                               |
-| `properties`         | Object | Additional properties associated with the event.                                   |
-| `user_id`            | String | The unique identifier of the user triggering the event.                            |
-| `group_id`           | String | The unique identifier of the account triggering the event.                         |
-| `timestamp`          | Date   | The date and time the event occurred, recommended to use ISO-8601 date strings.    |
-| `context` (optional) | Object | A dictionary of extra information that provides useful context about a data point. |
+### Request Fields
 
-### 1.2.2. Event Properties
+When sending the "tenant_waitlisted" event, the following parameters are required:
 
-The following properties describe how an event is defined by a schema:
+| Parameter   | Type   | Description                                                                                     |
+|-------------|--------|-------------------------------------------------------------------------------------------------|
+| event_name  | String | The name of the event being tracked. Use `"tenant_waitlisted"`.                                   |
+| user_id     | String | A unique identifier of the user associated with the waitlisted account.                         |
+| properties   | Object | Additional properties that provide more details about the account being waitlisted.             |
+| timestamp   | Date   | The time when the account was waitlisted, in ISO-8601 format.                                  |
+| context     | Object | Additional metadata to provide more context (e.g., device, location, etc.).                     |
 
-| Property | Type   | Description                                                   |
-| -------- | ------ | ------------------------------------------------------------- |
-| `email`  | String | The email of the user associated with the waitlisted account. |
+### Event Properties
 
-### 1.2.3. Sample
+The `properties` field contains additional data about the account being waitlisted. These are the expected fields within the properties object:
 
-A JSON object with the required Event Object fields and any additional event properties.
+| Property          | Type   | Description                                               |
+|-------------------|--------|-----------------------------------------------------------|
+| email             | String | The email address associated with the waitlisted account.  |
+
+### Event Context
+
+The `context` field provides additional metadata that gives more context for the event.
+
+| Context Property   | Type   | Description                                                               |
+|--------------------|--------|---------------------------------------------------------------------------|
+| group_id           | String | A unique identifier for the account that has been waitlisted.             |
+
+### Example JSON Payload
 
 ```json
-{
-  "user_id": "user_123",
-  "event": "Event Name",
-  "properties": {
-    "email": "JoeD@example.com"
-  },
-  "context": {
-    "group_id": "account_123"
-  },
-  "timestamp": "2023-11-02T00:30:08.276Z"
-}
+[
+  {
+    "event_name": "tenant_waitlisted",
+    "user_id": "5p442d0e-11b8-43d2-a933-04f62bb832e1",
+    "properties": {
+      "email": "JoeD@example.com"
+    },
+    "context": {
+      "group_id": "bp497d1a-0159-4009-9454-8a1b0e7c0a60"
+    },
+    "timestamp": "2023-11-02T00:30:08.276Z"
+  }
+]
 ```
 
-### 1.2.4. [Try Out!](../../../../../integrate/public_apis/track)
+<hr/>
 
-```json
-{
-  "user_id": "766b3aef-5904-46fe-af05-a293fee8h345",
-  "event": "tenant_waitlisted",
-  "properties": {
-    "email": "JoeD@example.com"
-  },
-  "context": {
-    "group_id": "47464e5b-4727-11ee-aeb6-fefbf8354ds3"
-  },
-  "timestamp": "2023-11-02T00:30:08.276Z"
-}
+##  Sample cURL
+
+```bash
+curl --location 'https://api.app.thrivestack.ai/api/track' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer <your_auth_token>' \
+--data-raw '[
+    {
+      "event_name": "tenant_waitlisted",
+      "user_id": "5p442d0e-11b8-43d2-a933-04f62bb832e1",
+      "properties": {
+        "email": "JoeD@example.com"
+      },
+      "context": {
+        "group_id": "bp497d1a-0159-4009-9454-8a1b0e7c0a60"
+      },
+      "timestamp": "2023-11-02T00:30:08.276Z"
+    }
+]
+'
 ```

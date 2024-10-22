@@ -59,7 +59,7 @@ The Token API allows clients to authenticate with the Thrivestack API by obtaini
 
 | Code  | Description                                                   |
 |-------|---------------------------------------------------------------|
-| `200` | OK, login successful                                          |
+| `200` | OK, token created successfully                                |
 | `400` | Bad Request, invalid input data                               |
 | `500` | Internal Server Error, a generic error occurred on the server |
 

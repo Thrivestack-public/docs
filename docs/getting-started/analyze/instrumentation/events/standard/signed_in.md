@@ -1,45 +1,51 @@
 # Signed In
 
-# 1. Introduction
+## Overview
+The purpose of the "signed_in" event is to help SaaS builders track user sign-ins to their product, providing insight into user activity and engagement.
 
-The goal is to generate a ‘signed in’ event that enables SaaS builders to track when a user signs in to their product.
+<!-- ![Signed In Event Flowchart](/img/docs/events/signed_in.png) -->
 
-![Signed In Event Flowchart](/img/docs/events/signed_in.png)
+> To track a "signed_in" event, use the _Track API_ to capture and transmit user activity. For more details, refer to the [Track API](/getting-started/analyze/instrumentation/events/event-tracking).
 
-## 1.2. Track API
+<hr/>
 
-The `/track` endpoint is used to track events or actions performed by users. It allows you to associate and update event information as property.
+## Event Details for Track API
 
-### 1.2.1. Event Parameters
+### Request Fields
 
-To complete this step, you need to provide five pieces of information: the first is the event name, the second is the user ID, the third is the group ID, the fourth is additional properties associated with the event, and the fifth is the timestamp.
+When sending the "signed_in" event, the following parameters are required:
 
-| Parameter   | Type   | Description                                                  |
-|-------------|--------|--------------------------------------------------------------|
-| `event_name`| String | The name of the event being tracked.                         |
-| `properties`| Object | Additional properties associated with the event.             |
-| `user_id`   | String | The unique identifier of the user triggering the event.      |
-| `group_id`  | String | The unique identifier of the account triggering the event.   |
-| `timestamp` | Date   | Date the user’s account was first created. Recommends using ISO-8601 date strings. |
-| `context` (optional) | Object | Context is a dictionary of extra information that provides useful context about a datapoint |
+| Parameter   | Type   | Description                                                                |
+|-------------|--------|----------------------------------------------------------------------------|
+| `event_name`| String | The name of the event being tracked. Use `"signed_in"`.                      |
+| `user_id`   | String | A unique identifier for the user who is signing in.                         |
+| `properties`| Object | Additional properties that provide more details about the user and the event.|
+| `timestamp` | Date   | The time when the user signed in, formatted in ISO-8601 format.              |
+| `context` | Object | Metadata providing additional context for the event (e.g., location, device). |
 
-### 1.2.2. Event Properties
+### Event Properties
 
-The following properties of how an event is described by a schema:
+The `properties` field provides details about the user and the event, with the following expected fields:
 
-| Property          | Type   | Description                                        |
-|-------------------|--------|----------------------------------------------------|
-| `User_name`       | String | The username of the user signing in.               |
-| `context.group_id`| String | The id of the account associated with the user signing in. |
+| Property            | Type   | Description                                       |
+|---------------------|--------|---------------------------------------------------|
+| `email`             | String | The email address of the user signing in.         |
+| `user_name`         | String | The username of the user.                         |
 
-### 1.2.3. Sample
+### Event Context
 
-A JSON object with the required Event Object fields and any additional event properties. [Try Out!](../../../../../integrate/public_apis/track)
+The `context` field provides additional metadata that gives more context for the event.
+
+| Context Property   | Type   | Description                                                             |
+|--------------------|--------|-------------------------------------------------------------------------|
+| `group_id`         | String | A unique identifier of the account associated with the user signing in. |
+
+### Example JSON Payload
 
 ```json
 [
 	{
-    "event": "signed_in",
+    "event_name": "signed_in",
     "properties": {
       "email": "JohnDoe@acmelabs.com",
       "user_name": "John Doe"
@@ -52,16 +58,17 @@ A JSON object with the required Event Object fields and any additional event pro
 }]
 ```
 
-### 1.2.4. Sample cURL
+<hr/>
 
+## Sample cURL
 
 ```bash
 curl --location 'https://api.app.thrivestack.ai/api/track' \
 --header 'Content-Type: application/json' \
---header 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsImlkIjoiZjk5OTI4MmMtYjZjZi00YjQ4LTliMWEtOTAyMWVlM2Q3NmI0IiwidHlwIjoiSldUIn0.eyJhdWQiOiJ1c2VyX21hbmFnZW1lbnQiLCJleHAiOjE3MjUwMTQwOTcsImp0aSI6ImY5OTkyODJjLWI2Y2YtNGI0OC05YjFhLTkwMjFlZTNkNzZiNCIsImlhdCI6MTcyNDkzNjA5NywiaXNzIjoiVGhyaXZlU3RhY2sifQ.dCfke26t69Xd9mKbvVH9GPCueMxnSRrL5qJwUm02giXVO1Ne8jTBH5oSAo2nisE3h6ri8FpCEfTn7qTfkBYmXyCwRGUFBkqCwZAtYWrp8ugmAlp2exsuCzFLGF5UQiwHi5qcOzsDEUa7s7UODNl7nThNwArlqTwkJp-XEc9BXCjw2mX3_9Hc0H_ozbg8pWjXIcBqLjuXjVI-VIT3P46wd3_PVJve8Hm-rOuoMkwprihJCbYavihecNff_lE2f2KIzUruIJyLeXqohd1XkVxG3xSrviDqXEbsVBA-o3rHoLZqEHC2lSm99S1Ot7DsVR19Vo5INgV4cvdsmYMfdsyXDw' \
+--header 'Authorization: Bearer <your_auth_token>' \
 --data-raw '[
 	{
-    "event": "signed_in",
+    "event_name": "signed_in",
     "properties": {
       "email": "JohnDoe@acmelabs.com",
       "user_name": "John Doe"

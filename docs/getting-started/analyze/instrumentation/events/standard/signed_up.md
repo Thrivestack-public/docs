@@ -1,41 +1,39 @@
 # Signed up
 
-# 1. Introduction
+## Overview
 
-The goal is to generate a ‘signed up’ event that enables SaaS builders to track when users sign up for their product.
+Tracking the "signed_up" event helps in understanding the acquisition process of your product. It enables SaaS builders to monitor when users are registering for their platform, providing critical insights into user acquisition and onboarding.
 
-![](/img/docs/events/signed_up.png)
+<!-- ![](/img/docs/events/signed_up.png) -->
 
-## 1.2. Track API
+> To send the "signed_up" event, the _Track API_ is used. For more details, refer to the [Track API](/getting-started/analyze/instrumentation/events/event-tracking)
 
-The `/track` endpoint is used to track events or actions performed by users. It allows you to associate and update event information as property.
+<hr/>
 
-### 1.2.1. Event Parameters
+## Event Details for Track API
+### Request Field
+When sending the _signed_up_ event, the following parameters are required:
 
-To complete this step, you need to provide four pieces of information: the first is the event name, the second is the user ID, the third is additional properties associated with the event, and the fourth is the timestamp.
+| Parameter   | Type   | Description                                                                                     |
+|-------------|--------|-------------------------------------------------------------------------------------------------|
+| event_name  | String | The name of the event being tracked. Use `"signed_up"`.                                           |
+| user_id     | String | A unique identifier of the user signing up.                                                      |
+| properties  | Object | Additional properties that provide more details about the user who signed up.                    |
+| timestamp   | Date   | The time when the user signed up, in ISO-8601 format.                                            |
+| context (optional) | Object | Additional metadata to provide more context (e.g., device, location, etc.).                 |
 
-| Parameter   | Type   | Description                                           |
-|-------------|--------|-------------------------------------------------------|
-| event_name  | String | The name of the event being tracked.                  |
-| properties  | Object | Additional properties associated with the event.       |
-| user_id     | String | The unique identifier of the user triggering the event. |
-| timestamp   | Date   | Date the user’s account was first created. Recommends using ISO-8601 date strings. |
-| context (optional) | Object | Context is a dictionary of extra information that provides useful context about a datapoint. |
+### Event Properties
+The `properties` field contains additional data that helps in identifying the user who signed up. These are the expected fields within the properties object:
 
-### 1.2.2. Event Properties
+| Property      | Type   | Description                                                |
+|---------------|--------|------------------------------------------------------------|
+| email         | String | The email address of the user who signed up.                |
+| name          | String | The full name of the user (typically a combination of first and last name). |
+| first_name    | String | The first name of the user.                                 |
+| last_name     | String | The last name of the user.                                  |
 
-The following properties of how an event is described by a schema:
 
-| Property    | Type   | Description                                  |
-|-------------|--------|----------------------------------------------|
-| email       | String | The email of the user.                      |
-| name        | String | The name of the user.                       |
-| first_name  | String | The first name of the user.                 |
-| last_name   | String | The last name of the user.                  |
-
-### 1.2.3. Sample
-
-A JSON object with the required Event Object fields and any additional event properties.
+### Example JSON Payload
 
 ```json
 [
@@ -51,12 +49,14 @@ A JSON object with the required Event Object fields and any additional event pro
 ]
 ```
 
-### 1.2.4. Sample cURL
+<hr/>
+
+## Sample cURL
 
 ```bash
 curl --location 'https://api.app.thrivestack.ai/api/track' \
 --header 'Content-Type: application/json' \
---header 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsImlkIjoiNWZiY2E4YmUtNzk0OC00ZGQ3LTgxZGItZDZiMTFjNjhlYjgwIiwidHlwIjoiSldUIn0.eyJhdWQiOiJ0ZWxlbWV0cnlfYXBpcyIsImV4cCI6MTcyOTQ5MzkyOCwianRpIjoiNWZiY2E4YmUtNzk0OC00ZGQ3LTgxZGItZDZiMTFjNjhlYjgwIiwiaWF0IjoxNzI5NDE1OTI4LCJpc3MiOiJUaHJpdmVTdGFjayJ9.a34Mo3gGJfL_n6ls9Y3KP3IIpHJdqEOchZyAZF0hov-VujecPLJblZ-8WXs7KzZEwyo7DVVeIAygPUz0Xs9a56tA2ZW_6GxRWpw6zS-LLh8FNI1Ekk33hsoloW4WeGOAG8xybghJJH3w6R_H59jubrVNFnaz8YqBbiYou9klowTAjZBg-6IH5eGovGs0xzmaEFpC_0PphZ11wQKC0ZiMI3qz83GnC01VZZe5KjOmEON--B1qtN04pBNnEeCjuNFhBS1uhzAd_7FlRMiiUU29QOve8OXFHCXskvsFIHuUnSE3ZqDduFpKTMnK74VxuevjGsI8X7kIkz1SYnS72sFtUg' \
+--header 'Authorization: Bearer <your_auth_token>' \
 --data-raw '[
     {
         "event_name": "signed_up",
