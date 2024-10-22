@@ -46,7 +46,7 @@ The `properties` field contains additional data related to the account being cre
             "account_name": "acme.com"
         },
         "user_id": "5p442d0e-11b8-43d2-a933-04f62bb832e1",
-        "timestamp": "2024-10-20T15:51:36.088000Z",
+        "timestamp": "2024-10-20T15:51:35.059000Z",
         "context": {
             "group_id": "7149d9cb-416a-4cd7-bf4c-dcd7f71421b8"
         }
@@ -71,7 +71,7 @@ curl --location 'https://api.app.thrivestack.ai/api/track' \
             "account_name": "acme.com"
         },
         "user_id": "5p442d0e-11b8-43d2-a933-04f62bb832e1",
-        "timestamp": "2024-10-20T15:51:36.088000Z",
+        "timestamp": "2024-10-20T15:51:35.059000Z",
         "context": {
             "group_id": "7149d9cb-416a-4cd7-bf4c-dcd7f71421b8"
         }

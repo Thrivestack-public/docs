@@ -60,7 +60,7 @@ The `context` field provides additional metadata that gives more context for the
           "subscription_type": "premium"
       },
       "user_id": "user_123",
-      "timestamp": "2024-10-20T15:51:36.514000Z",
+      "timestamp": "2024-10-20T15:51:35.059000Z",
       "context": {
           "group_id": "account_456",
           "device_type": "mobile",
@@ -88,7 +88,7 @@ curl --location 'https://api.app.thrivestack.ai/api/track' \
         "subscription_type": "premium"
     },
     "user_id": "user_123",
-    "timestamp": "2024-10-20T15:51:36.514000Z",
+    "timestamp": "2024-10-20T15:51:35.059000Z",
     "context": {
         "group_id": "account_456",
         "device_type": "mobile",

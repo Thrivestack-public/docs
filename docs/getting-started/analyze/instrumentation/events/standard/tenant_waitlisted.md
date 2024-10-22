@@ -53,7 +53,7 @@ The `context` field provides additional metadata that gives more context for the
     "context": {
       "group_id": "bp497d1a-0159-4009-9454-8a1b0e7c0a60"
     },
-    "timestamp": "2023-11-02T00:30:08.276Z"
+    "timestamp": "2024-10-20T15:51:35.059000Z"
   }
 ]
 ```
@@ -76,7 +76,7 @@ curl --location 'https://api.app.thrivestack.ai/api/track' \
       "context": {
         "group_id": "bp497d1a-0159-4009-9454-8a1b0e7c0a60"
       },
-      "timestamp": "2023-11-02T00:30:08.276Z"
+      "timestamp": "2024-10-20T15:51:35.059000Z"
     }
 ]
 '

@@ -135,7 +135,7 @@ The `context` field provides additional metadata that gives more context for the
     "context": {
       "group_id": "group_456"
     },
-    "timestamp": "2024-10-22T15:45:30.000Z"
+    "timestamp": "2024-10-20T15:51:35.059000Z"
   }
 ]
 ```
@@ -199,7 +199,7 @@ curl --location 'https://api.app.thrivestack.ai/api/track' \
     "context": {
       "group_id": "group_456"
     },
-    "timestamp": "2024-10-22T15:45:30.000Z"
+    "timestamp": "2024-10-20T15:51:35.059000Z"
   }
 ]
 '

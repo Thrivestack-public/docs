@@ -52,7 +52,7 @@ The `context` field provides additional metadata that gives more context for the
             "user_email": "JohnDoe@acmelabs.com"
         },
         "user_id": "5p442d0e-11b8-43d2-a933-04f62bb832e1",
-        "timestamp": "2024-10-20T15:51:36.514000Z",
+        "timestamp": "2024-10-20T15:51:35.059000Z",
         "context": {
             "group_id": "bp497d1a-0159-4009-9454-8a1b0e7c0a60"
         }
@@ -75,7 +75,7 @@ curl --location 'https://api.app.thrivestack.ai/api/track' \
             "user_email": "JohnDoe@acmelabs.com"
         },
         "user_id": "5p442d0e-11b8-43d2-a933-04f62bb832e1",
-        "timestamp": "2024-10-20T15:51:36.514000Z",
+        "timestamp": "2024-10-20T15:51:35.059000Z",
         "context": {
             "group_id": "bp497d1a-0159-4009-9454-8a1b0e7c0a60"
         }
