@@ -1,41 +1,48 @@
 # Account Added User
 
-# 1. Introduction
+## Overview
 
-The aim is to generate an ‘account added user’ event that enables SaaS builders to track when a user is added to the account.
+Tracking the "account_added_user" event helps SaaS builders monitor when a user is added to an account. This event provides insights into account growth and user role assignments within the product.
 
-![](/img/docs/events/account_added_user.png)
+<!-- ![](/img/docs/events/account_added_user.png) -->
 
-## 1.2. Track API
+> To send the "account_added_user" event, the _Track API_ is used. For more details, refer to the [Track API](/getting-started/analyze/instrumentation/events/event-tracking).
 
-The `/track` endpoint is used to track events or actions performed by users. It allows you to associate and update event information as property.
+<hr/>
 
-### 1.2.1. Event Parameters
+## Event Details for Track API
 
-To complete this step, you need to provide five pieces of information: the first is the event name, the second is the user ID, the third is the group ID, the fourth is additional properties associated with the event, and the fifth is the timestamp.
+### Request Fields
 
-| Parameter   | Type   | Description                                           |
-|-------------|--------|-------------------------------------------------------|
-| event_name  | String | The name of the event being tracked.                  |
-| properties  | Object | Additional properties associated with the event.       |
-| user_id     | String | The unique identifier of the user triggering the event. |
-| group_id    | String | The unique identifier of the account triggering the event. |
-| timestamp   | Date   | Date the user’s account was first created. Recommends using ISO-8601 date strings. |
-| context (optional) | Object | Context is a dictionary of extra information that provides useful context about a datapoint. |
+When sending the "account_added_user" event, the following parameters are required:
 
-### 1.2.2. Event Properties
+| Parameter   | Type   | Description                                                                                     |
+|-------------|--------|-------------------------------------------------------------------------------------------------|
+| event_name  | String | The name of the event being tracked. Use `"account_added_user"`.                                   |
+| user_id     | String | A unique identifier of the user being added to the account.                                       |
+| properties  | Object | Additional properties that provide more details about the user and the account.                   |
+| timestamp   | Date   | The time when the user was added to the account, in ISO-8601 format.                              |
+| context | Object | Additional metadata to provide more context (e.g., device, location, etc.).                 |
 
-The following properties of how an event is described by a schema:
+### Event Properties
 
-| Property          | Type   | Description                                  |
-|-------------------|--------|----------------------------------------------|
-| user_role         | String | The permission group for this user in this account. |
-| context.group_id  | String | The id of the account the user is being added to. |
+The `properties` field contains additional data about the account and user being added. These are the expected fields within the properties object:
 
-### 1.2.3. Sample
+| Property          | Type   | Description                                                |
+|-------------------|--------|------------------------------------------------------------|
+| account_name      | String | The name of the account to which the user is being added.   |
+| user_email        | String | The email address of the user being added to the account.   |
 
-A JSON object with the required Event Object fields and any additional event properties.
 
+### Event Context
+
+The `context` field provides additional metadata that gives more context for the event.
+
+| Context Property   | Type   | Description                                                               |
+|--------------------|--------|---------------------------------------------------------------------------|
+| group_id           | String | A unique identifier for the account to which the user is being mapped.     |
+
+### Example JSON Payload
 ```json
 [
     {
@@ -52,13 +59,14 @@ A JSON object with the required Event Object fields and any additional event pro
     }
 ]
 ```
+<hr/>
 
-### 1.2.4. Sample cURL
+##  Sample cURL
 
 ```bash
 curl --location 'https://api.app.thrivestack.ai/api/track' \
 --header 'Content-Type: application/json' \
---header 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsImlkIjoiNWZiY2E4YmUtNzk0OC00ZGQ3LTgxZGItZDZiMTFjNjhlYjgwIiwidHlwIjoiSldUIn0.eyJhdWQiOiJ0ZWxlbWV0cnlfYXBpcyIsImV4cCI6MTcyOTQ5MzkyOCwianRpIjoiNWZiY2E4YmUtNzk0OC00ZGQ3LTgxZGItZDZiMTFjNjhlYjgwIiwiaWF0IjoxNzI5NDE1OTI4LCJpc3MiOiJUaHJpdmVTdGFjayJ9.a34Mo3gGJfL_n6ls9Y3KP3IIpHJdqEOchZyAZF0hov-VujecPLJblZ-8WXs7KzZEwyo7DVVeIAygPUz0Xs9a56tA2ZW_6GxRWpw6zS-LLh8FNI1Ekk33hsoloW4WeGOAG8xybghJJH3w6R_H59jubrVNFnaz8YqBbiYou9klowTAjZBg-6IH5eGovGs0xzmaEFpC_0PphZ11wQKC0ZiMI3qz83GnC01VZZe5KjOmEON--B1qtN04pBNnEeCjuNFhBS1uhzAd_7FlRMiiUU29QOve8OXFHCXskvsFIHuUnSE3ZqDduFpKTMnK74VxuevjGsI8X7kIkz1SYnS72sFtUg' \
+--header 'Authorization: Bearer <your_auth_token>' \
 --data-raw '[
     {
         "event_name": "account_added_user",

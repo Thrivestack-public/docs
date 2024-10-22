@@ -1,84 +1,101 @@
 # Custom Events
 
-## 1. Introduction
+## Overview
 
-The goal is to generate custom events that allow SaaS builders to track specific actions performed by users in their product. 
+Tracking the "[Your Custom Event]" allows SaaS builders to monitor specific actions performed by users in their product. This event provides insights into user interactions and engagement within the application.
 
-## 1.2. Track API
+<!-- ![](/img/docs/events/custom_event.png) -->
 
-The `/track` endpoint is used to track events or actions performed by users. It allows you to associate and update event information as a property.
+> To send the "[Your Custom Event]", the _Track API_ is used. For more details, refer to the [Track API](/getting-started/analyze/instrumentation/events/event-tracking).
 
-### 1.2.1. Event Parameters
+<hr/>
 
-Custom events provide flexibility in tracking various user interactions. Below, we’ll define the structure of custom events and provide examples.
+## Event Details for Track API
 
-| Parameter            | Type   | Description                                                                        |
-| -------------------- | ------ | ---------------------------------------------------------------------------------- |
-| `event_name`         | String | The name of the event being tracked.                                               |
-| `properties`         | Object | Additional properties associated with the custom event.                                   |
-| `user_id`            | String | The unique identifier of the user triggering the event.                            |
-| `group_id`           | String | The unique identifier of the account triggering the event.                         |
-| `timestamp`          | Date   | The date and time the event occurred, recommended to use ISO-8601 date strings.    |
-| `context` (optional) | Object | A dictionary of extra information that provides useful context about a data point. |
+### Request Fields
 
-### 1.2.2. Event Properties
+When sending the "[Your Custom Event]", the following parameters are required:
 
-Custom events can have various properties. Let’s consider an example with two properties:
+| Parameter   | Type   | Description                                                                                     |
+|-------------|--------|-------------------------------------------------------------------------------------------------|
+| event_name        | String | The name of the event being tracked. Use `"[Your Custom Event]"`.                                |
+| user_id     | String | A unique identifier of the user triggering the event.                                           |
+| properties  | Object | Additional properties that provide more details about the event.                                 |
+| timestamp   | Date   | The time when the event occurred, in ISO-8601 format.                                          |
+| context     | Object | Additional metadata to provide more context (e.g., device, location, etc.).                     |
 
-| Property | Type   | Description            |
-| -------- | ------ | ---------------------- |
-| `email`  | String | The email of the user. |
-| `action`     | String | The specific action associated with the event (e.g., “clicked_button,” “completed_survey”).    |
+### Event Properties
 
-### 1.2.3. Sample
+The `properties` field contains additional data relevant to the event. This is a flexible field that can include various properties, such as:
 
-Here are a few more custom event examples:
+| Property          | Type   | Description                                               |
+|-------------------|--------|-----------------------------------------------------------|
+| user_email        | String | The email address of the user who triggered the event.    |
+| action            | String | The specific action taken by the user (e.g., "clicked_button"). |
+| feature_name      | String | The name of the feature used during the event (e.g., "analytics_dashboard"). |
+| subscription_type | String | The type of subscription associated with the event (e.g., "premium"). |
 
-##### Subscription Upgraded:
+
+### Event Context
+
+The `context` field provides additional metadata that gives more context for the event. This is also flexible and can include various contextual properties, such as:
+
+| Context Property   | Type   | Description                                                               |
+|--------------------|--------|---------------------------------------------------------------------------|
+| group_id           | String | A unique identifier for the associated account or group.                 |
+| device_type        | String | The type of device used by the user (e.g., "mobile", "desktop").         |
+| location           | String | The geographical location of the user when the event occurred (e.g., "New York, USA"). |
+| referrer           | String | The source from which the user navigated to the product (e.g., "email_campaign"). |
+
+### Example JSON Payload
+
 ```json
-{
-  "user_id": "user_456",
-  "event": "subscription_upgraded",
-  "properties": {
-    "email": "AliceW@example.com"
-  },
-  "context": {
-    "group_id": "account_789"
-  },
-  "timestamp": "2023-11-03T10:15:20.123Z"
-}
+[
+  {
+      "event_name": "[Your Custom Event]",
+      "properties": {
+          "user_email": "JaneDoe@example.com",
+          "action": "clicked_button",
+          "feature_name": "analytics_dashboard",
+          "subscription_type": "premium"
+      },
+      "user_id": "user_123",
+      "timestamp": "2024-10-20T15:51:36.514000Z",
+      "context": {
+          "group_id": "account_456",
+          "device_type": "mobile",
+          "location": "New York, USA",
+          "referrer": "email_campaign"
+      }
+  }
+]
 ```
+<hr/>
 
-##### Feature Usage:
-```json
-{
-  "user_id": "user_789",
-  "event": "feature_used",
-  "properties": {
-    "email": "BobS@example.com",
-    "feature_name": "analytics_dashboard"
-  },
-  "context": {
-    "group_id": "account_456"
-  },
-  "timestamp": "2023-11-04T14:45:30.987Z"
-}
+##  Sample cURL
 
-```
-
-### 1.2.4. [Try Out!](../../../../../integrate/public_apis/track)
-
-```json
-{
-  "user_id": "user_123",
-  "event": "custom.event_example",
-  "properties": {
-    "email": "JoeD@example.com",
-    "action": "clicked_button"
-  },
-  "context": {
-    "group_id": "account_123"
-  },
-  "timestamp": "2023-11-02T00:30:08.276Z"
-}
+```bash
+curl --location 'https://api.app.thrivestack.ai/api/track' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer <your_auth_token>' \
+--data-raw '[
+  {
+    "event_name": "[Your Custom Event]",
+    "properties": {
+        "user_email": "JaneDoe@example.com",
+        "action": "clicked_button",
+        "feature_name": "analytics_dashboard",
+        "subscription_type": "premium"
+    },
+    "user_id": "user_123",
+    "timestamp": "2024-10-20T15:51:36.514000Z",
+    "context": {
+        "group_id": "account_456",
+        "device_type": "mobile",
+        "location": "New York, USA",
+        "referrer": "email_campaign"
+    }
+  }
+]
+'
 ```
