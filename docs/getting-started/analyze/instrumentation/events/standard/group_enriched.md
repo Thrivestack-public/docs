@@ -4,8 +4,7 @@
 
 Tracking the "group_enriched" event helps SaaS builders monitor when a group's information has been enriched with additional data in their product. This event provides insights into group data enhancements and account profiling.
 
-> To send the "group_enriched" event, the _Track API_ is used. For more details, refer to the [Track API](/getting-started/analyze/instrumentation/events/event-tracking).
-
+> To send this event, the _Track API_ is used. For more details, [click here](/getting-started/analyze/instrumentation/events/event-tracking).
 <hr/>
 
 ## Event Details for Track API

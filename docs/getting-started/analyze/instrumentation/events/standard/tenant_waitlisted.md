@@ -6,7 +6,7 @@ Tracking the "tenant_waitlisted" event helps SaaS builders monitor when an accou
 
 <!-- ![](/img/docs/events/tenant_waitlisted.png) -->
 
-> To send the "tenant_waitlisted" event, the _Track API_ is used. For more details, refer to the [Track API](/getting-started/analyze/instrumentation/events/event-tracking).
+> To send this event, the _Track API_ is used. For more details, [click here](/getting-started/analyze/instrumentation/events/event-tracking).
 
 <hr/>
 

@@ -6,7 +6,7 @@ Tracking the "signed_up" event helps in understanding the acquisition process of
 
 <!-- ![](/img/docs/events/signed_up.png) -->
 
-> To send the "signed_up" event, the _Track API_ is used. For more details, refer to the [Track API](/getting-started/analyze/instrumentation/events/event-tracking)
+> To send this event, the _Track API_ is used. For more details, [click here](/getting-started/analyze/instrumentation/events/event-tracking).
 
 <hr/>
 
