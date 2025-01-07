@@ -4,9 +4,7 @@
 
 The Track API is designed to capture and log key interactions and system events for B2B products. By tracking these events, businesses can gain detailed insights into how their users interact with the platform, understand usage patterns, and monitor performance metrics. This data plays a critical role in enhancing customer acquisition, retention, and virality, allowing product teams to make data-driven decisions and optimize the overall user experience.
 
-This API provides a standardized way to collect telemetry events such as user actions, feature usage, system behaviors, and custom events across your product ecosystem. These events can then be analyzed to assess user engagement, detect bottlenecks, or identify opportunities for product improvement.
-
-<!-- ![Track Flowchart](/img/docs/analyze/apis/track-flowchart.png) -->
+This API provides a standardized way to collect telemetry events such as user actions, feature usage, system behaviours, and custom events across your product ecosystem. These events can then be analyzed to assess user engagement, detect bottlenecks, or identify opportunities for product improvement.
 
 **URL:** `https://api.app.thrivestack.ai/api/track`
 
@@ -45,10 +43,14 @@ This API provides a standardized way to collect telemetry events such as user ac
     {
         "event_name": "signed_up",
         "properties": {
-            "email": "testUser@acme.com",
-            "name": "testUser"
+            "user_email": "testUser@acme.com",
+            "user_name": "testUser"
         },
-        "user_id": "7408c7fe-1b2f-48d0-9759-0ae09e285832",
+        "context":{
+            "group_id": "ng6SrfNCx",
+			"org_id": "pAYhQI1Cr"
+        },
+        "user_id": "0rwtoH3IN",
         "timestamp": "2024-10-20T15:51:35.059000Z"
     }
 ]
@@ -65,6 +67,8 @@ This API provides a standardized way to collect telemetry events such as user ac
 | `success` | Bool | Indicates if the event was successfully tracked |
 | `response_id` | String | A unique identifier for the response |
 | `message` | String | Any additional information about the request status |
+| `warnings` | Array | Warnings about the request status |
+| `documentation` | String | Documentation about the request status |
 
 ### JSON Example
 
@@ -72,7 +76,11 @@ This API provides a standardized way to collect telemetry events such as user ac
 {
   "success": true,
   "response_id": "7e51e59e-abf7-4610-858c-d759dd2d1a06",
-  "message": "Event tracked successfully"
+  "message": "Event tracked successfully",
+  "warnings" : [
+    "Field 'user_email' is missing and may affect 'Virality' Report"
+  ],
+  "documentation" : "https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/events/standard/events_overview"
 }
 ```
 
@@ -100,11 +108,16 @@ curl --location 'https://api.app.thrivestack.ai/api/track' \
             "email": "testUser@acme.com",
             "name": "testUser"
         },
-        "user_id": "7408c7fe-1b2f-48d0-9759-0ae09e285832",
+        "context":{
+            "group_id": "ng6SrfNCx",
+			"org_id": "pAYhQI1Cr"
+        },
+        "user_id": "0rwtoH3IN",
         "timestamp": "2024-10-20T15:51:35.059000Z"
     }
 ]'
 ```
+
 <hr/>
 
 ## Authorization scopes

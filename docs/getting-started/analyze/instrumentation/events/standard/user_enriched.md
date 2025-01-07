@@ -4,7 +4,6 @@
 
 Tracking the "user_enriched" event helps SaaS builders monitor when a user's information has been enriched with additional data in their product. This event provides insights into user data enhancements and account profiling.
 
-<!-- ![](/img/docs/events/user_enriched.png) -->
 
 > To send this event, the _Track API_ is used. For more details, [click here](/getting-started/analyze/instrumentation/events/event-tracking).
 
@@ -55,7 +54,7 @@ The `properties` field contains additional data about the user being enriched. T
 | enrichment_state_code             | String | The state code of the user's location.               |
 | enrichment_time_zone              | String | The time zone of the user's location.                |
 | enrichment_twitter_handle         | String | The Twitter handle of the user.                      |
-             |
+ 
 
 ### Event Context
 
@@ -106,6 +105,7 @@ The `context` field provides additional metadata that gives more context for the
   }
 ]
 ```
+
 <hr/>
 
 ##  Sample cURL
@@ -150,6 +150,5 @@ curl --location 'https://api.app.thrivestack.ai/api/track' \
     },
     "timestamp": "2024-10-20T15:51:35.059000Z"
   }
-]
-'
+]'
 ```

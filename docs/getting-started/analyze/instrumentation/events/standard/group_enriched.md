@@ -5,6 +5,7 @@
 Tracking the "group_enriched" event helps SaaS builders monitor when a group's information has been enriched with additional data in their product. This event provides insights into group data enhancements and account profiling.
 
 > To send this event, the _Track API_ is used. For more details, [click here](/getting-started/analyze/instrumentation/events/event-tracking).
+
 <hr/>
 
 ## Event Details for Track API
@@ -200,6 +201,5 @@ curl --location 'https://api.app.thrivestack.ai/api/track' \
     },
     "timestamp": "2024-10-20T15:51:35.059000Z"
   }
-]
-'
+]'
 ```

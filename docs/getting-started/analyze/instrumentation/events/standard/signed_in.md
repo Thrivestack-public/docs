@@ -3,8 +3,6 @@
 ## Overview
 The purpose of the "signed_in" event is to help SaaS builders track user sign-ins to their product, providing insight into user activity and engagement.
 
-<!-- ![Signed In Event Flowchart](/img/docs/events/signed_in.png) -->
-
 > To track a "signed_in" event, use the _Track API_ to capture and transmit user activity. For more details, refer to the [Track API](/getting-started/analyze/instrumentation/events/event-tracking).
 
 <hr/>
@@ -29,7 +27,7 @@ The `properties` field provides details about the user and the event, with the f
 
 | Property            | Type   | Description                                       |
 |---------------------|--------|---------------------------------------------------|
-| `email`             | String | The email address of the user signing in.         |
+| `user_email`        | String | The email address of the user signing in.         |
 | `user_name`         | String | The username of the user.                         |
 
 ### Event Context
@@ -39,6 +37,8 @@ The `context` field provides additional metadata that gives more context for the
 | Context Property   | Type   | Description                                                             |
 |--------------------|--------|-------------------------------------------------------------------------|
 | `group_id`         | String | A unique identifier of the account associated with the user signing in. |
+| `product_id`         | String | A unique identifier of the product associated with the user signing in. |
+| `enviornment_id`         | String | A unique identifier of the enviornment associated with the user signing in. |
 
 ### Example JSON Payload
 
@@ -47,13 +47,15 @@ The `context` field provides additional metadata that gives more context for the
 	{
     "event_name": "signed_in",
     "properties": {
-      "email": "JohnDoe@acmelabs.com",
+      "user_email": "JohnDoe@acmelabs.com",
       "user_name": "John Doe"
     },
-    "user_id": "3e474abe-5943-41fd-8b7b-4c87ad95b0c7",
+    "user_id": "0rwtoH3IN",
     "timestamp": "2024-10-20T15:51:35.059000Z",
     "context": {
-	    "group_id": "55444abe-41fd-5943-d95b-4c87ad95b674"
+	      "environment_id": "0d8WgtOPE",
+        "group_id": "ng6SrfNCx",
+        "product_id": "E7Mswu8T6"
     }
 }]
 ```
@@ -70,13 +72,15 @@ curl --location 'https://api.app.thrivestack.ai/api/track' \
 	{
     "event_name": "signed_in",
     "properties": {
-      "email": "JohnDoe@acmelabs.com",
+      "user_email": "JohnDoe@acmelabs.com",
       "user_name": "John Doe"
     },
-    "user_id": "3e474abe-5943-41fd-8b7b-4c87ad95b0c7",
+    "user_id": "0rwtoH3IN",
     "timestamp": "2024-10-20T15:51:35.059000Z",
     "context": {
-	    "group_id": "55444abe-41fd-5943-d95b-4c87ad95b674"
+	     "environment_id": "0d8WgtOPE",
+        "group_id": "ng6SrfNCx",
+        "product_id": "E7Mswu8T6"
     }
 }]'
 ```
