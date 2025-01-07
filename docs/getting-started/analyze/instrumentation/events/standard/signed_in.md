@@ -3,7 +3,9 @@
 ## Overview
 The purpose of the "signed_in" event is to help SaaS builders track user sign-ins to their product, providing insight into user activity and engagement.
 
-To track a "signed_in" event, use the _Track API_ to capture and transmit user activity. For more details, refer to the [Track API](/getting-started/analyze/instrumentation/events/event-tracking).
+>To track a "signed_in" event, use the _Track API_ to capture and transmit user activity. For more details, refer to the [Track API](/getting-started/analyze/instrumentation/events/event-tracking).
+
+<hr/>
 
 ## Event Details for Track API
 
@@ -58,7 +60,7 @@ The `context` field provides additional metadata that gives more context for the
 }]
 ```
 
-
+<hr/>
 
 ## Sample cURL
 

@@ -4,7 +4,9 @@
 
 Tracking the "account_created" event helps SaaS builders monitor when a new account is created within their product. This event provides valuable insights into the initial setup phase of user onboarding and account creation.
 
- To send this event, the _Track API_ is used. For more details, [click here](/getting-started/analyze/instrumentation/events/event-tracking).
+>To send this event, the _Track API_ is used. For more details, [click here](/getting-started/analyze/instrumentation/events/event-tracking).
+
+<hr/>
 
 ## Event Details for Track API
 
@@ -61,6 +63,7 @@ The `context` field provides additional metadata that gives more context for the
 ]
 ```
 
+<hr/>
 
 ## Sample cURL
 

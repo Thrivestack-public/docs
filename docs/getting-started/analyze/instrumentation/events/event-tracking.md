@@ -10,6 +10,7 @@ This API provides a standardized way to collect telemetry events such as user ac
 
 **Method:** `POST`
 
+<hr/>
 
 ## Request Headers
 
@@ -18,6 +19,7 @@ This API provides a standardized way to collect telemetry events such as user ac
 | `Authorization` | Bearer token for authentication | `Bearer <token>` |
 | `Content-Type` | Media type of request body | application/json |
 
+<hr/>
 
 ## Request Body
 
@@ -50,6 +52,7 @@ This API provides a standardized way to collect telemetry events such as user ac
 ]
 ```
 
+<hr/>
 
 ## Response Body
 
@@ -84,6 +87,7 @@ This API provides a standardized way to collect telemetry events such as user ac
 | `401` | Access token missing or invalid |
 | `500` | Internal Server Error, a generic error occurred on the server |
 
+<hr/>
 
 ## Example cURL
 
@@ -104,6 +108,7 @@ curl --location 'https://api.app.thrivestack.ai/api/track' \
 ]'
 ```
 
+<hr/>
 
 ## Authorization scopes
 

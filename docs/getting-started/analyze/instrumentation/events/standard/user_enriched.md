@@ -5,10 +5,9 @@
 Tracking the "user_enriched" event helps SaaS builders monitor when a user's information has been enriched with additional data in their product. This event provides insights into user data enhancements and account profiling.
 
 
-
 > To send this event, the _Track API_ is used. For more details, [click here](/getting-started/analyze/instrumentation/events/event-tracking).
 
-
+<hr/>
 
 ## Event Details for Track API
 
@@ -106,6 +105,8 @@ The `context` field provides additional metadata that gives more context for the
   }
 ]
 ```
+
+<hr/>
 
 ##  Sample cURL
 

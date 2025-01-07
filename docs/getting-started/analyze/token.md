@@ -7,7 +7,7 @@ The Token API allows clients to authenticate with the Thrivestack API by obtaini
 
 **Method:** `POST`
 
-
+</hr>
 
 ## Request Headers
 
@@ -15,7 +15,7 @@ The Token API allows clients to authenticate with the Thrivestack API by obtaini
 |-----------------|----------------------------------|-------------------------|
 | `Content-Type`  | Media type of request body       | `application/json`      |
 
-
+</hr>
 
 ## Request Body 
 
@@ -37,7 +37,7 @@ The Token API allows clients to authenticate with the Thrivestack API by obtaini
 }
 ```
 
-
+</hr>
 
 ## Response Body 
 
@@ -67,7 +67,7 @@ The Token API allows clients to authenticate with the Thrivestack API by obtaini
 | `500` | Internal Server Error, a generic error occurred on the server |
 
 
-
+</hr>
 
 ## Example cURL
 

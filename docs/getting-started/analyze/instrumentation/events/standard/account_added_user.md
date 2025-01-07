@@ -4,7 +4,9 @@
 
 Tracking the "account_added_user" event helps SaaS builders monitor when a user is added to an account. This event provides insights into account growth and user role assignments within the product.
 
-To send this event, the _Track API_ is used. For more details, [click here](/getting-started/analyze/instrumentation/events/event-tracking).
+>To send this event, the _Track API_ is used. For more details, [click here](/getting-started/analyze/instrumentation/events/event-tracking).
+
+</hr>
 
 ## Event Details for Track API
 
@@ -58,6 +60,7 @@ The `context` field provides additional metadata that gives more context for the
 ]
 ```
 
+</hr>
 
 ##  Sample cURL
 

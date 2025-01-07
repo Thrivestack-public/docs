@@ -17,7 +17,7 @@ In addition to the `groupId`, the Group API accepts traits specific to the group
 
 **Method:** `POST`
 
-
+<hr/>
 
 ## Request Headers
 
@@ -26,7 +26,7 @@ In addition to the `groupId`, the Group API accepts traits specific to the group
 | `Authorization` | Bearer token for authentication | `Bearer <token>`        |
 | `Content-Type`  | Media type of request body                        | `application/json`      |
 
-
+<hr/>
 
 ## Request Body 
 > **Note:** A maximum of **1,000 group events or 2 MB of data**, whichever is smaller, can be sent in a single API request. Alternatively, if **100 groups** are being updated, they can be batched into one request. Exceeding either the event or size limit will result in a `400 Bad Request` response.
@@ -110,6 +110,7 @@ Group traits are used to build a detailed profile of a group. The following trai
 ]
 ```
 
+<hr/>
 
 ## Response Body 
 ### Fields
@@ -141,6 +142,7 @@ Group traits are used to build a detailed profile of a group. The following trai
 | `401` | Access token missing or invalid |
 | `500` | Internal Server Error, a generic error occurred on the server |
 
+<hr/>
 
 ## Example cURL
 
@@ -168,6 +170,7 @@ curl --location 'https://api.app.thrivestack.ai/api/group' \
 ]'
 ```
 
+<hr/>
 
 ## Authorization scopes
 Requires one of the following OAuth scopes:
