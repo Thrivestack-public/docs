@@ -103,7 +103,7 @@ Group traits are used to build a detailed profile of a group. The following trai
       "planName": "Basic"
 	  },
     "context": {
-      "group_id": "7cc972d3-685d-4106-a862-4fc37da0eca4"
+      "group_id": "ng6SrfNCx"
     },
     "timestamp": "2024-10-20T15:51:35.059000Z"
     }

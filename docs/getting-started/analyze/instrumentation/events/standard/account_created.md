@@ -82,7 +82,7 @@ curl --location 'https://api.app.thrivestack.ai/api/track' \
         "user_id": "0rwtoH3IN",
         "timestamp": "2024-10-20T15:51:35.059000Z",
         "context": {
-            "group_id": "7ng6SrfNCx",
+            "group_id": "ng6SrfNCx",
              "org_id" : "rWEuEHRSa"
         }
     }

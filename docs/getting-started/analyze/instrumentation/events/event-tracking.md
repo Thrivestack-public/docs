@@ -43,10 +43,14 @@ This API provides a standardized way to collect telemetry events such as user ac
     {
         "event_name": "signed_up",
         "properties": {
-            "email": "testUser@acme.com",
-            "name": "testUser"
+            "user_email": "testUser@acme.com",
+            "user_name": "testUser"
         },
-        "user_id": "7408c7fe-1b2f-48d0-9759-0ae09e285832",
+        "context":{
+            "group_id": "ng6SrfNCx",
+			"org_id": "pAYhQI1Cr"
+        },
+        "user_id": "0rwtoH3IN",
         "timestamp": "2024-10-20T15:51:35.059000Z"
     }
 ]
@@ -74,7 +78,7 @@ This API provides a standardized way to collect telemetry events such as user ac
   "response_id": "7e51e59e-abf7-4610-858c-d759dd2d1a06",
   "message": "Event tracked successfully",
   "warnings" : [
-    "Field 'invitee_role_id' is missing and may affect 'Virality' Report"
+    "Field 'user_email' is missing and may affect 'Virality' Report"
   ],
   "documentation" : "https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/events/standard/events_overview"
 }
@@ -104,7 +108,11 @@ curl --location 'https://api.app.thrivestack.ai/api/track' \
             "email": "testUser@acme.com",
             "name": "testUser"
         },
-        "user_id": "7408c7fe-1b2f-48d0-9759-0ae09e285832",
+        "context":{
+            "group_id": "ng6SrfNCx",
+			"org_id": "pAYhQI1Cr"
+        },
+        "user_id": "0rwtoH3IN",
         "timestamp": "2024-10-20T15:51:35.059000Z"
     }
 ]'
