@@ -7,7 +7,7 @@ The objective is to generate an 'invite_sent' event, enabling you, the SaaS buil
 
 API integrations aren't necessary for tracking the 'Invite Sent' event if you use ThriveStack's Self-Serve [Invitation API](https://docs.dev.app.thrivestack.ai/getting-started/self-serve/apis/invitation)
 
->To send this event, the _Track API_ is used. For more details, [click here](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/events/event-tracking).
+> To send this event, the _Track API_ is used. For more details, [click here](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/events/event-tracking).
 
 <hr/>
 

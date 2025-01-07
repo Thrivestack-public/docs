@@ -41,7 +41,7 @@ In addition to the `groupId`, the Group API accepts traits specific to the group
 | `context` | Object | No | A map containing additional context related to the event |
 
 ### Group Traits
-Group traits are used to build a detailed profile of a group. The following traits are accepted as part of the request, it is mandate to send `group_type`
+Group traits are used to build a detailed profile of a group. The following traits are accepted as part of the request; it is mandated to send `group_type`
 
 | Trait | Type | Description |
 | --- | --- | --- |
@@ -94,7 +94,7 @@ Group traits are used to build a detailed profile of a group. The following trai
 ```json
 [
 	{
-    "user_id": "1820abb7-e6d4-45ec-8bc5-9a5c13ba06ca",
+    "user_id": "0rwtoH3IN",
     "traits": {
       "group_type": "Team",
       "industry": "Telecommunications",
@@ -120,7 +120,7 @@ Group traits are used to build a detailed profile of a group. The following trai
 | `success` | Bool | Indicates if user was successfully identified |
 | `response_id` | String | A unique identifier for the response |
 | `message` | String | Any additional information about the request status |
-| `Warnings` | Array | Warnings about the request status |
+| `warnings` | Array | Warnings about the request status |
 | `documentation` | String | Documentation about the request status |
 ### JSON Example
 ```json
@@ -128,7 +128,9 @@ Group traits are used to build a detailed profile of a group. The following trai
   "success": true,
   "response_id": "7e51e59e-abf7-4610-858c-d759dd2d1a06",
   "message": "Group(s) updated successfully",
-  "Warnings" : null,
+  "warnings" : [
+    "Field 'group_id' is missing and may affect 'CRM' Insights"
+  ],
   "documentation" : "https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/events/standard/events_overview"
 }
 ```
@@ -153,8 +155,8 @@ curl --location 'https://api.app.thrivestack.ai/api/group' \
 --header 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsImlkIjoiNWZiY2E4YmUtNzk0OC00ZGQ3LTgxZGItZDZiMTFjNjhlYjgwIiwidHlwIjoiSldUIn0.eyJhdWQiOiJ0ZWxlbWV0cnlfYXBpcyIsImV4cCI6MTcyOTQ5MzkyOCwianRpIjoiNWZiY2E4YmUtNzk0OC00ZGQ3LTgxZGItZDZiMTFjNjhlYjgwIiwiaWF0IjoxNzI5NDE1OTI4LCJpc3MiOiJUaHJpdmVTdGFjayJ9.a34Mo3gGJfL_n6ls9Y3KP3IIpHJdqEOchZyAZF0hov-VujecPLJblZ-8WXs7KzZEwyo7DVVeIAygPUz0Xs9a56tA2ZW_6GxRWpw6zS-LLh8FNI1Ekk33hsoloW4WeGOAG8xybghJJH3w6R_H59jubrVNFnaz8YqBbiYou9klowTAjZBg-6IH5eGovGs0xzmaEFpC_0PphZ11wQKC0ZiMI3qz83GnC01VZZe5KjOmEON--B1qtN04pBNnEeCjuNFhBS1uhzAd_7FlRMiiUU29QOve8OXFHCXskvsFIHuUnSE3ZqDduFpKTMnK74VxuevjGsI8X7kIkz1SYnS72sFtUg' \
 --data '[
     {
-    "user_id": "2520abb7-e6d4-45ec-8bc5-9a5c13ba06ca",
-    "group_id": "25c972d3-685d-4106-a862-4fc37da0eca4",
+    "user_id": "0rwtoH3IN",
+    "group_id": "ng6SrfNCx",
     "traits": {
       "group_type": "Team",
       "industry": "Telecommunications",
@@ -163,7 +165,7 @@ curl --location 'https://api.app.thrivestack.ai/api/group' \
       "planName": "Basic"
       },
     "context": {
-      "group_id": "7cc972d3-685d-4106-a862-4fc37da0eca4"
+      "group_id": "ng6SrfNCx"
     },
     "timestamp": "2024-10-20T15:51:35.059000Z"
    }

@@ -3,7 +3,7 @@
 ## Overview
 The purpose of the "signed_in" event is to help SaaS builders track user sign-ins to their product, providing insight into user activity and engagement.
 
->To track a "signed_in" event, use the _Track API_ to capture and transmit user activity. For more details, refer to the [Track API](/getting-started/analyze/instrumentation/events/event-tracking).
+> To track a "signed_in" event, use the _Track API_ to capture and transmit user activity. For more details, refer to the [Track API](/getting-started/analyze/instrumentation/events/event-tracking).
 
 <hr/>
 
@@ -38,7 +38,7 @@ The `context` field provides additional metadata that gives more context for the
 |--------------------|--------|-------------------------------------------------------------------------|
 | `group_id`         | String | A unique identifier of the account associated with the user signing in. |
 | `product_id`         | String | A unique identifier of the product associated with the user signing in. |
-| `enviorment_id`         | String | A unique identifier of the enviorment associated with the user signing in. |
+| `enviornment_id`         | String | A unique identifier of the enviornment associated with the user signing in. |
 
 ### Example JSON Payload
 

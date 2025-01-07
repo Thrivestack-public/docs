@@ -4,7 +4,7 @@
 
 Tracking the "signed_up" event helps in understanding the acquisition process of your product. It enables SaaS builders to monitor when users are registering for their platform, providing critical insights into user acquisition and onboarding.
 
->To send this event, the _Track API_ is used. For more details, [click here](/getting-started/analyze/instrumentation/events/event-tracking).
+> To send this event, the _Track API_ is used. For more details, [click here](/getting-started/analyze/instrumentation/events/event-tracking).
 
 <hr/>
 

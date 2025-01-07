@@ -70,7 +70,7 @@ User traits are used to build a detailed profile of the user. The following trai
 ```json
 [
     {
-        "user_id": "7408c7fe-1b2f-48d0-9759-0ae09e285832",
+        "user_id": "0rwtoH3IN",
         "traits": {
             "email":"testUser@acme.com",
             "name": "testUser"
@@ -89,7 +89,7 @@ User traits are used to build a detailed profile of the user. The following trai
 | `success` | Bool | Indicates if user was successfully identified |
 | `response_id` | String | A unique identifier for the response |
 | `message` | String | Any additional information about the request status |
-| `Warnings` | Array | Warnings about the request status |
+| `warnings` | Array | Warnings about the request status |
 | `documentation` | String | Documentation about the request status |
 
 ### JSON Example
@@ -98,7 +98,9 @@ User traits are used to build a detailed profile of the user. The following trai
   "success": true,
   "response_id": "7e51e59e-abf7-4610-858c-d759dd2d1a06",
   "message": "User(s) identified successfully",
-  "Warnings": null,
+  "warnings": [
+    "Field 'user_id' is missing and may affect 'CRM' Insights"
+  ],
   "documentation" : "https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/events/standard/events_overview"
 }
 ```
@@ -122,7 +124,7 @@ curl --location 'https://api.app.thrivestack.ai/api/identify' \
 --header 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsImlkIjoiNWZiY2E4YmUtNzk0OC00ZGQ3LTgxZGItZDZiMTFjNjhlYjgwIiwidHlwIjoiSldUIn0.eyJhdWQiOiJ0ZWxlbWV0cnlfYXBpcyIsImV4cCI6MTcyOTU5MDg1NiwianRpIjoiNWZiY2E4YmUtNzk0OC00ZGQ3LTgxZGItZDZiMTFjNjhlYjgwIiwiaWF0IjoxNzI5NTEyODU2LCJpc3MiOiJUaHJpdmVTdGFjayJ9.RAImwOdWQUsK9ZPilxZe87SyNmWjvbC8YmbVc2GhLcH4g0hfQbxpeN7HUHk9cNdSw6PDQuNY3rpAKlCGeRBECUFVgAwCW5xSfNIc4_qlNeys9Sy0aQGeZ_9bhZFiDADOsVaspQnXI0MiE54UAlHnz4rU21YiDOgt5OQbdhmX9v8vW6AGRdwIS8WGADbCjdu8uFmaCEJqK4EsKTvJrxgyBGc_JC_A7ssYUbPmKpOuat6Vanlumw_kq32lYn7fSdL7gMXLYJykd6jV8uLUJsKQQd3w8L0DQFt40YPJmRm-68XhmBCDwQf0aUFuhbkOotZw-7-OJ4kuNoa6e6p62O_KqQ' \
 --data-raw '[
     {
-        "user_id": "7408c7fe-1b2f-48d0-9759-0ae09e285832",
+        "user_id": "0rwtoH3IN",
         "traits": {
             "email": "testUser@acme.com",
             "name": "testUser"
