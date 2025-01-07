@@ -7,7 +7,7 @@ The Token API allows clients to authenticate with the Thrivestack API by obtaini
 
 **Method:** `POST`
 
-<hr/>
+
 
 ## Request Headers
 
@@ -15,7 +15,7 @@ The Token API allows clients to authenticate with the Thrivestack API by obtaini
 |-----------------|----------------------------------|-------------------------|
 | `Content-Type`  | Media type of request body       | `application/json`      |
 
-<hr/>
+
 
 ## Request Body 
 
@@ -37,7 +37,7 @@ The Token API allows clients to authenticate with the Thrivestack API by obtaini
 }
 ```
 
-<hr/>
+
 
 ## Response Body 
 
@@ -47,11 +47,14 @@ The Token API allows clients to authenticate with the Thrivestack API by obtaini
 |--------------|--------|--------------------------------------------------------------------------------------|
 | `token`      | String | The authentication token for the session.                                            |
 | `response_id`| String | A unique identifier for the response.                                                |
+| `message`| String | Any additional information about the request status                                      |
+
 ### JSON Example
 ```json
 {
     "token": "eyJhbGciOiJSUzI1NiIsImlkIjoiZjk5OTI4MmMtYjZjZi00YjQ4LTliMWEtOTAyMWVlM2Q3NmI0IiwidHlwIjoiSldUIn0.eyJhdWQiOiJ1c2VyX21hbmFnZW1lbnQiLCJleHAiOjE3MjUwMTQwOTcsImp0aSI6ImY5OTkyODJjLWI2Y2YtNGI0OC05YjFhLTkwMjFlZTNkNzZiNCIsImlhdCI6MTcyNDkzNjA5NywiaXNzIjoiVGhyaXZlU3RhY2sifQ.dCfke26t69Xd9mKbvVH9GPCueMxnSRrL5qJwUm02giXVO1Ne8jTBH5oSAo2nisE3h6ri8FpCEfTn7qTfkBYmXyCwRGUFBkqCwZAtYWrp8ugmAlp2exsuCzFLGF5UQiwHi5qcOzsDEUa7s7UODNl7nThNwArlqTwkJp-XEc9BXCjw2mX3_9Hc0H_ozbg8pWjXIcBqLjuXjVI-VIT3P46wd3_PVJve8Hm-rOuoMkwprihJCbYavihecNff_lE2f2KIzUruIJyLeXqohd1XkVxG3xSrviDqXEbsVBA-o3rHoLZqEHC2lSm99S1Ot7DsVR19Vo5INgV4cvdsmYMfdsyXDw",
-    "response_id": "7e51e59e-abf7-4610-858c-d759dd2d1a06"
+    "response_id": "7e51e59e-abf7-4610-858c-d759dd2d1a06",
+    "message" : "Token fetched successfully"
 }
 ```
 
@@ -64,7 +67,7 @@ The Token API allows clients to authenticate with the Thrivestack API by obtaini
 | `500` | Internal Server Error, a generic error occurred on the server |
 
 
-<hr/>
+
 
 ## Example cURL
 

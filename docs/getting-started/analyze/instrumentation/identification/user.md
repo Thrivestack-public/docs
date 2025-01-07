@@ -8,13 +8,11 @@ Thrivestack recommends that you make an Identify call:
 - After a user joins a workspace/account
 - When a user updates their info (for example, they change or add a new address)
 
-<!-- ![User Identify Flowchart](/img/docs/analyze/apis/identify-flowchart.png) -->
 
 **URL:** `https://api.app.thrivestack.ai/api/identify`
 
 **Method:** `POST`
 
-<hr/>
 
 ## Request Headers
 
@@ -23,7 +21,7 @@ Thrivestack recommends that you make an Identify call:
 | `Authorization` | Bearer token for authentication | `Bearer <token>`        |
 | `Content-Type`  | Media type of request body                        | `application/json`      |
 
-<hr/>
+
 
 ## Request Body 
 > **Note:** A maximum of **1,000 identify events or 2 MB of data**, whichever is smaller, can be sent in a single API request. Alternatively, if **100 users** are being identified, they can be batched into one request. Exceeding either the event or size limit will result in a `400 Bad Request` response.
@@ -80,7 +78,6 @@ User traits are used to build a detailed profile of the user. The following trai
     }
 ]
 ```
-<hr/>
 
 ## Response Body 
 ### Fields
@@ -90,13 +87,17 @@ User traits are used to build a detailed profile of the user. The following trai
 | `success` | Bool | Indicates if user was successfully identified |
 | `response_id` | String | A unique identifier for the response |
 | `message` | String | Any additional information about the request status |
+| `Warnings` | Array | Warnings about the request status |
+| `documentation` | String | Documentation about the request status |
 
 ### JSON Example
 ```json
 {
   "success": true,
   "response_id": "7e51e59e-abf7-4610-858c-d759dd2d1a06",
-  "message": "User(s) identified successfully"
+  "message": "User(s) identified successfully",
+  "Warnings": null,
+  "documentation" : "https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/events/standard/events_overview"
 }
 ```
 
@@ -109,7 +110,6 @@ User traits are used to build a detailed profile of the user. The following trai
 | `401` | Access token missing or invalid |
 | `500` | Internal Server Error, a generic error occurred on the server |
 
-<hr/>
 
 ## Example cURL
 
@@ -128,8 +128,6 @@ curl --location 'https://api.app.thrivestack.ai/api/identify' \
     }
 ]'
 ```
-
-<hr/>
 
 ## Authorization scopes
 Requires one of the following OAuth scopes:

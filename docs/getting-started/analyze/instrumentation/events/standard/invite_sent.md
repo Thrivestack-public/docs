@@ -3,17 +3,11 @@
 ## Overview
 The objective is to generate an 'invite_sent' event, enabling you, the SaaS builder, to track when users invite other users.
 
-:::tip
 **Built-In Invitation Tracking with ThriveStack's Invitation API**
 
-API integrations aren't necessary for tracking the 'Invite Sent' event if you use ThriveStack's Self-Serve [Invitation API](/getting-started/self-serve/apis/invitation)
-:::
+API integrations aren't necessary for tracking the 'Invite Sent' event if you use ThriveStack's Self-Serve [Invitation API](https://docs.dev.app.thrivestack.ai/getting-started/self-serve/apis/invitation)
 
-<!-- ![Invite Sent Event Flowchart](/img/docs/events/invite_sent.png) -->
-
-> To send this event, the _Track API_ is used. For more details, [click here](/getting-started/analyze/instrumentation/events/event-tracking).
-
-<hr/>
+To send this event, the _Track API_ is used. For more details, [click here](https://docs.dev.app.thrivestack.ai/getting-started/analyze/instrumentation/events/event-tracking).
 
 ## Event Details for Track API
 ### Request Field
@@ -32,12 +26,15 @@ The `properties` field contains additional data about the account and user being
 
 | Property          | Type   | Description                                            |
 |-------------------|--------|--------------------------------------------------------|
+| `invitee_user_id`   | String | The user id of the person receiving the invite.  |
 | `invitee_email`   | String | The email address of the person receiving the invite.  |
-| `invitee_first_name` | String | The first name of the person receiving the invite.    |
-| `invitee_last_name` | String | The last name of the person receiving the invite.     |
-| `invitee_role`    | String | The permission group for the person receiving the invite. |
+| `invitee_team_name` | String | The team name of the person receiving the invite.    |
+| `invitee_role_id`    | String | The role id of the person receiving the invite. |
+| `invitee_team_id`    | String | The team id of the person receiving the invite. |
+| `invitee_role`    | String | The role of the person receiving the invite. |
 | `feature_name`    | String | A particular feature of the product from where the invitation has triggered |
 
+			
 ### Event Context
 
 The `context` field provides additional metadata that gives more context for the event.
@@ -45,6 +42,7 @@ The `context` field provides additional metadata that gives more context for the
 | Context Property   | Type   | Description                                                               |
 |--------------------|--------|---------------------------------------------------------------------------|
 | group_id           | String | A unique identifier for the account to which the user is being invited     |
+| tenant_id           | String | A unique identifier for the tenant to which the user is being invited     |
 
 ### Example JSON Payload
 ```json 
@@ -52,21 +50,24 @@ The `context` field provides additional metadata that gives more context for the
   {
     "event_name": "invite_sent",
     "properties": {
-      "invitee_email": "amy@achme.com",
-      "invitee_first_name": "Amy",
-      "invitee_last_name": "Frank",
-      "invitee_role": "Developer",
-      "feature_name": "CUSTOMER_JOURNEY"
+      "invitee_user_id":"dwferffd9",
+      "invitee_email":"amy@achme.com",
+      "invitee_team_name":"product123",
+      "invitee_role_id":"3rf4rfcOP",
+      "invitee_team_id":"erKfrf42d",
+      "invitee_role":"Developer",
+      "feature_name":"CUSTOMER_JOURNEY"
     },
-    "user_id": "766b3aef-5904-46fe-af05-a293fee8h345",
+    "user_id": "0rwtoH3IN",
     "timestamp": "2024-10-20T15:51:35.059000Z",
     "context": {
-      "group_id": "bp497d1a-0159-4009-9454-8a1b0e7c0a60"
+      "group_id": "ng6SrfNCx",
+      "tenant_id":"E7Mswu8T6"
     }
   }
 ]
 ```
-<hr/>
+
 
 ##  Sample cURL
 
@@ -78,20 +79,23 @@ curl --location 'https://api.app.thrivestack.ai/api/track' \
     {
       "event_name": "invite_sent",
       "properties": {
-        "feature_name": "CUSTOMER_JOURNEY",
-        "invitee_email": "amy@achme.com",
-        "invitee_first_name": "Amy",
-        "invitee_last_name": "Frank",
-        "invitee_role": "Developer"
+        "invitee_user_id":"dwferffd9",
+        "invitee_email":"amy@achme.com",
+        "invitee_team_name":"product123",
+        "invitee_role_id":"3rf4rfcOP",
+        "invitee_team_id":"erKfrf42d",
+        "invitee_role":"Developer",
+        "feature_name":"CUSTOMER_JOURNEY"
       },
-      "user_id": "766b3aef-5904-46fe-af05-a293fee8h345",
+      "user_id": "0rwtoH3IN",
       "timestamp": "2024-10-20T15:51:35.059000Z",
       "context": {
-        "group_id": "bp497d1a-0159-4009-9454-8a1b0e7c0a60"
+        "group_id": "ng6SrfNCx",
+        "tenant_id":"E7Mswu8T6"
+    }
       }
   }
-]
-'
+]'
 ```
 
 
