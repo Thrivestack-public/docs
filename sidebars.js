@@ -12,6 +12,19 @@
 const build = [
 {
           type: 'category', 
+          label: 'In-App Features',
+          items: [
+            {
+              type: 'category',
+              label: 'Invitation',
+              items: [
+                "getting-started/in-app-features/invitation"
+              ]
+            }
+          ]
+        },
+{
+          type: 'category', 
           label: 'Self Serve',
           //link: {
           //  type: 'generated-index',
