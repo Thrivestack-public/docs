@@ -66,8 +66,9 @@ Integrate the `InvitationModal` component into your application and provide the 
 <InvitationModal 
     isModalVisible={false}
     setIsModalVisible={setIsModalVisible}
-    sender_email_id="xyz@domain.com"
-    invite_workflow_id=""
+    invitation_workflow_id=""
+    source_url="https://google.com/build/setup"
+    destination_url="https://google.com/build/setup"
 />
 ```
 
@@ -76,10 +77,10 @@ Here is the list of all the props that can be sent to the Modal for customizatio
 - **isModalVisible**: Controls the visibility of the invitation modal (true to show, false to hide).  
 - **setIsModalVisible**: A function to toggle the visibility state of the invitation modal.  
 - **sender_email_id**: The email ID of the user sending the invitation.  
-- **invite_workflow_id**: The unique ID of the invitation workflow to be used.  
-- **invite_source_page_url**: The URL of the page where the invitation was initiated.  
-- **invite_destination_page_url**: The URL to which the invitee will be directed upon accepting the invitation.  
-- **invite_link_expiry_in_minutes**: The expiration time (in minutes) for the invitation link.  
+- **invitation_workflow_id**: The unique ID of the invitation workflow to be used.  
+- **source_url**: The URL of the page where the invitation was initiated.  
+- **destination_url**: The URL to which the invitee will be directed upon accepting the invitation.  
+- **invitation_expiry_minutes**: The expiration time (in minutes) for the invitation link.  
 - **test_mode**: A boolean indicating whether the invitation is being sent in test mode.  
 - **roles**: A list of roles assigned to the invitee.  
 - **teams**: A list of teams the invitee will be added to.  
@@ -87,7 +88,10 @@ Here is the list of all the props that can be sent to the Modal for customizatio
 - **feature_name**: The name of the feature associated with the invitation.  
 - **task_id**: The unique ID of the task linked to the invitation.  
 - **task_name**: The name of the task linked to the invitation.  
-- **comments**: Additional comments or notes to be included with the invitation.  
+- **comments**: Additional comments or notes to be included with the invitation.
+- **description**: Content to be displayed below modal title, accepts any valid React node such as strings, JSX, or elements.
+- **user_auth_token**: Uses the provided authentication token from props, defaults to detecting it from cookies if not provided.
+- **management_token**: Uses the provided authentication token from props, defaults to detecting it from cookies if not provided.
 
 #### How is Authentication and Authorization Handled?
 
@@ -104,8 +108,8 @@ curl --location 'https://api.dev.app.thrivestack.ai/v1/TriggerInvitation' \
 --data-raw '{
     "account_id": "RXBTZH6hn",
     "tenant_id": "w0qhZsOFl",
-    "workflow_design_time_id": "285FVfZhL7",
-    "invite_user_details": [
+    "invitation_workflow_id": "285FVfZhL7",
+    "invitees": [
         {
             "email_id": "xcm39u41ko@dygovil.com",
             "role_id": "role_id_1",
@@ -114,15 +118,15 @@ curl --location 'https://api.dev.app.thrivestack.ai/v1/TriggerInvitation' \
             "team_name": "Team One"
         }
     ],
-    "invite_destination_page_url": "https://google.com/build/setup",
-    "invite_source_page_url": "userManagemnet",
-    "invite_link_expiry_in_minutes": 300,
+    "destination_url": "https://google.com/build/setup",
+    "source_url": "https://google.com/build/setup",
+    "invitation_expiry_minutes": 300,
     "feature_id": "feature_id", 
     "feature_name": "feature name", 
     "task_id": "task_id",
     "task_name": "task_name",
     "comments": "test comment",
-    "token": "<tsAuthToken>"
+    "user_auth_token": "<tsAuthToken>"
 }'
 ```
 
