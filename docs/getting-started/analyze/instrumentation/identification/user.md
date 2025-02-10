@@ -19,13 +19,13 @@ Thrivestack recommends that you make an Identify call:
 
 | Header Name     | Description                                       | Example Value           |
 |-----------------|---------------------------------------------------|-------------------------|
-| `Authorization` | Bearer token for authentication | `Bearer <token>`        |
+| `x-api-key` | API Key for authentication | `7MQF6Y6xZ5yxusbsnvl4rcf76zjSMeothmKdm/c80u0=`        |
 | `Content-Type`  | Media type of request body                        | `application/json`      |
 
 <hr/>
 
 ## Request Body 
-> **Note:** A maximum of **1,000 identify events or 2 MB of data**, whichever is smaller, can be sent in a single API request. Alternatively, if **100 users** are being identified, they can be batched into one request. Exceeding either the event or size limit will result in a `400 Bad Request` response.
+> **Note:** A maximum of **1,000 identify events or 2 MB of data**, whichever is smaller, can be sent in a single API request. Exceeding either the event or size limit will result in a `400 Bad Request` response.
 
 ### Fields
 | Field | Type | Required | Description |
@@ -111,7 +111,7 @@ User traits are used to build a detailed profile of the user. The following trai
 | --- | --- |
 | `200` | User(s) identified successfully |
 | `400` | Bad Request, invalid input data |
-| `401` | Access token missing or invalid |
+| `401` | API key missing or invalid |
 | `500` | Internal Server Error, a generic error occurred on the server |
 
 <hr/>
@@ -121,7 +121,7 @@ User traits are used to build a detailed profile of the user. The following trai
 ```bash
 curl --location 'https://api.app.thrivestack.ai/api/identify' \
 --header 'Content-Type: application/json' \
---header 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsImlkIjoiNWZiY2E4YmUtNzk0OC00ZGQ3LTgxZGItZDZiMTFjNjhlYjgwIiwidHlwIjoiSldUIn0.eyJhdWQiOiJ0ZWxlbWV0cnlfYXBpcyIsImV4cCI6MTcyOTU5MDg1NiwianRpIjoiNWZiY2E4YmUtNzk0OC00ZGQ3LTgxZGItZDZiMTFjNjhlYjgwIiwiaWF0IjoxNzI5NTEyODU2LCJpc3MiOiJUaHJpdmVTdGFjayJ9.RAImwOdWQUsK9ZPilxZe87SyNmWjvbC8YmbVc2GhLcH4g0hfQbxpeN7HUHk9cNdSw6PDQuNY3rpAKlCGeRBECUFVgAwCW5xSfNIc4_qlNeys9Sy0aQGeZ_9bhZFiDADOsVaspQnXI0MiE54UAlHnz4rU21YiDOgt5OQbdhmX9v8vW6AGRdwIS8WGADbCjdu8uFmaCEJqK4EsKTvJrxgyBGc_JC_A7ssYUbPmKpOuat6Vanlumw_kq32lYn7fSdL7gMXLYJykd6jV8uLUJsKQQd3w8L0DQFt40YPJmRm-68XhmBCDwQf0aUFuhbkOotZw-7-OJ4kuNoa6e6p62O_KqQ' \
+--header 'x-api-key: 7MQF6Y6xZ5yxusbsnvl4rcf76zjSMeothmKdm/c80u0=' \
 --data-raw '[
     {
         "user_id": "0rwtoH3IN",
@@ -137,6 +137,6 @@ curl --location 'https://api.app.thrivestack.ai/api/identify' \
 <hr/>
 
 ## Authorization scopes
-Requires one of the following OAuth scopes:
+Requires one of the following API Key scopes:
 - `telemetry_apis`
 - `identify_api`

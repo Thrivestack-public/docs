@@ -1,17 +1,21 @@
 # Introduction
-## Overview
-👋 Welcome to ThriveStack's Analyze Module! This guide will walk you through all the features provided by ThriveStack for Instrumentation and Reporting.
 
-This guide is divided into the following sections:
+## Overview
+
+👋 Welcome to ThriveStack's Analyze Module! This guide will walk you through all the features provided for Instrumentation and Reporting.
+
+The guide is divided into the following sections:
 - [Instrumentation](#instrumentation): Understand your users and their actions on your SaaS product.
 - [Reporting](#reporting): Access insights about products with intuitive reports.
 
 <hr/>
 
 ## Instrumentation
-ThriveStack's **Instrumentation** framework enables tracking and analysis of user interactions through key concepts and APIs. Below is an overview of how these work together:
+
+The **Instrumentation** framework enables the tracking and analysis of user interactions through key concepts and APIs. Below is an overview of how these elements work together:
 
 ### Key Concepts and APIs
+
 - **[Users → Identify API](./identification/user)**
     - Purpose: Identifies users by capturing their unique details, such as name and email.
     - Focus: Who is the user?
@@ -24,11 +28,21 @@ ThriveStack's **Instrumentation** framework enables tracking and analysis of use
     - Purpose: Records user actions and interactions with the product (events).
     - Focus: What are the users doing?
 
-By leveraging ThriveStack's **Identify**, **Group**, and **Track** APIs, you gain powerful insights into user behavior and engagement, allowing you to optimize your product for better performance and user experience.
+- **[Pages → Page API](./identification/page)**
+    - Purpose: Monitors and tracks the pages a user visits.
+    - Focus: Which pages are the users visiting?
+
+By leveraging the **Identify**, **Group**, **Page**, and **Track** APIs, you gain powerful insights into user behavior and engagement, allowing you to optimize your product for better performance and user experience.
 
 <hr/>
 
 ## Reporting
-To delve into Reports, [Read more](../reports/overview).
-Welcome to the comprehensive guide on ThriveStack's powerful APIs for instrumentation. In this guide, we will delve into the core functionalities provided by ThriveStack's APIs, empowering you to gain deeper insights into user interactions within your SaaS product.
 
+The reporting features provide various types of reports to help you gain valuable insights into user interactions within your SaaS product. Here are the types of reports you can access:
+
+- [**Acquisition Reports**](../reports/standard/acquisition): Measures the number of new users or customers acquired within a specific period.
+- [**Retention Reports**](../reports/standard/engagement): Evaluates the rate at which users continue to use the product over time, indicating its value and stickiness.
+- [**Virality Reports**](../reports/standard/engagement): Measure how users are spreading the word about your product and bringing in new users.
+- [**Activation Reports**](../reports/standard/activation): Analyze how users are engaging with your product and progressing through key activation milestones.
+
+To delve deeper into these reports, [Read more](../reports/overview).

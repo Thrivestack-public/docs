@@ -5,12 +5,12 @@ The Group API call allows you to associate an individual user with a specific gr
 
 This call enables you to identify the account or organization to which your users belong. There are two key identifiers in a Group call:
 
-- **`userId`**: Refers to the individual user.
-- **`groupId`**: Refers to the specific group or organization.
+- **`user_id`**: Refers to the individual user.
+- **`group_id`**: Refers to the specific group or organization.
 
-A user can be associated with multiple groups, each represented by a different `groupId`, but will have only one `userId` linked to each of those groups. Note that not all platforms support multiple group associations for a single user.
+A user can be associated with multiple groups, each represented by a different `group_id`, but will have only one `user_id` linked to each of those groups. Note that not all platforms support multiple group associations for a single user.
 
-In addition to the `groupId`, the Group API accepts traits specific to the group, such as industry or number of employees, which pertain to that particular account. Similar to the traits in an Identify call, you can update these traits by calling the same attribute with a new value.
+In addition to the `group_id`, the Group API accepts traits specific to the group, such as industry or number of employees, which pertain to that particular account. Similar to the traits in an Identify call, you can update these traits by calling the same attribute with a new value.
 
 
 **URL:** `https://api.app.thrivestack.ai/api/group`
@@ -23,13 +23,13 @@ In addition to the `groupId`, the Group API accepts traits specific to the group
 
 | Header Name     | Description                                       | Example Value           |
 |-----------------|---------------------------------------------------|-------------------------|
-| `Authorization` | Bearer token for authentication | `Bearer <token>`        |
+| `x-api-key` | API Key for authentication | `7MQF6Y6xZ5yxusbsnvl4rcf76zjSMeothmKdm/c80u0=`        |
 | `Content-Type`  | Media type of request body                        | `application/json`      |
 
 <hr/>
 
 ## Request Body 
-> **Note:** A maximum of **1,000 group events or 2 MB of data**, whichever is smaller, can be sent in a single API request. Alternatively, if **100 groups** are being updated, they can be batched into one request. Exceeding either the event or size limit will result in a `400 Bad Request` response.
+> **Note:** A maximum of **1,000 group events or 2 MB of data**, whichever is smaller, can be sent in a single API request. Exceeding either the event or size limit will result in a `400 Bad Request` response.
 
 ### Fields
 | Field | Type | Required | Description |
@@ -122,6 +122,7 @@ Group traits are used to build a detailed profile of a group. The following trai
 | `message` | String | Any additional information about the request status |
 | `warnings` | Array | Warnings about the request status |
 | `documentation` | String | Documentation about the request status |
+
 ### JSON Example
 ```json
 {
@@ -141,7 +142,7 @@ Group traits are used to build a detailed profile of a group. The following trai
 | --- | --- |
 | `200` | Group(s) updated successfully |
 | `400` | Bad Request, invalid input data |
-| `401` | Access token missing or invalid |
+| `401` | API key missing or invalid |
 | `500` | Internal Server Error, a generic error occurred on the server |
 
 <hr/>
@@ -152,7 +153,7 @@ Group traits are used to build a detailed profile of a group. The following trai
 ```bash
 curl --location 'https://api.app.thrivestack.ai/api/group' \
 --header 'Content-Type: application/json' \
---header 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsImlkIjoiNWZiY2E4YmUtNzk0OC00ZGQ3LTgxZGItZDZiMTFjNjhlYjgwIiwidHlwIjoiSldUIn0.eyJhdWQiOiJ0ZWxlbWV0cnlfYXBpcyIsImV4cCI6MTcyOTQ5MzkyOCwianRpIjoiNWZiY2E4YmUtNzk0OC00ZGQ3LTgxZGItZDZiMTFjNjhlYjgwIiwiaWF0IjoxNzI5NDE1OTI4LCJpc3MiOiJUaHJpdmVTdGFjayJ9.a34Mo3gGJfL_n6ls9Y3KP3IIpHJdqEOchZyAZF0hov-VujecPLJblZ-8WXs7KzZEwyo7DVVeIAygPUz0Xs9a56tA2ZW_6GxRWpw6zS-LLh8FNI1Ekk33hsoloW4WeGOAG8xybghJJH3w6R_H59jubrVNFnaz8YqBbiYou9klowTAjZBg-6IH5eGovGs0xzmaEFpC_0PphZ11wQKC0ZiMI3qz83GnC01VZZe5KjOmEON--B1qtN04pBNnEeCjuNFhBS1uhzAd_7FlRMiiUU29QOve8OXFHCXskvsFIHuUnSE3ZqDduFpKTMnK74VxuevjGsI8X7kIkz1SYnS72sFtUg' \
+--header 'x-api-key: 7MQF6Y6xZ5yxusbsnvl4rcf76zjSMeothmKdm/c80u0=' \
 --data '[
     {
     "user_id": "0rwtoH3IN",
@@ -175,6 +176,6 @@ curl --location 'https://api.app.thrivestack.ai/api/group' \
 <hr/>
 
 ## Authorization scopes
-Requires one of the following OAuth scopes:
+Requires one of the following API Key scopes:
 - `telemetry_apis`
 - `group_api`
