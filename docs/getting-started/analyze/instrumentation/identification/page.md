@@ -121,4 +121,3 @@ curl --location 'https://api.app.thrivestack.ai/api/page' \
 ## Authorization scopes
 Requires one of the following API Key scopes:
 - `telemetry_apis`
-- `page_api`
