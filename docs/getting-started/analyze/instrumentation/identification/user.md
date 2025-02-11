@@ -139,4 +139,3 @@ curl --location 'https://api.app.thrivestack.ai/api/identify' \
 ## Authorization scopes
 Requires one of the following API Key scopes:
 - `telemetry_apis`
-- `identify_api`
