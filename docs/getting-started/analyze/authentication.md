@@ -17,10 +17,6 @@ Authorization is the process of granting or denying access to resources based on
 | Scope ID               | Name                              | Description                                                       |
 |------------------------|-----------------------------------|-------------------------------------------------------------------|
 | `telemetry_apis`       | Telemetry APIs                    | Authorizes all telemetry APIs, `/track`, `/identify`, `/page` and `/group`|
-| `track_api`            | Telemetry:Track API               | Authorized only for `/track` API                                  |
-| `identify_api`         | Telemetry:Identify API            | Authorized only for `/identify` API                               |
-| `group_api`            | Telemetry:Group API               | Authorized only for `/group` API                                  |
-| `page_api`            | Telemetry:Page API               | Authorized only for `/page` API                                  |
 
 <hr/>
 
