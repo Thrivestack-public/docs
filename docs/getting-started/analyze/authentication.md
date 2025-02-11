@@ -30,9 +30,8 @@ If you don't have an API Key yet, follow these steps to create one:
 2. Click on **Create New API Key**.
 3. Enter a name for your API Key.
 4. Select an expiry date.
-5. Set the appropriate rotation frequency.
-6. Select the necessary scopes for your API Key.
-7. Click on **Create**.
+5. Select the necessary scopes for your API Key.
+6. Click on **Create**.
 
 You will receive an API Key. Make sure to _copy the key and store it securely_.
 
