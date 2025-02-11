@@ -123,4 +123,3 @@ curl --location 'https://api.app.thrivestack.ai/api/track' \
 ## Authorization scopes
 Requires one of the following API Key scopes:
 - `telemetry_apis`
-- `track_api`
